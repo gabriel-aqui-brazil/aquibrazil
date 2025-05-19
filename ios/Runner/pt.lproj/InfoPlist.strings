@@ -1,0 +1,3 @@
+NSLocationWhenInUseUsageDescription = "Para pesquisar empresas nas proximidades este aplicativo requer acesso à sua localização atual.";
+PermissionGroupNotification = "Receber notificação de atualizações sobre seus pedidos";
+ITSAppUsesNonExemptEncryption = "NO";
