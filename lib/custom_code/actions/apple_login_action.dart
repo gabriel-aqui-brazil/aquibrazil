@@ -14,12 +14,13 @@ import 'package:flutter/material.dart';
 
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'dart:io';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
-Future<dynamic> appleLoginAction() async {
+Future<dynamic> appleLoginAction(BuildContext context) async {
   try {
     if (!Platform.isIOS) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login com Apple disponível apenas no iOS')),
+      );
       return {'error': "Erro: Login com Apple disponível apenas no iOS"};
     }
 
@@ -35,41 +36,28 @@ Future<dynamic> appleLoginAction() async {
         : null;
 
     final idToken = credential.identityToken;
+
     if (idToken == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('ID Token da Apple não encontrado')),
+      );
       return {'error': 'ID Token da Apple não encontrado'};
     }
 
-    // 🔐 Sua Firebase Web API Key aqui
-    const firebaseApiKey = 'AIzaSyANwmYHretWP_DP3Shqm5s9GdRIo_c6IXQ';
-
-    final response = await http.post(
-      Uri.parse(
-          'https://identitytoolkit.googleapis.com/v1/accounts:signInWithIdp?key=$firebaseApiKey'),
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'postBody': 'id_token=$idToken&providerId=apple.com',
-        'requestUri': 'http://localhost',
-        'returnIdpCredential': true,
-        'returnSecureToken': true,
-      }),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Login com Apple sucesso: ${credential.email}')),
     );
 
-    if (response.statusCode != 200) {
-      print('Erro Firebase REST (Apple): ${response.body}');
-      return {'error': 'Erro ao validar com Firebase'};
-    }
-
-    final firebaseData = json.decode(response.body);
-    final firebaseUid = firebaseData['localId'];
-
     return {
-      'uid': firebaseUid,
+      'uid': idToken,
       'idToken': idToken,
       'email': credential.email,
       'displayName': fullName,
     };
   } catch (e) {
-    print('Erro no login com Apple: $e');
-    return {'error': "Erro no login"};
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Erro no login com Apple: $e')),
+    );
+    return {'error': "Erro no login: $e"};
   }
 }

@@ -2016,6 +2016,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   FFAppState().deleteLastCacheTime();
                                   FFAppState().lastCacheTime = null;
 
+                                  FFAppState().deleteActualVersion();
+                                  FFAppState().actualVersion = '';
+
                                   FFAppState().clearCacheHomePageCacheKey(
                                       valueOrDefault<String>(
                                     currentUserData?.id,

@@ -6,6 +6,9 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:convert';
 import 'dart:math';
 import 'dart:ui';
+import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
+    as aquibrazil_library_oi8i5r_data_schema;
+import '/backend/schema/structs/index.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'signup_step1_widget.dart' show SignupStep1Widget;
@@ -26,17 +29,13 @@ class SignupStep1Model extends FlutterFlowModel<SignupStep1Widget> {
 
   final formKey = GlobalKey<FormState>();
   // Stores action output result for [Custom Action - googleLoginAction] action in Container widget.
-  dynamic? googleSignup;
-  // Stores action output result for [Backend Call - API (Signup)] action in Container widget.
-  ApiCallResponse? apiResultm2d;
-  // Stores action output result for [Backend Call - API (Login)] action in Container widget.
-  ApiCallResponse? loginGoogleOutput;
+  dynamic? signupGoogle;
+  // Stores action output result for [Backend Call - API (Login Signup social)] action in Container widget.
+  ApiCallResponse? signupGoogleOutput;
   // Stores action output result for [Custom Action - appleLoginAction] action in Container widget.
   dynamic? appleSignup;
-  // Stores action output result for [Backend Call - API (Signup)] action in Container widget.
-  ApiCallResponse? apiResultm2dCopy;
-  // Stores action output result for [Backend Call - API (Login)] action in Container widget.
-  ApiCallResponse? loginAppleOutput;
+  // Stores action output result for [Backend Call - API (Login Signup social)] action in Container widget.
+  ApiCallResponse? signupAppleOutput;
   // State field(s) for emailCadastro widget.
   FocusNode? emailCadastroFocusNode;
   TextEditingController? emailCadastroTextController;

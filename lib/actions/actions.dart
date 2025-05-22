@@ -114,9 +114,8 @@ Future errorAlertSnacbar(
   );
 }
 
-Future verifyHomeCache(BuildContext context) async {
+Future<bool> verifyHomeCache(BuildContext context) async {
   bool? isOverride;
-  ApiCallResponse? appVersion;
 
   if (FFAppState().lastCacheTime == null) {
     FFAppState().lastCacheTime = getCurrentTimestamp;
@@ -133,15 +132,28 @@ Future verifyHomeCache(BuildContext context) async {
       '-',
     ));
     await Future.delayed(const Duration(milliseconds: 1000));
-    appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
-      token: currentAuthenticationToken,
-    );
+    FFAppState().isCacheOverride = false;
+    return true;
+  } else {
+    return false;
+  }
+}
 
+Future verifyAppVersion(BuildContext context) async {
+  ApiCallResponse? appVersion;
+
+  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
+    token: currentAuthenticationToken,
+  );
+
+  if ((appVersion?.succeeded ?? true)) {
     FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
         .actualVersion(
           (appVersion?.jsonBody ?? ''),
         )
         .toString();
-    FFAppState().isCacheOverride = false;
+    return;
+  } else {
+    return;
   }
 }

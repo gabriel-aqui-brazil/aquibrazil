@@ -553,7 +553,7 @@ class LoginCall {
 class LoginSignupSocialCall {
   Future<ApiCallResponse> call({
     String? email = '',
-    String? password = '',
+    String? type = '',
     String? authId = '',
     String? fcmId = '',
     String? firstName = '',
@@ -569,7 +569,7 @@ class LoginSignupSocialCall {
     final ffApiRequestBody = '''
 {
   "email": "${email}",
-  "password": "${password}",
+  "type": "${type}",
   "auth_id": "${authId}",
   "fcm_id": "${fcmId}",
   "first_name": "${firstName}"
@@ -3933,7 +3933,7 @@ class GETAppVersionAvaliableCall {
     );
   }
 
-  dynamic actualVersion(dynamic response) => getJsonField(
+  dynamic? actualVersion(dynamic response) => getJsonField(
         response,
         r'''$''',
       );

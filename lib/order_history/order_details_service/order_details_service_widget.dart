@@ -393,73 +393,72 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                       ),
                       Padding(
                         padding: EdgeInsets.all(12.0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 50.0,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFFFBF66),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 12.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    await actions.addToCalendar(
-                                      valueOrDefault<String>(
-                                        aquibrazil_library_oi8i5r_data_schema
-                                                    .OrderStruct
-                                                .maybeFromMap(
-                                                    orderDetailsServiceGetOrderDetailServiceResponse
-                                                        .jsonBody)
-                                            ?.items
-                                            ?.firstOrNull
-                                            ?.baseProduct
-                                            ?.name,
-                                        '0',
-                                      ),
-                                      'Horario agendado com o profissional ${valueOrDefault<String>(
-                                        aquibrazil_library_oi8i5r_data_schema
-                                                    .OrderStruct
-                                                .maybeFromMap(
-                                                    orderDetailsServiceGetOrderDetailServiceResponse
-                                                        .jsonBody)
-                                            ?.items
-                                            ?.firstOrNull
-                                            ?.orderServiceDetail
-                                            ?.provider
-                                            ?.firstName,
-                                        '0',
-                                      )} no ${valueOrDefault<String>(
-                                        aquibrazil_library_oi8i5r_data_schema
-                                                    .OrderStruct
-                                                .maybeFromMap(
-                                                    orderDetailsServiceGetOrderDetailServiceResponse
-                                                        .jsonBody)
-                                            ?.company
-                                            ?.name,
-                                        '0',
-                                      )} no endereço  ${valueOrDefault<String>(
-                                        aquibrazil_library_oi8i5r_data_schema
-                                                    .OrderStruct
-                                                .maybeFromMap(
-                                                    orderDetailsServiceGetOrderDetailServiceResponse
-                                                        .jsonBody)
-                                            ?.company
-                                            ?.address
-                                            ?.address,
-                                        '0',
-                                      )}',
-                                      DateTime.fromMillisecondsSinceEpoch(
-                                          valueOrDefault<int>(
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await actions.addToCalendar(
+                              valueOrDefault<String>(
+                                aquibrazil_library_oi8i5r_data_schema
+                                            .OrderStruct
+                                        .maybeFromMap(
+                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                .jsonBody)
+                                    ?.items
+                                    ?.firstOrNull
+                                    ?.baseProduct
+                                    ?.name,
+                                '0',
+                              ),
+                              'Horario agendado com o profissional ${valueOrDefault<String>(
+                                aquibrazil_library_oi8i5r_data_schema
+                                            .OrderStruct
+                                        .maybeFromMap(
+                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                .jsonBody)
+                                    ?.items
+                                    ?.firstOrNull
+                                    ?.orderServiceDetail
+                                    ?.provider
+                                    ?.firstName,
+                                '0',
+                              )} no ${valueOrDefault<String>(
+                                aquibrazil_library_oi8i5r_data_schema
+                                            .OrderStruct
+                                        .maybeFromMap(
+                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                .jsonBody)
+                                    ?.company
+                                    ?.name,
+                                '0',
+                              )} no endereço  ${valueOrDefault<String>(
+                                aquibrazil_library_oi8i5r_data_schema
+                                            .OrderStruct
+                                        .maybeFromMap(
+                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                .jsonBody)
+                                    ?.company
+                                    ?.address
+                                    ?.address,
+                                '0',
+                              )}',
+                              DateTime.fromMillisecondsSinceEpoch(
+                                  valueOrDefault<int>(
+                                aquibrazil_library_oi8i5r_data_schema
+                                            .OrderStruct
+                                        .maybeFromMap(
+                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                .jsonBody)
+                                    ?.items
+                                    ?.firstOrNull
+                                    ?.orderServiceDetail
+                                    ?.preferredTime,
+                                0,
+                              )),
+                              DateTime.fromMillisecondsSinceEpoch(
+                                  valueOrDefault<int>(
                                         aquibrazil_library_oi8i5r_data_schema
                                                     .OrderStruct
                                                 .maybeFromMap(
@@ -470,24 +469,26 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                             ?.orderServiceDetail
                                             ?.preferredTime,
                                         0,
-                                      )),
-                                      DateTime.fromMillisecondsSinceEpoch(
-                                          valueOrDefault<int>(
-                                                aquibrazil_library_oi8i5r_data_schema
-                                                            .OrderStruct
-                                                        .maybeFromMap(
-                                                            orderDetailsServiceGetOrderDetailServiceResponse
-                                                                .jsonBody)
-                                                    ?.items
-                                                    ?.firstOrNull
-                                                    ?.orderServiceDetail
-                                                    ?.preferredTime,
-                                                0,
-                                              ) +
-                                              3600000),
-                                    );
-                                  },
-                                  child: Text(
+                                      ) +
+                                      3600000),
+                            );
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 50.0,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFBF66),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 12.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
                                     FFLocalizations.of(context).getText(
                                       'rg2mm23z' /* CRIAR EVENTO NO CALENDÁRIO DO ... */,
                                     ),
@@ -512,14 +513,14 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                                   .fontStyle,
                                         ),
                                   ),
-                                ),
-                                Icon(
-                                  FFIcons.kcalendarAdd,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 22.0,
-                                ),
-                              ],
+                                  Icon(
+                                    FFIcons.kcalendarAdd,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 22.0,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

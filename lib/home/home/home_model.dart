@@ -55,6 +55,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   // Stores action output result for [Custom Action - timezone] action in home widget.
   String? timezone;
+  // Stores action output result for [Action Block - verifyHomeCache] action in home widget.
+  bool? cacheOverride;
   // Stores action output result for [Custom Action - isAppUpdated] action in home widget.
   bool? isAppUpdated;
   // Model for orderInProgress component.

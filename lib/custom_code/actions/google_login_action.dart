@@ -13,61 +13,47 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
-Future<dynamic> googleLoginAction() async {
+Future<dynamic> googleLoginAction(BuildContext context) async {
   try {
     final GoogleSignIn _googleSignIn = GoogleSignIn(
       scopes: ['email', 'profile'],
     );
 
     final GoogleSignInAccount? account = await _googleSignIn.signIn();
+
     if (account == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login cancelado pelo usuário')),
+      );
       return {'error': 'Login cancelado pelo usuário'};
     }
 
     final GoogleSignInAuthentication auth = await account.authentication;
 
-    final idToken = auth.idToken;
-    if (idToken == null) {
+    if (auth.idToken == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('ID Token não encontrado')),
+      );
       return {'error': 'ID Token não encontrado'};
     }
 
-    // 🔐 Sua Firebase Web API Key aqui
-    const firebaseApiKey = 'AIzaSyANwmYHretWP_DP3Shqm5s9GdRIo_c6IXQ';
-
-    // 🔥 Chamada para obter UID do Firebase via REST
-    final response = await http.post(
-      Uri.parse(
-          'https://identitytoolkit.googleapis.com/v1/accounts:signInWithIdp?key=$firebaseApiKey'),
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'postBody': 'id_token=$idToken&providerId=google.com',
-        'requestUri': 'http://localhost',
-        'returnIdpCredential': true,
-        'returnSecureToken': true,
-      }),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Login com Google sucesso: ${account.email}')),
     );
 
-    if (response.statusCode != 200) {
-      print('Erro Firebase REST: ${response.body}');
-      return {'error': 'Erro ao validar com Firebase'};
-    }
-
-    final firebaseData = json.decode(response.body);
-    final firebaseUid = firebaseData['localId'];
-
     return {
-      'uid': firebaseUid,
-      'idToken': idToken,
+      'uid': auth.idToken,
+      'idToken': auth.idToken,
       'accessToken': auth.accessToken,
       'email': account.email,
       'displayName': account.displayName,
       'photoUrl': account.photoUrl,
     };
   } catch (e) {
-    print('Erro no login com Google: $e');
-    return {'error': 'Erro no login'};
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Erro no login com Google: $e')),
+    );
+    return {'error': 'Erro no login: $e'};
   }
 }

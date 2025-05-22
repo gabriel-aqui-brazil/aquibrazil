@@ -97,10 +97,13 @@ class _HomeWidgetState extends State<HomeWidget> {
       }
 
       _model.timezone = await actions.timezone();
-      await action_blocks.verifyHomeCache(context);
-      safeSetState(() {});
-      await actions.getAppVersionInfo();
       HapticFeedback.mediumImpact();
+      await actions.getAppVersionInfo();
+      _model.cacheOverride = await action_blocks.verifyHomeCache(context);
+      if (_model.cacheOverride!) {
+        await action_blocks.verifyAppVersion(context);
+        safeSetState(() {});
+      }
       FFAppState().paymentMethodSelected = currentUserData!.defaultCard;
       authManager.updateAuthUserData(
         authenticationToken: currentAuthenticationToken,

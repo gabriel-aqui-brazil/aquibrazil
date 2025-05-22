@@ -18,40 +18,22 @@ import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 import 'package:provider/provider.dart';
-
 import 'package:flutter/gestures.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:flutter_web_plugins/url_strategy.dart';
-
 import 'auth/custom_auth/auth_util.dart';
-
 import 'auth/custom_auth/custom_auth_user_provider.dart';
-
 import 'flutter_flow/flutter_flow_util.dart';
-
 import 'flutter_flow/internationalization.dart';
-
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import 'flutter_flow/nav/nav.dart';
-
 import 'index.dart';
-
-// Extras do segundo main.dart
-
 import '/custom_code/actions/index.dart' as actions;
-
 import 'package:lock_orientation_library_opafp4/custom_code/actions/index.dart'
     as lock_orientation_library_opafp4_actions;
-
 import 'package:aqui_brazil/profile/help/error_page/error_page_widget.dart';
-
 import 'dart:async';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();

@@ -6,6 +6,9 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:convert';
 import 'dart:math';
 import 'dart:ui';
+import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
+    as aquibrazil_library_oi8i5r_data_schema;
+import '/backend/schema/structs/index.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
@@ -73,6 +76,8 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -149,58 +154,122 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          _model.googleSignup =
-                                              await actions.googleLoginAction();
-                                          _model.apiResultm2d =
-                                              await MainGroup.signupCall.call(
-                                            firstName: getJsonField(
-                                              _model.googleSignup,
-                                              r'''$.displayName''',
-                                            ).toString(),
+                                          var _shouldSetState = false;
+                                          _model.signupGoogle =
+                                              await actions.googleLoginAction(
+                                            context,
+                                          );
+                                          _shouldSetState = true;
+                                          _model.signupGoogleOutput =
+                                              await MainGroup
+                                                  .loginSignupSocialCall
+                                                  .call(
                                             email: getJsonField(
-                                              _model.googleSignup,
+                                              _model.signupGoogle,
                                               r'''$.email''',
                                             ).toString(),
                                             authId: getJsonField(
-                                              _model.googleSignup,
+                                              _model.signupGoogle,
                                               r'''$.uid''',
+                                            ).toString(),
+                                            fcmId: FFAppState().tokenFCM,
+                                            firstName: getJsonField(
+                                              _model.signupGoogle,
+                                              r'''$.displayName''',
                                             ).toString(),
                                           );
 
-                                          _model.loginGoogleOutput =
-                                              await MainGroup.loginCall.call(
-                                            authId: getJsonField(
-                                              _model.googleSignup,
-                                              r'''$.uid''',
-                                            ).toString(),
-                                          );
-
-                                          if ((_model.loginGoogleOutput
+                                          _shouldSetState = true;
+                                          if ((_model.signupGoogleOutput
                                                   ?.succeeded ??
                                               true)) {
                                             GoRouter.of(context)
                                                 .prepareAuthEvent();
                                             await authManager.signIn(
-                                              authenticationToken:
-                                                  MainGroup.loginCall.authToken(
-                                                (_model.loginGoogleOutput
-                                                        ?.jsonBody ??
-                                                    ''),
-                                              ),
-                                              authUid: MainGroup.loginCall.id(
-                                                (_model.loginGoogleOutput
-                                                        ?.jsonBody ??
-                                                    ''),
-                                              ),
+                                              authenticationToken: UserStruct
+                                                      .maybeFromMap((_model
+                                                              .signupGoogleOutput
+                                                              ?.jsonBody ??
+                                                          ''))
+                                                  ?.authToken,
+                                              tokenExpiration: DateTime
+                                                  .fromMillisecondsSinceEpoch(
+                                                      valueOrDefault<int>(
+                                                UserStruct.maybeFromMap((_model
+                                                            .signupGoogleOutput
+                                                            ?.jsonBody ??
+                                                        ''))
+                                                    ?.expirationToken,
+                                                0,
+                                              )),
+                                              authUid: UserStruct.maybeFromMap(
+                                                      (_model.signupGoogleOutput
+                                                              ?.jsonBody ??
+                                                          ''))
+                                                  ?.id,
+                                              userData: UserStruct.maybeFromMap(
+                                                  (_model.signupGoogleOutput
+                                                          ?.jsonBody ??
+                                                      '')),
+                                            );
+                                            await MainGroup.editFcmIdCall.call(
+                                              fcmId: FFAppState().tokenFCM,
+                                              token: UserStruct.maybeFromMap(
+                                                      (_model.signupGoogleOutput
+                                                              ?.jsonBody ??
+                                                          ''))
+                                                  ?.authToken,
                                             );
 
-                                            context.goNamedAuth(
-                                                CompleteProfileNumberWidget
-                                                    .routeName,
-                                                context.mounted);
+                                            if (UserStruct.maybeFromMap((_model
+                                                        .signupGoogleOutput
+                                                        ?.jsonBody ??
+                                                    ''))!
+                                                .isSignup) {
+                                              context.goNamedAuth(
+                                                  CompleteProfileNumberWidget
+                                                      .routeName,
+                                                  context.mounted);
+                                            } else {
+                                              context.goNamedAuth(
+                                                  HomeWidget.routeName,
+                                                  context.mounted);
+                                            }
+
+                                            if (_shouldSetState)
+                                              safeSetState(() {});
+                                            return;
+                                          } else {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              SnackBar(
+                                                content: Text(
+                                                  getJsonField(
+                                                    (_model.signupGoogleOutput
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                    r'''$.message''',
+                                                  ).toString(),
+                                                  style: TextStyle(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                  ),
+                                                ),
+                                                duration: Duration(
+                                                    milliseconds: 4000),
+                                                backgroundColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                              ),
+                                            );
+                                            if (_shouldSetState)
+                                              safeSetState(() {});
+                                            return;
                                           }
 
-                                          safeSetState(() {});
+                                          if (_shouldSetState)
+                                            safeSetState(() {});
                                         },
                                         child: Container(
                                           width: 80.0,
@@ -238,14 +307,16 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            _model.appleSignup = await actions
-                                                .appleLoginAction();
-                                            _model.apiResultm2dCopy =
-                                                await MainGroup.signupCall.call(
-                                              firstName: getJsonField(
-                                                _model.appleSignup,
-                                                r'''$.displayName''',
-                                              ).toString(),
+                                            var _shouldSetState = false;
+                                            _model.appleSignup =
+                                                await actions.appleLoginAction(
+                                              context,
+                                            );
+                                            _shouldSetState = true;
+                                            _model.signupAppleOutput =
+                                                await MainGroup
+                                                    .loginSignupSocialCall
+                                                    .call(
                                               email: getJsonField(
                                                 _model.appleSignup,
                                                 r'''$.email''',
@@ -254,43 +325,108 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                 _model.appleSignup,
                                                 r'''$.uid''',
                                               ).toString(),
-                                            );
-
-                                            _model.loginAppleOutput =
-                                                await MainGroup.loginCall.call(
-                                              authId: getJsonField(
+                                              fcmId: FFAppState().tokenFCM,
+                                              firstName: getJsonField(
                                                 _model.appleSignup,
-                                                r'''$.uid''',
+                                                r'''$.displayName''',
                                               ).toString(),
                                             );
 
-                                            if ((_model.loginAppleOutput
+                                            _shouldSetState = true;
+                                            if ((_model.signupAppleOutput
                                                     ?.succeeded ??
                                                 true)) {
                                               GoRouter.of(context)
                                                   .prepareAuthEvent();
                                               await authManager.signIn(
-                                                authenticationToken: MainGroup
-                                                    .loginCall
-                                                    .authToken(
-                                                  (_model.loginAppleOutput
-                                                          ?.jsonBody ??
-                                                      ''),
-                                                ),
-                                                authUid: MainGroup.loginCall.id(
-                                                  (_model.loginAppleOutput
-                                                          ?.jsonBody ??
-                                                      ''),
-                                                ),
+                                                authenticationToken: UserStruct
+                                                        .maybeFromMap((_model
+                                                                .signupAppleOutput
+                                                                ?.jsonBody ??
+                                                            ''))
+                                                    ?.authToken,
+                                                tokenExpiration: DateTime
+                                                    .fromMillisecondsSinceEpoch(
+                                                        valueOrDefault<int>(
+                                                  UserStruct.maybeFromMap((_model
+                                                              .signupAppleOutput
+                                                              ?.jsonBody ??
+                                                          ''))
+                                                      ?.expirationToken,
+                                                  0,
+                                                )),
+                                                authUid: UserStruct.maybeFromMap(
+                                                        (_model.signupAppleOutput
+                                                                ?.jsonBody ??
+                                                            ''))
+                                                    ?.id,
+                                                userData: UserStruct
+                                                    .maybeFromMap((_model
+                                                            .signupAppleOutput
+                                                            ?.jsonBody ??
+                                                        '')),
+                                              );
+                                              await MainGroup.editFcmIdCall
+                                                  .call(
+                                                fcmId: FFAppState().tokenFCM,
+                                                token: UserStruct.maybeFromMap(
+                                                        (_model.signupAppleOutput
+                                                                ?.jsonBody ??
+                                                            ''))
+                                                    ?.authToken,
                                               );
 
-                                              context.goNamedAuth(
-                                                  CompleteProfileNumberWidget
-                                                      .routeName,
-                                                  context.mounted);
+                                              if (UserStruct.maybeFromMap(
+                                                      (_model.signupAppleOutput
+                                                              ?.jsonBody ??
+                                                          ''))!
+                                                  .isSignup) {
+                                                context.goNamedAuth(
+                                                    CompleteProfileNumberWidget
+                                                        .routeName,
+                                                    context.mounted);
+                                              } else {
+                                                context.goNamedAuth(
+                                                    HomeWidget.routeName,
+                                                    context.mounted);
+                                              }
+
+                                              if (_shouldSetState)
+                                                safeSetState(() {});
+                                              return;
+                                            } else {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                SnackBar(
+                                                  content: Text(
+                                                    getJsonField(
+                                                      (_model.signupAppleOutput
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                      r'''$.message''',
+                                                    ).toString(),
+                                                    style: TextStyle(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                    ),
+                                                  ),
+                                                  duration: Duration(
+                                                      milliseconds: 4000),
+                                                  backgroundColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .error,
+                                                ),
+                                              );
+                                              if (_shouldSetState)
+                                                safeSetState(() {});
+                                              return;
                                             }
 
-                                            safeSetState(() {});
+                                            if (_shouldSetState)
+                                              safeSetState(() {});
                                           },
                                           child: Container(
                                             width: 80.0,

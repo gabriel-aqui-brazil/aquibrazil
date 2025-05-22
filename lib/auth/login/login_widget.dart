@@ -758,7 +758,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                 onTap: () async {
                                   var _shouldSetState = false;
                                   _model.loginGoogle =
-                                      await actions.googleLoginAction();
+                                      await actions.googleLoginAction(
+                                    context,
+                                  );
                                   _shouldSetState = true;
                                   _model.loginGoogleOutput = await MainGroup
                                       .loginSignupSocialCall
@@ -893,7 +895,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                   onTap: () async {
                                     var _shouldSetState = false;
                                     _model.appleLogin =
-                                        await actions.appleLoginAction();
+                                        await actions.appleLoginAction(
+                                      context,
+                                    );
                                     _shouldSetState = true;
                                     _model.loginAppleOutput = await MainGroup
                                         .loginSignupSocialCall
