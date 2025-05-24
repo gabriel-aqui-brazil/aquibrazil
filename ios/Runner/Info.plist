@@ -31,19 +31,20 @@
       <dict>
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>com.googleusercontent.apps.60551182546-mpn5o496335j5hhbibul413tmp3vbr12</string>
-        </array>
-      </dict>
-      <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
         <key>CFBundleURLName</key>
         <string>aquibrazil.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
           <string>app</string>
+        </array>
+      </dict>
+      <!-- Google Sign-In URL Scheme -->
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.60551182546-5end35i5hb4lv9tbv1hk7pvhsvj12ie6</string>
         </array>
       </dict>
     </array>
@@ -54,7 +55,7 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Para pesquisar empresas nas proximidades este aplicativo requer acesso à sua localização atual.</string>
+    <string>Este app precisa da sua localização para oferecer serviços baseados na sua posição.</string>
     <key>NSCameraUsageDescription</key>
     <string>In order to take a picture or video, this app requires permission to access the camera.</string>
     <key>NSPhotoLibraryUsageDescription</key>
@@ -67,10 +68,6 @@
     <key>NSCalendarsUsageDescription</key>
     <string>Este app usa o calendário para agendar e gerenciar eventos.</string>
     <!-- End of UseExternalCalendar -->
-    <!-- Start of useLocation -->
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Este app precisa da sua localização para oferecer serviços baseados na sua posição.</string>
-    <!-- End of useLocation -->
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>UIMainStoryboardFile</key>

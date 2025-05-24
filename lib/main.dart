@@ -8,6 +8,7 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'auth/custom_auth/auth_util.dart';
 import 'auth/custom_auth/custom_auth_user_provider.dart';
 
+import 'backend/firebase/firebase_config.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
@@ -18,45 +19,69 @@ import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 import 'package:provider/provider.dart';
+
 import 'package:flutter/gestures.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter_web_plugins/url_strategy.dart';
+
 import 'auth/custom_auth/auth_util.dart';
+
 import 'auth/custom_auth/custom_auth_user_provider.dart';
+
 import 'flutter_flow/flutter_flow_util.dart';
+
 import 'flutter_flow/internationalization.dart';
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:google_nav_bar/google_nav_bar.dart';
+
 import 'flutter_flow/nav/nav.dart';
+
 import 'index.dart';
+import 'backend/firebase/firebase_config.dart';
 import '/custom_code/actions/index.dart' as actions;
+
 import 'package:lock_orientation_library_opafp4/custom_code/actions/index.dart'
     as lock_orientation_library_opafp4_actions;
+
 import 'package:aqui_brazil/profile/help/error_page/error_page_widget.dart';
+
 import 'dart:async';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   GoRouter.optionURLReflectsImperativeAPIs = true;
+
   usePathUrlStrategy();
 
   final environmentValues = FFDevEnvironmentValues();
+  await initFirebase();
   await environmentValues.initialize();
 
   // Ações customizadas iniciais
+
   await lock_orientation_library_opafp4_actions.lockOrientation();
+
   await actions.initializeIntercom();
 
   await authManager.initialize();
+
   await FFLocalizations.initialize();
 
   final appState = FFAppState();
+
   await appState.initializePersistedState();
 
   // Tratamento global de erros
+
   FlutterError.onError = (FlutterErrorDetails details) {
     navigatorKey.currentState?.pushReplacement(
       MaterialPageRoute(

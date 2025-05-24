@@ -773,11 +773,11 @@ class _LoginWidgetState extends State<LoginWidget>
                                       _model.loginGoogle,
                                       r'''$.uid''',
                                     ).toString(),
-                                    fcmId: FFAppState().tokenFCM,
                                     firstName: getJsonField(
                                       _model.loginGoogle,
                                       r'''$.displayName''',
                                     ).toString(),
+                                    provider: 'Google',
                                   );
 
                                   _shouldSetState = true;
@@ -826,13 +826,16 @@ class _LoginWidgetState extends State<LoginWidget>
                                       context.goNamedAuth(
                                           CompleteProfileNumberWidget.routeName,
                                           context.mounted);
+
+                                      if (_shouldSetState) safeSetState(() {});
+                                      return;
                                     } else {
                                       context.goNamedAuth(HomeWidget.routeName,
                                           context.mounted);
-                                    }
 
-                                    if (_shouldSetState) safeSetState(() {});
-                                    return;
+                                      if (_shouldSetState) safeSetState(() {});
+                                      return;
+                                    }
                                   } else {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
@@ -910,11 +913,11 @@ class _LoginWidgetState extends State<LoginWidget>
                                         _model.appleLogin,
                                         r'''$.uid''',
                                       ).toString(),
-                                      fcmId: FFAppState().tokenFCM,
                                       firstName: getJsonField(
                                         _model.appleLogin,
                                         r'''$.displayName''',
                                       ).toString(),
+                                      provider: 'Apple',
                                     );
 
                                     _shouldSetState = true;

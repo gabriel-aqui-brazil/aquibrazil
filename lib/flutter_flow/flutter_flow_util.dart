@@ -31,6 +31,7 @@ export 'package:page_transition/page_transition.dart';
 export 'custom_icons.dart' show FFIcons;
 export 'internationalization.dart' show FFLocalizations;
 export 'nav/nav.dart';
+export 'firebase_remote_config_util.dart';
 
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 

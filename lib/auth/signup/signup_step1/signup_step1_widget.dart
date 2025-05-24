@@ -172,11 +172,11 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                               _model.signupGoogle,
                                               r'''$.uid''',
                                             ).toString(),
-                                            fcmId: FFAppState().tokenFCM,
                                             firstName: getJsonField(
                                               _model.signupGoogle,
                                               r'''$.displayName''',
                                             ).toString(),
+                                            provider: 'Google',
                                           );
 
                                           _shouldSetState = true;
@@ -325,11 +325,11 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                 _model.appleSignup,
                                                 r'''$.uid''',
                                               ).toString(),
-                                              fcmId: FFAppState().tokenFCM,
                                               firstName: getJsonField(
                                                 _model.appleSignup,
                                                 r'''$.displayName''',
                                               ).toString(),
+                                              provider: 'Apple',
                                             );
 
                                             _shouldSetState = true;

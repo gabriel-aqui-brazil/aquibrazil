@@ -553,10 +553,9 @@ class LoginCall {
 class LoginSignupSocialCall {
   Future<ApiCallResponse> call({
     String? email = '',
-    String? type = '',
     String? authId = '',
-    String? fcmId = '',
     String? firstName = '',
+    String? provider = '',
     String? token = '',
     String? dataSource,
   }) async {
@@ -568,11 +567,10 @@ class LoginSignupSocialCall {
 
     final ffApiRequestBody = '''
 {
+  "first_name": "${firstName}",
   "email": "${email}",
-  "type": "${type}",
   "auth_id": "${authId}",
-  "fcm_id": "${fcmId}",
-  "first_name": "${firstName}"
+  "provider": "${provider}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Login Signup social',
