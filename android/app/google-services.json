@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "60551182546",
+    "project_id": "aquibrazil-40ba0",
+    "storage_bucket": "aquibrazil-40ba0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60551182546:android:21c28153386452403ad50b",
+        "android_client_info": {
+          "package_name": "com.oficial.aquibrazil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60551182546-289ibdopc977nekpnft60o1rm5ce4unn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oficial.aquibrazil",
+            "certificate_hash": "8cf5fa940d6bd44d0d7350a0bfbab5f9dbec3449"
+          }
+        },
+        {
+          "client_id": "60551182546-8mqf6ba7hg84i4h1n9ksj5ujfgbja1tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oficial.aquibrazil",
+            "certificate_hash": "66fdb0d069ff903c92a12da841c8a4f49ad504db"
+          }
+        },
+        {
+          "client_id": "60551182546-h2mgrbtnfkvc0hacqjejq63nguji7d4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oficial.aquibrazil",
+            "certificate_hash": "33deb9aeccafeac90599f7e14371203aa9c14ce7"
+          }
+        },
+        {
+          "client_id": "60551182546-o6ag2suao99if9unehg90e1ffi02skch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oficial.aquibrazil",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "60551182546-95clce5knooel1abq3064flosnjklmpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtJuFne-9HRsuOoGsawaBa34mwVWbb0tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60551182546-95clce5knooel1abq3064flosnjklmpv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "60551182546-5end35i5hb4lv9tbv1hk7pvhsvj12ie6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.oficial.aquibrazil",
+                "app_store_id": "6504440822"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
