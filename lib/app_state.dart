@@ -370,7 +370,7 @@ class FFAppState extends ChangeNotifier {
     secureStorage.delete(key: 'ff_isCacheOverride');
   }
 
-  String _actualVersion = '';
+  String _actualVersion = '1.0.14';
   String get actualVersion => _actualVersion;
   set actualVersion(String value) {
     _actualVersion = value;

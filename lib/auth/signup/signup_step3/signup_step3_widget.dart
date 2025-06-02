@@ -606,7 +606,6 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                                       ),
                                       icon: Icon(
                                         FFIcons.kmessage,
-                                        color: Color(0xFF1A1A1A),
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
@@ -617,6 +616,7 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 8.0, 0.0),
+                                        iconColor: Color(0xFF1A1A1A),
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         textStyle: FlutterFlowTheme.of(context)
@@ -763,7 +763,6 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                                       ),
                                       icon: FaIcon(
                                         FontAwesomeIcons.whatsapp,
-                                        color: Color(0xFF1A1A1A),
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
@@ -774,6 +773,7 @@ class _SignupStep3WidgetState extends State<SignupStep3Widget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 8.0, 0.0),
+                                        iconColor: Color(0xFF1A1A1A),
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         textStyle: FlutterFlowTheme.of(context)

@@ -395,3 +395,15 @@ String uberUrlPtBr(
   final novaUri = uri.replace(pathSegments: newSegments);
   return novaUri.toString();
 }
+
+double cartSubtotal(List<dynamic> items) {
+  double total = 0;
+
+  for (var item in items) {
+    double price = item['price_sum_with_addon'];
+    int qty = item['quantity'];
+    total += price * qty;
+  }
+
+  return total;
+}

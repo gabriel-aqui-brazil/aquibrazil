@@ -136,7 +136,8 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
                   if (selectedMedia != null &&
                       selectedMedia.every(
                           (m) => validateFileFormat(m.storagePath, context))) {
-                    safeSetState(() => _model.isDataUploading1 = true);
+                    safeSetState(
+                        () => _model.isDataUploading_uploadDataAnb = true);
                     var selectedUploadedFiles = <FFUploadedFile>[];
 
                     try {
@@ -150,11 +151,12 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
                               ))
                           .toList();
                     } finally {
-                      _model.isDataUploading1 = false;
+                      _model.isDataUploading_uploadDataAnb = false;
                     }
                     if (selectedUploadedFiles.length == selectedMedia.length) {
                       safeSetState(() {
-                        _model.uploadedLocalFile1 = selectedUploadedFiles.first;
+                        _model.uploadedLocalFile_uploadDataAnb =
+                            selectedUploadedFiles.first;
                       });
                     } else {
                       safeSetState(() {});
@@ -164,7 +166,7 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
 
                   _model.apiUploadImageCopy =
                       await MainGroup.postImagemChatCall.call(
-                    image: _model.uploadedLocalFile1,
+                    image: _model.uploadedLocalFile_uploadDataAnb,
                     token: currentAuthenticationToken,
                     chatId: widget!.chatId,
                   );
@@ -268,7 +270,8 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
                 if (selectedMedia != null &&
                     selectedMedia.every(
                         (m) => validateFileFormat(m.storagePath, context))) {
-                  safeSetState(() => _model.isDataUploading2 = true);
+                  safeSetState(
+                      () => _model.isDataUploading_uploadDataCbv = true);
                   var selectedUploadedFiles = <FFUploadedFile>[];
 
                   try {
@@ -282,11 +285,12 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
                             ))
                         .toList();
                   } finally {
-                    _model.isDataUploading2 = false;
+                    _model.isDataUploading_uploadDataCbv = false;
                   }
                   if (selectedUploadedFiles.length == selectedMedia.length) {
                     safeSetState(() {
-                      _model.uploadedLocalFile2 = selectedUploadedFiles.first;
+                      _model.uploadedLocalFile_uploadDataCbv =
+                          selectedUploadedFiles.first;
                     });
                   } else {
                     safeSetState(() {});
@@ -295,7 +299,7 @@ class _AnexarArquivoWidgetState extends State<AnexarArquivoWidget> {
                 }
 
                 _model.apiUploadImage = await MainGroup.postImagemChatCall.call(
-                  image: _model.uploadedLocalFile2,
+                  image: _model.uploadedLocalFile_uploadDataCbv,
                   token: currentAuthenticationToken,
                   chatId: widget!.chatId,
                 );

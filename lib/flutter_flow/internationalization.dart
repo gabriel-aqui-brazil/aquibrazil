@@ -3839,64 +3839,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // cart2
-  {
-    'q9rkdazn': {
-      'pt': 'SACOLA',
-      'en': 'BAG',
-      'es': 'BOLSA',
-    },
-    'zv2b9kfb': {
-      'pt': 'LIMPAR',
-      'en': 'TO CLEAN',
-      'es': 'PARA LIMPIAR',
-    },
-    'iva6vri0': {
-      'pt': 'ENTREGA',
-      'en': 'DELIVERY',
-      'es': 'ENTREGA',
-    },
-    're13yst0': {
-      'pt': 'RETIRADA',
-      'en': 'WITHDRAWAL',
-      'es': 'RETIRO',
-    },
-    'yo7yq381': {
-      'pt': 'ENTREGAR NO ENDEREÇO',
-      'en': 'DELIVER TO ADDRESS',
-      'es': 'ENTREGAR A DIRECCIÓN',
-    },
-    '4r04al90': {
-      'pt': 'ALTERAR',
-      'en': 'TO ALTER',
-      'es': 'ALTERAR',
-    },
-    'xoczqfbd': {
-      'pt': 'RETIRAR NA LOJA',
-      'en': 'PICK UP IN STORE',
-      'es': 'RECOGIDA EN TIENDA',
-    },
-    'dworfzzv': {
-      'pt': ' / ',
-      'en': '/',
-      'es': '/',
-    },
-    '8wqibkx2': {
-      'pt': 'R\$ 34,90 /1 item',
-      'en': 'R\$ 34.90 /1 item',
-      'es': 'R\$ 34,90 /1 unidad',
-    },
-    'b6vayfyp': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'jvqyy6sw': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
   // membershipCheckoutChangePlan
   {
     'i9uyae6x': {
@@ -4241,84 +4183,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // cart1
-  {
-    '6bfw8bgs': {
-      'pt': 'SACOLA',
-      'en': 'BAG',
-      'es': 'BOLSA',
-    },
-    'qt91mzn0': {
-      'pt': 'LIMPAR',
-      'en': 'TO CLEAN',
-      'es': 'PARA LIMPIAR',
-    },
-    '2srx5p0f': {
-      'pt': 'ITENS SELECIONADOS',
-      'en': 'SELECTED ITEMS',
-      'es': 'ARTICULOS SELECCIONADOS',
-    },
-    'qu6m6axw': {
-      'pt': 'ADICIONAR MAIS PRODUTOS',
-      'en': 'ADD MORE PRODUCTS',
-      'es': 'AGREGAR MÁS PRODUCTOS',
-    },
-    '169c5pti': {
-      'pt': 'RESUMO DE VALORES',
-      'en': 'SUMMARY OF VALUES',
-      'es': 'RESUMEN DE VALORES',
-    },
-    'l8y0dita': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '850w1ufv': {
-      'pt': 'TAXA DE ENTREGA',
-      'en': 'DELIVERY FEE',
-      'es': 'TARIFA DE ENVÍO',
-    },
-    '90zluk8k': {
-      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
-      'en': 'TAX AND SERVICE FEE',
-      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
-    },
-    'zue617bo': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    '9dguuow4': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
-      'en': 'WITH AQUIPASS YOU SAVED',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    '3f4831bt': {
-      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
-      'en': 'YOU HAVE EARNED 3% CASHBACK',
-      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'vmkxf3u6': {
-      'pt': ' / ',
-      'en': '/',
-      'es': '/',
-    },
-    'k2gfc8nr': {
-      'pt': 'R\$ 34,90 /1 item',
-      'en': 'R\$ 34.90 /1 item',
-      'es': 'R\$ 34,90 /1 unidad',
-    },
-    'zwfi947a': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'k7bfldjb': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // profile
@@ -5036,6 +4900,147 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'DISTANCIA',
     },
     '6igburi0': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // cart1
+  {
+    '6bfw8bgs': {
+      'pt': 'SACOLA',
+      'en': 'BAG',
+      'es': 'BOLSA',
+    },
+    'qt91mzn0': {
+      'pt': 'LIMPAR',
+      'en': 'TO CLEAN',
+      'es': 'PARA LIMPIAR',
+    },
+    '2srx5p0f': {
+      'pt': 'ITENS SELECIONADOS',
+      'en': 'SELECTED ITEMS',
+      'es': 'ARTICULOS SELECCIONADOS',
+    },
+    'qu6m6axw': {
+      'pt': 'ADICIONAR MAIS PRODUTOS',
+      'en': 'ADD MORE PRODUCTS',
+      'es': 'AGREGAR MÁS PRODUCTOS',
+    },
+    '169c5pti': {
+      'pt': 'RESUMO DE VALORES',
+      'en': 'SUMMARY OF VALUES',
+      'es': 'RESUMEN DE VALORES',
+    },
+    'l8y0dita': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '850w1ufv': {
+      'pt': 'TAXA DE ENTREGA',
+      'en': 'DELIVERY FEE',
+      'es': 'TARIFA DE ENVÍO',
+    },
+    '90zluk8k': {
+      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
+      'en': 'TAX AND SERVICE FEE',
+      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
+    },
+    'zue617bo': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    '9dguuow4': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
+      'en': 'WITH AQUIPASS YOU SAVED',
+      'es': 'CON AQUIPASS AHORRAS',
+    },
+    '3f4831bt': {
+      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
+      'en': 'YOU HAVE EARNED 3% CASHBACK',
+      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'itrgdsus': {
+      'pt': '\$',
+      'en': '',
+      'es': '',
+    },
+    'vmkxf3u6': {
+      'pt': ' / ',
+      'en': '/',
+      'es': '/',
+    },
+    'k2gfc8nr': {
+      'pt': 'R\$ 34,90 /1 item',
+      'en': 'R\$ 34.90 /1 item',
+      'es': 'R\$ 34,90 /1 unidad',
+    },
+    'zwfi947a': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'k7bfldjb': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // cart2
+  {
+    'q9rkdazn': {
+      'pt': 'SACOLA',
+      'en': 'BAG',
+      'es': 'BOLSA',
+    },
+    'zv2b9kfb': {
+      'pt': 'LIMPAR',
+      'en': 'TO CLEAN',
+      'es': 'PARA LIMPIAR',
+    },
+    'iva6vri0': {
+      'pt': 'ENTREGA',
+      'en': 'DELIVERY',
+      'es': 'ENTREGA',
+    },
+    're13yst0': {
+      'pt': 'RETIRADA',
+      'en': 'WITHDRAWAL',
+      'es': 'RETIRO',
+    },
+    'yo7yq381': {
+      'pt': 'ENTREGAR NO ENDEREÇO',
+      'en': 'DELIVER TO ADDRESS',
+      'es': 'ENTREGAR A DIRECCIÓN',
+    },
+    '4r04al90': {
+      'pt': 'ALTERAR',
+      'en': 'TO ALTER',
+      'es': 'ALTERAR',
+    },
+    'xoczqfbd': {
+      'pt': 'RETIRAR NA LOJA',
+      'en': 'PICK UP IN STORE',
+      'es': 'RECOGIDA EN TIENDA',
+    },
+    'dworfzzv': {
+      'pt': ' / ',
+      'en': '/',
+      'es': '/',
+    },
+    '8wqibkx2': {
+      'pt': 'R\$ 34,90 /1 item',
+      'en': 'R\$ 34.90 /1 item',
+      'es': 'R\$ 34,90 /1 unidad',
+    },
+    'b6vayfyp': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'jvqyy6sw': {
       'pt': '',
       'en': '',
       'es': '',
@@ -6131,7 +6136,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'PUEDES CANJEAR HASTA',
     },
     '9i82b0aj': {
-      'pt': '3000',
+      'pt': '1000',
       'en': '',
       'es': 'CPF NO VÁLIDO',
     },

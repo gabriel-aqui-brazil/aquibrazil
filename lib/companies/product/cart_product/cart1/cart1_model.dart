@@ -4,15 +4,19 @@ import '/companies/product/cart_product/cart_company/cart_company_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
+import "package:aquibrazil_library_oi8i5r/flutter_flow/nav/serialization_util.dart"
+    as aquibrazil_library_oi8i5r_serialization_util;
 import '/actions/actions.dart' as action_blocks;
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'cart1_widget.dart' show Cart1Widget;
 import 'dart:async';
+import 'package:ff_commons/api_requests/api_streaming.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +32,8 @@ class Cart1Model extends FlutterFlowModel<Cart1Widget> {
   // Model for cartCompany component.
   late CartCompanyModel cartCompanyModel;
   Completer<ApiCallResponse>? apiRequestCompleter;
+  // Stores action output result for [Backend Call - API (Cart product review)] action in Button widget.
+  ApiCallResponse? apiPostCartResponse;
 
   @override
   void initState(BuildContext context) {

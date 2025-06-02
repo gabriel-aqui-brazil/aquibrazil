@@ -15,14 +15,14 @@ import 'package:provider/provider.dart';
 class AnexarArquivoModel extends FlutterFlowModel<AnexarArquivoWidget> {
   ///  State fields for stateful widgets in this component.
 
-  bool isDataUploading1 = false;
-  FFUploadedFile uploadedLocalFile1 =
+  bool isDataUploading_uploadDataAnb = false;
+  FFUploadedFile uploadedLocalFile_uploadDataAnb =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
   // Stores action output result for [Backend Call - API (POST IMAGEM CHAT)] action in Row widget.
   ApiCallResponse? apiUploadImageCopy;
-  bool isDataUploading2 = false;
-  FFUploadedFile uploadedLocalFile2 =
+  bool isDataUploading_uploadDataCbv = false;
+  FFUploadedFile uploadedLocalFile_uploadDataCbv =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
   // Stores action output result for [Backend Call - API (POST IMAGEM CHAT)] action in Container widget.

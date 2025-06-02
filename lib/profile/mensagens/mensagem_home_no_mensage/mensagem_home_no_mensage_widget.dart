@@ -1485,8 +1485,6 @@ class _MensagemHomeNoMensageWidgetState
                               ),
                               icon: Icon(
                                 FFIcons.kmessage,
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
                                 size: 18.0,
                               ),
                               options: FFButtonOptions(
@@ -1496,6 +1494,8 @@ class _MensagemHomeNoMensageWidgetState
                                     16.0, 0.0, 16.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
+                                iconColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall

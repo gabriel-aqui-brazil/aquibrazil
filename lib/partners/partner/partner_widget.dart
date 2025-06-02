@@ -735,7 +735,6 @@ class _PartnerWidgetState extends State<PartnerWidget> {
                             ),
                             icon: FaIcon(
                               FontAwesomeIcons.copy,
-                              color: FlutterFlowTheme.of(context).primaryText,
                               size: 14.0,
                             ),
                             options: FFButtonOptions(
@@ -745,6 +744,8 @@ class _PartnerWidgetState extends State<PartnerWidget> {
                                   12.0, 0.0, 12.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
+                              iconColor:
+                                  FlutterFlowTheme.of(context).primaryText,
                               color: Color(0xFFD4D4D4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall

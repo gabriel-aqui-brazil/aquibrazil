@@ -313,7 +313,7 @@ class _AzulStep3WidgetState extends State<AzulStep3Widget> {
                             ),
                             TextSpan(
                               text: FFLocalizations.of(context).getText(
-                                '9i82b0aj' /* 3000 */,
+                                '9i82b0aj' /* 1000 */,
                               ),
                               style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w500,
@@ -380,7 +380,7 @@ class _AzulStep3WidgetState extends State<AzulStep3Widget> {
                                 ),
                                 int.parse(_model.pontosTextController.text))) ||
                             ((int inputValue) {
-                              return inputValue >= 3000 ? false : true;
+                              return inputValue >= 1000 ? false : true;
                             }(int.parse(_model.pontosTextController.text))))
                         ? null
                         : () async {

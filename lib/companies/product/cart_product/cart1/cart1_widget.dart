@@ -4,14 +4,18 @@ import '/companies/product/cart_product/cart_company/cart_company_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
+import "package:aquibrazil_library_oi8i5r/flutter_flow/nav/serialization_util.dart"
+    as aquibrazil_library_oi8i5r_serialization_util;
 import '/actions/actions.dart' as action_blocks;
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'dart:async';
+import 'package:ff_commons/api_requests/api_streaming.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -224,14 +228,7 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                   Builder(
                                     builder: (context) {
                                       final cart =
-                                          aquibrazil_library_oi8i5r_data_schema
-                                                          .CartStruct
-                                                      .maybeFromMap(
-                                                          cart1CartProductReviewResponse
-                                                              .jsonBody)
-                                                  ?.items
-                                                  ?.toList() ??
-                                              [];
+                                          FFAppState().cart.items.toList();
 
                                       return ListView.separated(
                                         padding: EdgeInsets.fromLTRB(
@@ -512,7 +509,7 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                           child:
                                                                               Text(
                                                                             valueOrDefault<String>(
-                                                                              ' - ${formatNumber(
+                                                                              ' -  ${formatNumber(
                                                                                 addonItem.quantity * addonItem.unitPrice,
                                                                                 formatType: FormatType.custom,
                                                                                 currency: '\$',
@@ -585,8 +582,16 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                             Builder(
                                                               builder:
                                                                   (context) {
-                                                                if (cartItem
-                                                                        .quantity >
+                                                                if (valueOrDefault<
+                                                                        int>(
+                                                                      FFAppState()
+                                                                          .cart
+                                                                          .items
+                                                                          .elementAtOrNull(
+                                                                              cartIndex)
+                                                                          ?.quantity,
+                                                                      0,
+                                                                    ) >
                                                                     1) {
                                                                   return FlutterFlowIconButton(
                                                                     borderColor:
@@ -657,19 +662,46 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                       FFAppState()
                                                                           .update(
                                                                               () {});
-                                                                      safeSetState(() =>
-                                                                          _model.apiRequestCompleter =
-                                                                              null);
-                                                                      await _model
-                                                                          .waitForApiRequestCompleted();
-                                                                      if (aquibrazil_library_oi8i5r_data_schema.CartStruct.maybeFromMap(cart1CartProductReviewResponse.jsonBody)
-                                                                              ?.items
-                                                                              ?.length ==
+                                                                      if (valueOrDefault<
+                                                                          bool>(
+                                                                        aquibrazil_library_oi8i5r_data_schema.CartStruct.maybeFromMap(cart1CartProductReviewResponse.jsonBody)
+                                                                            ?.customer
+                                                                            ?.membership
+                                                                            ?.hasId(),
+                                                                        false,
+                                                                      )) {
+                                                                        safeSetState(() =>
+                                                                            _model.apiRequestCompleter =
+                                                                                null);
+                                                                        await _model
+                                                                            .waitForApiRequestCompleted();
+                                                                      }
+                                                                      if (FFAppState()
+                                                                              .cart
+                                                                              .items
+                                                                              .length ==
                                                                           0) {
                                                                         await action_blocks
                                                                             .cartClear(context);
                                                                         safeSetState(
                                                                             () {});
+
+                                                                        context
+                                                                            .goNamed(
+                                                                          HomeWidget
+                                                                              .routeName,
+                                                                          extra: <String,
+                                                                              dynamic>{
+                                                                            kTransitionInfoKey:
+                                                                                TransitionInfo(
+                                                                              hasTransition: true,
+                                                                              transitionType: PageTransitionType.fade,
+                                                                              duration: Duration(milliseconds: 300),
+                                                                            ),
+                                                                          },
+                                                                        );
+                                                                      } else {
+                                                                        return;
                                                                       }
                                                                     },
                                                                     child:
@@ -687,8 +719,13 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                               },
                                                             ),
                                                             Text(
-                                                              cartItem.quantity
-                                                                  .toString(),
+                                                              valueOrDefault<
+                                                                  String>(
+                                                                cartItem
+                                                                    .quantity
+                                                                    .toString(),
+                                                                '0',
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -751,11 +788,26 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                 FFAppState()
                                                                     .update(
                                                                         () {});
-                                                                safeSetState(() =>
-                                                                    _model.apiRequestCompleter =
-                                                                        null);
-                                                                await _model
-                                                                    .waitForApiRequestCompleted();
+                                                                if (valueOrDefault<
+                                                                    bool>(
+                                                                  aquibrazil_library_oi8i5r_data_schema
+                                                                              .CartStruct
+                                                                          .maybeFromMap(
+                                                                              cart1CartProductReviewResponse.jsonBody)
+                                                                      ?.customer
+                                                                      ?.membership
+                                                                      ?.hasId(),
+                                                                  false,
+                                                                )) {
+                                                                  safeSetState(() =>
+                                                                      _model.apiRequestCompleter =
+                                                                          null);
+                                                                  await _model
+                                                                      .waitForApiRequestCompleted();
+                                                                  return;
+                                                                } else {
+                                                                  return;
+                                                                }
                                                               },
                                                             ),
                                                           ],
@@ -776,8 +828,7 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 12.0, 16.0),
+                              padding: EdgeInsets.all(16.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
                                   context.pushNamed(
@@ -928,12 +979,13 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                 Text(
                                                   valueOrDefault<String>(
                                                     formatNumber(
-                                                      aquibrazil_library_oi8i5r_data_schema
-                                                                  .CartStruct
-                                                              .maybeFromMap(
-                                                                  cart1CartProductReviewResponse
-                                                                      .jsonBody)
-                                                          ?.subtotal,
+                                                      functions.cartSubtotal(
+                                                          FFAppState()
+                                                              .cart
+                                                              .items
+                                                              .map((e) =>
+                                                                  e.toMap())
+                                                              .toList()),
                                                       formatType:
                                                           FormatType.decimal,
                                                       decimalType: DecimalType
@@ -1156,37 +1208,19 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                         thickness: 1.0,
                                         color: Color(0xFFD9D9D9),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 20.0, 0.0, 12.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'zue617bo' /* TOTAL A PAGAR */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.inter(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    fontSize: 12.0,
-                                                    letterSpacing: 0.0,
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'zue617bo' /* TOTAL A PAGAR */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.inter(
                                                     fontWeight: FontWeight.bold,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
@@ -1194,6 +1228,193 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                          ),
+                                          RichText(
+                                            textScaler: MediaQuery.of(context)
+                                                .textScaler,
+                                            text: TextSpan(
+                                              children: [
+                                                TextSpan(
+                                                  text: valueOrDefault<String>(
+                                                    formatNumber(
+                                                      valueOrDefault<double>(
+                                                            aquibrazil_library_oi8i5r_data_schema
+                                                                        .CartStruct
+                                                                    .maybeFromMap(
+                                                                        cart1CartProductReviewResponse
+                                                                            .jsonBody)
+                                                                ?.deliveryFee,
+                                                            0.0,
+                                                          ) +
+                                                          valueOrDefault<
+                                                              double>(
+                                                            functions.cartSubtotal(
+                                                                FFAppState()
+                                                                    .cart
+                                                                    .items
+                                                                    .map((e) =>
+                                                                        e.toMap())
+                                                                    .toList()),
+                                                            0.0,
+                                                          ) +
+                                                          valueOrDefault<
+                                                              double>(
+                                                            aquibrazil_library_oi8i5r_data_schema
+                                                                        .CartStruct
+                                                                    .maybeFromMap(
+                                                                        cart1CartProductReviewResponse
+                                                                            .jsonBody)
+                                                                ?.taxAndService,
+                                                            0.0,
+                                                          ),
+                                                      formatType:
+                                                          FormatType.decimal,
+                                                      decimalType: DecimalType
+                                                          .periodDecimal,
+                                                      currency: '\$',
+                                                    ),
+                                                    '\$0.00',
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font:
+                                                            GoogleFonts.roboto(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontSize: 13.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                )
+                                              ],
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                        fontSize: 13.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      if (valueOrDefault<bool>(
+                                        aquibrazil_library_oi8i5r_data_schema
+                                                    .CartStruct
+                                                .maybeFromMap(
+                                                    cart1CartProductReviewResponse
+                                                        .jsonBody)
+                                            ?.customer
+                                            ?.membership
+                                            ?.hasId(),
+                                        false,
+                                      ))
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Lottie.asset(
+                                                  'assets/jsons/star-badge.json',
+                                                  width: 25.0,
+                                                  height: 25.0,
+                                                  fit: BoxFit.cover,
+                                                  animate: true,
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '9dguuow4' /* COM AQUIPASS VOCÊ ECONOMIZOU */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font:
+                                                            GoogleFonts.poppins(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .verde,
+                                                        fontSize: 11.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                              ].divide(SizedBox(width: 4.0)),
                                             ),
                                             RichText(
                                               textScaler: MediaQuery.of(context)
@@ -1209,7 +1430,7 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                 .maybeFromMap(
                                                                     cart1CartProductReviewResponse
                                                                         .jsonBody)
-                                                            ?.total,
+                                                            ?.aquipassSaved,
                                                         formatType:
                                                             FormatType.decimal,
                                                         decimalType: DecimalType
@@ -1234,7 +1455,7 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                           ),
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primaryText,
+                                                              .verde,
                                                           fontSize: 13.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -1284,135 +1505,45 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                             ),
                                           ],
                                         ),
-                                      ),
-                                      if (aquibrazil_library_oi8i5r_data_schema
-                                                      .CartStruct
-                                                  .maybeFromMap(
-                                                      cart1CartProductReviewResponse
-                                                          .jsonBody)
-                                              ?.customer
-                                              ?.membership
-                                              ?.hasId() ??
-                                          true)
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 4.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Lottie.asset(
-                                                    'assets/jsons/star-badge.json',
-                                                    width: 25.0,
-                                                    height: 25.0,
-                                                    fit: BoxFit.cover,
-                                                    animate: true,
+                                      if (valueOrDefault<bool>(
+                                        aquibrazil_library_oi8i5r_data_schema
+                                                    .CartStruct
+                                                .maybeFromMap(
+                                                    cart1CartProductReviewResponse
+                                                        .jsonBody)
+                                            ?.customer
+                                            ?.membership
+                                            ?.hasId(),
+                                        false,
+                                      ))
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Lottie.asset(
+                                                  'assets/jsons/coin-dollar.json',
+                                                  width: 25.0,
+                                                  height: 25.0,
+                                                  fit: BoxFit.cover,
+                                                  animate: true,
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '3f4831bt' /* VOCÊ GANHOU 3% DE CASHBACK */,
                                                   ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '9dguuow4' /* COM AQUIPASS VOCÊ ECONOMIZOU */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .poppins(
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .verde,
-                                                          fontSize: 11.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                ].divide(SizedBox(width: 4.0)),
-                                              ),
-                                              RichText(
-                                                textScaler:
-                                                    MediaQuery.of(context)
-                                                        .textScaler,
-                                                text: TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: valueOrDefault<
-                                                          String>(
-                                                        formatNumber(
-                                                          aquibrazil_library_oi8i5r_data_schema
-                                                                      .CartStruct
-                                                                  .maybeFromMap(
-                                                                      cart1CartProductReviewResponse
-                                                                          .jsonBody)
-                                                              ?.aquipassSaved,
-                                                          formatType: FormatType
-                                                              .decimal,
-                                                          decimalType:
-                                                              DecimalType
-                                                                  .periodDecimal,
-                                                          currency: '\$',
-                                                        ),
-                                                        '\$0.00',
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .roboto(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .verde,
-                                                            fontSize: 13.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                    )
-                                                  ],
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
+                                                              FontWeight.w500,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1423,13 +1554,10 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .primary,
-                                                        fontSize: 13.0,
+                                                        fontSize: 11.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
+                                                            FontWeight.w500,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1437,51 +1565,46 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                 .fontStyle,
                                                       ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      if (aquibrazil_library_oi8i5r_data_schema
-                                                      .CartStruct
-                                                  .maybeFromMap(
-                                                      cart1CartProductReviewResponse
-                                                          .jsonBody)
-                                              ?.customer
-                                              ?.membership
-                                              ?.hasId() ??
-                                          true)
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 4.0, 0.0, 4.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
+                                              ].divide(SizedBox(width: 4.0)),
+                                            ),
+                                            RichText(
+                                              textScaler: MediaQuery.of(context)
+                                                  .textScaler,
+                                              text: TextSpan(
                                                 children: [
-                                                  Lottie.asset(
-                                                    'assets/jsons/coin-dollar.json',
-                                                    width: 25.0,
-                                                    height: 25.0,
-                                                    fit: BoxFit.cover,
-                                                    animate: true,
-                                                  ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
                                                         .getText(
-                                                      '3f4831bt' /* VOCÊ GANHOU 3% DE CASHBACK */,
+                                                      'itrgdsus' /* $ */,
+                                                    ),
+                                                    style: TextStyle(),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        valueOrDefault<String>(
+                                                      (valueOrDefault<double>(
+                                                                functions.cartSubtotal(
+                                                                    FFAppState()
+                                                                        .cart
+                                                                        .items
+                                                                        .map((e) =>
+                                                                            e.toMap())
+                                                                        .toList()),
+                                                                0.0,
+                                                              ) *
+                                                              0.03)
+                                                          .toStringAsFixed(2),
+                                                      '0.0',
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
                                                         .override(
                                                           font: GoogleFonts
-                                                              .poppins(
+                                                              .roboto(
                                                             fontWeight:
-                                                                FontWeight.w500,
+                                                                FontWeight.w600,
                                                             fontStyle:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1491,96 +1614,23 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,
-                                                          fontSize: 11.0,
+                                                          fontSize: 13.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
-                                                              FontWeight.w500,
+                                                              FontWeight.w600,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                  ),
-                                                ].divide(SizedBox(width: 4.0)),
-                                              ),
-                                              RichText(
-                                                textScaler:
-                                                    MediaQuery.of(context)
-                                                        .textScaler,
-                                                text: TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: valueOrDefault<
-                                                          String>(
-                                                        formatNumber(
-                                                          aquibrazil_library_oi8i5r_data_schema
-                                                                      .CartStruct
-                                                                  .maybeFromMap(
-                                                                      cart1CartProductReviewResponse
-                                                                          .jsonBody)
-                                                              ?.cashback,
-                                                          formatType: FormatType
-                                                              .decimal,
-                                                          decimalType:
-                                                              DecimalType
-                                                                  .periodDecimal,
-                                                          currency: '\$',
-                                                        ),
-                                                        '\$0.00',
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .roboto(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            fontSize: 13.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                    )
-                                                  ],
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
+                                                  )
+                                                ],
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1592,12 +1642,28 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
-                                                ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      fontSize: 13.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
-                                    ],
+                                    ].divide(SizedBox(height: 8.0)),
                                   ),
                                 ),
                               ),
@@ -1642,66 +1708,53 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Container(
-                                          width: 32.0,
-                                          height: 32.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            FFAppState()
-                                                .cart
-                                                .company
-                                                .profilePhotoUrl,
-                                            fit: BoxFit.cover,
-                                          ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        width: 32.0,
+                                        height: 32.0,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
                                         ),
-                                        RichText(
-                                          textScaler:
-                                              MediaQuery.of(context).textScaler,
-                                          text: TextSpan(
-                                            children: [
-                                              TextSpan(
-                                                text: valueOrDefault<String>(
-                                                  formatNumber(
-                                                    aquibrazil_library_oi8i5r_data_schema
-                                                                .CartStruct
-                                                            .maybeFromMap(
-                                                                cart1CartProductReviewResponse
-                                                                    .jsonBody)
-                                                        ?.subtotal,
-                                                    formatType:
-                                                        FormatType.custom,
-                                                    currency: '\$',
-                                                    format: '#,##0.00',
-                                                    locale: 'en_us',
-                                                  ),
-                                                  '\$0.00',
+                                        child: Image.network(
+                                          FFAppState()
+                                              .cart
+                                              .company
+                                              .profilePhotoUrl,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      RichText(
+                                        textScaler:
+                                            MediaQuery.of(context).textScaler,
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: valueOrDefault<String>(
+                                                formatNumber(
+                                                  functions.cartSubtotal(
+                                                      FFAppState()
+                                                          .cart
+                                                          .items
+                                                          .map((e) => e.toMap())
+                                                          .toList()),
+                                                  formatType:
+                                                      FormatType.decimal,
+                                                  decimalType:
+                                                      DecimalType.periodDecimal,
+                                                  currency: '\$',
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.roboto(
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                      fontSize: 16.0,
-                                                      letterSpacing: 0.0,
+                                                '\$0.00',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.roboto(
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontStyle:
@@ -1710,48 +1763,43 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  'vmkxf3u6' /*  /  */,
-                                                ),
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: 12.0,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text: valueOrDefault<String>(
-                                                  FFAppState()
-                                                      .cart
-                                                      .items
-                                                      .length
-                                                      .toString(),
-                                                  '1',
-                                                ),
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                ),
-                                              )
-                                            ],
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.rubik(
-                                                    fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontWeight,
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w600,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  fontSize: 12.0,
-                                                  letterSpacing: 0.0,
+                                            ),
+                                            TextSpan(
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'vmkxf3u6' /*  /  */,
+                                              ),
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 12.0,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: valueOrDefault<String>(
+                                                FFAppState()
+                                                    .cart
+                                                    .items
+                                                    .length
+                                                    .toString(),
+                                                '1',
+                                              ),
+                                              style: TextStyle(
+                                                fontSize: 12.0,
+                                              ),
+                                            )
+                                          ],
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.rubik(
                                                   fontWeight:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -1763,63 +1811,168 @@ class _Cart1WidgetState extends State<Cart1Widget> {
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                          ),
+                                                fontSize: 12.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
                                         ),
-                                      ].divide(SizedBox(width: 8.0)),
-                                    ),
-                                  ].divide(SizedBox(height: 5.0)),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed(
-                                      Cart2Widget.routeName,
-                                      queryParameters: {
-                                        'total': serializeParam(
-                                          aquibrazil_library_oi8i5r_data_schema
-                                                      .CartStruct
-                                                  .maybeFromMap(
-                                                      cart1CartProductReviewResponse
-                                                          .jsonBody)
-                                              ?.total,
-                                          ParamType.double,
-                                        ),
-                                      }.withoutNulls,
-                                    );
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'zwfi947a' /* CONTINUAR */,
+                                      ),
+                                    ].divide(SizedBox(width: 8.0)),
                                   ),
-                                  options: FFButtonOptions(
-                                    width: 130.0,
-                                    height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          font: GoogleFonts.inter(
+                                ),
+                                Expanded(
+                                  child: FFButtonWidget(
+                                    onPressed:
+                                        (aquibrazil_library_oi8i5r_data_schema
+                                                            .CartStruct
+                                                        .maybeFromMap(
+                                                            cart1CartProductReviewResponse
+                                                                .jsonBody)
+                                                    ?.items
+                                                    ?.length ==
+                                                0)
+                                            ? null
+                                            : () async {
+                                                var _shouldSetState = false;
+                                                _model.apiPostCartResponse =
+                                                    await MainGroup
+                                                        .cartProductReviewCall
+                                                        .call(
+                                                  dropoffAddressId:
+                                                      currentUserData
+                                                          ?.address?.id,
+                                                  companyId: FFAppState()
+                                                      .cart
+                                                      .company
+                                                      .id,
+                                                  itemsJson: FFAppState()
+                                                      .cart
+                                                      .items
+                                                      .map((e) => e.toMap())
+                                                      .toList(),
+                                                  customerPaymentMethodId:
+                                                      FFAppState()
+                                                          .paymentMethodSelected
+                                                          .id,
+                                                  token:
+                                                      currentAuthenticationToken,
+                                                  deliveryTip: 0.0,
+                                                  isPickup: false,
+                                                  timezone:
+                                                      currentUserData?.timezone,
+                                                );
+
+                                                _shouldSetState = true;
+                                                if ((_model.apiPostCartResponse
+                                                        ?.succeeded ??
+                                                    true)) {
+                                                  context.pushNamed(
+                                                    Cart2Widget.routeName,
+                                                    queryParameters: {
+                                                      'total': serializeParam(
+                                                        aquibrazil_library_oi8i5r_data_schema
+                                                                    .CartStruct
+                                                                .maybeFromMap(
+                                                                    cart1CartProductReviewResponse
+                                                                        .jsonBody)
+                                                            ?.total,
+                                                        ParamType.double,
+                                                      ),
+                                                      'deliveryDuration':
+                                                          serializeParam(
+                                                        aquibrazil_library_oi8i5r_data_schema
+                                                                    .CartStruct
+                                                                .maybeFromMap((_model
+                                                                        .apiPostCartResponse
+                                                                        ?.jsonBody ??
+                                                                    ''))
+                                                            ?.deliveryDurationDate,
+                                                        ParamType.int,
+                                                      ),
+                                                      'operatingHours':
+                                                          aquibrazil_library_oi8i5r_serialization_util
+                                                              .serializeParam(
+                                                        aquibrazil_library_oi8i5r_data_schema
+                                                                    .CartStruct
+                                                                .maybeFromMap(
+                                                                    cart1CartProductReviewResponse
+                                                                        .jsonBody)
+                                                            ?.operatingHour,
+                                                        aquibrazil_library_oi8i5r_serialization_util
+                                                            .ParamType
+                                                            .DataStruct,
+                                                        isList: true,
+                                                      ),
+                                                    }.withoutNulls,
+                                                  );
+
+                                                  if (_shouldSetState)
+                                                    safeSetState(() {});
+                                                  return;
+                                                } else {
+                                                  await action_blocks
+                                                      .errorAlertSnacbar(
+                                                    context,
+                                                    textPt:
+                                                        'Ocorreu um erro com o seu carrinho, tente novamente!',
+                                                    textEs:
+                                                        'There was an error with your cart, please try again!',
+                                                    textEn:
+                                                        'Hubo un error con tu carrito, ¡inténtalo de nuevo!',
+                                                  );
+                                                  if (_shouldSetState)
+                                                    safeSetState(() {});
+                                                  return;
+                                                }
+
+                                                if (_shouldSetState)
+                                                  safeSetState(() {});
+                                              },
+                                    text: FFLocalizations.of(context).getText(
+                                      'zwfi947a' /* CONTINUAR */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 130.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            font: GoogleFonts.inter(
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontStyle,
+                                            ),
+                                            color: Colors.white,
+                                            fontSize: 8.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .fontStyle,
                                           ),
-                                          color: Colors.white,
-                                          fontSize: 8.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                        ),
-                                    elevation: 0.0,
-                                    borderRadius: BorderRadius.circular(40.0),
+                                      elevation: 0.0,
+                                      borderRadius: BorderRadius.circular(40.0),
+                                      disabledColor: Color(0x8A000000),
+                                    ),
+                                    showLoadingIndicator: false,
                                   ),
-                                  showLoadingIndicator: false,
                                 ),
                               ],
                             ),

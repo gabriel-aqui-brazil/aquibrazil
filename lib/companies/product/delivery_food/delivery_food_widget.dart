@@ -419,8 +419,6 @@ class _DeliveryFoodWidgetState extends State<DeliveryFoodWidget>
                                       ),
                                       icon: Icon(
                                         FFIcons.kfire,
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
@@ -430,6 +428,8 @@ class _DeliveryFoodWidgetState extends State<DeliveryFoodWidget>
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
+                                        iconColor:
+                                            FlutterFlowTheme.of(context).error,
                                         color: Color(0xFFF7F7F7),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
