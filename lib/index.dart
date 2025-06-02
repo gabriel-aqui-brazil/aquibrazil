@@ -117,8 +117,6 @@ export '/companies/service/service/service_widget.dart' show ServiceWidget;
 export '/cashback/my_cash_back/my_cash_back_widget.dart' show MyCashBackWidget;
 export '/membership/without_membership/membership_checkout/membership_checkout_widget.dart'
     show MembershipCheckoutWidget;
-export '/companies/product/cart_product/cart2/cart2_widget.dart'
-    show Cart2Widget;
 export '/membership/without_membership/membership_checkout_change_plan/membership_checkout_change_plan_widget.dart'
     show MembershipCheckoutChangePlanWidget;
 export '/companies/product/cart_product/cart4/cart4_widget.dart'
@@ -126,8 +124,6 @@ export '/companies/product/cart_product/cart4/cart4_widget.dart'
 export '/home/all_categories/all_categories_widget.dart'
     show AllCategoriesWidget;
 export '/auth/login/login_widget.dart' show LoginWidget;
-export '/companies/product/cart_product/cart1/cart1_widget.dart'
-    show Cart1Widget;
 export '/profile/profile/profile_widget.dart' show ProfileWidget;
 export '/order_history/order_details/order_details_widget.dart'
     show OrderDetailsWidget;
@@ -146,3 +142,7 @@ export '/companies/product/cart_product/view_link_tracker/view_link_tracker_widg
     show ViewLinkTrackerWidget;
 export '/profile/help/error_page/error_page_widget.dart' show ErrorPageWidget;
 export '/home/home/home_widget.dart' show HomeWidget;
+export '/companies/product/cart_product/cart1/cart1_widget.dart'
+    show Cart1Widget;
+export '/companies/product/cart_product/cart2/cart2_widget.dart'
+    show Cart2Widget;

@@ -2017,7 +2017,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   FFAppState().lastCacheTime = null;
 
                                   FFAppState().deleteActualVersion();
-                                  FFAppState().actualVersion = '';
+                                  FFAppState().actualVersion = '1.0.14';
 
                                   FFAppState().clearCacheHomePageCacheKey(
                                       valueOrDefault<String>(

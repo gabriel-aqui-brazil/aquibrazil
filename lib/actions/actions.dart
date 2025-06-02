@@ -14,35 +14,6 @@ import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Future cartClear(BuildContext context) async {
-  FFAppState().deleteCart();
-  FFAppState().cart = aquibrazil_library_oi8i5r_data_schema.CartStruct();
-
-  FFAppState().preferredTimeDelivery = null;
-  FFAppState().update(() {});
-
-  context.goNamed(HomeWidget.routeName);
-
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Text(
-        'SUA SACOLA ESTÁ VAZIA',
-        style: FlutterFlowTheme.of(context).bodySmall.override(
-              font: GoogleFonts.rubik(
-                fontWeight: FontWeight.w500,
-                fontStyle: FlutterFlowTheme.of(context).bodySmall.fontStyle,
-              ),
-              letterSpacing: 0.0,
-              fontWeight: FontWeight.w500,
-              fontStyle: FlutterFlowTheme.of(context).bodySmall.fontStyle,
-            ),
-      ),
-      duration: Duration(milliseconds: 3000),
-      backgroundColor: FlutterFlowTheme.of(context).secondary,
-    ),
-  );
-}
-
 Future<bool?> insertUserDocument(
   BuildContext context, {
   required String? document,
@@ -156,4 +127,41 @@ Future verifyAppVersion(BuildContext context) async {
   } else {
     return;
   }
+}
+
+Future cartClear(BuildContext context) async {
+  FFAppState().deleteCart();
+  FFAppState().cart = aquibrazil_library_oi8i5r_data_schema.CartStruct();
+
+  FFAppState().preferredTimeDelivery = null;
+  FFAppState().update(() {});
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      content: Text(
+        'SUA SACOLA ESTÁ VAZIA',
+        style: FlutterFlowTheme.of(context).bodySmall.override(
+              font: GoogleFonts.rubik(
+                fontWeight: FontWeight.w500,
+                fontStyle: FlutterFlowTheme.of(context).bodySmall.fontStyle,
+              ),
+              letterSpacing: 0.0,
+              fontWeight: FontWeight.w500,
+              fontStyle: FlutterFlowTheme.of(context).bodySmall.fontStyle,
+            ),
+      ),
+      duration: Duration(milliseconds: 3000),
+      backgroundColor: FlutterFlowTheme.of(context).secondary,
+    ),
+  );
+
+  context.goNamed(
+    HomeWidget.routeName,
+    extra: <String, dynamic>{
+      kTransitionInfoKey: TransitionInfo(
+        hasTransition: true,
+        transitionType: PageTransitionType.fade,
+        duration: Duration(milliseconds: 300),
+      ),
+    },
+  );
 }

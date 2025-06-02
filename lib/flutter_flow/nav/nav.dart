@@ -700,20 +700,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
-              name: Cart2Widget.routeName,
-              path: Cart2Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: Cart2Widget(
-                  total: params.getParam(
-                    'total',
-                    ParamType.double,
-                  ),
-                ),
-              ),
-            ),
-            FFRoute(
               name: MembershipCheckoutChangePlanWidget.routeName,
               path: MembershipCheckoutChangePlanWidget.routePath,
               requireAuth: true,
@@ -755,15 +741,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: LoginWidget.routeName,
               path: LoginWidget.routePath,
               builder: (context, params) => LoginWidget(),
-            ),
-            FFRoute(
-              name: Cart1Widget.routeName,
-              path: Cart1Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: Cart1Widget(),
-              ),
             ),
             FFRoute(
               name: ProfileWidget.routeName,
@@ -889,6 +866,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'home')
                   : HomeWidget(),
+            ),
+            FFRoute(
+              name: Cart1Widget.routeName,
+              path: Cart1Widget.routePath,
+              requireAuth: true,
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: Cart1Widget(),
+              ),
+            ),
+            FFRoute(
+              name: Cart2Widget.routeName,
+              path: Cart2Widget.routePath,
+              requireAuth: true,
+              builder: (context, params) => NavBarPage(
+                initialPage: '',
+                page: Cart2Widget(
+                  deliveryDuration: params.getParam(
+                    'deliveryDuration',
+                    ParamType.int,
+                  ),
+                  total: params.getParam(
+                    'total',
+                    ParamType.double,
+                  ),
+                  operatingHours: params.getParam<
+                      aquibrazil_library_oi8i5r_data_schema
+                      .OperatingHourStruct>(
+                    'operatingHours',
+                    ParamType.DataStruct,
+                    isList: true,
+                    structBuilder: aquibrazil_library_oi8i5r_data_schema
+                        .OperatingHourStruct.fromSerializableMap,
+                  ),
+                ),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

@@ -841,12 +841,16 @@ class _AddressDeliveryAddEditWidgetState
                                                 });
                                               }
                                             },
-                                            side: BorderSide(
-                                              width: 2,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                            ),
+                                            side: (FlutterFlowTheme.of(context)
+                                                        .alternate !=
+                                                    null)
+                                                ? BorderSide(
+                                                    width: 2,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .alternate!,
+                                                  )
+                                                : null,
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primary,
@@ -1289,10 +1293,6 @@ class _AddressDeliveryAddEditWidgetState
                                         ),
                                         icon: Icon(
                                           FFIcons.khome2,
-                                          color: _model.typeAddress == 'Casa'
-                                              ? Colors.white
-                                              : FlutterFlowTheme.of(context)
-                                                  .primaryText,
                                           size: 22.0,
                                         ),
                                         options: FFButtonOptions(
@@ -1304,6 +1304,11 @@ class _AddressDeliveryAddEditWidgetState
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
+                                          iconColor:
+                                              _model.typeAddress == 'Casa'
+                                                  ? Colors.white
+                                                  : FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                           color: _model.typeAddress == 'Casa'
                                               ? FlutterFlowTheme.of(context)
                                                   .primary
@@ -1350,11 +1355,6 @@ class _AddressDeliveryAddEditWidgetState
                                         ),
                                         icon: Icon(
                                           FFIcons.kshop,
-                                          color:
-                                              _model.typeAddress == 'Trabalho'
-                                                  ? Colors.white
-                                                  : FlutterFlowTheme.of(context)
-                                                      .primaryText,
                                           size: 20.0,
                                         ),
                                         options: FFButtonOptions(
@@ -1366,6 +1366,11 @@ class _AddressDeliveryAddEditWidgetState
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
+                                          iconColor:
+                                              _model.typeAddress == 'Trabalho'
+                                                  ? Colors.white
+                                                  : FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                           color:
                                               _model.typeAddress == 'Trabalho'
                                                   ? FlutterFlowTheme.of(context)
@@ -1413,11 +1418,6 @@ class _AddressDeliveryAddEditWidgetState
                                         ),
                                         icon: Icon(
                                           FFIcons.kbuildings,
-                                          color: _model.typeAddress ==
-                                                  'Apartamento'
-                                              ? Colors.white
-                                              : FlutterFlowTheme.of(context)
-                                                  .primaryText,
                                           size: 20.0,
                                         ),
                                         options: FFButtonOptions(
@@ -1429,6 +1429,11 @@ class _AddressDeliveryAddEditWidgetState
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
+                                          iconColor: _model.typeAddress ==
+                                                  'Apartamento'
+                                              ? Colors.white
+                                              : FlutterFlowTheme.of(context)
+                                                  .primaryText,
                                           color:
                                               _model.typeAddress ==
                                                       'Apartamento'
@@ -1477,10 +1482,6 @@ class _AddressDeliveryAddEditWidgetState
                                         ),
                                         icon: Icon(
                                           FFIcons.koutdoorTableRestaurant,
-                                          color: _model.typeAddress == 'Hotel'
-                                              ? Colors.white
-                                              : FlutterFlowTheme.of(context)
-                                                  .primaryText,
                                           size: 20.0,
                                         ),
                                         options: FFButtonOptions(
@@ -1492,6 +1493,11 @@ class _AddressDeliveryAddEditWidgetState
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
+                                          iconColor:
+                                              _model.typeAddress == 'Hotel'
+                                                  ? Colors.white
+                                                  : FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                           color: _model.typeAddress == 'Hotel'
                                               ? FlutterFlowTheme.of(context)
                                                   .primary
@@ -1538,10 +1544,6 @@ class _AddressDeliveryAddEditWidgetState
                                         ),
                                         icon: Icon(
                                           FFIcons.klocation,
-                                          color: _model.typeAddress == 'Outro'
-                                              ? Colors.white
-                                              : FlutterFlowTheme.of(context)
-                                                  .primaryText,
                                           size: 20.0,
                                         ),
                                         options: FFButtonOptions(
@@ -1553,6 +1555,11 @@ class _AddressDeliveryAddEditWidgetState
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
+                                          iconColor:
+                                              _model.typeAddress == 'Outro'
+                                                  ? Colors.white
+                                                  : FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                           color: _model.typeAddress == 'Outro'
                                               ? FlutterFlowTheme.of(context)
                                                   .primary

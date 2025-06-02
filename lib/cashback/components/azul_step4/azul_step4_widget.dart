@@ -150,22 +150,22 @@ class _AzulStep4WidgetState extends State<AzulStep4Widget> {
                               ),
                               style: GoogleFonts.roboto(
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 13.0,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14.0,
                               ),
                             )
                           ],
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.normal,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
@@ -227,6 +227,7 @@ class _AzulStep4WidgetState extends State<AzulStep4Widget> {
                             ),
                             style: GoogleFonts.roboto(
                               color: FlutterFlowTheme.of(context).primaryText,
+                              fontWeight: FontWeight.w500,
                               fontSize: 14.0,
                             ),
                           )
@@ -369,8 +370,8 @@ class _AzulStep4WidgetState extends State<AzulStep4Widget> {
                               ),
                               style: GoogleFonts.roboto(
                                 color: Color(0xFF319B6F),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 13.0,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.0,
                               ),
                             ),
                             TextSpan(

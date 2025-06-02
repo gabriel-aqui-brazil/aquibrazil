@@ -255,18 +255,18 @@ class _BalanceCashbackWidgetState extends State<BalanceCashbackWidget> {
                           ),
                         FFButtonWidget(
                           onPressed: () async {
-                            if (widget!.cashBack! < 30.0) {
+                            if (widget!.cashBack! < 10.0) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
                                     valueOrDefault<String>(
                                       FFLocalizations.of(context)
                                           .getVariableText(
-                                        ptText: 'Valor mínimo 30 dólares.',
-                                        enText: 'Minimum value 30 dollars',
-                                        esText: 'Valor mínimo 30 dólares',
+                                        ptText: 'Valor mínimo 10 dólares.',
+                                        enText: 'Minimum value 10 dollars',
+                                        esText: 'Valor mínimo 10 dólares',
                                       ),
-                                      'Valor mínimo 30 dólares',
+                                      'Valor mínimo 10 dólares',
                                     ),
                                     style: TextStyle(
                                       color: FlutterFlowTheme.of(context)

@@ -180,9 +180,6 @@ class _TradeCashProductsPageWidgetState
                                       ),
                                       icon: Icon(
                                         Icons.discount_outlined,
-                                        color: _model.selectedFilter == 'cupons'
-                                            ? Colors.white
-                                            : Color(0xFF808080),
                                         size: 16.0,
                                       ),
                                       options: FFButtonOptions(
@@ -193,6 +190,10 @@ class _TradeCashProductsPageWidgetState
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
+                                        iconColor:
+                                            _model.selectedFilter == 'cupons'
+                                                ? Colors.white
+                                                : Color(0xFF808080),
                                         color: _model.selectedFilter == 'cupons'
                                             ? FlutterFlowTheme.of(context)
                                                 .primary
@@ -234,10 +235,6 @@ class _TradeCashProductsPageWidgetState
                                       ),
                                       icon: Icon(
                                         FFIcons.kiconamoonDiscountFill,
-                                        color:
-                                            _model.selectedFilter == 'ofertas'
-                                                ? Colors.white
-                                                : Color(0xFF808080),
                                         size: 16.0,
                                       ),
                                       options: FFButtonOptions(
@@ -248,6 +245,10 @@ class _TradeCashProductsPageWidgetState
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
+                                        iconColor:
+                                            _model.selectedFilter == 'ofertas'
+                                                ? Colors.white
+                                                : Color(0xFF808080),
                                         color:
                                             _model.selectedFilter == 'ofertas'
                                                 ? FlutterFlowTheme.of(context)
@@ -289,7 +290,6 @@ class _TradeCashProductsPageWidgetState
                                       ),
                                       icon: FaIcon(
                                         FontAwesomeIcons.gamepad,
-                                        color: Color(0xFF808080),
                                         size: 16.0,
                                       ),
                                       options: FFButtonOptions(
@@ -300,6 +300,7 @@ class _TradeCashProductsPageWidgetState
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
+                                        iconColor: Color(0xFF808080),
                                         color: Color(0xFFF7F7F7),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
