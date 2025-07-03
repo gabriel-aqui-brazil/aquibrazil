@@ -60,6 +60,8 @@ class _MembershipWidgetState extends State<MembershipWidget> {
     _model.documentTextController ??=
         TextEditingController(text: currentUserData?.document);
     _model.documentFocusNode ??= FocusNode();
+
+    _model.documentMask = MaskTextInputFormatter(mask: '###.###.###-##');
   }
 
   @override

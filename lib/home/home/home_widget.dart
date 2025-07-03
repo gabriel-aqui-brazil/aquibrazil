@@ -725,7 +725,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 ),
                               ),
                             ),
-                            if (_model.isAppUpdated == false)
+                            if (valueOrDefault<bool>(
+                              _model.isAppUpdated == false,
+                              false,
+                            ))
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),

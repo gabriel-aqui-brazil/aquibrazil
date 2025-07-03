@@ -1,3 +1,4 @@
+import '/custom_code/actions/index.dart' as actions;
 import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -19,38 +20,21 @@ import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 import 'package:provider/provider.dart';
-
 import 'package:flutter/gestures.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:flutter_web_plugins/url_strategy.dart';
-
 import 'auth/custom_auth/auth_util.dart';
-
 import 'auth/custom_auth/custom_auth_user_provider.dart';
-
 import 'flutter_flow/flutter_flow_util.dart';
-
 import 'flutter_flow/internationalization.dart';
-
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import 'flutter_flow/nav/nav.dart';
-
 import 'index.dart';
 import 'backend/firebase/firebase_config.dart';
 import '/custom_code/actions/index.dart' as actions;
-
-import 'package:lock_orientation_library_opafp4/custom_code/actions/index.dart'
-    as lock_orientation_library_opafp4_actions;
-
 import 'package:aqui_brazil/profile/help/error_page/error_page_widget.dart';
-
 import 'dart:async';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -65,12 +49,11 @@ void main() async {
   final environmentValues = FFDevEnvironmentValues();
   await initFirebase();
   await environmentValues.initialize();
-
+  await actions.lockOrientation();
   // Ações customizadas iniciais
 
-  await lock_orientation_library_opafp4_actions.lockOrientation();
-
   await actions.initializeIntercom();
+  await actions.lockOrientation();
 
   await authManager.initialize();
 
@@ -138,7 +121,6 @@ class _MyAppState extends State<MyApp> {
       _router.routerDelegate.currentConfiguration.matches
           .map((e) => getRoute(e))
           .toList();
-
   late Stream<AquiBrazilAuthUser> userStream;
 
   @override
@@ -227,10 +209,16 @@ class _MyAppState extends State<MyApp> {
 }
 
 class NavBarPage extends StatefulWidget {
-  NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
+  NavBarPage({
+    Key? key,
+    this.initialPage,
+    this.page,
+    this.disableResizeToAvoidBottomInset = false,
+  }) : super(key: key);
 
   final String? initialPage;
   final Widget? page;
+  final bool disableResizeToAvoidBottomInset;
 
   @override
   _NavBarPageState createState() => _NavBarPageState();
@@ -260,6 +248,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
     return Scaffold(
+      resizeToAvoidBottomInset: !widget.disableResizeToAvoidBottomInset,
       body: _currentPage ?? tabs[_currentPageName],
       bottomNavigationBar: Visibility(
         visible: responsiveVisibility(

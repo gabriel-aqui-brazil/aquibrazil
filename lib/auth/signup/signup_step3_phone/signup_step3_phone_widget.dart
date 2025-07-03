@@ -143,7 +143,7 @@ class _SignupStep3PhoneWidgetState extends State<SignupStep3PhoneWidget> {
                               .fontStyle,
                         ),
                         color: Color(0xFF1A1A1A),
-                        fontSize: 12.0,
+                        fontSize: 13.0,
                         letterSpacing: 0.0,
                         fontWeight:
                             FlutterFlowTheme.of(context).labelMedium.fontWeight,
@@ -161,7 +161,7 @@ class _SignupStep3PhoneWidgetState extends State<SignupStep3PhoneWidget> {
                               .fontStyle,
                         ),
                         color: Color(0xFF1A1A1A),
-                        fontSize: 12.0,
+                        fontSize: 13.0,
                         letterSpacing: 0.0,
                         fontWeight:
                             FlutterFlowTheme.of(context).labelMedium.fontWeight,
@@ -210,7 +210,7 @@ class _SignupStep3PhoneWidgetState extends State<SignupStep3PhoneWidget> {
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
                       color: Color(0xFF1A1A1A),
-                      fontSize: 12.0,
+                      fontSize: 13.0,
                       letterSpacing: 0.0,
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,

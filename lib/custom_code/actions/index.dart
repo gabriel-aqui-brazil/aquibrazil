@@ -14,3 +14,4 @@ export 'is_app_updated.dart' show isAppUpdated;
 export 'request_permission_location.dart' show requestPermissionLocation;
 export 'is_override_cache_action.dart' show isOverrideCacheAction;
 export 'debug_print.dart' show debugPrint;
+export 'lock_orientation.dart' show lockOrientation;

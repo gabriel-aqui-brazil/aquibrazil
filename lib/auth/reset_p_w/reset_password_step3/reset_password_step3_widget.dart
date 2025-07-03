@@ -236,7 +236,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -267,7 +267,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -361,7 +361,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFF1A1A1A),
-                                                fontSize: 12.0,
+                                                fontSize: 13.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
                                                     FlutterFlowTheme.of(context)
@@ -409,7 +409,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -440,7 +440,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -534,7 +534,7 @@ class _ResetPasswordStep3WidgetState extends State<ResetPasswordStep3Widget> {
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFF1A1A1A),
-                                                fontSize: 12.0,
+                                                fontSize: 13.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
                                                     FlutterFlowTheme.of(context)

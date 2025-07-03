@@ -21,6 +21,8 @@ import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 
 import '/index.dart';
+import 'package:aquibrazil_library_oi8i5r/index.dart'
+    as $aquibrazil_library_oi8i5r;
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -82,667 +84,672 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
-      initialLocation: '/',
-      debugLogDiagnostics: true,
-      refreshListenable: appStateNotifier,
-      navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
-      routes: [
-        FFRoute(
-          name: '_initialize',
-          path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
-          routes: [
-            FFRoute(
-              name: FavoriteCompanyWidget.routeName,
-              path: FavoriteCompanyWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'favoriteCompany')
-                  : FavoriteCompanyWidget(),
-            ),
-            FFRoute(
-              name: Temp8ConfirmWidget.routeName,
-              path: Temp8ConfirmWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Temp8ConfirmWidget(
-                orderID: params.getParam(
-                  'orderID',
-                  ParamType.String,
-                ),
+GoRouter createRouter(AppStateNotifier appStateNotifier) {
+  $aquibrazil_library_oi8i5r.initializeRoutes(
+    homePageWidgetName: 'aquibrazil_library_oi8i5r.HomePage',
+    homePageWidgetPath: 'a',
+  );
+
+  return GoRouter(
+    initialLocation: '/',
+    debugLogDiagnostics: true,
+    refreshListenable: appStateNotifier,
+    navigatorKey: appNavigatorKey,
+    errorBuilder: (context, state) =>
+        appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+    routes: [
+      FFRoute(
+        name: '_initialize',
+        path: '/',
+        builder: (context, _) =>
+            appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+        routes: [
+          FFRoute(
+            name: FavoriteCompanyWidget.routeName,
+            path: FavoriteCompanyWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'favoriteCompany')
+                : FavoriteCompanyWidget(),
+          ),
+          FFRoute(
+            name: Temp8ConfirmWidget.routeName,
+            path: Temp8ConfirmWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Temp8ConfirmWidget(
+              orderID: params.getParam(
+                'orderID',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: SignupStep1Widget.routeName,
-              path: SignupStep1Widget.routePath,
-              builder: (context, params) => SignupStep1Widget(),
-            ),
-            FFRoute(
-              name: SignupStep5Widget.routeName,
-              path: SignupStep5Widget.routePath,
-              builder: (context, params) => SignupStep5Widget(),
-            ),
-            FFRoute(
-              name: ResetPasswordStep1Widget.routeName,
-              path: ResetPasswordStep1Widget.routePath,
-              builder: (context, params) => ResetPasswordStep1Widget(),
-            ),
-            FFRoute(
-              name: ResetPasswordStep3Widget.routeName,
-              path: ResetPasswordStep3Widget.routePath,
-              builder: (context, params) => ResetPasswordStep3Widget(
-                token: params.getParam(
-                  'token',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: SignupStep1Widget.routeName,
+            path: SignupStep1Widget.routePath,
+            builder: (context, params) => SignupStep1Widget(),
+          ),
+          FFRoute(
+            name: SignupStep5Widget.routeName,
+            path: SignupStep5Widget.routePath,
+            builder: (context, params) => SignupStep5Widget(),
+          ),
+          FFRoute(
+            name: ResetPasswordStep1Widget.routeName,
+            path: ResetPasswordStep1Widget.routePath,
+            builder: (context, params) => ResetPasswordStep1Widget(),
+          ),
+          FFRoute(
+            name: ResetPasswordStep3Widget.routeName,
+            path: ResetPasswordStep3Widget.routePath,
+            builder: (context, params) => ResetPasswordStep3Widget(
+              token: params.getParam(
+                'token',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: SignupStep6Widget.routeName,
-              path: SignupStep6Widget.routePath,
-              builder: (context, params) => SignupStep6Widget(),
-            ),
-            FFRoute(
-              name: PartnersWidget.routeName,
-              path: PartnersWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'partners')
-                  : PartnersWidget(),
-            ),
-            FFRoute(
-              name: PaymentMethodWidget.routeName,
-              path: PaymentMethodWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => PaymentMethodWidget(),
-            ),
-            FFRoute(
-              name: AccountDataWidget.routeName,
-              path: AccountDataWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AccountDataWidget(),
-            ),
-            FFRoute(
-              name: InfoEditWidget.routeName,
-              path: InfoEditWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => InfoEditWidget(),
-            ),
-            FFRoute(
-              name: AccessInfoWidget.routeName,
-              path: AccessInfoWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AccessInfoWidget(),
-            ),
-            FFRoute(
-              name: EmailEditWidget.routeName,
-              path: EmailEditWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => EmailEditWidget(),
-            ),
-            FFRoute(
-              name: LanguageWidget.routeName,
-              path: LanguageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => LanguageWidget(),
-            ),
-            FFRoute(
-              name: SecurityWidget.routeName,
-              path: SecurityWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => SecurityWidget(),
-            ),
-            FFRoute(
-              name: OrderHistoryWidget.routeName,
-              path: OrderHistoryWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'orderHistory')
-                  : OrderHistoryWidget(),
-            ),
-            FFRoute(
-              name: SignupStep2Widget.routeName,
-              path: SignupStep2Widget.routePath,
-              builder: (context, params) => SignupStep2Widget(),
-            ),
-            FFRoute(
-              name: NotificationsAndMessageWidget.routeName,
-              path: NotificationsAndMessageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => NotificationsAndMessageWidget(),
-            ),
-            FFRoute(
-              name: ResetPasswordStep2Widget.routeName,
-              path: ResetPasswordStep2Widget.routePath,
-              builder: (context, params) => ResetPasswordStep2Widget(
-                email: params.getParam(
-                  'email',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: SignupStep6Widget.routeName,
+            path: SignupStep6Widget.routePath,
+            builder: (context, params) => SignupStep6Widget(),
+          ),
+          FFRoute(
+            name: PartnersWidget.routeName,
+            path: PartnersWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'partners')
+                : PartnersWidget(),
+          ),
+          FFRoute(
+            name: PaymentMethodWidget.routeName,
+            path: PaymentMethodWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => PaymentMethodWidget(),
+          ),
+          FFRoute(
+            name: AccountDataWidget.routeName,
+            path: AccountDataWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AccountDataWidget(),
+          ),
+          FFRoute(
+            name: InfoEditWidget.routeName,
+            path: InfoEditWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => InfoEditWidget(),
+          ),
+          FFRoute(
+            name: AccessInfoWidget.routeName,
+            path: AccessInfoWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AccessInfoWidget(),
+          ),
+          FFRoute(
+            name: EmailEditWidget.routeName,
+            path: EmailEditWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => EmailEditWidget(),
+          ),
+          FFRoute(
+            name: LanguageWidget.routeName,
+            path: LanguageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => LanguageWidget(),
+          ),
+          FFRoute(
+            name: SecurityWidget.routeName,
+            path: SecurityWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => SecurityWidget(),
+          ),
+          FFRoute(
+            name: OrderHistoryWidget.routeName,
+            path: OrderHistoryWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'orderHistory')
+                : OrderHistoryWidget(),
+          ),
+          FFRoute(
+            name: SignupStep2Widget.routeName,
+            path: SignupStep2Widget.routePath,
+            builder: (context, params) => SignupStep2Widget(),
+          ),
+          FFRoute(
+            name: NotificationsAndMessageWidget.routeName,
+            path: NotificationsAndMessageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => NotificationsAndMessageWidget(),
+          ),
+          FFRoute(
+            name: ResetPasswordStep2Widget.routeName,
+            path: ResetPasswordStep2Widget.routePath,
+            builder: (context, params) => ResetPasswordStep2Widget(
+              email: params.getParam(
+                'email',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: SignupStep4Widget.routeName,
-              path: SignupStep4Widget.routePath,
-              builder: (context, params) => SignupStep4Widget(
-                messageSource: params.getParam(
-                  'messageSource',
-                  ParamType.String,
-                ),
-                phone: params.getParam(
-                  'phone',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: SignupStep4Widget.routeName,
+            path: SignupStep4Widget.routePath,
+            builder: (context, params) => SignupStep4Widget(
+              messageSource: params.getParam(
+                'messageSource',
+                ParamType.String,
+              ),
+              phone: params.getParam(
+                'phone',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: PartnerWidget.routeName,
-              path: PartnerWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => PartnerWidget(
-                partnerDetails: params.getParam(
-                  'partnerDetails',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: aquibrazil_library_oi8i5r_data_schema
-                      .CompanyPartnerStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: PartnerWidget.routeName,
+            path: PartnerWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => PartnerWidget(
+              partnerDetails: params.getParam(
+                'partnerDetails',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .CompanyPartnerStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: RentalAutomotiveWidget.routeName,
-              path: RentalAutomotiveWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => RentalAutomotiveWidget(
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: CompanyStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: RentalAutomotiveWidget.routeName,
+            path: RentalAutomotiveWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => RentalAutomotiveWidget(
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: CompanyStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: RentalAutomotiveScheduleWidget.routeName,
-              path: RentalAutomotiveScheduleWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => RentalAutomotiveScheduleWidget(
-                product: params.getParam(
-                  'product',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: BaseProductStruct.fromSerializableMap,
-                ),
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: CompanyStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: RentalAutomotiveScheduleWidget.routeName,
+            path: RentalAutomotiveScheduleWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => RentalAutomotiveScheduleWidget(
+              product: params.getParam(
+                'product',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: BaseProductStruct.fromSerializableMap,
+              ),
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: CompanyStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: RentalHouseScheduleWidget.routeName,
-              path: RentalHouseScheduleWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => RentalHouseScheduleWidget(
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: CompanyStruct.fromSerializableMap,
-                ),
-                property: params.getParam(
-                  'property',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: BaseProductStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: RentalHouseScheduleWidget.routeName,
+            path: RentalHouseScheduleWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => RentalHouseScheduleWidget(
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: CompanyStruct.fromSerializableMap,
+              ),
+              property: params.getParam(
+                'property',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: BaseProductStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: SettingsWidget.routeName,
-              path: SettingsWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => SettingsWidget(),
-            ),
-            FFRoute(
-              name: NotificationManageWidget.routeName,
-              path: NotificationManageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => NotificationManageWidget(),
-            ),
-            FFRoute(
-              name: AboutVersionWidget.routeName,
-              path: AboutVersionWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AboutVersionWidget(),
-            ),
-            FFRoute(
-              name: AddressDeliveryWidget.routeName,
-              path: AddressDeliveryWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AddressDeliveryWidget(),
-            ),
-            FFRoute(
-              name: Step1Widget.routeName,
-              path: Step1Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Step1Widget(),
-            ),
-            FFRoute(
-              name: Step2Widget.routeName,
-              path: Step2Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Step2Widget(),
-            ),
-            FFRoute(
-              name: Step3Widget.routeName,
-              path: Step3Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Step3Widget(),
-            ),
-            FFRoute(
-              name: TermsWidget.routeName,
-              path: TermsWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => TermsWidget(),
-            ),
-            FFRoute(
-              name: PolicyAzulWidget.routeName,
-              path: PolicyAzulWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => PolicyAzulWidget(),
-            ),
-            FFRoute(
-              name: FaqWidget.routeName,
-              path: FaqWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => FaqWidget(),
-            ),
-            FFRoute(
-              name: FaqAnswerWidget.routeName,
-              path: FaqAnswerWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => FaqAnswerWidget(
-                faq: params.getParam(
-                  'faq',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: FaqStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: SettingsWidget.routeName,
+            path: SettingsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => SettingsWidget(),
+          ),
+          FFRoute(
+            name: NotificationManageWidget.routeName,
+            path: NotificationManageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => NotificationManageWidget(),
+          ),
+          FFRoute(
+            name: AboutVersionWidget.routeName,
+            path: AboutVersionWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AboutVersionWidget(),
+          ),
+          FFRoute(
+            name: AddressDeliveryWidget.routeName,
+            path: AddressDeliveryWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AddressDeliveryWidget(),
+          ),
+          FFRoute(
+            name: Step1Widget.routeName,
+            path: Step1Widget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Step1Widget(),
+          ),
+          FFRoute(
+            name: Step2Widget.routeName,
+            path: Step2Widget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Step2Widget(),
+          ),
+          FFRoute(
+            name: Step3Widget.routeName,
+            path: Step3Widget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Step3Widget(),
+          ),
+          FFRoute(
+            name: TermsWidget.routeName,
+            path: TermsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => TermsWidget(),
+          ),
+          FFRoute(
+            name: PolicyAzulWidget.routeName,
+            path: PolicyAzulWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => PolicyAzulWidget(),
+          ),
+          FFRoute(
+            name: FaqWidget.routeName,
+            path: FaqWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => FaqWidget(),
+          ),
+          FFRoute(
+            name: FaqAnswerWidget.routeName,
+            path: FaqAnswerWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => FaqAnswerWidget(
+              faq: params.getParam(
+                'faq',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: FaqStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: FaqAnswerViewWidget.routeName,
-              path: FaqAnswerViewWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => FaqAnswerViewWidget(
-                faqAnswer: params.getParam(
-                  'faqAnswer',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: FaqAnswerStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: FaqAnswerViewWidget.routeName,
+            path: FaqAnswerViewWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => FaqAnswerViewWidget(
+              faqAnswer: params.getParam(
+                'faqAnswer',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: FaqAnswerStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: PagamentosWidget.routeName,
-              path: PagamentosWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => PagamentosWidget(),
-            ),
-            FFRoute(
-              name: HistoricoDePagamentoWidget.routeName,
-              path: HistoricoDePagamentoWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => HistoricoDePagamentoWidget(),
-            ),
-            FFRoute(
-              name: AddressDeliveryMapWidget.routeName,
-              path: AddressDeliveryMapWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AddressDeliveryMapWidget(
-                selectedPrediction: params.getParam(
-                  'selectedPrediction',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: PredictionsStruct.fromSerializableMap,
-                ),
-                location: params.getParam(
-                  'location',
-                  ParamType.LatLng,
-                ),
-                edit: params.getParam(
-                  'edit',
-                  ParamType.bool,
-                ),
-                addressSelected: params.getParam(
-                  'addressSelected',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: AddressStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: PagamentosWidget.routeName,
+            path: PagamentosWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => PagamentosWidget(),
+          ),
+          FFRoute(
+            name: HistoricoDePagamentoWidget.routeName,
+            path: HistoricoDePagamentoWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => HistoricoDePagamentoWidget(),
+          ),
+          FFRoute(
+            name: AddressDeliveryMapWidget.routeName,
+            path: AddressDeliveryMapWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AddressDeliveryMapWidget(
+              selectedPrediction: params.getParam(
+                'selectedPrediction',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: PredictionsStruct.fromSerializableMap,
+              ),
+              location: params.getParam(
+                'location',
+                ParamType.LatLng,
+              ),
+              edit: params.getParam(
+                'edit',
+                ParamType.bool,
+              ),
+              addressSelected: params.getParam(
+                'addressSelected',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: AddressStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: PagOffAnuncioWidget.routeName,
-              path: PagOffAnuncioWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => PagOffAnuncioWidget(),
-            ),
-            FFRoute(
-              name: EditPhoneWidget.routeName,
-              path: EditPhoneWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => EditPhoneWidget(),
-            ),
-            FFRoute(
-              name: AddressDeliveryAddEditWidget.routeName,
-              path: AddressDeliveryAddEditWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AddressDeliveryAddEditWidget(
-                position: params.getParam(
-                  'position',
-                  ParamType.LatLng,
-                ),
-                address: params.getParam(
-                  'address',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: AddressStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: PagOffAnuncioWidget.routeName,
+            path: PagOffAnuncioWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => PagOffAnuncioWidget(),
+          ),
+          FFRoute(
+            name: EditPhoneWidget.routeName,
+            path: EditPhoneWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => EditPhoneWidget(),
+          ),
+          FFRoute(
+            name: AddressDeliveryAddEditWidget.routeName,
+            path: AddressDeliveryAddEditWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AddressDeliveryAddEditWidget(
+              position: params.getParam(
+                'position',
+                ParamType.LatLng,
+              ),
+              address: params.getParam(
+                'address',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: AddressStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: MensagemHomeNoMensageWidget.routeName,
-              path: MensagemHomeNoMensageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MensagemHomeNoMensageWidget(),
-            ),
-            FFRoute(
-              name: ChatWidget.routeName,
-              path: ChatWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ChatWidget(
-                chatId: params.getParam(
-                  'chatId',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: MensagemHomeNoMensageWidget.routeName,
+            path: MensagemHomeNoMensageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MensagemHomeNoMensageWidget(),
+          ),
+          FFRoute(
+            name: ChatWidget.routeName,
+            path: ChatWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ChatWidget(
+              chatId: params.getParam(
+                'chatId',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: ExtractCashBackWidget.routeName,
-              path: ExtractCashBackWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ExtractCashBackWidget(),
-            ),
-            FFRoute(
-              name: TradeCashProductsPageWidget.routeName,
-              path: TradeCashProductsPageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => TradeCashProductsPageWidget(),
-            ),
-            FFRoute(
-              name: VoeAzulSignupWidget.routeName,
-              path: VoeAzulSignupWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => VoeAzulSignupWidget(),
-            ),
-            FFRoute(
-              name: ProductDetailsWidget.routeName,
-              path: ProductDetailsWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ProductDetailsWidget(),
-            ),
-            FFRoute(
-              name: RentalHouseWidget.routeName,
-              path: RentalHouseWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => RentalHouseWidget(
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: CompanyStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: ExtractCashBackWidget.routeName,
+            path: ExtractCashBackWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ExtractCashBackWidget(),
+          ),
+          FFRoute(
+            name: TradeCashProductsPageWidget.routeName,
+            path: TradeCashProductsPageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => TradeCashProductsPageWidget(),
+          ),
+          FFRoute(
+            name: VoeAzulSignupWidget.routeName,
+            path: VoeAzulSignupWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => VoeAzulSignupWidget(),
+          ),
+          FFRoute(
+            name: ProductDetailsWidget.routeName,
+            path: ProductDetailsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ProductDetailsWidget(),
+          ),
+          FFRoute(
+            name: RentalHouseWidget.routeName,
+            path: RentalHouseWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => RentalHouseWidget(
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: CompanyStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: MembershipManageWidget.routeName,
-              path: MembershipManageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipManageWidget(),
-            ),
-            FFRoute(
-              name: MembershipCancelWidget.routeName,
-              path: MembershipCancelWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipCancelWidget(
-                membership: params.getParam(
-                  'membership',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: MembershipStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: MembershipManageWidget.routeName,
+            path: MembershipManageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipManageWidget(),
+          ),
+          FFRoute(
+            name: MembershipCancelWidget.routeName,
+            path: MembershipCancelWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipCancelWidget(
+              membership: params.getParam(
+                'membership',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: MembershipStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: MembershipWidget.routeName,
-              path: MembershipWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipWidget(),
-            ),
-            FFRoute(
+          ),
+          FFRoute(
+            name: MembershipWidget.routeName,
+            path: MembershipWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipWidget(),
+          ),
+          FFRoute(
               name: FilterCompanyWidget.routeName,
               path: FilterCompanyWidget.routePath,
               requireAuth: true,
               builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: FilterCompanyWidget(
-                  category: params.getParam(
-                    'category',
-                    ParamType.DataStruct,
-                    isList: false,
-                    structBuilder: aquibrazil_library_oi8i5r_data_schema
-                        .CategoryStruct.fromSerializableMap,
-                  ),
-                ),
+                    initialPage: '',
+                    page: FilterCompanyWidget(
+                      category: params.getParam(
+                        'category',
+                        ParamType.DataStruct,
+                        isList: false,
+                        structBuilder: aquibrazil_library_oi8i5r_data_schema
+                            .CategoryStruct.fromSerializableMap,
+                      ),
+                    ),
+                  )),
+          FFRoute(
+            name: MembershipTermsWidget.routeName,
+            path: MembershipTermsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipTermsWidget(),
+          ),
+          FFRoute(
+            name: ConfirmPhoneWidget.routeName,
+            path: ConfirmPhoneWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ConfirmPhoneWidget(
+              messageSource: params.getParam(
+                'messageSource',
+                ParamType.String,
+              ),
+              phone: params.getParam(
+                'phone',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: MembershipTermsWidget.routeName,
-              path: MembershipTermsWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipTermsWidget(),
-            ),
-            FFRoute(
-              name: ConfirmPhoneWidget.routeName,
-              path: ConfirmPhoneWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ConfirmPhoneWidget(
-                messageSource: params.getParam(
-                  'messageSource',
-                  ParamType.String,
-                ),
-                phone: params.getParam(
-                  'phone',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: HomeNoAuthWidget.routeName,
+            path: HomeNoAuthWidget.routePath,
+            builder: (context, params) => HomeNoAuthWidget(),
+          ),
+          FFRoute(
+            name: AddressDeliveryNoAuthWidget.routeName,
+            path: AddressDeliveryNoAuthWidget.routePath,
+            builder: (context, params) => AddressDeliveryNoAuthWidget(),
+          ),
+          FFRoute(
+            name: AddressDeliveryMapNoAuthWidget.routeName,
+            path: AddressDeliveryMapNoAuthWidget.routePath,
+            builder: (context, params) => AddressDeliveryMapNoAuthWidget(
+              selectedPrediction: params.getParam(
+                'selectedPrediction',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: PredictionsStruct.fromSerializableMap,
+              ),
+              location: params.getParam(
+                'location',
+                ParamType.LatLng,
+              ),
+              edit: params.getParam(
+                'edit',
+                ParamType.bool,
+              ),
+              addressSelected: params.getParam(
+                'addressSelected',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: AddressStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: HomeNoAuthWidget.routeName,
-              path: HomeNoAuthWidget.routePath,
-              builder: (context, params) => HomeNoAuthWidget(),
-            ),
-            FFRoute(
-              name: AddressDeliveryNoAuthWidget.routeName,
-              path: AddressDeliveryNoAuthWidget.routePath,
-              builder: (context, params) => AddressDeliveryNoAuthWidget(),
-            ),
-            FFRoute(
-              name: AddressDeliveryMapNoAuthWidget.routeName,
-              path: AddressDeliveryMapNoAuthWidget.routePath,
-              builder: (context, params) => AddressDeliveryMapNoAuthWidget(
-                selectedPrediction: params.getParam(
-                  'selectedPrediction',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: PredictionsStruct.fromSerializableMap,
-                ),
-                location: params.getParam(
-                  'location',
-                  ParamType.LatLng,
-                ),
-                edit: params.getParam(
-                  'edit',
-                  ParamType.bool,
-                ),
-                addressSelected: params.getParam(
-                  'addressSelected',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: AddressStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: ConfirmOrderWidget.routeName,
+            path: ConfirmOrderWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ConfirmOrderWidget(),
+          ),
+          FFRoute(
+            name: TesteWidget.routeName,
+            path: TesteWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => TesteWidget(),
+          ),
+          FFRoute(
+            name: CompleteProfileWidget.routeName,
+            path: CompleteProfileWidget.routePath,
+            builder: (context, params) => CompleteProfileWidget(),
+          ),
+          FFRoute(
+            name: CompleteProfileNumberWidget.routeName,
+            path: CompleteProfileNumberWidget.routePath,
+            builder: (context, params) => CompleteProfileNumberWidget(),
+          ),
+          FFRoute(
+            name: CompleteProfileValidateNumberWidget.routeName,
+            path: CompleteProfileValidateNumberWidget.routePath,
+            builder: (context, params) => CompleteProfileValidateNumberWidget(
+              messageSource: params.getParam(
+                'messageSource',
+                ParamType.String,
+              ),
+              phone: params.getParam(
+                'phone',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: ConfirmOrderWidget.routeName,
-              path: ConfirmOrderWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ConfirmOrderWidget(),
-            ),
-            FFRoute(
-              name: TesteWidget.routeName,
-              path: TesteWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => TesteWidget(),
-            ),
-            FFRoute(
-              name: CompleteProfileWidget.routeName,
-              path: CompleteProfileWidget.routePath,
-              builder: (context, params) => CompleteProfileWidget(),
-            ),
-            FFRoute(
-              name: CompleteProfileNumberWidget.routeName,
-              path: CompleteProfileNumberWidget.routePath,
-              builder: (context, params) => CompleteProfileNumberWidget(),
-            ),
-            FFRoute(
-              name: CompleteProfileValidateNumberWidget.routeName,
-              path: CompleteProfileValidateNumberWidget.routePath,
-              builder: (context, params) => CompleteProfileValidateNumberWidget(
-                messageSource: params.getParam(
-                  'messageSource',
-                  ParamType.String,
-                ),
-                phone: params.getParam(
-                  'phone',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: MembershipChangePlanWidget.routeName,
+            path: MembershipChangePlanWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipChangePlanWidget(
+              planActual: params.getParam(
+                'planActual',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: MembershipStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: MembershipChangePlanWidget.routeName,
-              path: MembershipChangePlanWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipChangePlanWidget(
-                planActual: params.getParam(
-                  'planActual',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: MembershipStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: SignupStep3Widget.routeName,
+            path: SignupStep3Widget.routePath,
+            builder: (context, params) => SignupStep3Widget(),
+          ),
+          FFRoute(
+            name: ServiceWidget.routeName,
+            path: ServiceWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ServiceWidget(
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .CompanyStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: SignupStep3Widget.routeName,
-              path: SignupStep3Widget.routePath,
-              builder: (context, params) => SignupStep3Widget(),
-            ),
-            FFRoute(
-              name: ServiceWidget.routeName,
-              path: ServiceWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ServiceWidget(
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: aquibrazil_library_oi8i5r_data_schema
-                      .CompanyStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: MyCashBackWidget.routeName,
+            path: MyCashBackWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MyCashBackWidget(),
+          ),
+          FFRoute(
+            name: MembershipCheckoutWidget.routeName,
+            path: MembershipCheckoutWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipCheckoutWidget(
+              couponCode: params.getParam(
+                'couponCode',
+                ParamType.String,
+              ),
+              document: params.getParam(
+                'document',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: MyCashBackWidget.routeName,
-              path: MyCashBackWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MyCashBackWidget(),
-            ),
-            FFRoute(
-              name: MembershipCheckoutWidget.routeName,
-              path: MembershipCheckoutWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipCheckoutWidget(
-                couponCode: params.getParam(
-                  'couponCode',
-                  ParamType.String,
-                ),
-                document: params.getParam(
-                  'document',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: MembershipCheckoutChangePlanWidget.routeName,
+            path: MembershipCheckoutChangePlanWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipCheckoutChangePlanWidget(
+              couponCode: params.getParam(
+                'couponCode',
+                ParamType.String,
+              ),
+              planActual: params.getParam(
+                'planActual',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: MembershipStruct.fromSerializableMap,
               ),
             ),
-            FFRoute(
-              name: MembershipCheckoutChangePlanWidget.routeName,
-              path: MembershipCheckoutChangePlanWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => MembershipCheckoutChangePlanWidget(
-                couponCode: params.getParam(
-                  'couponCode',
-                  ParamType.String,
-                ),
-                planActual: params.getParam(
-                  'planActual',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: MembershipStruct.fromSerializableMap,
-                ),
+          ),
+          FFRoute(
+            name: Cart4Widget.routeName,
+            path: Cart4Widget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Cart4Widget(
+              deliveryTip: params.getParam(
+                'deliveryTip',
+                ParamType.int,
+              ),
+              isPickup: params.getParam(
+                'isPickup',
+                ParamType.bool,
               ),
             ),
-            FFRoute(
-              name: Cart4Widget.routeName,
-              path: Cart4Widget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Cart4Widget(
-                deliveryTip: params.getParam(
-                  'deliveryTip',
-                  ParamType.int,
-                ),
-                isPickup: params.getParam(
-                  'isPickup',
-                  ParamType.bool,
-                ),
-              ),
-            ),
-            FFRoute(
-              name: AllCategoriesWidget.routeName,
-              path: AllCategoriesWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => AllCategoriesWidget(),
-            ),
-            FFRoute(
-              name: LoginWidget.routeName,
-              path: LoginWidget.routePath,
-              builder: (context, params) => LoginWidget(),
-            ),
-            FFRoute(
+          ),
+          FFRoute(
+            name: AllCategoriesWidget.routeName,
+            path: AllCategoriesWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => AllCategoriesWidget(),
+          ),
+          FFRoute(
+            name: LoginWidget.routeName,
+            path: LoginWidget.routePath,
+            builder: (context, params) => LoginWidget(),
+          ),
+          FFRoute(
               name: ProfileWidget.routeName,
               path: ProfileWidget.routePath,
               requireAuth: true,
@@ -751,163 +758,166 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : NavBarPage(
                       initialPage: 'profile',
                       page: ProfileWidget(),
-                    ),
-            ),
-            FFRoute(
-              name: OrderDetailsWidget.routeName,
-              path: OrderDetailsWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => OrderDetailsWidget(
-                orderID: params.getParam(
-                  'orderID',
-                  ParamType.String,
-                ),
+                    )),
+          FFRoute(
+            name: OrderDetailsWidget.routeName,
+            path: OrderDetailsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => OrderDetailsWidget(
+              orderID: params.getParam(
+                'orderID',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: Temp7CheckoutWidget.routeName,
-              path: Temp7CheckoutWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Temp7CheckoutWidget(),
-            ),
-            FFRoute(
-              name: DeliveryFoodWidget.routeName,
-              path: DeliveryFoodWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => DeliveryFoodWidget(
-                companyId: params.getParam(
-                  'companyId',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: Temp7CheckoutWidget.routeName,
+            path: Temp7CheckoutWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Temp7CheckoutWidget(),
+          ),
+          FFRoute(
+            name: DeliveryFoodWidget.routeName,
+            path: DeliveryFoodWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => DeliveryFoodWidget(
+              companyId: params.getParam(
+                'companyId',
+                ParamType.String,
               ),
             ),
-            FFRoute(
+          ),
+          FFRoute(
               name: TrackOrderWidget.routeName,
               path: TrackOrderWidget.routePath,
               requireAuth: true,
               builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: TrackOrderWidget(
-                  orderId: params.getParam(
-                    'orderId',
-                    ParamType.String,
-                  ),
-                ),
+                    initialPage: '',
+                    page: TrackOrderWidget(
+                      orderId: params.getParam(
+                        'orderId',
+                        ParamType.String,
+                      ),
+                    ),
+                  )),
+          FFRoute(
+            name: OrderDetailsServiceWidget.routeName,
+            path: OrderDetailsServiceWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => OrderDetailsServiceWidget(
+              orderID: params.getParam(
+                'orderID',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: OrderDetailsServiceWidget.routeName,
-              path: OrderDetailsServiceWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => OrderDetailsServiceWidget(
-                orderID: params.getParam(
-                  'orderID',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: Temp3AppointmentWidget.routeName,
+            path: Temp3AppointmentWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => Temp3AppointmentWidget(
+              product: params.getParam(
+                'product',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .BaseProductStruct.fromSerializableMap,
+              ),
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .CompanyStruct.fromSerializableMap,
+              ),
+              hasMoreService: params.getParam(
+                'hasMoreService',
+                ParamType.bool,
               ),
             ),
-            FFRoute(
-              name: Temp3AppointmentWidget.routeName,
-              path: Temp3AppointmentWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => Temp3AppointmentWidget(
-                product: params.getParam(
-                  'product',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: aquibrazil_library_oi8i5r_data_schema
-                      .BaseProductStruct.fromSerializableMap,
-                ),
-                company: params.getParam(
-                  'company',
-                  ParamType.DataStruct,
-                  isList: false,
-                  structBuilder: aquibrazil_library_oi8i5r_data_schema
-                      .CompanyStruct.fromSerializableMap,
-                ),
-                hasMoreService: params.getParam(
-                  'hasMoreService',
-                  ParamType.bool,
-                ),
+          ),
+          FFRoute(
+            name: HelpWidget.routeName,
+            path: HelpWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => HelpWidget(),
+          ),
+          FFRoute(
+            name: ViewLinkTrackerWidget.routeName,
+            path: ViewLinkTrackerWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ViewLinkTrackerWidget(
+              tracerLink: params.getParam(
+                'tracerLink',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: HelpWidget.routeName,
-              path: HelpWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => HelpWidget(),
-            ),
-            FFRoute(
-              name: ViewLinkTrackerWidget.routeName,
-              path: ViewLinkTrackerWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ViewLinkTrackerWidget(
-                tracerLink: params.getParam(
-                  'tracerLink',
-                  ParamType.String,
-                ),
+          ),
+          FFRoute(
+            name: ErrorPageWidget.routeName,
+            path: ErrorPageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => ErrorPageWidget(
+              details: params.getParam(
+                'details',
+                ParamType.String,
               ),
             ),
-            FFRoute(
-              name: ErrorPageWidget.routeName,
-              path: ErrorPageWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => ErrorPageWidget(
-                details: params.getParam(
-                  'details',
-                  ParamType.String,
-                ),
-              ),
-            ),
-            FFRoute(
-              name: HomeWidget.routeName,
-              path: HomeWidget.routePath,
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'home')
-                  : HomeWidget(),
-            ),
-            FFRoute(
+          ),
+          FFRoute(
+            name: HomeWidget.routeName,
+            path: HomeWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) =>
+                params.isEmpty ? NavBarPage(initialPage: 'home') : HomeWidget(),
+          ),
+          FFRoute(
               name: Cart1Widget.routeName,
               path: Cart1Widget.routePath,
               requireAuth: true,
               builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: Cart1Widget(),
-              ),
-            ),
-            FFRoute(
+                    initialPage: '',
+                    page: Cart1Widget(),
+                  )),
+          FFRoute(
               name: Cart2Widget.routeName,
               path: Cart2Widget.routePath,
               requireAuth: true,
               builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: Cart2Widget(
-                  deliveryDuration: params.getParam(
-                    'deliveryDuration',
-                    ParamType.int,
-                  ),
-                  total: params.getParam(
-                    'total',
-                    ParamType.double,
-                  ),
-                  operatingHours: params.getParam<
-                      aquibrazil_library_oi8i5r_data_schema
-                      .OperatingHourStruct>(
-                    'operatingHours',
-                    ParamType.DataStruct,
-                    isList: true,
-                    structBuilder: aquibrazil_library_oi8i5r_data_schema
-                        .OperatingHourStruct.fromSerializableMap,
-                  ),
-                ),
-              ),
-            )
-          ].map((r) => r.toRoute(appStateNotifier)).toList(),
-        ),
-      ].map((r) => r.toRoute(appStateNotifier)).toList(),
-      observers: [routeObserver],
-    );
+                    initialPage: '',
+                    page: Cart2Widget(
+                      deliveryDuration: params.getParam(
+                        'deliveryDuration',
+                        ParamType.int,
+                      ),
+                      total: params.getParam(
+                        'total',
+                        ParamType.double,
+                      ),
+                      operatingHours: params.getParam<
+                          aquibrazil_library_oi8i5r_data_schema
+                          .OperatingHourStruct>(
+                        'operatingHours',
+                        ParamType.DataStruct,
+                        isList: true,
+                        structBuilder: aquibrazil_library_oi8i5r_data_schema
+                            .OperatingHourStruct.fromSerializableMap,
+                      ),
+                    ),
+                  )),
+          FFRoute(
+            name: $aquibrazil_library_oi8i5r.HomePageWidget.routeName,
+            path: $aquibrazil_library_oi8i5r.HomePageWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) =>
+                $aquibrazil_library_oi8i5r.HomePageWidget(),
+          )
+        ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      ),
+    ].map((r) => r.toRoute(appStateNotifier)).toList(),
+    observers: [routeObserver],
+  );
+}
 
 extension NavParamExtensions on Map<String, String?> {
   Map<String, String> get withoutNulls => Map.fromEntries(

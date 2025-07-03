@@ -98,8 +98,12 @@ class _AdsCompanyWidgetState extends State<AdsCompanyWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: Text(
-                            functions.toUpperCase(
-                                widget!.company!.isOpen ? 'Aberto' : 'Fechado'),
+                            valueOrDefault<String>(
+                              functions.toUpperCase(widget!.company!.isOpen
+                                  ? 'Aberto'
+                                  : 'Fechado'),
+                              '-',
+                            ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
