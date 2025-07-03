@@ -18,10 +18,12 @@ import 'dart:io';
 Future<dynamic> appleLoginAction(BuildContext context) async {
   try {
     if (!Platform.isIOS) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Login com Apple disponível apenas no iOS')),
-      );
-      return {'error': "Erro: Login com Apple disponível apenas no iOS"};
+      return {
+        'uid': '',
+        'idToken': '',
+        'email': '',
+        'displayName': '',
+      };
     }
 
     final credential = await SignInWithApple.getAppleIDCredential(
@@ -31,33 +33,26 @@ Future<dynamic> appleLoginAction(BuildContext context) async {
       ],
     );
 
-    final fullName = credential.givenName != null
-        ? '${credential.givenName} ${credential.familyName}'
-        : null;
+    final idToken = credential.identityToken ?? '';
 
-    final idToken = credential.identityToken;
+    final email = credential.email ?? '';
 
-    if (idToken == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('ID Token da Apple não encontrado')),
-      );
-      return {'error': 'ID Token da Apple não encontrado'};
-    }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Login com Apple sucesso: ${credential.email}')),
-    );
+    final displayName = (credential.givenName ?? '').isNotEmpty
+        ? '${credential.givenName ?? ''} ${credential.familyName ?? ''}'.trim()
+        : '';
 
     return {
       'uid': idToken,
       'idToken': idToken,
-      'email': credential.email,
-      'displayName': fullName,
+      'email': email,
+      'displayName': displayName,
     };
-  } catch (e) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Erro no login com Apple: $e')),
-    );
-    return {'error': "Erro no login: $e"};
+  } catch (_) {
+    return {
+      'uid': '',
+      'idToken': '',
+      'email': '',
+      'displayName': '',
+    };
   }
 }

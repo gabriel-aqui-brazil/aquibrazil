@@ -26,6 +26,7 @@ class OrderStruct extends BaseStruct {
     String? observation,
     int? autoCancelAt,
     CustomerStruct? customer,
+    RatingStruct? rating,
   })  : _id = id,
         _createdAt = createdAt,
         _number = number,
@@ -44,7 +45,8 @@ class OrderStruct extends BaseStruct {
         _isReeschedule = isReeschedule,
         _observation = observation,
         _autoCancelAt = autoCancelAt,
-        _customer = customer;
+        _customer = customer,
+        _rating = rating;
 
   // "id" field.
   String? _id;
@@ -222,6 +224,17 @@ class OrderStruct extends BaseStruct {
 
   bool hasCustomer() => _customer != null;
 
+  // "rating" field.
+  RatingStruct? _rating;
+  RatingStruct get rating => _rating ?? RatingStruct();
+  set rating(RatingStruct? val) => _rating = val;
+
+  void updateRating(Function(RatingStruct) updateFn) {
+    updateFn(_rating ??= RatingStruct());
+  }
+
+  bool hasRating() => _rating != null;
+
   static OrderStruct fromMap(Map<String, dynamic> data) => OrderStruct(
         id: data['id'] as String?,
         createdAt: castToType<int>(data['created_at']),
@@ -254,6 +267,9 @@ class OrderStruct extends BaseStruct {
         customer: data['customer'] is CustomerStruct
             ? data['customer']
             : CustomerStruct.maybeFromMap(data['customer']),
+        rating: data['rating'] is RatingStruct
+            ? data['rating']
+            : RatingStruct.maybeFromMap(data['rating']),
       );
 
   static OrderStruct? maybeFromMap(dynamic data) =>
@@ -279,6 +295,7 @@ class OrderStruct extends BaseStruct {
         'observation': _observation,
         'auto_cancel_at': _autoCancelAt,
         'customer': _customer?.toMap(),
+        'rating': _rating?.toMap(),
       }.withoutNulls;
 
   @override
@@ -359,6 +376,10 @@ class OrderStruct extends BaseStruct {
         ),
         'customer': serializeParam(
           _customer,
+          ParamType.DataStruct,
+        ),
+        'rating': serializeParam(
+          _rating,
           ParamType.DataStruct,
         ),
       }.withoutNulls;
@@ -465,6 +486,12 @@ class OrderStruct extends BaseStruct {
           false,
           structBuilder: CustomerStruct.fromSerializableMap,
         ),
+        rating: deserializeStructParam(
+          data['rating'],
+          ParamType.DataStruct,
+          false,
+          structBuilder: RatingStruct.fromSerializableMap,
+        ),
       );
 
   @override
@@ -492,7 +519,8 @@ class OrderStruct extends BaseStruct {
         isReeschedule == other.isReeschedule &&
         observation == other.observation &&
         autoCancelAt == other.autoCancelAt &&
-        customer == other.customer;
+        customer == other.customer &&
+        rating == other.rating;
   }
 
   @override
@@ -515,7 +543,8 @@ class OrderStruct extends BaseStruct {
         isReeschedule,
         observation,
         autoCancelAt,
-        customer
+        customer,
+        rating
       ]);
 }
 
@@ -537,6 +566,7 @@ OrderStruct createOrderStruct({
   String? observation,
   int? autoCancelAt,
   CustomerStruct? customer,
+  RatingStruct? rating,
 }) =>
     OrderStruct(
       id: id,
@@ -556,4 +586,5 @@ OrderStruct createOrderStruct({
       observation: observation,
       autoCancelAt: autoCancelAt,
       customer: customer ?? CustomerStruct(),
+      rating: rating ?? RatingStruct(),
     );

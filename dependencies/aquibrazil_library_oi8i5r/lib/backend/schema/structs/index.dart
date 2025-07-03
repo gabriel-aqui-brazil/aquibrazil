@@ -34,6 +34,7 @@ export 'order_service_detail_struct.dart';
 export 'price_struct.dart';
 export 'product_image_struct.dart';
 export 'provider_work_schedule_struct.dart';
+export 'rating_struct.dart';
 export 'service_struct.dart';
 export 'session_struct.dart';
 export 'session_product_struct.dart';

@@ -29,7 +29,7 @@ class AzulStep2Model extends FlutterFlowModel<AzulStep2Widget> {
   // State field(s) for CPFfield widget.
   FocusNode? cPFfieldFocusNode;
   TextEditingController? cPFfieldTextController;
-  final cPFfieldMask = MaskTextInputFormatter(mask: '###.###.###-##');
+  late MaskTextInputFormatter cPFfieldMask;
   String? Function(BuildContext, String?)? cPFfieldTextControllerValidator;
   // Stores action output result for [Custom Action - cpfValid] action in Button widget.
   bool? cpfIsValid;

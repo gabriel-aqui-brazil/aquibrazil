@@ -49,6 +49,8 @@ class _AzulStep2WidgetState extends State<AzulStep2Widget> {
     _model.cPFfieldTextController ??=
         TextEditingController(text: currentUserData?.document);
     _model.cPFfieldFocusNode ??= FocusNode();
+
+    _model.cPFfieldMask = MaskTextInputFormatter(mask: '###.###.###-##');
   }
 
   @override

@@ -628,7 +628,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -660,7 +660,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -734,7 +734,7 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                             .fontStyle,
                                                   ),
                                                   color: Color(0xFF1A1A1A),
-                                                  fontSize: 12.0,
+                                                  fontSize: 13.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
                                                       FlutterFlowTheme.of(

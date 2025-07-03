@@ -52,7 +52,7 @@ class MembershipModel extends FlutterFlowModel<MembershipWidget> {
   // State field(s) for document widget.
   FocusNode? documentFocusNode;
   TextEditingController? documentTextController;
-  final documentMask = MaskTextInputFormatter(mask: '###.###.###-##');
+  late MaskTextInputFormatter documentMask;
   String? Function(BuildContext, String?)? documentTextControllerValidator;
   // Model for membershipPlans component.
   late MembershipPlansModel membershipPlansModel;

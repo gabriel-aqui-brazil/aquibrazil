@@ -30,6 +30,7 @@ class CompanyStruct extends BaseStruct {
     String? description,
     List<OperatingHourStruct>? operatingHour,
     bool? open24,
+    double? rating,
   })  : _id = id,
         _name = name,
         _coverPhotoUrl = coverPhotoUrl,
@@ -52,7 +53,8 @@ class CompanyStruct extends BaseStruct {
         _sumDiscount = sumDiscount,
         _description = description,
         _operatingHour = operatingHour,
-        _open24 = open24;
+        _open24 = open24,
+        _rating = rating;
 
   // "id" field.
   String? _id;
@@ -253,6 +255,15 @@ class CompanyStruct extends BaseStruct {
 
   bool hasOpen24() => _open24 != null;
 
+  // "rating" field.
+  double? _rating;
+  double get rating => _rating ?? 0.0;
+  set rating(double? val) => _rating = val;
+
+  void incrementRating(double amount) => rating = rating + amount;
+
+  bool hasRating() => _rating != null;
+
   static CompanyStruct fromMap(Map<String, dynamic> data) => CompanyStruct(
         id: data['id'] as String?,
         name: data['name'] as String?,
@@ -288,6 +299,7 @@ class CompanyStruct extends BaseStruct {
           OperatingHourStruct.fromMap,
         ),
         open24: data['open_24'] as bool?,
+        rating: castToType<double>(data['rating']),
       );
 
   static CompanyStruct? maybeFromMap(dynamic data) =>
@@ -317,6 +329,7 @@ class CompanyStruct extends BaseStruct {
         'description': _description,
         'operating_hour': _operatingHour?.map((e) => e.toMap()).toList(),
         'open_24': _open24,
+        'rating': _rating,
       }.withoutNulls;
 
   @override
@@ -413,6 +426,10 @@ class CompanyStruct extends BaseStruct {
         'open_24': serializeParam(
           _open24,
           ParamType.bool,
+        ),
+        'rating': serializeParam(
+          _rating,
+          ParamType.double,
         ),
       }.withoutNulls;
 
@@ -538,6 +555,11 @@ class CompanyStruct extends BaseStruct {
           ParamType.bool,
           false,
         ),
+        rating: deserializeParam(
+          data['rating'],
+          ParamType.double,
+          false,
+        ),
       );
 
   @override
@@ -569,7 +591,8 @@ class CompanyStruct extends BaseStruct {
         sumDiscount == other.sumDiscount &&
         description == other.description &&
         listEquality.equals(operatingHour, other.operatingHour) &&
-        open24 == other.open24;
+        open24 == other.open24 &&
+        rating == other.rating;
   }
 
   @override
@@ -596,7 +619,8 @@ class CompanyStruct extends BaseStruct {
         sumDiscount,
         description,
         operatingHour,
-        open24
+        open24,
+        rating
       ]);
 }
 
@@ -623,6 +647,7 @@ CompanyStruct createCompanyStruct({
   double? sumDiscount,
   String? description,
   bool? open24,
+  double? rating,
 }) =>
     CompanyStruct(
       id: id,
@@ -647,4 +672,5 @@ CompanyStruct createCompanyStruct({
       sumDiscount: sumDiscount,
       description: description,
       open24: open24,
+      rating: rating,
     );

@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
+import '/actions/actions.dart' as action_blocks;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -55,6 +56,12 @@ class _BannerNewVersionWidgetState extends State<BannerNewVersionWidget> {
             await launchURL(
                 'https://play.google.com/store/apps/details?id=com.oficial.aquibrazil');
           }
+
+          await Future.delayed(const Duration(milliseconds: 1000));
+          await action_blocks.verifyAppVersion(context);
+          safeSetState(() {});
+
+          _model.updatePage(() {});
         },
         child: Container(
           width: MediaQuery.sizeOf(context).width * 1.0,

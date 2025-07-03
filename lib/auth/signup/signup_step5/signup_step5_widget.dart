@@ -256,7 +256,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -287,7 +287,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -361,7 +361,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFF1A1A1A),
-                                                fontSize: 12.0,
+                                                fontSize: 13.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
                                                     FlutterFlowTheme.of(context)
@@ -406,7 +406,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -437,7 +437,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -511,7 +511,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFF1A1A1A),
-                                                fontSize: 12.0,
+                                                fontSize: 13.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
                                                     FlutterFlowTheme.of(context)
@@ -563,7 +563,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -595,7 +595,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -702,7 +702,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
@@ -756,7 +756,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -788,7 +788,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                         ),
                                                         color:
                                                             Color(0xFF1A1A1A),
-                                                        fontSize: 12.0,
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -895,7 +895,7 @@ class _SignupStep5WidgetState extends State<SignupStep5Widget> {
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0xFF1A1A1A),
-                                                      fontSize: 12.0,
+                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FlutterFlowTheme.of(

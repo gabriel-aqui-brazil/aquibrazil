@@ -201,7 +201,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                           .fontStyle,
                                     ),
                                     color: Color(0xFF1A1A1A),
-                                    fontSize: 12.0,
+                                    fontSize: 13.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
@@ -277,7 +277,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                         .fontStyle,
                                   ),
                                   color: Color(0xFF1A1A1A),
-                                  fontSize: 12.0,
+                                  fontSize: 13.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -313,7 +313,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                           .fontStyle,
                                     ),
                                     color: Color(0xFF1A1A1A),
-                                    fontSize: 12.0,
+                                    fontSize: 13.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -406,7 +406,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                         .fontStyle,
                                   ),
                                   color: Color(0xFF1A1A1A),
-                                  fontSize: 12.0,
+                                  fontSize: 13.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .bodyMedium

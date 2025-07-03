@@ -23,37 +23,34 @@ Future<dynamic> googleLoginAction(BuildContext context) async {
     final GoogleSignInAccount? account = await _googleSignIn.signIn();
 
     if (account == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Login cancelado pelo usuário')),
-      );
-      return {'error': 'Login cancelado pelo usuário'};
+      return {
+        'uid': '',
+        'idToken': '',
+        'accessToken': '',
+        'email': '',
+        'displayName': '',
+        'photoUrl': '',
+      };
     }
 
     final GoogleSignInAuthentication auth = await account.authentication;
 
-    if (auth.idToken == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('ID Token não encontrado')),
-      );
-      return {'error': 'ID Token não encontrado'};
-    }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Login com Google sucesso: ${account.email}')),
-    );
-
     return {
-      'uid': auth.idToken,
-      'idToken': auth.idToken,
-      'accessToken': auth.accessToken,
-      'email': account.email,
-      'displayName': account.displayName,
-      'photoUrl': account.photoUrl,
+      'uid': auth.idToken ?? '',
+      'idToken': auth.idToken ?? '',
+      'accessToken': auth.accessToken ?? '',
+      'email': account.email ?? '',
+      'displayName': account.displayName ?? '',
+      'photoUrl': account.photoUrl ?? '',
     };
-  } catch (e) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Erro no login com Google: $e')),
-    );
-    return {'error': 'Erro no login: $e'};
+  } catch (_) {
+    return {
+      'uid': '',
+      'idToken': '',
+      'accessToken': '',
+      'email': '',
+      'displayName': '',
+      'photoUrl': '',
+    };
   }
 }

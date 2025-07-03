@@ -284,28 +284,34 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: (widget!.company?.primaryCategory
-                                                      ?.name ==
-                                                  'Delivery e/ou Retirada') &&
-                                              (widget!.company
-                                                      ?.deliveryLogistics ==
-                                                  'Propria')
-                                          ? formatNumber(
-                                              widget!.company!.priceDelivery,
-                                              formatType: FormatType.custom,
-                                              currency: '\$',
-                                              format: '#,##0.00',
-                                              locale: 'en_us',
-                                            )
-                                          : '',
+                                      text: valueOrDefault<String>(
+                                        (widget!.company?.primaryCategory
+                                                        ?.name ==
+                                                    'Delivery e/ou Retirada') &&
+                                                (widget!.company
+                                                        ?.deliveryLogistics ==
+                                                    'Propria')
+                                            ? formatNumber(
+                                                widget!.company?.priceDelivery,
+                                                formatType: FormatType.custom,
+                                                currency: '\$',
+                                                format: '#,##0.00',
+                                                locale: 'en_us',
+                                              )
+                                            : '',
+                                        '-',
+                                      ),
                                       style: GoogleFonts.roboto(),
                                     ),
                                     TextSpan(
-                                      text: widget!.company?.primaryCategory
-                                                  ?.name ==
-                                              'Delivery e/ou Retirada'
-                                          ? ' • '
-                                          : '',
+                                      text: valueOrDefault<String>(
+                                        widget!.company?.primaryCategory
+                                                    ?.name ==
+                                                'Delivery e/ou Retirada'
+                                            ? ' • '
+                                            : '',
+                                        '-',
+                                      ),
                                       style: TextStyle(),
                                     ),
                                     TextSpan(
