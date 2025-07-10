@@ -13,6 +13,8 @@ import '/backend/schema/enums/enums.dart';
 import '/auth/custom_auth/auth_util.dart';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
+import "package:aquibrazil_library_oi8i5r/backend/schema/enums/enums.dart"
+    as aquibrazil_library_oi8i5r_enums;
 
 dynamic latLngToJson(LatLng latLng) {
   return {

@@ -11,7 +11,6 @@ import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
-import '/actions/actions.dart' as action_blocks;
 import '/index.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
@@ -1760,176 +1759,131 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                             builder: (context) => FFButtonWidget(
                               onPressed: () async {
                                 var _shouldSetState = false;
-                                if (widget!.document != null &&
-                                    widget!.document != '') {
-                                  _model.apiResultvd0 = await MainGroup
-                                      .updateDocumentProfileCall
-                                      .call(
-                                    document: widget!.document,
-                                    token: currentAuthenticationToken,
-                                  );
+                                _model.checkout =
+                                    await MainGroup.membershipCheckoutCall.call(
+                                  customerPaymentMethodId:
+                                      FFAppState().paymentMethodSelected.id,
+                                  membershipId:
+                                      FFAppState().membershipPlanSelected.id,
+                                  token: currentAuthenticationToken,
+                                  taxAndServiceAmount:
+                                      MembershipCheckoutStruct.maybeFromMap(
+                                              membershipCheckoutMembershipCartReviewResponse
+                                                  .jsonBody)
+                                          ?.taxAndService,
+                                  discountAmount: MembershipCheckoutStruct
+                                                  .maybeFromMap(
+                                                      membershipCheckoutMembershipCartReviewResponse
+                                                          .jsonBody)!
+                                              .discount >
+                                          0.0
+                                      ? MembershipCheckoutStruct.maybeFromMap(
+                                              membershipCheckoutMembershipCartReviewResponse
+                                                  .jsonBody)
+                                          ?.discount
+                                      : 0.0,
+                                  couponCode: widget!.couponCode,
+                                );
 
-                                  _shouldSetState = true;
-                                  if ((_model.apiResultvd0?.succeeded ??
-                                      true)) {
-                                    authManager.updateAuthUserData(
-                                      authenticationToken:
-                                          currentAuthenticationToken,
-                                      tokenExpiration:
-                                          currentAuthTokenExpiration,
-                                      authUid: currentUserUid,
-                                      userData: UserStruct(
-                                        id: currentUserData?.id,
-                                        firstName: currentUserData?.firstName,
-                                        lastName: currentUserData?.lastName,
-                                        email: currentUserData?.email,
-                                        biometric: currentUserData?.biometric,
-                                        profilePicture:
-                                            currentUserData?.profilePicture,
-                                        location: currentUserData?.location,
-                                        address: currentUserData?.address,
-                                        cashbackEarned:
-                                            currentUserData?.cashbackEarned,
-                                        phone: currentUserData?.phone,
-                                        timezone: currentUserData?.timezone,
-                                        defaultCard:
-                                            currentUserData?.defaultCard,
-                                        document: widget!.document,
-                                        lastOrderId:
-                                            currentUserData?.lastOrderId,
-                                      ),
-                                    );
-                                    _model.checkout = await MainGroup
-                                        .membershipCheckoutCall
+                                _shouldSetState = true;
+                                if ((_model.checkout?.succeeded ?? true)) {
+                                  showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    isDismissible: false,
+                                    enableDrag: false,
+                                    useSafeArea: true,
+                                    context: context,
+                                    builder: (context) {
+                                      return WebViewAware(
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            FocusScope.of(context).unfocus();
+                                            FocusManager.instance.primaryFocus
+                                                ?.unfocus();
+                                          },
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child: Container(
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.53,
+                                              child: MembershipWelcomeWidget(),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => safeSetState(() {}));
+
+                                  if (widget!.document != null &&
+                                      widget!.document != '') {
+                                    _model.apiResultd7s = await MainGroup
+                                        .updateDocumentProfileCall
                                         .call(
-                                      customerPaymentMethodId:
-                                          FFAppState().paymentMethodSelected.id,
-                                      membershipId: FFAppState()
-                                          .membershipPlanSelected
-                                          .id,
+                                      document: widget!.document,
                                       token: currentAuthenticationToken,
-                                      taxAndServiceAmount:
-                                          MembershipCheckoutStruct.maybeFromMap(
-                                                  membershipCheckoutMembershipCartReviewResponse
-                                                      .jsonBody)
-                                              ?.taxAndService,
-                                      discountAmount: MembershipCheckoutStruct
-                                                      .maybeFromMap(
-                                                          membershipCheckoutMembershipCartReviewResponse
-                                                              .jsonBody)!
-                                                  .discount >
-                                              0.0
-                                          ? MembershipCheckoutStruct.maybeFromMap(
-                                                  membershipCheckoutMembershipCartReviewResponse
-                                                      .jsonBody)
-                                              ?.discount
-                                          : 0.0,
-                                      couponCode: widget!.couponCode,
                                     );
 
                                     _shouldSetState = true;
-                                    if ((_model.checkout?.succeeded ?? true)) {
-                                      await showModalBottomSheet(
-                                        isScrollControlled: true,
-                                        backgroundColor: Colors.transparent,
-                                        isDismissible: false,
-                                        enableDrag: false,
-                                        useSafeArea: true,
-                                        context: context,
-                                        builder: (context) {
-                                          return WebViewAware(
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                FocusScope.of(context)
-                                                    .unfocus();
-                                                FocusManager
-                                                    .instance.primaryFocus
-                                                    ?.unfocus();
-                                              },
-                                              child: Padding(
-                                                padding:
-                                                    MediaQuery.viewInsetsOf(
-                                                        context),
-                                                child: Container(
-                                                  height:
-                                                      MediaQuery.sizeOf(context)
-                                                              .height *
-                                                          0.53,
-                                                  child:
-                                                      MembershipWelcomeWidget(),
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      ).then((value) => safeSetState(() {}));
-
-                                      if (_shouldSetState) safeSetState(() {});
-                                      return;
-                                    } else {
-                                      await showDialog(
-                                        context: context,
-                                        builder: (dialogContext) {
-                                          return Dialog(
-                                            elevation: 0,
-                                            insetPadding: EdgeInsets.zero,
-                                            backgroundColor: Colors.transparent,
-                                            alignment: AlignmentDirectional(
-                                                    0.0, 0.0)
-                                                .resolve(
-                                                    Directionality.of(context)),
-                                            child: WebViewAware(
-                                              child: GestureDetector(
-                                                onTap: () {
-                                                  FocusScope.of(dialogContext)
-                                                      .unfocus();
-                                                  FocusManager
-                                                      .instance.primaryFocus
-                                                      ?.unfocus();
-                                                },
-                                                child:
-                                                    PaymentMethodErrorWidget(),
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      );
-
-                                      if (_shouldSetState) safeSetState(() {});
-                                      return;
-                                    }
-                                  } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          getJsonField(
-                                            (_model.apiResultvd0?.jsonBody ??
-                                                ''),
-                                            r'''$.message''',
-                                          ).toString(),
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                          ),
+                                    if ((_model.apiResultd7s?.succeeded ??
+                                        true)) {
+                                      authManager.updateAuthUserData(
+                                        authenticationToken:
+                                            currentAuthenticationToken,
+                                        tokenExpiration:
+                                            currentAuthTokenExpiration,
+                                        authUid: currentUserUid,
+                                        userData: UserStruct(
+                                          id: currentUserData?.id,
+                                          firstName: currentUserData?.firstName,
+                                          lastName: currentUserData?.lastName,
+                                          email: currentUserData?.email,
+                                          profilePicture:
+                                              currentUserData?.profilePicture,
+                                          location: currentUserData?.location,
+                                          address: currentUserData?.address,
+                                          cashbackEarned:
+                                              currentUserData?.cashbackEarned,
+                                          timezone: currentUserData?.timezone,
+                                          phone: currentUserData?.phone,
+                                          defaultCard:
+                                              currentUserData?.defaultCard,
+                                          document: currentUserData?.document,
+                                          lastOrderId:
+                                              currentUserData?.lastOrderId,
                                         ),
-                                        duration: Duration(milliseconds: 4000),
-                                        backgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                      ),
-                                    );
-                                    if (_shouldSetState) safeSetState(() {});
-                                    return;
+                                      );
+                                    }
                                   }
                                 } else {
-                                  await action_blocks.errorAlertSnacbar(
-                                    context,
-                                    textPt:
-                                        'É necessario ter um documento atrelado a sua conta',
-                                    textEs:
-                                        'Debes tener un documento vinculado a tu cuenta',
-                                    textEn:
-                                        'You must have a document linked to your account',
+                                  await showDialog(
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            AlignmentDirectional(0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: WebViewAware(
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              FocusScope.of(dialogContext)
+                                                  .unfocus();
+                                              FocusManager.instance.primaryFocus
+                                                  ?.unfocus();
+                                            },
+                                            child: PaymentMethodErrorWidget(),
+                                          ),
+                                        ),
+                                      );
+                                    },
                                   );
+
                                   if (_shouldSetState) safeSetState(() {});
                                   return;
                                 }

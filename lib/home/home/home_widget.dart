@@ -104,7 +104,6 @@ class _HomeWidgetState extends State<HomeWidget> {
         await action_blocks.verifyAppVersion(context);
         safeSetState(() {});
       }
-      FFAppState().paymentMethodSelected = currentUserData!.defaultCard;
       authManager.updateAuthUserData(
         authenticationToken: currentAuthenticationToken,
         tokenExpiration: currentAuthTokenExpiration,
@@ -130,6 +129,8 @@ class _HomeWidgetState extends State<HomeWidget> {
         FFAppState().appVersion,
         FFAppState().actualVersion,
       );
+      FFAppState().paymentMethodSelected = currentUserData!.defaultCard;
+      safeSetState(() {});
     });
   }
 

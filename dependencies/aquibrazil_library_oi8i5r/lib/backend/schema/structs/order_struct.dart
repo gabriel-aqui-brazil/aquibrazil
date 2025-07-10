@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_getters_setters
 
 import '/backend/schema/util/schema_util.dart';
+import '/backend/schema/enums/enums.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -27,6 +28,8 @@ class OrderStruct extends BaseStruct {
     int? autoCancelAt,
     CustomerStruct? customer,
     RatingStruct? rating,
+    CardStruct? paymentMethod,
+    ComplaintStruct? complaint,
   })  : _id = id,
         _createdAt = createdAt,
         _number = number,
@@ -46,7 +49,9 @@ class OrderStruct extends BaseStruct {
         _observation = observation,
         _autoCancelAt = autoCancelAt,
         _customer = customer,
-        _rating = rating;
+        _rating = rating,
+        _paymentMethod = paymentMethod,
+        _complaint = complaint;
 
   // "id" field.
   String? _id;
@@ -235,6 +240,28 @@ class OrderStruct extends BaseStruct {
 
   bool hasRating() => _rating != null;
 
+  // "payment_method" field.
+  CardStruct? _paymentMethod;
+  CardStruct get paymentMethod => _paymentMethod ?? CardStruct();
+  set paymentMethod(CardStruct? val) => _paymentMethod = val;
+
+  void updatePaymentMethod(Function(CardStruct) updateFn) {
+    updateFn(_paymentMethod ??= CardStruct());
+  }
+
+  bool hasPaymentMethod() => _paymentMethod != null;
+
+  // "complaint" field.
+  ComplaintStruct? _complaint;
+  ComplaintStruct get complaint => _complaint ?? ComplaintStruct();
+  set complaint(ComplaintStruct? val) => _complaint = val;
+
+  void updateComplaint(Function(ComplaintStruct) updateFn) {
+    updateFn(_complaint ??= ComplaintStruct());
+  }
+
+  bool hasComplaint() => _complaint != null;
+
   static OrderStruct fromMap(Map<String, dynamic> data) => OrderStruct(
         id: data['id'] as String?,
         createdAt: castToType<int>(data['created_at']),
@@ -270,6 +297,12 @@ class OrderStruct extends BaseStruct {
         rating: data['rating'] is RatingStruct
             ? data['rating']
             : RatingStruct.maybeFromMap(data['rating']),
+        paymentMethod: data['payment_method'] is CardStruct
+            ? data['payment_method']
+            : CardStruct.maybeFromMap(data['payment_method']),
+        complaint: data['complaint'] is ComplaintStruct
+            ? data['complaint']
+            : ComplaintStruct.maybeFromMap(data['complaint']),
       );
 
   static OrderStruct? maybeFromMap(dynamic data) =>
@@ -296,6 +329,8 @@ class OrderStruct extends BaseStruct {
         'auto_cancel_at': _autoCancelAt,
         'customer': _customer?.toMap(),
         'rating': _rating?.toMap(),
+        'payment_method': _paymentMethod?.toMap(),
+        'complaint': _complaint?.toMap(),
       }.withoutNulls;
 
   @override
@@ -380,6 +415,14 @@ class OrderStruct extends BaseStruct {
         ),
         'rating': serializeParam(
           _rating,
+          ParamType.DataStruct,
+        ),
+        'payment_method': serializeParam(
+          _paymentMethod,
+          ParamType.DataStruct,
+        ),
+        'complaint': serializeParam(
+          _complaint,
           ParamType.DataStruct,
         ),
       }.withoutNulls;
@@ -492,6 +535,18 @@ class OrderStruct extends BaseStruct {
           false,
           structBuilder: RatingStruct.fromSerializableMap,
         ),
+        paymentMethod: deserializeStructParam(
+          data['payment_method'],
+          ParamType.DataStruct,
+          false,
+          structBuilder: CardStruct.fromSerializableMap,
+        ),
+        complaint: deserializeStructParam(
+          data['complaint'],
+          ParamType.DataStruct,
+          false,
+          structBuilder: ComplaintStruct.fromSerializableMap,
+        ),
       );
 
   @override
@@ -520,7 +575,9 @@ class OrderStruct extends BaseStruct {
         observation == other.observation &&
         autoCancelAt == other.autoCancelAt &&
         customer == other.customer &&
-        rating == other.rating;
+        rating == other.rating &&
+        paymentMethod == other.paymentMethod &&
+        complaint == other.complaint;
   }
 
   @override
@@ -544,7 +601,9 @@ class OrderStruct extends BaseStruct {
         observation,
         autoCancelAt,
         customer,
-        rating
+        rating,
+        paymentMethod,
+        complaint
       ]);
 }
 
@@ -567,6 +626,8 @@ OrderStruct createOrderStruct({
   int? autoCancelAt,
   CustomerStruct? customer,
   RatingStruct? rating,
+  CardStruct? paymentMethod,
+  ComplaintStruct? complaint,
 }) =>
     OrderStruct(
       id: id,
@@ -587,4 +648,6 @@ OrderStruct createOrderStruct({
       autoCancelAt: autoCancelAt,
       customer: customer ?? CustomerStruct(),
       rating: rating ?? RatingStruct(),
+      paymentMethod: paymentMethod ?? CardStruct(),
+      complaint: complaint ?? ComplaintStruct(),
     );
