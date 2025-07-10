@@ -11,7 +11,6 @@ import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
-import '/actions/actions.dart' as action_blocks;
 import '/index.dart';
 import 'membership_checkout_widget.dart' show MembershipCheckoutWidget;
 import 'package:ff_commons/api_requests/api_streaming.dart';
@@ -29,10 +28,10 @@ class MembershipCheckoutModel
 
   // Model for paymentMethodSelect component.
   late PaymentMethodSelectModel paymentMethodSelectModel;
-  // Stores action output result for [Backend Call - API (Update document profile)] action in Button widget.
-  ApiCallResponse? apiResultvd0;
   // Stores action output result for [Backend Call - API (Membership checkout)] action in Button widget.
   ApiCallResponse? checkout;
+  // Stores action output result for [Backend Call - API (Update document profile)] action in Button widget.
+  ApiCallResponse? apiResultd7s;
 
   @override
   void initState(BuildContext context) {

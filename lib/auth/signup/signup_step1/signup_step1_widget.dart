@@ -795,66 +795,46 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                   ),
                                 ].divide(SizedBox(height: 16.0)),
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 16.0, 0.0, 0.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    var _shouldSetState = false;
-                                    if (_model.formKey.currentState == null ||
-                                        !_model.formKey.currentState!
-                                            .validate()) {
-                                      return;
-                                    }
-                                    HapticFeedback.mediumImpact();
-                                    FFAppState().signupEmailToValidate =
-                                        _model.emailCadastroTextController.text;
-                                    safeSetState(() {});
-                                    _model.validateOutput = await MainGroup
-                                        .signupRequestCodeEmailCall
-                                        .call(
-                                      email: _model
-                                          .emailCadastroTextController.text,
-                                    );
+                              FFButtonWidget(
+                                onPressed: () async {
+                                  var _shouldSetState = false;
+                                  if (_model.formKey.currentState == null ||
+                                      !_model.formKey.currentState!
+                                          .validate()) {
+                                    return;
+                                  }
+                                  HapticFeedback.mediumImpact();
+                                  FFAppState().signupEmailToValidate =
+                                      _model.emailCadastroTextController.text;
+                                  safeSetState(() {});
+                                  _model.validateOutput = await MainGroup
+                                      .signupRequestCodeEmailCall
+                                      .call(
+                                    email:
+                                        _model.emailCadastroTextController.text,
+                                  );
 
-                                    _shouldSetState = true;
-                                    if ((_model.validateOutput?.succeeded ??
-                                        true)) {
-                                      context.pushNamed(
-                                          SignupStep2Widget.routeName);
+                                  _shouldSetState = true;
+                                  if ((_model.validateOutput?.succeeded ??
+                                      true)) {
+                                    context
+                                        .pushNamed(SignupStep2Widget.routeName);
 
-                                      if (_shouldSetState) safeSetState(() {});
-                                      return;
-                                    } else {
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        SnackBar(
-                                          content: Text(
-                                            getJsonField(
-                                              (_model.validateOutput
-                                                      ?.jsonBody ??
-                                                  ''),
-                                              r'''$.message''',
-                                            ).toString(),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.rubik(
-                                                    fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  letterSpacing: 0.0,
+                                    if (_shouldSetState) safeSetState(() {});
+                                    return;
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          getJsonField(
+                                            (_model.validateOutput?.jsonBody ??
+                                                ''),
+                                            r'''$.message''',
+                                          ).toString(),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.rubik(
                                                   fontWeight:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -866,48 +846,47 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                          ),
-                                          duration:
-                                              Duration(milliseconds: 4000),
-                                          backgroundColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
                                         ),
-                                      );
-                                      if (_shouldSetState) safeSetState(() {});
-                                      return;
-                                    }
-
+                                        duration: Duration(milliseconds: 4000),
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                      ),
+                                    );
                                     if (_shouldSetState) safeSetState(() {});
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'si1j1y5a' /* CONTINUAR */,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 1.0,
-                                    height: 55.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFFF27182),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          font: GoogleFonts.poppins(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .fontStyle,
-                                          ),
-                                          color: Colors.white,
-                                          fontSize: 14.0,
-                                          letterSpacing: 0.0,
+                                    return;
+                                  }
+
+                                  if (_shouldSetState) safeSetState(() {});
+                                },
+                                text: FFLocalizations.of(context).getText(
+                                  'si1j1y5a' /* CONTINUAR */,
+                                ),
+                                options: FFButtonOptions(
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height: 55.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      24.0, 0.0, 24.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFF27182),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        font: GoogleFonts.poppins(
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -917,15 +896,24 @@ class _SignupStep1WidgetState extends State<SignupStep1Widget>
                                                   .titleSmall
                                                   .fontStyle,
                                         ),
-                                    elevation: 0.0,
-                                    borderSide: BorderSide(
-                                      color: Colors.transparent,
-                                    ),
-                                    borderRadius: BorderRadius.circular(100.0),
+                                        color: Colors.white,
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontStyle,
+                                      ),
+                                  elevation: 0.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
                                   ),
+                                  borderRadius: BorderRadius.circular(100.0),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                         Align(

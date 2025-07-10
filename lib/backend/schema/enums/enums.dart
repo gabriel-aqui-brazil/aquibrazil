@@ -1,4 +1,6 @@
 import 'package:collection/collection.dart';
+import "package:aquibrazil_library_oi8i5r/backend/schema/enums/enums.dart"
+    as aquibrazil_library_oi8i5r_enums;
 import 'package:ff_commons/flutter_flow/enums.dart';
 export 'package:ff_commons/flutter_flow/enums.dart';
 
@@ -56,6 +58,9 @@ T? deserializeEnum<T>(String? value) {
       return Categories.values.deserialize(value) as T?;
     case (TransactionType):
       return TransactionType.values.deserialize(value) as T?;
+    case (aquibrazil_library_oi8i5r_enums.ComplaintStatus):
+      return aquibrazil_library_oi8i5r_enums.ComplaintStatus.values
+          .deserialize(value) as T?;
     default:
       return null;
   }
