@@ -3,7 +3,7 @@ import '/backend/api_requests/api_calls.dart';
 import '/companies/product/bottom_cart_alert/bottom_cart_alert_widget.dart';
 import '/companies/product/select_food/select_food_widget.dart';
 import '/components/banner_aqui_pass_company/banner_aqui_pass_company_widget.dart';
-import '/components/info_company_widget.dart';
+import '/components/info_company2_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';

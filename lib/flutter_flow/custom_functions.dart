@@ -16,11 +16,47 @@ import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
 import "package:aquibrazil_library_oi8i5r/backend/schema/enums/enums.dart"
     as aquibrazil_library_oi8i5r_enums;
 
-dynamic latLngToJson(LatLng latLng) {
-  return {
-    'lat': latLng.latitude,
-    'lng': latLng.longitude,
-  };
+String latlngToString(LatLng position) {
+  return '${position.latitude}, ${position.longitude}';
+}
+
+int? getIndexProduct(
+  List<dynamic> itens,
+  dynamic item,
+) {
+  final index = itens.indexWhere(
+    (product) => product['base_product']['id'] == item['base_product']['id'],
+  );
+
+  return index != -1 ? index : null;
+}
+
+double cartSubtotal(List<dynamic> items) {
+  double total = 0;
+
+  for (var item in items) {
+    double price = item['price_sum_with_addon'];
+    int qty = item['quantity'];
+    total += price * qty;
+  }
+
+  return total;
+}
+
+int getItensGroup(
+  aquibrazil_library_oi8i5r_data_schema.AddonGroupStruct addonGroup,
+  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addons,
+) {
+  int itemCount = 0;
+
+  for (var addon in addons) {
+    if (addon.addonGroup?.id == addonGroup.id) {
+      itemCount += addon
+          .quantity; // Soma a quantidade de itens para o grupo correspondente
+    }
+  }
+
+  return itemCount;
 }
 
 bool passwordCheck(String? pass) {
@@ -40,8 +76,11 @@ bool passwordCheck(String? pass) {
   return moreThan8Char && hasDigit;
 }
 
-int lengthString(String str) {
-  return str.length;
+int appointmentApproveLimit(int timestampMs) {
+  DateTime date = DateTime.fromMillisecondsSinceEpoch(timestampMs);
+  DateTime newDate = date.add(Duration(hours: 1));
+  Duration diff = newDate.difference(DateTime.now());
+  return diff.inMilliseconds;
 }
 
 List<DateTime> calendarMonth(
@@ -76,184 +115,6 @@ List<DateTime> calendarMonth(
   }
 
   return monthDates;
-}
-
-int? returnDateRangeInteger(
-  DateTime? checkIn,
-  DateTime? checkOut,
-) {
-  // take the checkIn date and checkOut date and return the number of days in between
-  if (checkIn == null || checkOut == null) return null;
-  final difference = checkOut.difference(checkIn);
-  return difference.inDays;
-}
-
-String toUpperCase(String? text) {
-  if (text == null) {
-    return '';
-  }
-  return text.toUpperCase();
-}
-
-LatLng convertLatLng(
-  double lat,
-  double lng,
-) {
-  return LatLng(lat, lng);
-}
-
-double calculateFinalValue(
-  double extraDiscount,
-  int individualDiscount,
-  int defaultDiscount,
-  double price,
-) {
-  double totalDiscount =
-      (extraDiscount == 0) ? individualDiscount.toDouble() : extraDiscount;
-  totalDiscount += defaultDiscount.toDouble();
-  double finalValue = ((100 - totalDiscount) * price) / 100;
-
-  return finalValue;
-}
-
-DateTime appointmentDateTime(
-  String date,
-  int timeTimestamp,
-) {
-  DateTime parsedDate = DateTime.parse(date);
-  DateTime parsedTime = DateTime.fromMillisecondsSinceEpoch(timeTimestamp);
-
-  DateTime combinedDateTime = DateTime(
-    parsedDate.year,
-    parsedDate.month,
-    parsedDate.day,
-    parsedTime.hour,
-    parsedTime.minute,
-    parsedTime.second,
-    parsedTime.millisecond,
-    parsedTime.microsecond,
-  );
-
-  return combinedDateTime;
-}
-
-int? getIndexProduct(
-  List<dynamic> itens,
-  dynamic item,
-) {
-  final index = itens.indexWhere(
-    (product) => product['base_product']['id'] == item['base_product']['id'],
-  );
-
-  return index != -1 ? index : null;
-}
-
-double amountCart(List<double> prices) {
-  return prices.fold(0, (amount, price) => amount + price);
-}
-
-String latlngToString(LatLng position) {
-  return '${position.latitude}, ${position.longitude}';
-}
-
-String getAddressFromIndex(
-  String address,
-  int startIndex,
-  int endIndex,
-) {
-  List<String> parts = address.split(',');
-  if (startIndex < 0 || startIndex >= parts.length) {
-    return '';
-  }
-
-  if (endIndex == 99 || endIndex >= parts.length) {
-    endIndex = parts.length - 1;
-  }
-
-  return parts.sublist(startIndex, endIndex + 1).join(',').trim();
-}
-
-int? getIndexAddon(
-  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> itens,
-  aquibrazil_library_oi8i5r_data_schema.AddonStruct? item,
-) {
-  return itens.indexWhere((addon) => addon?.id == item?.id);
-}
-
-List<String> getAddonsMandatoryisNotSet(
-  List<aquibrazil_library_oi8i5r_data_schema.AddonGroupStruct> addonGroup,
-  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addons,
-) {
-  List<String> mandatoryGroupNamesWithoutItems = [];
-
-  for (var group in addonGroup) {
-    if (group.isMandatory) {
-      bool hasItems = addons.any((addon) {
-        return addon.addonGroup?.id == group.id;
-      });
-
-      if (!hasItems) {
-        mandatoryGroupNamesWithoutItems.add(group.name);
-      }
-    }
-  }
-
-  return mandatoryGroupNamesWithoutItems;
-}
-
-double sumAddons(
-    List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addon) {
-  double totalSum = 0;
-
-  for (var item in addon) {
-    totalSum += (item.quantity * item.unitPrice);
-  }
-
-  return totalSum;
-}
-
-int getItensGroup(
-  aquibrazil_library_oi8i5r_data_schema.AddonGroupStruct addonGroup,
-  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addons,
-) {
-  int itemCount = 0;
-
-  for (var addon in addons) {
-    if (addon.addonGroup?.id == addonGroup.id) {
-      itemCount += addon
-          .quantity; // Soma a quantidade de itens para o grupo correspondente
-    }
-  }
-
-  return itemCount;
-}
-
-bool isFutureDate(String dateStr) {
-  DateTime inputDate = DateTime.parse(dateStr);
-  DateTime today = DateTime.now();
-
-  DateTime todayDateOnly = DateTime(today.year, today.month, today.day);
-
-  return inputDate.isAfter(todayDateOnly) ||
-      inputDate.isAtSameMomentAs(todayDateOnly);
-}
-
-int appointmentApproveLimit(int timestampMs) {
-  DateTime date = DateTime.fromMillisecondsSinceEpoch(timestampMs);
-  DateTime newDate = date.add(Duration(hours: 1));
-  Duration diff = newDate.difference(DateTime.now());
-  return diff.inMilliseconds;
-}
-
-DateTime calculateDate(DateTime dataNow) {
-  return dataNow.add(Duration(days: 2));
-}
-
-int timeScheduleCancel(int cancelAt) {
-  final now = DateTime.now();
-  final cancelDate = DateTime.fromMillisecondsSinceEpoch(cancelAt);
-  final difference = cancelDate.difference(now);
-  return difference.isNegative ? 0 : difference.inMilliseconds;
 }
 
 String getDayName(
@@ -295,19 +156,27 @@ String getDayName(
   return '';
 }
 
-int getCurrentDayWeek() {
-  int weekday = DateTime.now().weekday;
-  return weekday % 7;
+int timeServiceFinished(
+  int date,
+  int duration,
+) {
+  int durationInMillis = duration * 60 * 1000;
+
+  return date + durationInMillis;
 }
 
-String? formatImage(String url) {
-  // Verificar se a URL termina com .svg
-  if (url.toLowerCase().endsWith('.svg')) {
-    return 'svg';
-  }
+DateTime calculateDate(DateTime dataNow) {
+  return dataNow.add(Duration(days: 2));
+}
 
-  // Para outros tipos de imagens
-  return 'image';
+int? returnDateRangeInteger(
+  DateTime? checkIn,
+  DateTime? checkOut,
+) {
+  // take the checkIn date and checkOut date and return the number of days in between
+  if (checkIn == null || checkOut == null) return null;
+  final difference = checkOut.difference(checkIn);
+  return difference.inDays;
 }
 
 bool validateCPF(String? document) {
@@ -349,12 +218,51 @@ bool validateCPF(String? document) {
   return true;
 }
 
+List<String> getAddonsMandatoryisNotSet(
+  List<aquibrazil_library_oi8i5r_data_schema.AddonGroupStruct> addonGroup,
+  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addons,
+) {
+  List<String> mandatoryGroupNamesWithoutItems = [];
+
+  for (var group in addonGroup) {
+    if (group.isMandatory) {
+      bool hasItems = addons.any((addon) {
+        return addon.addonGroup?.id == group.id;
+      });
+
+      if (!hasItems) {
+        mandatoryGroupNamesWithoutItems.add(group.name);
+      }
+    }
+  }
+
+  return mandatoryGroupNamesWithoutItems;
+}
+
+String? formatImage(String url) {
+  // Verificar se a URL termina com .svg
+  if (url.toLowerCase().endsWith('.svg')) {
+    return 'svg';
+  }
+
+  // Para outros tipos de imagens
+  return 'image';
+}
+
+int lengthString(String str) {
+  return str.length;
+}
+
 String formatHour(String hour) {
   List<String> parts = hour.split(':');
   int h = int.parse(parts[0]);
   String suffix = h >= 12 ? 'PM' : 'AM';
   int h12 = h % 12 == 0 ? 12 : h % 12;
   return '$h12:${parts[1]} $suffix';
+}
+
+double amountCart(List<double> prices) {
+  return prices.fold(0, (amount, price) => amount + price);
 }
 
 String getTimeService(
@@ -378,13 +286,78 @@ String getTimeService(
   }
 }
 
-int timeServiceFinished(
-  int date,
-  int duration,
+double calculateFinalValue(
+  double extraDiscount,
+  int individualDiscount,
+  int defaultDiscount,
+  double price,
 ) {
-  int durationInMillis = duration * 60 * 1000;
+  double totalDiscount =
+      (extraDiscount == 0) ? individualDiscount.toDouble() : extraDiscount;
+  totalDiscount += defaultDiscount.toDouble();
+  double finalValue = ((100 - totalDiscount) * price) / 100;
 
-  return date + durationInMillis;
+  return finalValue;
+}
+
+int? getIndexAddon(
+  List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> itens,
+  aquibrazil_library_oi8i5r_data_schema.AddonStruct? item,
+) {
+  return itens.indexWhere((addon) => addon?.id == item?.id);
+}
+
+int getCurrentDayWeek() {
+  int weekday = DateTime.now().weekday;
+  return weekday % 7;
+}
+
+String toUpperCase(String? text) {
+  if (text == null) {
+    return '';
+  }
+  return text.toUpperCase();
+}
+
+dynamic latLngToJson(LatLng latLng) {
+  return {
+    'lat': latLng.latitude,
+    'lng': latLng.longitude,
+  };
+}
+
+int timeScheduleCancel(int cancelAt) {
+  final now = DateTime.now();
+  final cancelDate = DateTime.fromMillisecondsSinceEpoch(cancelAt);
+  final difference = cancelDate.difference(now);
+  return difference.isNegative ? 0 : difference.inMilliseconds;
+}
+
+String getAddressFromIndex(
+  String address,
+  int startIndex,
+  int endIndex,
+) {
+  List<String> parts = address.split(',');
+  if (startIndex < 0 || startIndex >= parts.length) {
+    return '';
+  }
+
+  if (endIndex == 99 || endIndex >= parts.length) {
+    endIndex = parts.length - 1;
+  }
+
+  return parts.sublist(startIndex, endIndex + 1).join(',').trim();
+}
+
+bool isFutureDate(String dateStr) {
+  DateTime inputDate = DateTime.parse(dateStr);
+  DateTime today = DateTime.now();
+
+  DateTime todayDateOnly = DateTime(today.year, today.month, today.day);
+
+  return inputDate.isAfter(todayDateOnly) ||
+      inputDate.isAtSameMomentAs(todayDateOnly);
 }
 
 String uberUrlPtBr(
@@ -398,14 +371,41 @@ String uberUrlPtBr(
   return novaUri.toString();
 }
 
-double cartSubtotal(List<dynamic> items) {
-  double total = 0;
+LatLng convertLatLng(
+  double lat,
+  double lng,
+) {
+  return LatLng(lat, lng);
+}
 
-  for (var item in items) {
-    double price = item['price_sum_with_addon'];
-    int qty = item['quantity'];
-    total += price * qty;
+DateTime appointmentDateTime(
+  String date,
+  int timeTimestamp,
+) {
+  DateTime parsedDate = DateTime.parse(date);
+  DateTime parsedTime = DateTime.fromMillisecondsSinceEpoch(timeTimestamp);
+
+  DateTime combinedDateTime = DateTime(
+    parsedDate.year,
+    parsedDate.month,
+    parsedDate.day,
+    parsedTime.hour,
+    parsedTime.minute,
+    parsedTime.second,
+    parsedTime.millisecond,
+    parsedTime.microsecond,
+  );
+
+  return combinedDateTime;
+}
+
+double sumAddons(
+    List<aquibrazil_library_oi8i5r_data_schema.CartProductAddonStruct> addon) {
+  double totalSum = 0;
+
+  for (var item in addon) {
+    totalSum += (item.quantity * item.unitPrice);
   }
 
-  return total;
+  return totalSum;
 }

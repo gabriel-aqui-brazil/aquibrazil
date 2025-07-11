@@ -834,7 +834,7 @@ class _Cart5WidgetState extends State<Cart5Widget> {
                     Navigator.pop(context);
 
                     context.pushNamed(
-                      TrackOrderWidget.routeName,
+                      OrderDetailsWidget.routeName,
                       queryParameters: {
                         'orderId': serializeParam(
                           aquibrazil_library_oi8i5r_data_schema.OrderStruct

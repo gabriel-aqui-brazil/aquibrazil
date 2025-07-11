@@ -138,7 +138,7 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
             }
           } else {
             context.pushNamed(
-              TrackOrderWidget.routeName,
+              OrderDetailsWidget.routeName,
               queryParameters: {
                 'orderId': serializeParam(
                   FFAppState().orderSelected.id,

@@ -93,55 +93,57 @@ class _AdsWidgetState extends State<AdsWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    if (false)
-                      Align(
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Container(
+                        width: 50.0,
+                        height: 30.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
                         alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Container(
-                          width: 50.0,
-                          height: 30.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(50.0),
-                          ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'lc4nqab9' /* 4.5 */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                      fontSize: 11.0,
-                                      letterSpacing: 0.0,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              formatNumber(
+                                widget!.ads!.company.rating,
+                                formatType: FormatType.custom,
+                                format: '#.0',
+                                locale: '',
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                              ),
-                              Icon(
-                                FFIcons.kcaminho2395,
-                                color: Color(0xFFFFC803),
-                                size: 11.0,
-                              ),
-                            ]
-                                .divide(SizedBox(width: 4.0))
-                                .addToStart(SizedBox(width: 4.0))
-                                .addToEnd(SizedBox(width: 4.0)),
-                          ),
+                                    fontSize: 11.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                            ),
+                            Icon(
+                              FFIcons.kcaminho2395,
+                              color: Color(0xFFFFC803),
+                              size: 11.0,
+                            ),
+                          ]
+                              .divide(SizedBox(width: 4.0))
+                              .addToStart(SizedBox(width: 4.0))
+                              .addToEnd(SizedBox(width: 4.0)),
                         ),
                       ),
+                    ),
                     if (false)
                       Builder(
                         builder: (context) {

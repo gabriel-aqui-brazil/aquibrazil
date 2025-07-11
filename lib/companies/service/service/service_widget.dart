@@ -2,7 +2,7 @@ import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/companies/service/select_service/select_service_widget.dart';
 import '/components/banner_aqui_pass_company/banner_aqui_pass_company_widget.dart';
-import '/components/info_company_widget.dart';
+import '/components/info_company2_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -317,7 +317,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                           '4l71pn31' /* TODOS */,
                                         ),
                                         options: FFButtonOptions(
-                                          height: 50.0,
+                                          height: 36.0,
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
@@ -377,7 +377,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                       Expanded(
                                         child: Container(
                                           width: double.infinity,
-                                          height: 50.0,
+                                          height: 36.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
@@ -506,40 +506,6 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 105.0, 0.0, 0.0),
-                                child: Container(
-                                  width: 55.0,
-                                  height: 55.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100.0),
-                                    border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      width: 2.0,
-                                    ),
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(100.0),
-                                    child: Image.network(
-                                      aquibrazil_library_oi8i5r_data_schema
-                                                  .SessionServiceStruct
-                                              .maybeFromMap(
-                                                  serviceQueryServiceResponse
-                                                      .jsonBody)!
-                                          .company
-                                          .profilePhotoUrl,
-                                      width: 50.0,
-                                      height: 50.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                       ),
@@ -564,7 +530,7 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 24.0, 12.0, 8.0),
+                                12.0, 12.0, 12.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -589,20 +555,14 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                           child: Container(
                                             height: MediaQuery.sizeOf(context)
                                                     .height *
-                                                1.0,
-                                            child: InfoCompanyWidget(
+                                                0.89,
+                                            child: InfoCompany2Widget(
                                               company: aquibrazil_library_oi8i5r_data_schema
                                                           .SessionServiceStruct
                                                       .maybeFromMap(
                                                           serviceQueryServiceResponse
                                                               .jsonBody)!
                                                   .company,
-                                              customer: aquibrazil_library_oi8i5r_data_schema
-                                                          .SessionServiceStruct
-                                                      .maybeFromMap(
-                                                          serviceQueryServiceResponse
-                                                              .jsonBody)!
-                                                  .customer,
                                             ),
                                           ),
                                         ),
@@ -613,7 +573,6 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                               },
                               child: Container(
                                 width: double.infinity,
-                                height: 75.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16.0),
                                   border: Border.all(
@@ -626,29 +585,66 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                       12.0, 16.0, 12.0, 16.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Flexible(
+                                      ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(200.0),
+                                        child: Image.network(
+                                          aquibrazil_library_oi8i5r_data_schema
+                                                      .SessionServiceStruct
+                                                  .maybeFromMap(
+                                                      serviceQueryServiceResponse
+                                                          .jsonBody)!
+                                              .company
+                                              .profilePhotoUrl,
+                                          width: 40.0,
+                                          height: 40.0,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Expanded(
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            Text(
-                                              functions.toUpperCase(
-                                                  aquibrazil_library_oi8i5r_data_schema
-                                                              .SessionServiceStruct
-                                                          .maybeFromMap(
-                                                              serviceQueryServiceResponse
-                                                                  .jsonBody)
-                                                      ?.company
-                                                      ?.name),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 4.0),
+                                                  child: Text(
+                                                    functions.toUpperCase(
+                                                        valueOrDefault<String>(
+                                                      aquibrazil_library_oi8i5r_data_schema
+                                                                  .SessionServiceStruct
+                                                              .maybeFromMap(
+                                                                  serviceQueryServiceResponse
+                                                                      .jsonBody)
+                                                          ?.company
+                                                          ?.name,
+                                                      'name',
+                                                    )),
+                                                    maxLines: 1,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          font: GoogleFonts
+                                                              .poppins(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                          fontSize: 18.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontStyle:
@@ -657,22 +653,83 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                        fontSize: 14.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                                  ),
+                                                ),
+                                              ].divide(SizedBox(width: 15.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
                                               children: [
+                                                Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          1.0, 0.0),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 2.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      valueOrDefault<String>(
+                                                        formatNumber(
+                                                          aquibrazil_library_oi8i5r_data_schema
+                                                                      .SessionServiceStruct
+                                                                  .maybeFromMap(
+                                                                      serviceQueryServiceResponse
+                                                                          .jsonBody)
+                                                              ?.company
+                                                              ?.priceDelivery,
+                                                          formatType:
+                                                              FormatType.custom,
+                                                          currency: '\$',
+                                                          format: '#,##0.00',
+                                                          locale: 'en_us',
+                                                        ),
+                                                        '-',
+                                                      ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .roboto(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
+                                                            color: Color(
+                                                                0xFF808080),
+                                                            fontSize: 12.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 12.0,
+                                                  child: VerticalDivider(
+                                                    width: 12.0,
+                                                    thickness: 0.7,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                  ),
+                                                ),
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -692,14 +749,19 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          functions.toUpperCase(aquibrazil_library_oi8i5r_data_schema
-                                                                      .SessionServiceStruct
-                                                                  .maybeFromMap(
-                                                                      serviceQueryServiceResponse
-                                                                          .jsonBody)
-                                                              ?.company
-                                                              ?.terciaryCategory
-                                                              ?.name),
+                                                          functions.toUpperCase(
+                                                              valueOrDefault<
+                                                                  String>(
+                                                            aquibrazil_library_oi8i5r_data_schema
+                                                                        .SessionServiceStruct
+                                                                    .maybeFromMap(
+                                                                        serviceQueryServiceResponse
+                                                                            .jsonBody)
+                                                                ?.company
+                                                                ?.terciaryCategory
+                                                                ?.name,
+                                                            '-',
+                                                          )),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -737,7 +799,9 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                         width: 3.0,
                                                         thickness: 0.7,
                                                         color:
-                                                            Color(0xFF808080),
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
                                                       ),
                                                     ),
                                                     Align(
@@ -753,18 +817,19 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '${valueOrDefault<String>(
-                                                            formatNumber(
-                                                              widget!.company
-                                                                  ?.distance,
-                                                              formatType:
-                                                                  FormatType
-                                                                      .decimal,
-                                                              decimalType:
-                                                                  DecimalType
-                                                                      .periodDecimal,
-                                                            ),
-                                                            '0',
+                                                          '${formatNumber(
+                                                            aquibrazil_library_oi8i5r_data_schema
+                                                                        .SessionServiceStruct
+                                                                    .maybeFromMap(
+                                                                        serviceQueryServiceResponse
+                                                                            .jsonBody)
+                                                                ?.company
+                                                                ?.distance,
+                                                            formatType:
+                                                                FormatType
+                                                                    .custom,
+                                                            format: '####.#',
+                                                            locale: '',
                                                           )} MILHAS',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -800,87 +865,46 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
                                                 ),
-                                              ],
+                                              ].divide(SizedBox(width: 4.0)),
                                             ),
-                                          ].divide(SizedBox(height: 4.0)),
+                                          ],
                                         ),
                                       ),
-                                      if (false)
-                                        Container(
-                                          width: 60.0,
-                                          height: 60.0,
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional(0.0, 0.0),
+                                        child: Container(
+                                          width: 50.0,
+                                          height: 30.0,
                                           decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
                                             borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            border: Border.all(
-                                              color: Color(0xFFEEEEEE),
-                                            ),
+                                                BorderRadius.circular(50.0),
                                           ),
-                                          child: Column(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 2.0,
-                                                                0.0, 0.0),
-                                                    child: Icon(
-                                                      FFIcons.kcaminho2395,
-                                                      color: Color(0xFFFFBC24),
-                                                      size: 12.0,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 2.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '5fqpjxom' /* 4.5 */,
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            font: GoogleFonts
-                                                                .inter(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
-                                                            fontSize: 14.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                ].divide(SizedBox(width: 4.0)),
-                                              ),
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'ysw0gsx9' /* 120 */,
+                                                valueOrDefault<String>(
+                                                  formatNumber(
+                                                    aquibrazil_library_oi8i5r_data_schema
+                                                                .SessionServiceStruct
+                                                            .maybeFromMap(
+                                                                serviceQueryServiceResponse
+                                                                    .jsonBody)
+                                                        ?.company
+                                                        ?.rating,
+                                                    formatType:
+                                                        FormatType.custom,
+                                                    format: '#.0',
+                                                    locale: '',
+                                                  ),
+                                                  '5.0',
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
@@ -888,17 +912,17 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                     .override(
                                                       font: GoogleFonts.poppins(
                                                         fontWeight:
-                                                            FontWeight.w500,
+                                                            FontWeight.w600,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
-                                                      fontSize: 10.0,
+                                                      fontSize: 11.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FontWeight.w500,
+                                                          FontWeight.w600,
                                                       fontStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -906,9 +930,19 @@ class _ServiceWidgetState extends State<ServiceWidget> {
                                                               .fontStyle,
                                                     ),
                                               ),
-                                            ],
+                                              Icon(
+                                                FFIcons.kcaminho2395,
+                                                color: Color(0xFFFFC803),
+                                                size: 11.0,
+                                              ),
+                                            ]
+                                                .divide(SizedBox(width: 4.0))
+                                                .addToStart(
+                                                    SizedBox(width: 4.0))
+                                                .addToEnd(SizedBox(width: 4.0)),
                                           ),
                                         ),
+                                      ),
                                       Icon(
                                         FFIcons.karrowSquareRight,
                                         color: FlutterFlowTheme.of(context)

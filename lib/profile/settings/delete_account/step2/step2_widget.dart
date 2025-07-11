@@ -75,7 +75,7 @@ class _Step2WidgetState extends State<Step2Widget> {
             ),
             title: Text(
               FFLocalizations.of(context).getText(
-                'l05ykvq0' /* APAGAR CONTA */,
+                'l05ykvq0' /* APAGAR MINHA CONTA */,
               ),
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Anton',

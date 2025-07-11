@@ -297,7 +297,7 @@ class _NavBarPageState extends State<NavBarPage> {
             GButton(
               icon: FFIcons.kreceipt,
               text: FFLocalizations.of(context).getText(
-                'e8vjpb96' /*  */,
+                'nxyn3ooa' /*  */,
               ),
               iconSize: 24.0,
             ),
