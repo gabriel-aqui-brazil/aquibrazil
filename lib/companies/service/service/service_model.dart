@@ -2,7 +2,7 @@ import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/companies/service/select_service/select_service_widget.dart';
 import '/components/banner_aqui_pass_company/banner_aqui_pass_company_widget.dart';
-import '/components/info_company_widget.dart';
+import '/components/info_company2_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';

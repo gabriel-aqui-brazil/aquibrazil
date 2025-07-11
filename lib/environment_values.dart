@@ -23,6 +23,7 @@ class FFDevEnvironmentValues {
       final data = await json.decode(response);
       _dataResource = data['dataResource'];
       _stripeKey = data['stripeKey'];
+      _branchVar = data['branchVar'];
     } catch (e) {
       print('Error loading environment values: $e');
     }
@@ -33,4 +34,7 @@ class FFDevEnvironmentValues {
 
   String _stripeKey = '';
   String get stripeKey => _stripeKey;
+
+  String _branchVar = '';
+  String get branchVar => _branchVar;
 }

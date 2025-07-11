@@ -16,6 +16,14 @@ import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+Future<bool> checkIsUserDataPopulate(BuildContext context) async {
+  if (loggedIn) {
+    return true;
+  }
+
+  return false;
+}
+
 Future<bool?> insertUserDocument(
   BuildContext context, {
   required String? document,
@@ -51,14 +59,6 @@ Future<bool?> insertUserDocument(
       backgroundColor: FlutterFlowTheme.of(context).error,
     ),
   );
-  return false;
-}
-
-Future<bool> checkIsUserDataPopulate(BuildContext context) async {
-  if (loggedIn) {
-    return true;
-  }
-
   return false;
 }
 
@@ -112,25 +112,6 @@ Future<bool> verifyHomeCache(BuildContext context) async {
   }
 }
 
-Future verifyAppVersion(BuildContext context) async {
-  ApiCallResponse? appVersion;
-
-  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
-    token: currentAuthenticationToken,
-  );
-
-  if ((appVersion?.succeeded ?? true)) {
-    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
-        .actualVersion(
-          (appVersion?.jsonBody ?? ''),
-        )
-        .toString();
-    return;
-  } else {
-    return;
-  }
-}
-
 Future cartClear(BuildContext context) async {
   FFAppState().deleteCart();
   FFAppState().cart = aquibrazil_library_oi8i5r_data_schema.CartStruct();
@@ -166,4 +147,49 @@ Future cartClear(BuildContext context) async {
       ),
     },
   );
+}
+
+Future verifyAppVersion(BuildContext context) async {
+  ApiCallResponse? appVersion;
+
+  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
+    token: currentAuthenticationToken,
+  );
+
+  if ((appVersion?.succeeded ?? true)) {
+    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
+        .actualVersion(
+          (appVersion?.jsonBody ?? ''),
+        )
+        .toString();
+    FFAppState().update(() {});
+    return;
+  } else {
+    return;
+  }
+}
+
+Future orderHistory(
+  BuildContext context, {
+  String? type,
+}) async {
+  ApiCallResponse? apiResult4xv2;
+
+  apiResult4xv2 = await MainGroup.queryOrderHistoryCall.call(
+    token: currentAuthenticationToken,
+    orderType: type,
+  );
+
+  FFAppState().historyOrder =
+      ((apiResult4xv2?.jsonBody ?? '')
+                  .toList()
+                  .map<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>(
+                      aquibrazil_library_oi8i5r_data_schema
+                          .OrderStruct.maybeFromMap)
+                  .toList()
+              as Iterable<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>)
+          .withoutNulls
+          .toList()
+          .cast<aquibrazil_library_oi8i5r_data_schema.OrderStruct>();
+  FFAppState().update(() {});
 }
