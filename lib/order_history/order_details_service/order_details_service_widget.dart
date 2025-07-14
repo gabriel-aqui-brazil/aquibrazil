@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/order_history/order_details_service_reeschedule/order_details_service_reeschedule_widget.dart';
+import '/order_history/order_rating/order_rating_widget.dart';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
@@ -13,8 +14,10 @@ import '/backend/schema/structs/index.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
+import 'dart:async';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -59,11 +62,15 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return FutureBuilder<ApiCallResponse>(
-      future: MainGroup.getOrderDetailServiceCall.call(
-        orderId: widget!.orderID,
-        token: currentAuthenticationToken,
-      ),
+      future: (_model.apiRequestCompleter ??= Completer<ApiCallResponse>()
+            ..complete(MainGroup.getOrderDetailServiceCall.call(
+              orderId: widget!.orderID,
+              token: currentAuthenticationToken,
+            )))
+          .future,
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -391,6 +398,128 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                           ),
                         ),
                       ),
+                      if (aquibrazil_library_oi8i5r_data_schema.OrderStruct
+                                  .maybeFromMap(
+                                      orderDetailsServiceGetOrderDetailServiceResponse
+                                          .jsonBody)
+                              ?.status ==
+                          'Concluido')
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              12.0, 0.0, 12.0, 0.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '6mje96kd' /* AVALIAR PEDIDO */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w600,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  if (!aquibrazil_library_oi8i5r_data_schema
+                                              .OrderStruct
+                                          .maybeFromMap(
+                                              orderDetailsServiceGetOrderDetailServiceResponse
+                                                  .jsonBody)!
+                                      .rating
+                                      .hasRating()) {
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return WebViewAware(
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              FocusScope.of(context).unfocus();
+                                              FocusManager.instance.primaryFocus
+                                                  ?.unfocus();
+                                            },
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: OrderRatingWidget(
+                                                order:
+                                                    FFAppState().orderSelected,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
+
+                                    safeSetState(() =>
+                                        _model.apiRequestCompleter = null);
+                                    await _model.waitForApiRequestCompleted();
+                                  }
+                                },
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Container(
+                                      width: 32.0,
+                                      height: 32.0,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.network(
+                                        aquibrazil_library_oi8i5r_data_schema
+                                                    .OrderStruct
+                                                .maybeFromMap(
+                                                    orderDetailsServiceGetOrderDetailServiceResponse
+                                                        .jsonBody)!
+                                            .company
+                                            .profilePhotoUrl,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    RatingBarIndicator(
+                                      itemBuilder: (context, index) => Icon(
+                                        Icons.star_rounded,
+                                        color: Color(0xFFF9AB10),
+                                      ),
+                                      direction: Axis.horizontal,
+                                      rating: aquibrazil_library_oi8i5r_data_schema
+                                                  .OrderStruct
+                                              .maybeFromMap(
+                                                  orderDetailsServiceGetOrderDetailServiceResponse
+                                                      .jsonBody)!
+                                          .rating
+                                          .rating,
+                                      unratedColor: Color(0xFF9CA3AF),
+                                      itemCount: 5,
+                                      itemSize: 20.0,
+                                    ),
+                                  ].divide(SizedBox(width: 12.0)),
+                                ),
+                              ),
+                            ].divide(SizedBox(height: 16.0)),
+                          ),
+                        ),
                       Padding(
                         padding: EdgeInsets.all(12.0),
                         child: InkWell(

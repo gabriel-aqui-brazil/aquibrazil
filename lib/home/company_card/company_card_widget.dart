@@ -156,33 +156,106 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
                                   ],
                                 ),
                               ),
-                              if (widget!.company!.sumDiscount >= 15.0)
-                                Container(
-                                  width: 40.0,
-                                  height: 40.0,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    borderRadius: BorderRadius.circular(100.0),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Padding(
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  if (widget!.company!.sumDiscount >= 15.0)
+                                    Container(
+                                      width: 40.0,
+                                      height: 40.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        borderRadius:
+                                            BorderRadius.circular(100.0),
+                                      ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 3.0),
+                                            child: Lottie.asset(
+                                              'assets/jsons/Fire_(2).json',
+                                              width: 30.0,
+                                              height: 30.0,
+                                              fit: BoxFit.contain,
+                                              animate: true,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Container(
+                                      width: 55.0,
+                                      height: 40.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        borderRadius:
+                                            BorderRadius.circular(50.0),
+                                      ),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 3.0),
-                                        child: Lottie.asset(
-                                          'assets/jsons/Fire_(2).json',
-                                          width: 30.0,
-                                          height: 30.0,
-                                          fit: BoxFit.contain,
-                                          animate: true,
+                                            0.0, 1.0, 0.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              formatNumber(
+                                                widget!.company!.rating,
+                                                formatType: FormatType.custom,
+                                                format: '#.0',
+                                                locale: '',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    fontSize: 11.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                            ),
+                                            Icon(
+                                              FFIcons.kcaminho2395,
+                                              color: Color(0xFFE4B405),
+                                              size: 11.0,
+                                            ),
+                                          ]
+                                              .divide(SizedBox(width: 4.0))
+                                              .addToStart(SizedBox(width: 4.0))
+                                              .addToEnd(SizedBox(width: 4.0)),
                                         ),
                                       ),
-                                    ],
+                                    ),
                                   ),
-                                ),
+                                ].divide(SizedBox(width: 16.0)),
+                              ),
                             ],
                           ),
                         ),

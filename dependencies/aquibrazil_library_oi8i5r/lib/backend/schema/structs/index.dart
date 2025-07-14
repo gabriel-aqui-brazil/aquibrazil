@@ -18,6 +18,7 @@ export 'company_partner_struct.dart';
 export 'company_partner_category_struct.dart';
 export 'company_with_category_struct.dart';
 export 'complaint_struct.dart';
+export 'complaint_history_struct.dart';
 export 'customer_struct.dart';
 export 'discount_rule_struct.dart';
 export 'distance_struct.dart';

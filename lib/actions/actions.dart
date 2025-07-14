@@ -16,6 +16,14 @@ import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+Future<bool> checkIsUserDataPopulate(BuildContext context) async {
+  if (loggedIn) {
+    return true;
+  }
+
+  return false;
+}
+
 Future<bool?> insertUserDocument(
   BuildContext context, {
   required String? document,
@@ -54,14 +62,6 @@ Future<bool?> insertUserDocument(
   return false;
 }
 
-Future<bool> checkIsUserDataPopulate(BuildContext context) async {
-  if (loggedIn) {
-    return true;
-  }
-
-  return false;
-}
-
 Future errorAlertSnacbar(
   BuildContext context, {
   required String? textPt,
@@ -85,6 +85,26 @@ Future errorAlertSnacbar(
       backgroundColor: FlutterFlowTheme.of(context).error,
     ),
   );
+}
+
+Future verifyAppVersion(BuildContext context) async {
+  ApiCallResponse? appVersion;
+
+  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
+    token: currentAuthenticationToken,
+  );
+
+  if ((appVersion?.succeeded ?? true)) {
+    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
+        .actualVersion(
+          (appVersion?.jsonBody ?? ''),
+        )
+        .toString();
+    FFAppState().update(() {});
+    return;
+  } else {
+    return;
+  }
 }
 
 Future<bool> verifyHomeCache(BuildContext context) async {
@@ -112,23 +132,29 @@ Future<bool> verifyHomeCache(BuildContext context) async {
   }
 }
 
-Future verifyAppVersion(BuildContext context) async {
-  ApiCallResponse? appVersion;
+Future orderHistory(
+  BuildContext context, {
+  String? type,
+}) async {
+  ApiCallResponse? apiResult4xv2;
 
-  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
+  apiResult4xv2 = await MainGroup.queryOrderHistoryCall.call(
     token: currentAuthenticationToken,
+    orderType: type,
   );
 
-  if ((appVersion?.succeeded ?? true)) {
-    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
-        .actualVersion(
-          (appVersion?.jsonBody ?? ''),
-        )
-        .toString();
-    return;
-  } else {
-    return;
-  }
+  FFAppState().historyOrder =
+      ((apiResult4xv2?.jsonBody ?? '')
+                  .toList()
+                  .map<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>(
+                      aquibrazil_library_oi8i5r_data_schema
+                          .OrderStruct.maybeFromMap)
+                  .toList()
+              as Iterable<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>)
+          .withoutNulls
+          .toList()
+          .cast<aquibrazil_library_oi8i5r_data_schema.OrderStruct>();
+  FFAppState().update(() {});
 }
 
 Future cartClear(BuildContext context) async {
