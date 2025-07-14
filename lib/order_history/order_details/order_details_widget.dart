@@ -1681,7 +1681,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                             text: FFLocalizations
                                                                     .of(context)
                                                                 .getText(
-                                                              '5pvmanfs' /* Previsão de entrega:  */,
+                                                              '5pvmanfs' /* INFORMAÇÕES */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1714,22 +1714,6 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                          ),
-                                                          TextSpan(
-                                                            text: FFLocalizations
-                                                                    .of(context)
-                                                                .getText(
-                                                              '0loqdvlr' /* 13:00 - 13:40 */,
-                                                            ),
-                                                            style: GoogleFonts
-                                                                .inter(
-                                                              color: Color(
-                                                                  0xFF808080),
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              fontSize: 12.0,
-                                                            ),
                                                           )
                                                         ],
                                                         style:
@@ -1908,13 +1892,16 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                           ].divide(SizedBox(height: 12.0)),
                                         ),
                                       ),
-                                      if ((FFAppState().orderSelected.status ==
-                                              'Saiu para entrega') &&
-                                          (FFAppState()
+                                      if (FFAppState()
                                                   .orderSelected
-                                                  .company
-                                                  .deliveryLogistics !=
-                                              'Propria'))
+                                                  .detail
+                                                  .dropoffCode !=
+                                              null &&
+                                          FFAppState()
+                                                  .orderSelected
+                                                  .detail
+                                                  .dropoffCode !=
+                                              '')
                                         Container(
                                           width: double.infinity,
                                           decoration: BoxDecoration(
@@ -1991,7 +1978,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                                 .orderSelected
                                                                 .detail
                                                                 .dropoffCode,
-                                                            '000',
+                                                            '0000',
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -3107,13 +3094,14 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                                             0.0,
                                                                             4.0),
                                                                     child: Text(
-                                                                      valueOrDefault<
-                                                                          String>(
+                                                                      functions.toUpperCase(
+                                                                          valueOrDefault<
+                                                                              String>(
                                                                         orderItem
                                                                             .baseProduct
                                                                             .name,
                                                                         '--',
-                                                                      ),
+                                                                      )),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -3142,13 +3130,14 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                                             0.0,
                                                                             4.0),
                                                                     child: Text(
-                                                                      valueOrDefault<
-                                                                          String>(
+                                                                      functions.toUpperCase(
+                                                                          valueOrDefault<
+                                                                              String>(
                                                                         orderItem
                                                                             .baseProduct
                                                                             .description,
                                                                         'BASE PRODUCT',
-                                                                      ),
+                                                                      )),
                                                                       maxLines:
                                                                           1,
                                                                       style: FlutterFlowTheme.of(
@@ -3235,10 +3224,10 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                                                               ),
                                                                               Flexible(
                                                                                 child: Text(
-                                                                                  valueOrDefault<String>(
+                                                                                  functions.toUpperCase(valueOrDefault<String>(
                                                                                     addonItem.name,
                                                                                     '--',
-                                                                                  ),
+                                                                                  )),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         font: GoogleFonts.inter(
                                                                                           fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,

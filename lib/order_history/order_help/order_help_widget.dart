@@ -112,7 +112,7 @@ class _OrderHelpWidgetState extends State<OrderHelpWidget> {
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        'umiue761' /* Selecione uma das opções para ... */,
+                        'umiue761' /* SELECIONE UMA DAS OPÇÕES PARA ... */,
                       ),
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -162,7 +162,7 @@ class _OrderHelpWidgetState extends State<OrderHelpWidget> {
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'ozw9vqwu' /* Problemas com o pedido */,
+                                  'ozw9vqwu' /* PROBLEMAS COM O PEDIDO */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

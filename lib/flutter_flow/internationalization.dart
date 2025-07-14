@@ -426,14 +426,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '14:48',
     },
     '5pvmanfs': {
-      'pt': 'Previsão de entrega: ',
-      'en': '',
-      'es': '',
-    },
-    '0loqdvlr': {
-      'pt': '13:00 - 13:40',
-      'en': '',
-      'es': '',
+      'pt': 'INFORMAÇÕES',
+      'en': 'INFORMATION',
+      'es': 'INFORMACIÓN',
     },
     'sf3duwcp': {
       'pt': 'CÓDIGO DE ENTREGA',
@@ -885,22 +880,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ordersHelp
   {
     'c7k1izy6': {
-      'pt': 'Pedido finalizado',
-      'en': 'Order completed',
-      'es': 'Pedido completado',
+      'pt': 'PEDIDO FINALIZADO',
+      'en': 'ORDER COMPLETED',
+      'es': 'PEDIDO COMPLETADO',
     },
     'i761s2om': {
-      'pt': 'Sentimos muito que houve um problema com o seu pedido',
-      'en': 'We are sorry there was a problem with your order.',
-      'es': 'Lamentamos que haya habido un problema con su pedido.',
+      'pt': 'SENTIMOS MUITO QUE HOUVE UM PROBLEMA COM O SEU PEDIDO',
+      'en': 'WE\'RE SO SORRY THERE WAS A PROBLEM WITH YOUR ORDER',
+      'es': 'LAMENTAMOS MUCHO QUE HAYA HABIDO UN PROBLEMA CON SU PEDIDO.',
     },
     'mqnc4cqc': {
       'pt':
-          'Queremos entender o qual foi o problema para negociamos o reembolso ou outra solução com a loja',
+          'QUEREMOS ENTENDER O QUAL FOI O PROBLEMA PARA NEGOCIAMOS O REEMBOLSO OU OUTRA SOLUÇÃO COM A LOJA',
       'en':
-          'We want to understand what the problem was so we can negotiate a refund or another solution with the store.',
+          'WE WANT TO UNDERSTAND WHAT THE PROBLEM WAS SO WE CAN NEGOTIATE A REFUND OR OTHER SOLUTION WITH THE STORE',
       'es':
-          'Queremos entender cuál fue el problema para poder negociar un reembolso u otra solución con la tienda.',
+          'QUEREMOS ENTENDER CUÁL FUE EL PROBLEMA PARA PODER NEGOCIAR UN REEMBOLSO U OTRA SOLUCIÓN CON LA TIENDA',
     },
     'mkwt404c': {
       'pt': 'CONTINUAR',
@@ -908,14 +903,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CONTINUAR',
     },
     '3rgj48ef': {
-      'pt': 'O que aconteceu com o seu pedido?',
-      'en': 'What happened to your order?',
-      'es': '¿Qué pasó con tu pedido?',
+      'pt': 'O QUE ACONTECEU COM O SEU PEDIDO?',
+      'en': 'WHAT HAPPENED TO YOUR ORDER?',
+      'es': '¿QUÉ PASÓ CON TU PEDIDO?',
     },
     'ne2tpn1o': {
-      'pt': 'Selecione o motivo que melhor representa o seu problema.',
-      'en': 'Select the reason that best represents your problem.',
-      'es': 'Seleccione el motivo que mejor represente su problema.',
+      'pt': 'SELECIONE O MOTIVO QUE MELHOR REPRESENTA O SEU PROBLEMA.',
+      'en': 'SELECT THE REASON THAT BEST REPRESENTS YOUR PROBLEM.',
+      'es': 'SELECCIONA EL MOTIVO QUE MEJOR REPRESENTA TU PROBLEMA.',
     },
     '2980it8j': {
       'pt': 'PRODUTO CHEGOU FRIO',
@@ -949,11 +944,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'x21w7nwo': {
       'pt':
-          'Antes de finalizar, você poderá revisar sua solicitação e fazer mudanças, se necessário.',
+          'ANTES DE FINALIZAR, VOCÊ PODERÁ REVISAR SUA SOLICITAÇÃO E FAZER MUDANÇAS, SE NECESSÁRIO.',
       'en':
-          'Before finalizing, you will be able to review your request and make changes if necessary.',
+          'BEFORE FINALIZING, YOU MAY REVIEW YOUR APPLICATION AND MAKE CHANGES IF NECESSARY.',
       'es':
-          'Antes de finalizar, usted podrá revisar su solicitud y realizar cambios si es necesario.',
+          'ANTES DE FINALIZAR, PUEDE REVISAR SU SOLICITUD Y HACER CAMBIOS SI ES NECESARIO.',
     },
     'nd673286': {
       'pt': 'CONTINUAR',
@@ -961,14 +956,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CONTINUAR',
     },
     'f4y05h29': {
-      'pt': 'Conte mais detalhes sobre o problema',
-      'en': 'Please provide more details about the problem.',
-      'es': 'Proporcione más detalles sobre el problema.',
+      'pt': 'CONTE MAIS DETALHES SOBRE O PROBLEMA',
+      'en': 'TELL US MORE DETAILS ABOUT THE PROBLEM',
+      'es': 'CUÉNTANOS MÁS DETALLES SOBRE EL PROBLEMA',
     },
     '9c0r94ob': {
-      'pt': 'Nos conte o que achou do seu pedido (obrigatório)',
-      'en': 'Tell us what you think of your order (required)',
-      'es': 'Cuéntanos qué te parece tu pedido (obligatorio)',
+      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OBRIGATÓRIO)',
+      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (MANDATORY)',
+      'es': 'DÍGANOS QUÉ LE PARECIÓ SU PEDIDO (OBLIGATORIO)',
     },
     '2b5zokwd': {
       'pt': 'CONTINUAR',
@@ -976,17 +971,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CONTINUAR',
     },
     'm35gae5a': {
-      'pt': 'Adicione evidências do problema',
-      'en': '',
-      'es': '',
+      'pt': 'ADICIONE EVIDÊNCIAS DO PROBLEMA',
+      'en': 'ADD EVIDENCE OF THE PROBLEM',
+      'es': 'AÑADIR EVIDENCIA DEL PROBLEMA',
     },
     'y6ie6k8n': {
       'pt':
-          'O envio de uma foto do item, da embalagem ou da nota fiscal podem ajudar a loja a entender o que aconteceu com seu pedido.',
+          'O ENVIO DE UMA FOTO DO ITEM, DA EMBALAGEM OU DA NOTA FISCAL PODEM AJUDAR A LOJA A ENTENDER O QUE ACONTECEU COM SEU PEDIDO.',
       'en':
-          'Sending a photo of the item, packaging, or receipt can help the store understand what happened to your order.',
+          'SENDING A PHOTO OF THE ITEM, PACKAGING OR INVOICE CAN HELP THE STORE UNDERSTAND WHAT HAPPENED TO YOUR ORDER.',
       'es':
-          'Enviar una foto del artículo, del embalaje o del recibo puede ayudar a la tienda a comprender qué sucedió con su pedido.',
+          'ENVIAR UNA FOTO DEL ARTÍCULO, EMBALAJE O FACTURA PUEDE AYUDAR A LA TIENDA A ENTENDER QUÉ SUCEDIÓ CON SU PEDIDO.',
     },
     'owkqt01u': {
       'pt': 'REVISAR SOLICITAÇÃO',
@@ -994,14 +989,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'SOLICITUD DE REVISIÓN',
     },
     '9yegjyd3': {
-      'pt': 'Revise sua solicitação',
-      'en': 'Review your request',
-      'es': 'Revisar su solicitud',
+      'pt': 'REVISE SUA SOLICITAÇÃO',
+      'en': 'REVIEW YOUR REQUEST',
+      'es': 'REVISA TU SOLICITUD',
     },
     '4r87pzxs': {
-      'pt': 'Evidências do problema',
-      'en': 'Evidence of the problem',
-      'es': 'Evidencia del problema',
+      'pt': 'EVIDÊNCIAS DO PROBLEMA',
+      'en': 'EVIDENCE OF THE PROBLEM',
+      'es': 'EVIDENCIA DEL PROBLEMA',
     },
     '5i8sxdcu': {
       'pt': 'ENVIAR',
@@ -6845,16 +6840,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'umiue761': {
       'pt':
-          'Selecione uma das opções para que possamos lhe ajudar com o seu pedido.',
-      'en':
-          'Please select one of the options so we can help you with your order.',
+          'SELECIONE UMA DAS OPÇÕES PARA QUE POSSAMOS LHE AJUDAR COM O SEU PEDIDO.',
+      'en': 'SELECT ONE OF THE OPTIONS SO WE CAN HELP YOU WITH YOUR ORDER.',
       'es':
-          'Por favor seleccione una de las opciones para que podamos ayudarle con su pedido.',
+          'SELECCIONA UNA DE LAS OPCIONES PARA QUE PODAMOS AYUDARTE CON TU PEDIDO.',
     },
     'ozw9vqwu': {
-      'pt': 'Problemas com o pedido',
-      'en': 'Problems with the order',
-      'es': 'Problemas con el pedido',
+      'pt': 'PROBLEMAS COM O PEDIDO',
+      'en': 'PROBLEMS WITH THE ORDER',
+      'es': 'PROBLEMAS CON EL PEDIDO',
     },
     '86ptcfnr': {
       'pt': 'PRODUTO CHEGOU FRIO',

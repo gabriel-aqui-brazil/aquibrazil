@@ -10,6 +10,7 @@ import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/actions/actions.dart' as action_blocks;
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
@@ -108,10 +109,10 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          valueOrDefault<String>(
+                          functions.toUpperCase(valueOrDefault<String>(
                             widget!.order?.company?.name,
                             '-',
-                          ),
+                          )),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -124,7 +125,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
-                            'c7k1izy6' /* Pedido finalizado */,
+                            'c7k1izy6' /* PEDIDO FINALIZADO */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -183,7 +184,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'i761s2om' /* Sentimos muito que houve um pr... */,
+                                        'i761s2om' /* SENTIMOS MUITO QUE HOUVE UM PR... */,
                                       ),
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
@@ -207,7 +208,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'mqnc4cqc' /* Queremos entender o qual foi o... */,
+                                        'mqnc4cqc' /* QUEREMOS ENTENDER O QUAL FOI O... */,
                                       ),
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
@@ -357,7 +358,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                             Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '3rgj48ef' /* O que aconteceu com o seu pedi... */,
+                                                '3rgj48ef' /* O QUE ACONTECEU COM O SEU PEDI... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -385,7 +386,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                             Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'ne2tpn1o' /* Selecione o motivo que melhor ... */,
+                                                'ne2tpn1o' /* SELECIONE O MOTIVO QUE MELHOR ... */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -1018,7 +1019,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'x21w7nwo' /* Antes de finalizar, você poder... */,
+                                                      'x21w7nwo' /* ANTES DE FINALIZAR, VOCÊ PODER... */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1178,7 +1179,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'f4y05h29' /* Conte mais detalhes sobre o pr... */,
+                                              'f4y05h29' /* CONTE MAIS DETALHES SOBRE O PR... */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1253,7 +1254,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                             hintText:
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                              '9c0r94ob' /* Nos conte o que achou do seu p... */,
+                                              '9c0r94ob' /* NOS CONTE O QUE ACHOU DO SEU P... */,
                                             ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1484,7 +1485,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                         children: [
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'm35gae5a' /* Adicione evidências do problem... */,
+                                              'm35gae5a' /* ADICIONE EVIDÊNCIAS DO PROBLEM... */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -2038,7 +2039,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                           16.0, 0.0, 16.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'y6ie6k8n' /* O envio de uma foto do item, d... */,
+                                          'y6ie6k8n' /* O ENVIO DE UMA FOTO DO ITEM, D... */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -2148,7 +2149,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '9yegjyd3' /* Revise sua solicitação */,
+                                          '9yegjyd3' /* REVISE SUA SOLICITAÇÃO */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -2210,11 +2211,12 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    valueOrDefault<String>(
+                                                    functions.toUpperCase(
+                                                        valueOrDefault<String>(
                                                       widget!
                                                           .order?.company?.name,
                                                       '-',
-                                                    ),
+                                                    )),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -2240,7 +2242,8 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    valueOrDefault<String>(
+                                                    functions.toUpperCase(
+                                                        valueOrDefault<String>(
                                                       dateTimeFormat(
                                                         "MMMMEEEEd",
                                                         getCurrentTimestamp,
@@ -2250,7 +2253,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                                 .languageCode,
                                                       ),
                                                       '--/--/--',
-                                                    ),
+                                                    )),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -2467,13 +2470,14 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                       ),
                                                       Expanded(
                                                         child: Text(
-                                                          valueOrDefault<
-                                                              String>(
+                                                          functions.toUpperCase(
+                                                              valueOrDefault<
+                                                                  String>(
                                                             orderItem
                                                                 .baseProduct
                                                                 .name,
                                                             '-',
-                                                          ),
+                                                          )),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -2631,12 +2635,9 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                                 ),
                                                                 Expanded(
                                                                   child: Text(
-                                                                    valueOrDefault<
-                                                                        String>(
-                                                                      addonItem
-                                                                          .name,
-                                                                      '--',
-                                                                    ),
+                                                                    functions.toUpperCase(
+                                                                        addonItem
+                                                                            .name),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -2759,7 +2760,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                           16.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '4r87pzxs' /* Evidências do problema */,
+                                          '4r87pzxs' /* EVIDÊNCIAS DO PROBLEMA */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium

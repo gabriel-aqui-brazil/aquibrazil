@@ -492,11 +492,11 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                                   context)
                                                               .getVariableText(
                                                             ptText:
-                                                                'Solicitação de reclamação aberta',
+                                                                'SOLICITAÇÃO DE RECLAMAÇÃO ABERTA',
                                                             enText:
-                                                                'Open complaint request',
+                                                                'OPEN COMPLAINT REQUEST',
                                                             esText:
-                                                                'Solicitud de queja abierta',
+                                                                'SOLICITUD DE QUEJA ABIERTA',
                                                           ),
                                                           'Solicitação de reclamação aberta',
                                                         );
@@ -511,11 +511,11 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                                   context)
                                                               .getVariableText(
                                                             ptText:
-                                                                'Resposta da loja',
+                                                                'RESPOSTA DA LOJA',
                                                             enText:
-                                                                'Store response',
+                                                                'STORE RESPONSE',
                                                             esText:
-                                                                'Respuesta de la tienda',
+                                                                'RESPUESTA DE LA TIENDA',
                                                           ),
                                                           'Resposta da loja',
                                                         );
@@ -530,11 +530,11 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                                   context)
                                                               .getVariableText(
                                                             ptText:
-                                                                'Resposta da AquiBrazil',
+                                                                'RESPOSTA DA AQUIBRAZIL',
                                                             enText:
-                                                                'AquiBrazil\'s Response',
+                                                                'AQUIBRAZIL\'S RESPONSE',
                                                             esText:
-                                                                'Respuesta de AquiBrasil',
+                                                                'RESPUESTA DE AQUIBRASIL',
                                                           ),
                                                           'Resposta da AquiBrazil',
                                                         );
@@ -548,9 +548,9 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getVariableText(
-                                                            ptText: 'Reembolso',
-                                                            enText: 'Refund',
-                                                            esText: 'Reembolso',
+                                                            ptText: 'REEMBOLSO',
+                                                            enText: 'REFUND',
+                                                            esText: 'REEMBOLSO',
                                                           ),
                                                           'Reembolso',
                                                         );
@@ -565,11 +565,11 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                                   context)
                                                               .getVariableText(
                                                             ptText:
-                                                                'Reembolso parcial',
+                                                                'REEMBOLSO PARCIAL',
                                                             enText:
-                                                                'Partial refund',
+                                                                'PARTIAL REFUND',
                                                             esText:
-                                                                'Reembolso parcial',
+                                                                'REEMBOLSO PARCIAL',
                                                           ),
                                                           'Reembolso parcial',
                                                         );
@@ -582,22 +582,22 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                                 .of(context)
                                                             .getVariableText(
                                                           ptText:
-                                                              'Cupom de desconto',
+                                                              'CUPOM DE DESCONTO',
                                                           enText:
-                                                              'Discount coupon',
+                                                              'DISCOUNT COUPON',
                                                           esText:
-                                                              'Cupón de descuento',
+                                                              'CUPÓN DE DESCUENTO',
                                                         );
                                                       } else {
                                                         return FFLocalizations
                                                                 .of(context)
                                                             .getVariableText(
                                                           ptText:
-                                                              'Solicitação finalizada',
+                                                              'SOLICITAÇÃO FINALIZADA',
                                                           enText:
-                                                              'Request completed',
+                                                              'REQUEST COMPLETED',
                                                           esText:
-                                                              'Solicitud completada',
+                                                              'SOLICITUD COMPLETADA',
                                                         );
                                                       }
                                                     }(),
@@ -683,10 +683,10 @@ class _OrdersHelpHistoryWidgetState extends State<OrdersHelpHistoryWidget> {
                                                   Text(
                                                     valueOrDefault<String>(
                                                       '${FFLocalizations.of(context).getVariableText(
-                                                        ptText: 'Observação: ',
-                                                        enText: 'Observation: ',
-                                                        esText: 'Observación: ',
-                                                      )}${historyItem.observation}',
+                                                        ptText: 'OBSERVAÇÃO: ',
+                                                        enText: 'OBSERVATION: ',
+                                                        esText: 'OBSERVACIÓN: ',
+                                                      )}${functions.toUpperCase(historyItem.observation)}',
                                                       '-',
                                                     ),
                                                     style: FlutterFlowTheme.of(
