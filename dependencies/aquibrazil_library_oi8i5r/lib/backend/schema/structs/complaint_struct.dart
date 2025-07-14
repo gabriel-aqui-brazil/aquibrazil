@@ -12,10 +12,14 @@ class ComplaintStruct extends BaseStruct {
     String? reason,
     String? comment,
     ComplaintStatus? status,
+    List<ComplaintHistoryStruct>? complaintHistory,
+    int? updateAt,
   })  : _createdAt = createdAt,
         _reason = reason,
         _comment = comment,
-        _status = status;
+        _status = status,
+        _complaintHistory = complaintHistory,
+        _updateAt = updateAt;
 
   // "created_at" field.
   int? _createdAt;
@@ -47,6 +51,28 @@ class ComplaintStruct extends BaseStruct {
 
   bool hasStatus() => _status != null;
 
+  // "complaint_history" field.
+  List<ComplaintHistoryStruct>? _complaintHistory;
+  List<ComplaintHistoryStruct> get complaintHistory =>
+      _complaintHistory ?? const [];
+  set complaintHistory(List<ComplaintHistoryStruct>? val) =>
+      _complaintHistory = val;
+
+  void updateComplaintHistory(Function(List<ComplaintHistoryStruct>) updateFn) {
+    updateFn(_complaintHistory ??= []);
+  }
+
+  bool hasComplaintHistory() => _complaintHistory != null;
+
+  // "update_at" field.
+  int? _updateAt;
+  int get updateAt => _updateAt ?? 0;
+  set updateAt(int? val) => _updateAt = val;
+
+  void incrementUpdateAt(int amount) => updateAt = updateAt + amount;
+
+  bool hasUpdateAt() => _updateAt != null;
+
   static ComplaintStruct fromMap(Map<String, dynamic> data) => ComplaintStruct(
         createdAt: castToType<int>(data['created_at']),
         reason: data['reason'] as String?,
@@ -54,6 +80,11 @@ class ComplaintStruct extends BaseStruct {
         status: data['status'] is ComplaintStatus
             ? data['status']
             : deserializeEnum<ComplaintStatus>(data['status']),
+        complaintHistory: getStructList(
+          data['complaint_history'],
+          ComplaintHistoryStruct.fromMap,
+        ),
+        updateAt: castToType<int>(data['update_at']),
       );
 
   static ComplaintStruct? maybeFromMap(dynamic data) => data is Map
@@ -65,6 +96,8 @@ class ComplaintStruct extends BaseStruct {
         'reason': _reason,
         'comment': _comment,
         'status': _status?.serialize(),
+        'complaint_history': _complaintHistory?.map((e) => e.toMap()).toList(),
+        'update_at': _updateAt,
       }.withoutNulls;
 
   @override
@@ -84,6 +117,15 @@ class ComplaintStruct extends BaseStruct {
         'status': serializeParam(
           _status,
           ParamType.Enum,
+        ),
+        'complaint_history': serializeParam(
+          _complaintHistory,
+          ParamType.DataStruct,
+          isList: true,
+        ),
+        'update_at': serializeParam(
+          _updateAt,
+          ParamType.int,
         ),
       }.withoutNulls;
 
@@ -109,6 +151,17 @@ class ComplaintStruct extends BaseStruct {
           ParamType.Enum,
           false,
         ),
+        complaintHistory: deserializeStructParam<ComplaintHistoryStruct>(
+          data['complaint_history'],
+          ParamType.DataStruct,
+          true,
+          structBuilder: ComplaintHistoryStruct.fromSerializableMap,
+        ),
+        updateAt: deserializeParam(
+          data['update_at'],
+          ParamType.int,
+          false,
+        ),
       );
 
   @override
@@ -116,16 +169,19 @@ class ComplaintStruct extends BaseStruct {
 
   @override
   bool operator ==(Object other) {
+    const listEquality = ListEquality();
     return other is ComplaintStruct &&
         createdAt == other.createdAt &&
         reason == other.reason &&
         comment == other.comment &&
-        status == other.status;
+        status == other.status &&
+        listEquality.equals(complaintHistory, other.complaintHistory) &&
+        updateAt == other.updateAt;
   }
 
   @override
-  int get hashCode =>
-      const ListEquality().hash([createdAt, reason, comment, status]);
+  int get hashCode => const ListEquality()
+      .hash([createdAt, reason, comment, status, complaintHistory, updateAt]);
 }
 
 ComplaintStruct createComplaintStruct({
@@ -133,10 +189,12 @@ ComplaintStruct createComplaintStruct({
   String? reason,
   String? comment,
   ComplaintStatus? status,
+  int? updateAt,
 }) =>
     ComplaintStruct(
       createdAt: createdAt,
       reason: reason,
       comment: comment,
       status: status,
+      updateAt: updateAt,
     );

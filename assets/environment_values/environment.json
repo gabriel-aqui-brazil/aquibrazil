@@ -1,5 +1,5 @@
 {
-  "dataResource": "test",
-"stripeKey": "pk_test_51MuI9zLHTG0cO5brDiIP7qJ9Y9KDw7WfPZFdRFjKDCDfZhHJzapGW1q9XEGLPszvXNKZ7LzVOAKbJHMYcLqZLNJf00fcz6sXQ7r8rVY7yF4KsJWaeWDLN8pO7g0mf7NeEcsmf1peY0oXFd9tXc00Q52ipIm8",
-"branchVar": "staging"
+  "dataResource": "live",
+"stripeKey": "pk_live_51MuI9zLHTG0cO5br73Iqbll7BPc5CeDwQYV86IOpr8rVY7yF4KsJWaeWDLN8pO7g0mf7NeEcsmf1peY0oXFd9tXc00Q52ipIm8",
+"branchVar": "v1"
 }

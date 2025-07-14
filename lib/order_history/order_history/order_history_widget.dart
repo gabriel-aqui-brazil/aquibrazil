@@ -530,38 +530,34 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'u92zr70k' /* Concluído */,
+                                                        'u92zr70k' /* CONCLUÍDO */,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .poppins(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFF319B6F),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                            ),
+                                                            color: Color(
+                                                                0xFF319B6F),
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                              ),
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
@@ -581,38 +577,34 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'z6sx1bco' /* Recusado */,
+                                                        'z6sx1bco' /* RECUSADO */,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .poppins(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFFEB001B),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                            ),
+                                                            color: Color(
+                                                                0xFFEB001B),
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                              ),
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
@@ -632,38 +624,34 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '4acz5fix' /* Cancelado */,
+                                                        '4acz5fix' /* CANCELADO */,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .poppins(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFFEB001B),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                            ),
+                                                            color: Color(
+                                                                0xFFEB001B),
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                              ),
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
@@ -683,38 +671,34 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'owfbas64' /* Pendente */,
+                                                        'owfbas64' /* PENDENTE */,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .poppins(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFFF9AB10),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                            ),
+                                                            color: Color(
+                                                                0xFFF9AB10),
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                              ),
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
@@ -738,20 +722,18 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'ob3fejyl' /* Em preparo */,
+                                                        'ob3fejyl' /* EM PREPARO */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .bodyMedium
                                                               .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                   fontStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -762,10 +744,9 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                                     .primaryText,
                                                                 letterSpacing:
                                                                     0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
                                                                 fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -793,8 +774,8 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'fboo98in' /* Pronto para 
-retirada */
+                                                        'fboo98in' /* PRONTO PARA 
+RETIRADA */
                                                         ,
                                                       ),
                                                       style:
@@ -802,13 +783,11 @@ retirada */
                                                                   context)
                                                               .bodyMedium
                                                               .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                   fontStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -819,10 +798,9 @@ retirada */
                                                                     .verde,
                                                                 letterSpacing:
                                                                     0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
                                                                 fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -851,8 +829,8 @@ retirada */
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'rg0m1s44' /* Saiu para 
-entrega */
+                                                        'rg0m1s44' /* SAIU PARA
+ENTREGA */
                                                         ,
                                                       ),
                                                       style:
@@ -860,13 +838,11 @@ entrega */
                                                                   context)
                                                               .bodyMedium
                                                               .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                   fontStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -877,10 +853,9 @@ entrega */
                                                                     .verde,
                                                                 letterSpacing:
                                                                     0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
                                                                 fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -908,20 +883,18 @@ entrega */
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '30qiob8f' /* Agendado */,
+                                                        '30qiob8f' /* AGENDADO */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .bodyMedium
                                                               .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                   fontStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -932,10 +905,9 @@ entrega */
                                                                     .verde,
                                                                 letterSpacing:
                                                                     0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
                                                                 fontStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -960,40 +932,36 @@ entrega */
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'as39lw78' /* Solicitação de 
-novo horário */
+                                                        'as39lw78' /* SOLIICITAÇÃO DE 
+NOVO HORÁRIO */
                                                         ,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            font: GoogleFonts
+                                                                .poppins(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              fontStyle:
+                                                                  FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
-                                                                ),
-                                                                color: Color(
-                                                                    0xFFF9AB10),
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
+                                                            ),
+                                                            color: Color(
+                                                                0xFFF9AB10),
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                              ),
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       SizedBox(width: 4.0)),
@@ -1102,28 +1070,24 @@ novo horário */
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                valueOrDefault<String>(
-                                                  orderItem.rating.hasRating()
-                                                      ? FFLocalizations.of(
-                                                              context)
-                                                          .getVariableText(
-                                                          ptText: 'Avaliação',
-                                                          enText: 'Rating',
-                                                          esText:
-                                                              'Calificación',
-                                                        )
-                                                      : FFLocalizations.of(
-                                                              context)
-                                                          .getVariableText(
-                                                          ptText:
-                                                              'Avalie seu pedido',
-                                                          enText:
-                                                              'Rate your order',
-                                                          esText:
-                                                              'Califica tu pedido',
-                                                        ),
-                                                  'Rate your order',
-                                                ),
+                                                orderItem.rating.hasRating()
+                                                    ? FFLocalizations.of(
+                                                            context)
+                                                        .getVariableText(
+                                                        ptText: 'AVALIAÇÃO',
+                                                        enText: 'RATING',
+                                                        esText: 'CALIFICACIÓN',
+                                                      )
+                                                    : FFLocalizations.of(
+                                                            context)
+                                                        .getVariableText(
+                                                        ptText:
+                                                            'AVALIE SEU PEDIDO',
+                                                        enText:
+                                                            'RATE YOUR ORDER',
+                                                        esText:
+                                                            'CALIFICA TU PEDIDO',
+                                                      ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
@@ -1228,13 +1192,14 @@ novo horário */
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'vklfevcq' /* Data do agendamento */,
+                                                    'vklfevcq' /* DATA DO AGENDAMENTO */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontStyle:
@@ -1245,7 +1210,7 @@ novo horário */
                                                         ),
                                                         color:
                                                             Color(0xFF808080),
-                                                        fontSize: 14.0,
+                                                        fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,

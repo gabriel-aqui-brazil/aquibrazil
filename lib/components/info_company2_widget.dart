@@ -113,57 +113,60 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          functions.toUpperCase(valueOrDefault<String>(
-                            widget!.company?.name,
-                            '-',
-                          )),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
+                    Flexible(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            functions.toUpperCase(valueOrDefault<String>(
+                              widget!.company?.name,
+                              '-',
+                            )),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w500,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                        ),
-                        Text(
-                          '${widget!.company?.terciaryCategory?.name} - ${widget!.company?.distance?.toString()}${FFLocalizations.of(context).getVariableText(
-                            ptText: ' MILHAS',
-                            enText: ' MILES',
-                            esText: ' MILLAS',
-                          )}',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                font: GoogleFonts.rubik(
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                          ),
+                          Text(
+                            '${functions.toUpperCase(widget!.company?.terciaryCategory?.name)} - ${widget!.company?.distance?.toString()}${FFLocalizations.of(context).getVariableText(
+                              ptText: ' MILHAS',
+                              enText: ' MILES',
+                              esText: ' MILLAS',
+                            )}',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  font: GoogleFonts.rubik(
+                                    fontWeight: FontWeight.normal,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  fontSize: 12.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                   fontStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 12.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.normal,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                        ),
-                      ].divide(SizedBox(height: 4.0)),
+                          ),
+                        ].divide(SizedBox(height: 4.0)),
+                      ),
                     ),
                     Container(
                       width: 60.0,
@@ -197,7 +200,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                               format: '0.0',
                               locale: '',
                             ),
-                            '5',
+                            '5.0',
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -276,7 +279,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                           FlutterFlowTheme.of(context).secondaryText,
                       labelStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.rubik(
+                                font: GoogleFonts.poppins(
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
@@ -284,7 +287,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                       .titleMedium
                                       .fontStyle,
                                 ),
-                                fontSize: 16.0,
+                                fontSize: 14.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FlutterFlowTheme.of(context)
                                     .titleMedium
@@ -295,7 +298,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                               ),
                       unselectedLabelStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.rubik(
+                                font: GoogleFonts.poppins(
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
@@ -303,7 +306,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                       .titleMedium
                                       .fontStyle,
                                 ),
-                                fontSize: 16.0,
+                                fontSize: 14.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FlutterFlowTheme.of(context)
                                     .titleMedium
@@ -316,12 +319,12 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                       tabs: [
                         Tab(
                           text: FFLocalizations.of(context).getText(
-                            'u827ahw7' /* Avaliações */,
+                            'j4mtcivj' /* INFORMAÇÕES */,
                           ),
                         ),
                         Tab(
                           text: FFLocalizations.of(context).getText(
-                            'j4mtcivj' /* Informações */,
+                            'z59vsxgp' /* AVALIAÇÕES */,
                           ),
                         ),
                       ],
@@ -335,205 +338,6 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                     child: TabBarView(
                       controller: _model.tabBarController,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: PagedListView<ApiPagingParams,
-                                  dynamic>.separated(
-                                pagingController: _model.setListViewController1(
-                                  (nextPageMarker) =>
-                                      MainGroup.queryRatingCall.call(
-                                    companyId: widget!.company?.id,
-                                    limit: _model.limit,
-                                    offset: nextPageMarker.nextPageNumber *
-                                        _model.limit,
-                                    token: currentAuthenticationToken,
-                                  ),
-                                ),
-                                padding: EdgeInsets.fromLTRB(
-                                  0,
-                                  24.0,
-                                  0,
-                                  0,
-                                ),
-                                shrinkWrap: true,
-                                reverse: false,
-                                scrollDirection: Axis.vertical,
-                                separatorBuilder: (_, __) =>
-                                    SizedBox(height: 24.0),
-                                builderDelegate:
-                                    PagedChildBuilderDelegate<dynamic>(
-                                  // Customize what your widget looks like when it's loading the first page.
-                                  firstPageProgressIndicatorBuilder: (_) =>
-                                      Center(
-                                    child: SizedBox(
-                                      width: 35.0,
-                                      height: 35.0,
-                                      child: SpinKitFadingCircle(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        size: 35.0,
-                                      ),
-                                    ),
-                                  ),
-                                  // Customize what your widget looks like when it's loading another page.
-                                  newPageProgressIndicatorBuilder: (_) =>
-                                      Center(
-                                    child: SizedBox(
-                                      width: 35.0,
-                                      height: 35.0,
-                                      child: SpinKitFadingCircle(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        size: 35.0,
-                                      ),
-                                    ),
-                                  ),
-                                  noItemsFoundIndicatorBuilder: (_) => Center(
-                                    child: Container(
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      child: EmptyListRatingWidget(),
-                                    ),
-                                  ),
-                                  itemBuilder: (context, _, ratingIndex) {
-                                    final ratingItem = _model
-                                        .listViewPagingController1!
-                                        .itemList![ratingIndex];
-                                    return Container(
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 16.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  ratingItem.customer.firstName,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.rubik(
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  ' - ${dateTimeFormat(
-                                                    "MM/dd/y",
-                                                    DateTime
-                                                        .fromMillisecondsSinceEpoch(
-                                                            ratingItem
-                                                                .createdAt),
-                                                    locale: FFLocalizations.of(
-                                                            context)
-                                                        .languageCode,
-                                                  )}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.rubik(
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        fontSize: 10.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                            RatingBarIndicator(
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .warning,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              rating: ratingItem.rating,
-                                              unratedColor: Color(0xFFD6D6D6),
-                                              itemCount: 5,
-                                              itemSize: 18.0,
-                                            ),
-                                            Text(
-                                              ratingItem.ratingDescription,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.rubik(
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                            ),
-                                          ].divide(SizedBox(height: 4.0)),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
                         SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -1189,6 +993,206 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                               ),
                             ],
                           ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Expanded(
+                              child: PagedListView<ApiPagingParams,
+                                  dynamic>.separated(
+                                pagingController: _model.setListViewController2(
+                                  (nextPageMarker) =>
+                                      MainGroup.queryRatingCall.call(
+                                    companyId: widget!.company?.id,
+                                    limit: _model.limit,
+                                    offset: nextPageMarker.nextPageNumber *
+                                        _model.limit,
+                                    token: currentAuthenticationToken,
+                                  ),
+                                ),
+                                padding: EdgeInsets.fromLTRB(
+                                  0,
+                                  24.0,
+                                  0,
+                                  0,
+                                ),
+                                shrinkWrap: true,
+                                reverse: false,
+                                scrollDirection: Axis.vertical,
+                                separatorBuilder: (_, __) =>
+                                    SizedBox(height: 24.0),
+                                builderDelegate:
+                                    PagedChildBuilderDelegate<dynamic>(
+                                  // Customize what your widget looks like when it's loading the first page.
+                                  firstPageProgressIndicatorBuilder: (_) =>
+                                      Center(
+                                    child: SizedBox(
+                                      width: 35.0,
+                                      height: 35.0,
+                                      child: SpinKitFadingCircle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 35.0,
+                                      ),
+                                    ),
+                                  ),
+                                  // Customize what your widget looks like when it's loading another page.
+                                  newPageProgressIndicatorBuilder: (_) =>
+                                      Center(
+                                    child: SizedBox(
+                                      width: 35.0,
+                                      height: 35.0,
+                                      child: SpinKitFadingCircle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 35.0,
+                                      ),
+                                    ),
+                                  ),
+                                  noItemsFoundIndicatorBuilder: (_) => Center(
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                      child: EmptyListRatingWidget(),
+                                    ),
+                                  ),
+                                  itemBuilder: (context, _, ratingIndex) {
+                                    final ratingItem = _model
+                                        .listViewPagingController2!
+                                        .itemList![ratingIndex];
+                                    return Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  ratingItem.customer.firstName,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.rubik(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  ' - ${dateTimeFormat(
+                                                    "MM/dd/y",
+                                                    DateTime
+                                                        .fromMillisecondsSinceEpoch(
+                                                            ratingItem
+                                                                .createdAt),
+                                                    locale: FFLocalizations.of(
+                                                            context)
+                                                        .languageCode,
+                                                  )}',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.rubik(
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        fontSize: 10.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                ),
+                                              ],
+                                            ),
+                                            RatingBarIndicator(
+                                              itemBuilder: (context, index) =>
+                                                  Icon(
+                                                Icons.star_rounded,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .warning,
+                                              ),
+                                              direction: Axis.horizontal,
+                                              rating: ratingItem.rating,
+                                              unratedColor: Color(0xFFD6D6D6),
+                                              itemCount: 5,
+                                              itemSize: 18.0,
+                                            ),
+                                            Text(
+                                              functions.toUpperCase(
+                                                  ratingItem.ratingDescription),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.rubik(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                            ),
+                                          ].divide(SizedBox(height: 4.0)),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),

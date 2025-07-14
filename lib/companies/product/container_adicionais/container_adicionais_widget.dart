@@ -60,103 +60,111 @@ class _ContainerAdicionaisWidgetState extends State<ContainerAdicionaisWidget> {
 
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
-      height: 75.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.network(
-                    valueOrDefault<String>(
-                      widget!.addonDetails?.imageUrl,
-                      'https://firebasestorage.googleapis.com/v0/b/aquibrazil-40ba0.appspot.com/o/foto_backgorund_alimento.png?alt=media&token=612ee640-432e-4c9e-b942-bd4c6a0d5c05',
+            Flexible(
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.network(
+                      valueOrDefault<String>(
+                        widget!.addonDetails?.imageUrl,
+                        'https://firebasestorage.googleapis.com/v0/b/aquibrazil-40ba0.appspot.com/o/foto_backgorund_alimento.png?alt=media&token=612ee640-432e-4c9e-b942-bd4c6a0d5c05',
+                      ),
+                      width: 55.0,
+                      height: 55.0,
+                      fit: BoxFit.cover,
                     ),
-                    width: 55.0,
-                    height: 55.0,
-                    fit: BoxFit.cover,
                   ),
-                ),
-                SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Text(
-                          functions.toUpperCase(widget!.addonDetails?.name),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
+                  Flexible(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Align(
+                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              child: Text(
+                                functions
+                                    .toUpperCase(widget!.addonDetails?.name),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.normal,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ),
-                      RichText(
-                        textScaler: MediaQuery.of(context).textScaler,
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: FFLocalizations.of(context).getText(
-                                '1c3k1wdv' /* +  */,
                               ),
+                            ),
+                          ),
+                          RichText(
+                            textScaler: MediaQuery.of(context).textScaler,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: FFLocalizations.of(context).getText(
+                                    '1c3k1wdv' /* +  */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.rubik(
+                                          fontWeight: FontWeight.w500,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w500,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                                TextSpan(
+                                  text: formatNumber(
+                                    widget!.addonDetails!.price,
+                                    formatType: FormatType.custom,
+                                    currency: '\$',
+                                    format: '#,##0.00',
+                                    locale: 'en_us',
+                                  ),
+                                  style: GoogleFonts.roboto(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 13.0,
+                                  ),
+                                )
+                              ],
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.rubik(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: formatNumber(
-                                widget!.addonDetails!.price,
-                                formatType: FormatType.custom,
-                                currency: '\$',
-                                format: '#,##0.00',
-                                locale: 'en_us',
-                              ),
-                              style: GoogleFonts.roboto(
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 13.0,
-                              ),
-                            )
-                          ],
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.roboto(
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -174,12 +182,14 @@ class _ContainerAdicionaisWidgetState extends State<ContainerAdicionaisWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                        ),
+                            ),
+                          ),
+                        ].divide(SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(height: 3.0)),
+                    ),
                   ),
-                ),
-              ].divide(SizedBox(width: 16.0)),
+                ].divide(SizedBox(width: 16.0)),
+              ),
             ),
             Container(
               width: 100.0,
@@ -336,7 +346,7 @@ class _ContainerAdicionaisWidgetState extends State<ContainerAdicionaisWidget> {
                 ),
               ),
             ),
-          ],
+          ].divide(SizedBox(width: 16.0)),
         ),
       ),
     );

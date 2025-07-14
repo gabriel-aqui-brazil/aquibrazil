@@ -192,8 +192,8 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
                                   Align(
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Container(
-                                      width: 50.0,
-                                      height: 30.0,
+                                      width: 55.0,
+                                      height: 40.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -201,22 +201,38 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
                                             BorderRadius.circular(50.0),
                                       ),
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            formatNumber(
-                                              widget!.company!.rating,
-                                              formatType: FormatType.custom,
-                                              format: '#.0',
-                                              locale: '',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.poppins(
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 1.0, 0.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              formatNumber(
+                                                widget!.company!.rating,
+                                                formatType: FormatType.custom,
+                                                format: '#.0',
+                                                locale: '',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    fontSize: 11.0,
+                                                    letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
@@ -224,25 +240,17 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  fontSize: 11.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                          ),
-                                          Icon(
-                                            FFIcons.kcaminho2395,
-                                            color: Color(0xFFFFC803),
-                                            size: 11.0,
-                                          ),
-                                        ]
-                                            .divide(SizedBox(width: 4.0))
-                                            .addToStart(SizedBox(width: 4.0))
-                                            .addToEnd(SizedBox(width: 4.0)),
+                                            ),
+                                            Icon(
+                                              FFIcons.kcaminho2395,
+                                              color: Color(0xFFE4B405),
+                                              size: 11.0,
+                                            ),
+                                          ]
+                                              .divide(SizedBox(width: 4.0))
+                                              .addToStart(SizedBox(width: 4.0))
+                                              .addToEnd(SizedBox(width: 4.0)),
+                                        ),
                                       ),
                                     ),
                                   ),

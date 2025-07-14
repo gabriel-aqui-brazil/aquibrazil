@@ -335,6 +335,202 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
+  // orderDetails
+  {
+    'p5u46jqv': {
+      'pt': 'ACOMPANHAR PEDIDO',
+      'en': 'TRACK ORDER',
+      'es': 'SEGUIMIENTO DE PEDIDO',
+    },
+    'myx5t027': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE DE RECLAMAÇÃO EM ANDAMENTO',
+      'en': 'REQUEST FOR ANALYSIS OF ONGOING COMPLAINT',
+      'es': 'SOLICITUD DE ANÁLISIS DE QUEJA EN CURSO',
+    },
+    '0awadmzs': {
+      'pt':
+          'ENTRAREMOS EM CONTAO VIA E-MAIL OU PELO SEU TELEFONE CADASTRADO EM NOSSA PLATAFORMA COM A SOLUÇÃO',
+      'en':
+          'WE WILL CONTACT YOU VIA EMAIL OR BY YOUR PHONE NUMBER REGISTERED ON OUR PLATFORM WITH THE SOLUTION',
+      'es':
+          'NOS PONDREMOS EN CONTACTO CON USTED VÍA CORREO ELECTRÓNICO O A SU NÚMERO DE TELÉFONO REGISTRADO EN NUESTRA PLATAFORMA CON LA SOLUCIÓN',
+    },
+    'i6uvruo3': {
+      'pt': 'REALIZADO AS: ',
+      'en': 'DONE AS:',
+      'es': 'HECHO COMO:',
+    },
+    'lszgo89n': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '3bprmx8f': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    '1huoy2rd': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE RECUSADA',
+      'en': 'REQUEST FOR ANALYSIS REFUSED',
+      'es': 'SOLICITUD DE ANÁLISIS RECHAZADA',
+    },
+    '6l9h836f': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'krlgoxyc': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    'vvt4pzdn': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'qe1vnkde': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE CONCLUÍDA',
+      'en': 'REQUEST FOR ANALYSIS COMPLETED',
+      'es': 'SOLICITUD DE ANÁLISIS COMPLETADA',
+    },
+    'h7lhh9ix': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'ryvxqbm1': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '5y2rv8oe': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'm8icup59': {
+      'pt': 'SEU PEDIDO FOI ENTREGUE',
+      'en': 'YOUR ORDER HAS BEEN DELIVERED',
+      'es': 'SU PEDIDO HA SIDO ENTREGADO',
+    },
+    '54tevu47': {
+      'pt': 'PEDIDO ENTREGUE AS ',
+      'en': 'ORDER DELIVERED AS',
+      'es': 'PEDIDO ENTREGADO COMO',
+    },
+    'blsn0q26': {
+      'pt': '14:48',
+      'en': '14:48',
+      'es': '14:48',
+    },
+    '5pvmanfs': {
+      'pt': 'Previsão de entrega: ',
+      'en': '',
+      'es': '',
+    },
+    '0loqdvlr': {
+      'pt': '13:00 - 13:40',
+      'en': '',
+      'es': '',
+    },
+    'sf3duwcp': {
+      'pt': 'CÓDIGO DE ENTREGA',
+      'en': 'DELIVERY CODE',
+      'es': 'CÓDIGO DE ENTREGA',
+    },
+    '5bmokfvc': {
+      'pt': 'AJUDA',
+      'en': 'HELP',
+      'es': 'AYUDA',
+    },
+    'wnnyg6es': {
+      'pt': 'RASTREAR PEDIDO',
+      'en': 'TRACK ORDER',
+      'es': 'SEGUIMIENTO DEL PEDIDO',
+    },
+    'n6l3hi1g': {
+      'pt': 'CANCELAR PEDIDO',
+      'en': 'CANCEL ORDER',
+      'es': 'CANCELAR PEDIDO',
+    },
+    'bp7kxwwy': {
+      'pt': 'CONFIRMAR ENTREGA',
+      'en': 'CONFIRM DELIVERY',
+      'es': 'CONFIRMAR ENTREGA',
+    },
+    '3s0w58fd': {
+      'pt': 'AVALIAR PEDIDO',
+      'en': 'EVALUATE ORDER',
+      'es': 'EVALUAR ORDEN',
+    },
+    'e8b7oqan': {
+      'pt': 'ENDEREÇO DE ENTREGA',
+      'en': 'DELIVERY ADDRESS',
+      'es': 'DIRECCIÓN DE ENTREGA',
+    },
+    '6lbfzvew': {
+      'pt': 'OBSERVAÇÃO',
+      'en': 'OBSERVATION',
+      'es': 'OBSERVACIÓN',
+    },
+    'js79e8tl': {
+      'pt': 'DETALHES DO PEDIDO',
+      'en': 'ORDER DETAILS',
+      'es': 'DETALLES DEL PEDIDO',
+    },
+    'nuwjtpiu': {
+      'pt': 'RESUMO DO PAGAMENTO',
+      'en': 'PAYMENT SUMMARY',
+      'es': 'RESUMEN DE PAGO',
+    },
+    'lpfm2er0': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '8rvzu7us': {
+      'pt': 'GORJETA',
+      'en': 'TIP',
+      'es': 'CONSEJO',
+    },
+    'th8gw6m6': {
+      'pt': 'TAXA DE ENTREGA',
+      'en': 'DELIVERY FEE',
+      'es': 'TARIFA DE ENVÍO',
+    },
+    'i3mz7r0z': {
+      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
+      'en': 'TAX AND SERVICE FEE',
+      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
+    },
+    'x33o0exx': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    'wlbqvz4x': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
+      'en': 'WITH AQUIPASS YOU SAVED',
+      'es': 'CON AQUIPASS AHORRAS',
+    },
+    'e1em4e6a': {
+      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
+      'en': 'YOU HAVE EARNED 3% CASHBACK',
+      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'nkkwygwh': {
+      'pt': 'FORMA DE PAGAMENTO',
+      'en': 'PAYMENT METHOD',
+      'es': 'FORMA DE PAGO',
+    },
+    'ottan1jr': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
   // confirmPhone
   {
     'ilqydroa': {
@@ -684,6 +880,138 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
+    },
+  },
+  // ordersHelp
+  {
+    'c7k1izy6': {
+      'pt': 'Pedido finalizado',
+      'en': 'Order completed',
+      'es': 'Pedido completado',
+    },
+    'i761s2om': {
+      'pt': 'Sentimos muito que houve um problema com o seu pedido',
+      'en': 'We are sorry there was a problem with your order.',
+      'es': 'Lamentamos que haya habido un problema con su pedido.',
+    },
+    'mqnc4cqc': {
+      'pt':
+          'Queremos entender o qual foi o problema para negociamos o reembolso ou outra solução com a loja',
+      'en':
+          'We want to understand what the problem was so we can negotiate a refund or another solution with the store.',
+      'es':
+          'Queremos entender cuál fue el problema para poder negociar un reembolso u otra solución con la tienda.',
+    },
+    'mkwt404c': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    '3rgj48ef': {
+      'pt': 'O que aconteceu com o seu pedido?',
+      'en': 'What happened to your order?',
+      'es': '¿Qué pasó con tu pedido?',
+    },
+    'ne2tpn1o': {
+      'pt': 'Selecione o motivo que melhor representa o seu problema.',
+      'en': 'Select the reason that best represents your problem.',
+      'es': 'Seleccione el motivo que mejor represente su problema.',
+    },
+    '2980it8j': {
+      'pt': 'PRODUTO CHEGOU FRIO',
+      'en': 'PRODUCT ARRIVED COLD',
+      'es': 'EL PRODUCTO LLEGÓ FRÍO',
+    },
+    'z0dyrnhm': {
+      'pt': 'PRODUTO ERRADO',
+      'en': 'WRONG PRODUCT',
+      'es': 'PRODUCTO INCORRECTO',
+    },
+    's14vh1ts': {
+      'pt': 'PRODUTO INCOMPLETO',
+      'en': 'INCOMPLETE PRODUCT',
+      'es': 'PRODUCTO INCOMPLETO',
+    },
+    '0ppxiq5c': {
+      'pt': 'PRODUTO DANIFICADO',
+      'en': 'DAMAGED PRODUCT',
+      'es': 'PRODUCTO DAÑADO',
+    },
+    'w0augal9': {
+      'pt': 'ATRASO NA ENTREGA',
+      'en': 'DELAY IN DELIVERY',
+      'es': 'RETRASO EN ENTREGA',
+    },
+    '8ia1f08g': {
+      'pt': 'OUTRO',
+      'en': 'OTHER',
+      'es': 'OTRO',
+    },
+    'x21w7nwo': {
+      'pt':
+          'Antes de finalizar, você poderá revisar sua solicitação e fazer mudanças, se necessário.',
+      'en':
+          'Before finalizing, you will be able to review your request and make changes if necessary.',
+      'es':
+          'Antes de finalizar, usted podrá revisar su solicitud y realizar cambios si es necesario.',
+    },
+    'nd673286': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'f4y05h29': {
+      'pt': 'Conte mais detalhes sobre o problema',
+      'en': 'Please provide more details about the problem.',
+      'es': 'Proporcione más detalles sobre el problema.',
+    },
+    '9c0r94ob': {
+      'pt': 'Nos conte o que achou do seu pedido (obrigatório)',
+      'en': 'Tell us what you think of your order (required)',
+      'es': 'Cuéntanos qué te parece tu pedido (obligatorio)',
+    },
+    '2b5zokwd': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'm35gae5a': {
+      'pt': 'Adicione evidências do problema',
+      'en': '',
+      'es': '',
+    },
+    'y6ie6k8n': {
+      'pt':
+          'O envio de uma foto do item, da embalagem ou da nota fiscal podem ajudar a loja a entender o que aconteceu com seu pedido.',
+      'en':
+          'Sending a photo of the item, packaging, or receipt can help the store understand what happened to your order.',
+      'es':
+          'Enviar una foto del artículo, del embalaje o del recibo puede ayudar a la tienda a comprender qué sucedió con su pedido.',
+    },
+    'owkqt01u': {
+      'pt': 'REVISAR SOLICITAÇÃO',
+      'en': 'REVIEW REQUEST',
+      'es': 'SOLICITUD DE REVISIÓN',
+    },
+    '9yegjyd3': {
+      'pt': 'Revise sua solicitação',
+      'en': 'Review your request',
+      'es': 'Revisar su solicitud',
+    },
+    '4r87pzxs': {
+      'pt': 'Evidências do problema',
+      'en': 'Evidence of the problem',
+      'es': 'Evidencia del problema',
+    },
+    '5i8sxdcu': {
+      'pt': 'ENVIAR',
+      'en': 'TO SEND',
+      'es': 'PARA ENVIAR',
+    },
+    'j3elzjdn': {
+      'pt': 'Home',
+      'en': '',
+      'es': '',
     },
   },
   // resetPassword-step1
@@ -1666,39 +1994,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'DESCONECTAR',
     },
   },
-  // deliveryFood
-  {
-    'dwbi5ilf': {
-      'pt': 'TODOS',
-      'en': 'ALL',
-      'es': 'TODO',
-    },
-    '9gp4mkz0': {
-      'pt': 'OFERTAS',
-      'en': 'OFFERS',
-      'es': 'OFERTAS',
-    },
-    'n4zbki52': {
-      'pt': 'OFERTAS IMPERDÍVEIS! APROVEITE AGORA!',
-      'en': 'UNMISSABLE OFFERS! TAKE ADVANTAGE NOW!',
-      'es': '¡OFERTAS IMPERDIBLES! ¡APROVECHA AHORA!',
-    },
-    'pcmf5gv5': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZA',
-      'en': 'WITH AQUIPASS YOU SAVE',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'y3442gxi': {
-      'pt': 'COM A AQUIPASS VOCÊ ECONOMIZA ',
-      'en': 'WITH AQUIPASS YOU SAVE',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'oz164jtx': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // membershipChangePlan
   {
     '5y13f796': {
@@ -1825,39 +2120,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'DIRECCIONES',
     },
     'q9qagp7p': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
-  // service
-  {
-    '4l71pn31': {
-      'pt': 'TODOS',
-      'en': 'ALL',
-      'es': 'TODO',
-    },
-    '0udgrwog': {
-      'pt': 'OFERTAS IMPERDÍVEIS! APROVEITE AGORA!',
-      'en': 'UNMISSABLE OFFERS! TAKE ADVANTAGE NOW!',
-      'es': '¡OFERTAS IMPERDIBLES! ¡APROVECHA AHORA!',
-    },
-    'dbie9m49': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZA',
-      'en': 'WITH AQUIPASS YOU SAVE',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'xscxrgls': {
-      'pt': 'COM A AQUIPASS VOCÊ ECONOMIZA ',
-      'en': 'WITH AQUIPASS YOU SAVE',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'bc2la0iq': {
-      'pt': 'RESERVAR',
-      'en': 'BOOK',
-      'es': 'LIBRO',
-    },
-    '96yxp592': {
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
@@ -4166,6 +4428,102 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
+  // orderHistory
+  {
+    '18994agu': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'b4fw56ij': {
+      'pt': 'DELIVERY',
+      'en': 'DELIVERY',
+      'es': 'ENTREGA',
+    },
+    'o3c2lo4i': {
+      'pt': 'AGENDAMENTOS',
+      'en': 'APPOINTMENTS',
+      'es': 'EQUIPO',
+    },
+    'u92zr70k': {
+      'pt': 'CONCLUÍDO',
+      'en': 'COMPLETED',
+      'es': 'TERMINADO',
+    },
+    'z6sx1bco': {
+      'pt': 'RECUSADO',
+      'en': 'REFUSED',
+      'es': 'RECHAZADO',
+    },
+    '4acz5fix': {
+      'pt': 'CANCELADO',
+      'en': 'CANCELED',
+      'es': 'CANCELADO',
+    },
+    'owfbas64': {
+      'pt': 'PENDENTE',
+      'en': 'PENDING',
+      'es': 'PENDIENTE',
+    },
+    'ob3fejyl': {
+      'pt': 'EM PREPARO',
+      'en': 'IN PREPARATION',
+      'es': 'EN PREPARACIÓN',
+    },
+    'fboo98in': {
+      'pt': 'PRONTO PARA \nRETIRADA',
+      'en': 'READY FOR\nPICKUP',
+      'es': 'LISTO PARA RECOGER',
+    },
+    'rg0m1s44': {
+      'pt': 'SAIU PARA\nENTREGA',
+      'en': 'OUT FOR\nDELIVERY',
+      'es': 'LIBRE PARA ENTREGA',
+    },
+    '30qiob8f': {
+      'pt': 'AGENDADO',
+      'en': 'SCHEDULED',
+      'es': 'PROGRAMADO',
+    },
+    'as39lw78': {
+      'pt': 'SOLIICITAÇÃO DE \nNOVO HORÁRIO',
+      'en': 'REQUEST FOR\nNEW SCHEDULE',
+      'es': 'SOLICITUD DE \nNUEVO HORARIO',
+    },
+    '4jd9k1xy': {
+      'pt': '-',
+      'en': '',
+      'es': '',
+    },
+    'vklfevcq': {
+      'pt': 'DATA DO AGENDAMENTO',
+      'en': 'APPOINTMENT DATE',
+      'es': 'FECHA DE LA CITA',
+    },
+    'qglylwgn': {
+      'pt': 'ITENS',
+      'en': 'ITEMS',
+      'es': 'ELEMENTOS',
+    },
+    'u5x337lz': {
+      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
+      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
+      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
+    },
+    'l1jcqiec': {
+      'pt':
+          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
+      'en':
+          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
+      'es':
+          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
+    },
+    'nxyn3ooa': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
   // completeProfileNumber
   {
     'q4l9icem': {
@@ -4793,383 +5151,98 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // orderDetails
+  // ordersHelpHistory
   {
-    'p5u46jqv': {
-      'pt': 'ACOMPANHAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DE PEDIDO',
-    },
-    'myx5t027': {
-      'pt': 'Solicitação de análise de reclamação em andamento',
-      'en': 'Request for analysis of ongoing complaint',
-      'es': 'Solicitud de análisis de queja en curso',
-    },
-    '0awadmzs': {
-      'pt':
-          'Entraremos em contao vai e-mail ou pelo seu telefone cadastrado em nossa plataforma com a solução',
-      'en':
-          'We will contact you via email or phone number registered on our platform with the solution.',
-      'es':
-          'Nos pondremos en contacto con usted vía correo electrónico o a través del número de teléfono registrado en nuestra plataforma con la solución.',
-    },
-    'i6uvruo3': {
-      'pt': 'Realizado as: ',
-      'en': 'Held at:',
-      'es': 'Celebrada en:',
-    },
-    '3bprmx8f': {
+    'h45t9r0r': {
       'pt': 'DETALHES DA SOLICITAÇÃO',
       'en': 'APPLICATION DETAILS',
       'es': 'DETALLES DE LA SOLICITUD',
     },
-    'm8icup59': {
-      'pt': 'Seu pedido foi entregue',
-      'en': 'Your order has been delivered',
-      'es': 'Su pedido ha sido entregado',
-    },
-    '54tevu47': {
-      'pt': 'Pedido entregue às ',
-      'en': 'Order delivered at',
-      'es': 'Pedido entregado en',
-    },
-    'yg0wo8vc': {
-      'pt': '14:48',
-      'en': '14:48',
-      'es': '14:48',
-    },
-    '0kccai5m': {
-      'pt': 'Previsão de entrega: ',
-      'en': '',
-      'es': '',
-    },
-    'e7lg5yl6': {
-      'pt': '13:00 - 13:40',
-      'en': '',
-      'es': '',
-    },
-    '5wi5dx1t': {
-      'pt': 'CÓDIGO DE ENTREGA',
-      'en': 'DELIVERY CODE',
-      'es': 'CÓDIGO DE ENTREGA',
-    },
-    '5bmokfvc': {
-      'pt': 'AJUDA',
-      'en': 'HELP',
-      'es': 'AYUDA',
-    },
-    'wnnyg6es': {
-      'pt': 'RASTREAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DEL PEDIDO',
-    },
-    'n6l3hi1g': {
-      'pt': 'CANCELAR PEDIDO',
-      'en': 'CANCEL ORDER',
-      'es': 'CANCELAR PEDIDO',
-    },
-    'bp7kxwwy': {
-      'pt': 'CONFIRMAR ENTREGA',
-      'en': 'CONFIRM DELIVERY',
-      'es': 'CONFIRMAR ENTREGA',
-    },
-    '3s0w58fd': {
-      'pt': 'AVALIAR PEDIDO',
-      'en': 'EVALUATE ORDER',
-      'es': 'EVALUAR ORDEN',
-    },
-    'e8b7oqan': {
-      'pt': 'ENDEREÇO DE ENTREGA',
-      'en': 'DELIVERY ADDRESS',
-      'es': 'DIRECCIÓN DE ENTREGA',
-    },
-    '6lbfzvew': {
-      'pt': 'OBSERVAÇÃO',
-      'en': 'OBSERVATION',
-      'es': 'OBSERVACIÓN',
-    },
-    'js79e8tl': {
-      'pt': 'DETALHES DO PEDIDO',
-      'en': 'ORDER DETAILS',
-      'es': 'DETALLES DEL PEDIDO',
-    },
-    'nuwjtpiu': {
-      'pt': 'RESUMO DO PAGAMENTO',
-      'en': 'PAYMENT SUMMARY',
-      'es': 'RESUMEN DE PAGO',
-    },
-    'lpfm2er0': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '8rvzu7us': {
-      'pt': 'GORJETA',
-      'en': 'TIP',
-      'es': 'CONSEJO',
-    },
-    'th8gw6m6': {
-      'pt': 'TAXA DE ENTREGA',
-      'en': 'DELIVERY FEE',
-      'es': 'TARIFA DE ENVÍO',
-    },
-    'i3mz7r0z': {
-      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
-      'en': 'TAX AND SERVICE FEE',
-      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
-    },
-    'x33o0exx': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    'wlbqvz4x': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
-      'en': 'WITH AQUIPASS YOU SAVED',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'e1em4e6a': {
-      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
-      'en': 'YOU HAVE EARNED 3% CASHBACK',
-      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'nkkwygwh': {
-      'pt': 'FORMA DE PAGAMENTO',
-      'en': 'PAYMENT METHOD',
-      'es': 'FORMA DE PAGO',
-    },
-    'ottan1jr': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
-  // ordersHelp
-  {
-    'c7k1izy6': {
-      'pt': 'Pedido finalizado',
-      'en': 'Order completed',
-      'es': 'Pedido completado',
-    },
-    'i761s2om': {
-      'pt': 'Sentimos muito que houve um problema com o seu pedido',
-      'en': 'We are sorry there was a problem with your order.',
-      'es': 'Lamentamos que haya habido un problema con su pedido.',
-    },
-    'mqnc4cqc': {
-      'pt':
-          'Queremos entender o qual foi o problema para negociamos o reembolso ou outra solução com a loja',
-      'en':
-          'We want to understand what the problem was so we can negotiate a refund or another solution with the store.',
-      'es':
-          'Queremos entender cuál fue el problema para poder negociar un reembolso u otra solución con la tienda.',
-    },
-    'mkwt404c': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    '3rgj48ef': {
-      'pt': 'O que aconteceu com o seu pedido?',
-      'en': 'What happened to your order?',
-      'es': '¿Qué pasó con tu pedido?',
-    },
-    'ne2tpn1o': {
-      'pt': 'Selecione o motivo que melhor representa o seu problema.',
-      'en': 'Select the reason that best represents your problem.',
-      'es': 'Seleccione el motivo que mejor represente su problema.',
-    },
-    '2980it8j': {
-      'pt': 'PRODUTO CHEGOU FRIO',
-      'en': 'PRODUCT ARRIVED COLD',
-      'es': 'EL PRODUCTO LLEGÓ FRÍO',
-    },
-    'z0dyrnhm': {
-      'pt': 'PRODUTO ERRADO',
-      'en': 'WRONG PRODUCT',
-      'es': 'PRODUCTO INCORRECTO',
-    },
-    's14vh1ts': {
-      'pt': 'PRODUTO INCOMPLETO',
-      'en': 'INCOMPLETE PRODUCT',
-      'es': 'PRODUCTO INCOMPLETO',
-    },
-    '0ppxiq5c': {
-      'pt': 'PRODUTO DANIFICADO',
-      'en': 'DAMAGED PRODUCT',
-      'es': 'PRODUCTO DAÑADO',
-    },
-    'w0augal9': {
-      'pt': 'ATRASO NA ENTREGA',
-      'en': 'DELAY IN DELIVERY',
-      'es': 'RETRASO EN ENTREGA',
-    },
-    '8ia1f08g': {
-      'pt': 'OUTRO',
-      'en': 'OTHER',
-      'es': 'OTRO',
-    },
-    'x21w7nwo': {
-      'pt':
-          'Antes de finalizar, você poderá revisar sua solicitação e fazer mudanças, se necessário.',
-      'en':
-          'Before finalizing, you will be able to review your request and make changes if necessary.',
-      'es':
-          'Antes de finalizar, usted podrá revisar su solicitud y realizar cambios si es necesario.',
-    },
-    'nd673286': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'f4y05h29': {
-      'pt': 'Conte mais detalhes sobre o problema',
-      'en': 'Please provide more details about the problem.',
-      'es': 'Proporcione más detalles sobre el problema.',
-    },
-    '9c0r94ob': {
-      'pt': 'Nos conte o que achou do seu pedido (obrigatório)',
-      'en': 'Tell us what you think of your order (required)',
-      'es': 'Cuéntanos qué te parece tu pedido (obligatorio)',
-    },
-    '2b5zokwd': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'm35gae5a': {
-      'pt': 'Adicione evidências do problema',
-      'en': '',
-      'es': '',
-    },
-    'y6ie6k8n': {
-      'pt':
-          'O envio de uma foto do item, da embalagem ou da nota fiscal podem ajudar a loja a entender o que aconteceu com seu pedido.',
-      'en':
-          'Sending a photo of the item, packaging, or receipt can help the store understand what happened to your order.',
-      'es':
-          'Enviar una foto del artículo, del embalaje o del recibo puede ayudar a la tienda a comprender qué sucedió con su pedido.',
-    },
-    'owkqt01u': {
-      'pt': 'REVISAR SOLICITAÇÃO',
-      'en': 'REVIEW REQUEST',
-      'es': 'SOLICITUD DE REVISIÓN',
-    },
-    '9yegjyd3': {
-      'pt': 'Revise sua solicitação',
-      'en': 'Review your request',
-      'es': 'Revisar su solicitud',
-    },
-    '4r87pzxs': {
-      'pt': 'Evidências do problema',
-      'en': 'Evidence of the problem',
-      'es': 'Evidencia del problema',
-    },
-    '5i8sxdcu': {
-      'pt': 'ENVIAR',
-      'en': 'TO SEND',
-      'es': 'PARA ENVIAR',
-    },
-    'j3elzjdn': {
+    'k952pyau': {
       'pt': 'Home',
       'en': '',
       'es': '',
     },
   },
-  // orderHistory
+  // deliveryFood
   {
-    '18994agu': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
+    'dwbi5ilf': {
+      'pt': 'TODOS',
+      'en': 'ALL',
+      'es': 'TODO',
     },
-    'b4fw56ij': {
-      'pt': 'DELIVERY',
+    '9gp4mkz0': {
+      'pt': 'OFERTAS',
+      'en': 'OFFERS',
+      'es': 'OFERTAS',
+    },
+    'pisuzef5': {
+      'pt': ' | ',
       'en': '',
       'es': '',
     },
-    'o3c2lo4i': {
-      'pt': 'AGENDAMENTOS',
+    'peh29hlp': {
+      'pt': ' | ',
       'en': '',
       'es': '',
     },
-    'u92zr70k': {
-      'pt': 'Concluído',
-      'en': 'Completed',
-      'es': 'Terminado',
+    'n4zbki52': {
+      'pt': 'OFERTAS IMPERDÍVEIS! APROVEITE AGORA!',
+      'en': 'UNMISSABLE OFFERS! TAKE ADVANTAGE NOW!',
+      'es': '¡OFERTAS IMPERDIBLES! ¡APROVECHA AHORA!',
     },
-    'z6sx1bco': {
-      'pt': 'Recusado',
-      'en': 'Refused',
-      'es': 'Rechazado',
+    'pcmf5gv5': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZA',
+      'en': 'WITH AQUIPASS YOU SAVE',
+      'es': 'CON AQUIPASS AHORRAS',
     },
-    '4acz5fix': {
-      'pt': 'Cancelado',
-      'en': 'Canceled',
-      'es': 'Cancelado',
+    'y3442gxi': {
+      'pt': 'COM A AQUIPASS VOCÊ ECONOMIZA ',
+      'en': 'WITH AQUIPASS YOU SAVE',
+      'es': 'CON AQUIPASS AHORRAS',
     },
-    'owfbas64': {
-      'pt': 'Pendente',
-      'en': 'Pending',
-      'es': 'Pendiente',
+    'oz164jtx': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
     },
-    'ob3fejyl': {
-      'pt': 'Em preparo',
-      'en': 'In preparation',
-      'es': 'En preparación',
+  },
+  // service
+  {
+    '4l71pn31': {
+      'pt': 'TODOS',
+      'en': 'ALL',
+      'es': 'TODO',
     },
-    'fboo98in': {
-      'pt': 'Pronto para \nretirada',
-      'en': 'Ready for\npickup',
-      'es': 'Listo para \nrecoger',
-    },
-    'rg0m1s44': {
-      'pt': 'Saiu para \nentrega',
-      'en': 'Out for\ndelivery',
-      'es': 'En camino \npara entrega',
-    },
-    '30qiob8f': {
-      'pt': 'Agendado',
-      'en': 'Scheduled',
-      'es': 'Programado',
-    },
-    'as39lw78': {
-      'pt': 'Solicitação de \nnovo horário',
-      'en': 'Request for\nnew schedule',
-      'es': 'Solicitud de \nnuevo horario',
-    },
-    '4jd9k1xy': {
-      'pt': '-',
+    '39c7tbbt': {
+      'pt': ' | ',
       'en': '',
       'es': '',
     },
-    'vklfevcq': {
-      'pt': 'Data do agendamento',
-      'en': 'Appointment date',
-      'es': 'Fecha de la cita',
+    '0udgrwog': {
+      'pt': 'OFERTAS IMPERDÍVEIS! APROVEITE AGORA!',
+      'en': 'UNMISSABLE OFFERS! TAKE ADVANTAGE NOW!',
+      'es': '¡OFERTAS IMPERDIBLES! ¡APROVECHA AHORA!',
     },
-    'qglylwgn': {
-      'pt': 'ITENS',
-      'en': 'ITEMS',
-      'es': 'ELEMENTOS',
+    'dbie9m49': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZA',
+      'en': 'WITH AQUIPASS YOU SAVE',
+      'es': 'CON AQUIPASS AHORRAS',
     },
-    'u5x337lz': {
-      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
-      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
-      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
+    'xscxrgls': {
+      'pt': 'COM A AQUIPASS VOCÊ ECONOMIZA ',
+      'en': 'WITH AQUIPASS YOU SAVE',
+      'es': 'CON AQUIPASS AHORRAS',
     },
-    'l1jcqiec': {
-      'pt':
-          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
-      'en':
-          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
-      'es':
-          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
+    'bc2la0iq': {
+      'pt': 'RESERVAR',
+      'en': 'BOOK',
+      'es': 'LIBRO',
     },
-    'nxyn3ooa': {
-      'pt': '',
-      'en': '',
-      'es': '',
+    '96yxp592': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
     },
   },
   // bannerAquiPass
@@ -5412,6 +5485,44 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'O QUE DESEJA BUSCAR?',
       'en': 'WHAT DO YOU WANT TO SEARCH FOR?',
       'es': '¿QUÉ QUIERES BUSCAR?',
+    },
+  },
+  // infoCompany2
+  {
+    'kbtgwxpz': {
+      'pt': '200 avaliações',
+      'en': '',
+      'es': '',
+    },
+    'j4mtcivj': {
+      'pt': 'INFORMAÇÕES',
+      'en': 'INFORMATION',
+      'es': 'INFORMACIÓN',
+    },
+    'kpwmsk3e': {
+      'pt': 'DESCRIÇÃO DA EMPRESA',
+      'en': 'COMPANY DESCRIPTION',
+      'es': 'DESCRIPCIÓN DE LA EMPRESA',
+    },
+    '78qulgpo': {
+      'pt': 'HOJE',
+      'en': 'TODAY',
+      'es': 'HOY',
+    },
+    'z59vsxgp': {
+      'pt': 'AVALIAÇÕES',
+      'en': 'REVIEWS',
+      'es': 'RESEÑAS',
+    },
+    'h2epjuil': {
+      'pt': 'Nome do cliente',
+      'en': '',
+      'es': '',
+    },
+    'zzw85pzu': {
+      'pt': 'Descrição',
+      'en': '',
+      'es': '',
     },
   },
   // paymentMethodDelete
@@ -6066,6 +6177,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Está bien, lo entiendo.',
     },
   },
+  // emptyListRating
+  {
+    '6yl3gjr3': {
+      'pt': 'Esta empresa ainda não possui avaliações.',
+      'en': 'This company has no reviews yet.',
+      'es': 'Esta empresa aún no tiene reseñas.',
+    },
+  },
   // selectService
   {
     '1n74gy2b': {
@@ -6717,6 +6836,57 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'SU CÓDIGO HA SIDO VERIFICADO ES INCORRECTO VERIFIQUE O ENVÍE DE NUEVO.',
     },
   },
+  // orderHelp
+  {
+    'ysoqs9rm': {
+      'pt': 'AJUDA COM O PEDIDO',
+      'en': 'HELP WITH THE ORDER',
+      'es': 'AYUDA CON EL PEDIDO',
+    },
+    'umiue761': {
+      'pt':
+          'Selecione uma das opções para que possamos lhe ajudar com o seu pedido.',
+      'en':
+          'Please select one of the options so we can help you with your order.',
+      'es':
+          'Por favor seleccione una de las opciones para que podamos ayudarle con su pedido.',
+    },
+    'ozw9vqwu': {
+      'pt': 'Problemas com o pedido',
+      'en': 'Problems with the order',
+      'es': 'Problemas con el pedido',
+    },
+    '86ptcfnr': {
+      'pt': 'PRODUTO CHEGOU FRIO',
+      'en': 'PRODUCT ARRIVED COLD',
+      'es': 'EL PRODUCTO LLEGÓ FRÍO',
+    },
+    '68sti7ax': {
+      'pt': 'PRODUTO ERRADO',
+      'en': 'WRONG PRODUCT',
+      'es': 'PRODUCTO INCORRECTO',
+    },
+    'vt5nfjue': {
+      'pt': 'PRODUTO INCOMPLETO',
+      'en': 'INCOMPLETE PRODUCT',
+      'es': 'PRODUCTO INCOMPLETO',
+    },
+    'i700d7jy': {
+      'pt': 'PRODUTO DANIFICADO',
+      'en': 'DAMAGED PRODUCT',
+      'es': 'PRODUCTO DAÑADO',
+    },
+    'cuijow04': {
+      'pt': 'ATRASO NA ENTREGA',
+      'en': 'DELAY IN DELIVERY',
+      'es': 'RETRASO EN ENTREGA',
+    },
+    'ot2nw1x1': {
+      'pt': 'OUTRO',
+      'en': 'OTHER',
+      'es': 'OTRO',
+    },
+  },
   // tradeCashForAzulPoints
   {
     'br742m8l': {
@@ -6743,6 +6913,64 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'APROVEITAR',
       'en': 'TO ENJOY',
       'es': 'PARA DISFRUTAR',
+    },
+  },
+  // orderRating
+  {
+    '8zyulgpb': {
+      'pt': 'AVALIAR PEDIDO',
+      'en': 'EVALUATE ORDER',
+      'es': 'EVALUAR ORDEN',
+    },
+    'cb6szzfh': {
+      'pt': 'ESCOLHA DE 1  A 5 ESTRELAS PARA CLASSIFICAR',
+      'en': 'CHOOSE 1 TO 5 STARS TO RATE',
+      'es': 'ELIGE DE 1 A 5 ESTRELLAS PARA CALIFICAR',
+    },
+    't7x94050': {
+      'pt': 'Do que mais você gostou?',
+      'en': '',
+      'es': '',
+    },
+    'db21u9dg': {
+      'pt': 'COMIDA SABOROSA',
+      'en': '',
+      'es': '',
+    },
+    'ltnc979n': {
+      'pt': 'BEM TEMPERADA',
+      'en': '',
+      'es': '',
+    },
+    'izp1mw96': {
+      'pt': 'BOA APARÊNCIA',
+      'en': '',
+      'es': '',
+    },
+    'rayc5y32': {
+      'pt': 'NO PONTO CERTO',
+      'en': '',
+      'es': '',
+    },
+    'jkveui23': {
+      'pt': 'BONS INGREDIENTES',
+      'en': '',
+      'es': '',
+    },
+    'njh0wnpn': {
+      'pt': 'DEIXE UM COMENTÁRIO',
+      'en': 'LEAVE A COMMENT',
+      'es': 'DEJA UN COMENTARIO',
+    },
+    '3pliobim': {
+      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OPCIONAL)',
+      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (OPTIONAL)',
+      'es': 'DÍGANOS QUÉ LE PARECIÓ DE SU PEDIDO (OPCIONAL)',
+    },
+    'l6qexh1x': {
+      'pt': 'ENVIAR AVALIAÇÃO',
+      'en': 'SUBMIT REVIEW',
+      'es': 'ENVIAR RESEÑA',
     },
   },
   // benefits
@@ -7398,161 +7626,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'SELECIONAR OUTRO MOTIVO',
       'en': 'SELECT ANOTHER REASON',
       'es': 'SELECCIONE OTRO MOTIVO',
-    },
-  },
-  // infoCompany2
-  {
-    'kbtgwxpz': {
-      'pt': '200 avaliações',
-      'en': '',
-      'es': '',
-    },
-    'u827ahw7': {
-      'pt': 'Avaliações',
-      'en': 'Reviews',
-      'es': 'Reseñas',
-    },
-    '2gqhhmdu': {
-      'pt': 'Nome do cliente',
-      'en': '',
-      'es': '',
-    },
-    'j5hmgruf': {
-      'pt': 'Descrição',
-      'en': '',
-      'es': '',
-    },
-    'j4mtcivj': {
-      'pt': 'Informações',
-      'en': 'Information',
-      'es': 'Información',
-    },
-    'kpwmsk3e': {
-      'pt': 'DESCRIÇÃO DA EMPRESA',
-      'en': 'COMPANY DESCRIPTION',
-      'es': 'DESCRIPCIÓN DE LA EMPRESA',
-    },
-    '78qulgpo': {
-      'pt': 'HOJE',
-      'en': 'TODAY',
-      'es': 'HOY',
-    },
-  },
-  // emptyListRating
-  {
-    '6yl3gjr3': {
-      'pt': 'Esta empresa ainda não possui avaliações.',
-      'en': 'This company has no reviews yet.',
-      'es': 'Esta empresa aún no tiene reseñas.',
-    },
-  },
-  // orderHelp
-  {
-    'ysoqs9rm': {
-      'pt': 'AJUDA COM O PEDIDO',
-      'en': 'HELP WITH THE ORDER',
-      'es': 'AYUDA CON EL PEDIDO',
-    },
-    'umiue761': {
-      'pt':
-          'Selecione uma das opções para que possamos lhe ajudar com o seu pedido.',
-      'en':
-          'Please select one of the options so we can help you with your order.',
-      'es':
-          'Por favor seleccione una de las opciones para que podamos ayudarle con su pedido.',
-    },
-    'ozw9vqwu': {
-      'pt': 'Problemas com o pedido',
-      'en': 'Problems with the order',
-      'es': 'Problemas con el pedido',
-    },
-    '86ptcfnr': {
-      'pt': 'PRODUTO CHEGOU FRIO',
-      'en': 'PRODUCT ARRIVED COLD',
-      'es': 'EL PRODUCTO LLEGÓ FRÍO',
-    },
-    '68sti7ax': {
-      'pt': 'PRODUTO ERRADO',
-      'en': 'WRONG PRODUCT',
-      'es': 'PRODUCTO INCORRECTO',
-    },
-    'vt5nfjue': {
-      'pt': 'PRODUTO INCOMPLETO',
-      'en': 'INCOMPLETE PRODUCT',
-      'es': 'PRODUCTO INCOMPLETO',
-    },
-    'i700d7jy': {
-      'pt': 'PRODUTO DANIFICADO',
-      'en': 'DAMAGED PRODUCT',
-      'es': 'PRODUCTO DAÑADO',
-    },
-    'cuijow04': {
-      'pt': 'ATRASO NA ENTREGA',
-      'en': 'DELAY IN DELIVERY',
-      'es': 'RETRASO EN ENTREGA',
-    },
-    'ot2nw1x1': {
-      'pt': 'OUTRO',
-      'en': 'OTHER',
-      'es': 'OTRO',
-    },
-  },
-  // orderRating
-  {
-    '8zyulgpb': {
-      'pt': 'Avaliar pedido',
-      'en': 'Evaluate order',
-      'es': 'Evaluar orden',
-    },
-    'cb6szzfh': {
-      'pt': 'Escolha de 1 a 5 estrelas para classificar',
-      'en': 'Choose 1 to 5 stars to rate',
-      'es': 'Elige de 1 a 5 estrellas para calificar',
-    },
-    't7x94050': {
-      'pt': 'Do que mais você gostou?',
-      'en': '',
-      'es': '',
-    },
-    'db21u9dg': {
-      'pt': 'COMIDA SABOROSA',
-      'en': '',
-      'es': '',
-    },
-    'ltnc979n': {
-      'pt': 'BEM TEMPERADA',
-      'en': '',
-      'es': '',
-    },
-    'izp1mw96': {
-      'pt': 'BOA APARÊNCIA',
-      'en': '',
-      'es': '',
-    },
-    'rayc5y32': {
-      'pt': 'NO PONTO CERTO',
-      'en': '',
-      'es': '',
-    },
-    'jkveui23': {
-      'pt': 'BONS INGREDIENTES',
-      'en': '',
-      'es': '',
-    },
-    'njh0wnpn': {
-      'pt': 'Deixe um comentário',
-      'en': 'Leave a comment',
-      'es': 'Deja un comentario',
-    },
-    '3pliobim': {
-      'pt': 'Nos conte o que achou do seu pedido (opcional)',
-      'en': 'Tell us what you think of your order (optional)',
-      'es': 'Cuéntanos qué te parece tu pedido (opcional)',
-    },
-    'l6qexh1x': {
-      'pt': 'ENVIAR AVALIAÇÃO',
-      'en': 'SUBMIT REVIEW',
-      'es': 'ENVIAR RESEÑA',
     },
   },
   // Miscellaneous

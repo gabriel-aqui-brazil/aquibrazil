@@ -36,16 +36,16 @@ class InfoCompany2Model extends FlutterFlowModel<InfoCompany2Widget> {
   int get tabBarPreviousIndex =>
       tabBarController != null ? tabBarController!.previousIndex : 0;
 
-  // State field(s) for ListView widget.
-
-  PagingController<ApiPagingParams, dynamic>? listViewPagingController1;
-  Function(ApiPagingParams nextPageMarker)? listViewApiCall1;
-
   // State field(s) for GoogleMap widget.
   LatLng? googleMapsCenter;
   final googleMapsController = Completer<GoogleMapController>();
   // State field(s) for Expandable widget.
   late ExpandableController expandableExpandableController;
+
+  // State field(s) for ListView widget.
+
+  PagingController<ApiPagingParams, dynamic>? listViewPagingController2;
+  Function(ApiPagingParams nextPageMarker)? listViewApiCall2;
 
   @override
   void initState(BuildContext context) {}
@@ -53,19 +53,19 @@ class InfoCompany2Model extends FlutterFlowModel<InfoCompany2Widget> {
   @override
   void dispose() {
     tabBarController?.dispose();
-    listViewPagingController1?.dispose();
     expandableExpandableController.dispose();
+    listViewPagingController2?.dispose();
   }
 
   /// Additional helper methods.
-  PagingController<ApiPagingParams, dynamic> setListViewController1(
+  PagingController<ApiPagingParams, dynamic> setListViewController2(
     Function(ApiPagingParams) apiCall,
   ) {
-    listViewApiCall1 = apiCall;
-    return listViewPagingController1 ??= _createListViewController1(apiCall);
+    listViewApiCall2 = apiCall;
+    return listViewPagingController2 ??= _createListViewController2(apiCall);
   }
 
-  PagingController<ApiPagingParams, dynamic> _createListViewController1(
+  PagingController<ApiPagingParams, dynamic> _createListViewController2(
     Function(ApiPagingParams) query,
   ) {
     final controller = PagingController<ApiPagingParams, dynamic>(
@@ -75,11 +75,11 @@ class InfoCompany2Model extends FlutterFlowModel<InfoCompany2Widget> {
         lastResponse: null,
       ),
     );
-    return controller..addPageRequestListener(listViewQueryRatingPage1);
+    return controller..addPageRequestListener(listViewQueryRatingPage2);
   }
 
-  void listViewQueryRatingPage1(ApiPagingParams nextPageMarker) =>
-      listViewApiCall1!(nextPageMarker).then((listViewQueryRatingResponse) {
+  void listViewQueryRatingPage2(ApiPagingParams nextPageMarker) =>
+      listViewApiCall2!(nextPageMarker).then((listViewQueryRatingResponse) {
         final pageItems = ((listViewQueryRatingResponse.jsonBody
                             .toList()
                             .map<
@@ -95,7 +95,7 @@ class InfoCompany2Model extends FlutterFlowModel<InfoCompany2Widget> {
                 [])
             .toList() as List;
         final newNumItems = nextPageMarker.numItems + pageItems.length;
-        listViewPagingController1?.appendPage(
+        listViewPagingController2?.appendPage(
           pageItems,
           (pageItems.length > 0)
               ? ApiPagingParams(

@@ -87,6 +87,26 @@ Future errorAlertSnacbar(
   );
 }
 
+Future verifyAppVersion(BuildContext context) async {
+  ApiCallResponse? appVersion;
+
+  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
+    token: currentAuthenticationToken,
+  );
+
+  if ((appVersion?.succeeded ?? true)) {
+    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
+        .actualVersion(
+          (appVersion?.jsonBody ?? ''),
+        )
+        .toString();
+    FFAppState().update(() {});
+    return;
+  } else {
+    return;
+  }
+}
+
 Future<bool> verifyHomeCache(BuildContext context) async {
   bool? isOverride;
 
@@ -110,6 +130,31 @@ Future<bool> verifyHomeCache(BuildContext context) async {
   } else {
     return false;
   }
+}
+
+Future orderHistory(
+  BuildContext context, {
+  String? type,
+}) async {
+  ApiCallResponse? apiResult4xv2;
+
+  apiResult4xv2 = await MainGroup.queryOrderHistoryCall.call(
+    token: currentAuthenticationToken,
+    orderType: type,
+  );
+
+  FFAppState().historyOrder =
+      ((apiResult4xv2?.jsonBody ?? '')
+                  .toList()
+                  .map<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>(
+                      aquibrazil_library_oi8i5r_data_schema
+                          .OrderStruct.maybeFromMap)
+                  .toList()
+              as Iterable<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>)
+          .withoutNulls
+          .toList()
+          .cast<aquibrazil_library_oi8i5r_data_schema.OrderStruct>();
+  FFAppState().update(() {});
 }
 
 Future cartClear(BuildContext context) async {
@@ -147,49 +192,4 @@ Future cartClear(BuildContext context) async {
       ),
     },
   );
-}
-
-Future verifyAppVersion(BuildContext context) async {
-  ApiCallResponse? appVersion;
-
-  appVersion = await MainGroup.gETAppVersionAvaliableCall.call(
-    token: currentAuthenticationToken,
-  );
-
-  if ((appVersion?.succeeded ?? true)) {
-    FFAppState().actualVersion = MainGroup.gETAppVersionAvaliableCall
-        .actualVersion(
-          (appVersion?.jsonBody ?? ''),
-        )
-        .toString();
-    FFAppState().update(() {});
-    return;
-  } else {
-    return;
-  }
-}
-
-Future orderHistory(
-  BuildContext context, {
-  String? type,
-}) async {
-  ApiCallResponse? apiResult4xv2;
-
-  apiResult4xv2 = await MainGroup.queryOrderHistoryCall.call(
-    token: currentAuthenticationToken,
-    orderType: type,
-  );
-
-  FFAppState().historyOrder =
-      ((apiResult4xv2?.jsonBody ?? '')
-                  .toList()
-                  .map<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>(
-                      aquibrazil_library_oi8i5r_data_schema
-                          .OrderStruct.maybeFromMap)
-                  .toList()
-              as Iterable<aquibrazil_library_oi8i5r_data_schema.OrderStruct?>)
-          .withoutNulls
-          .toList()
-          .cast<aquibrazil_library_oi8i5r_data_schema.OrderStruct>();
-  FFAppState().update(() {});
 }

@@ -21,17 +21,17 @@ class MainGroup {
   static String getBaseUrl({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     return 'https://x0lt-picx-zmmr.n7d.xano.io/api:ywIjzSH2';
   }
 
   static Map<String, String> headers = {
     'Authorization': 'Bearer [token]',
     'X-data-source': '[dataSource]',
-    'X-branch': '[bramchSource]',
+    'X-branch': '[branchSource]',
   };
   static UpdatePaymentMethodNicknameCall updatePaymentMethodNicknameCall =
       UpdatePaymentMethodNicknameCall();
@@ -96,6 +96,8 @@ class MainGroup {
       QueryCompanyHomeNoAuthCall();
   static QueryFavoriteCompanyCall queryFavoriteCompanyCall =
       QueryFavoriteCompanyCall();
+  static QueryOrderHistoryCall queryOrderHistoryCall = QueryOrderHistoryCall();
+  static InsertComplaintCall insertComplaintCall = InsertComplaintCall();
   static GetHomeCall getHomeCall = GetHomeCall();
   static QueryNotificationsCall queryNotificationsCall =
       QueryNotificationsCall();
@@ -116,6 +118,7 @@ class MainGroup {
       editProfileValidateCodeWhatsappCall =
       EditProfileValidateCodeWhatsappCall();
   static OrderProductCall orderProductCall = OrderProductCall();
+  static QueryRatingCall queryRatingCall = QueryRatingCall();
   static EditAddressCall editAddressCall = EditAddressCall();
   static AppointmentReescheduleCall appointmentReescheduleCall =
       AppointmentReescheduleCall();
@@ -163,6 +166,7 @@ class MainGroup {
   static EditCustomerEmailCall editCustomerEmailCall = EditCustomerEmailCall();
   static PostImagemChatCall postImagemChatCall = PostImagemChatCall();
   static GETChatExistCall gETChatExistCall = GETChatExistCall();
+  static InsertRatingCall insertRatingCall = InsertRatingCall();
   static GetCouponCall getCouponCall = GetCouponCall();
   static MembershipCancelCall membershipCancelCall = MembershipCancelCall();
   static MembershipCheckoutChangePlanCall membershipCheckoutChangePlanCall =
@@ -177,10 +181,8 @@ class MainGroup {
   static PostChatCall postChatCall = PostChatCall();
   static GetMembershipCurrentCall getMembershipCurrentCall =
       GetMembershipCurrentCall();
-  static QueryOrderHistoryCall queryOrderHistoryCall = QueryOrderHistoryCall();
-  static InsertComplaintCall insertComplaintCall = InsertComplaintCall();
-  static QueryRatingCall queryRatingCall = QueryRatingCall();
-  static InsertRatingCall insertRatingCall = InsertRatingCall();
+  static GetComplaintHistoryCall getComplaintHistoryCall =
+      GetComplaintHistoryCall();
 }
 
 class UpdatePaymentMethodNicknameCall {
@@ -189,14 +191,14 @@ class UpdatePaymentMethodNicknameCall {
     String? paymentMethodId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -211,7 +213,7 @@ class UpdatePaymentMethodNicknameCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -231,14 +233,14 @@ class EditFcmIdCall {
     String? fcmId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -252,7 +254,7 @@ class EditFcmIdCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -272,14 +274,14 @@ class QueryMembershipPlanCall {
     String? coupon = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -289,7 +291,7 @@ class QueryMembershipPlanCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'coupon': coupon,
@@ -308,14 +310,14 @@ class QueryPaymentMethodCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -325,7 +327,7 @@ class QueryPaymentMethodCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -342,14 +344,14 @@ class DeleteAccountCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -359,7 +361,7 @@ class DeleteAccountCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -376,14 +378,14 @@ class GETCashbackTransactionHistoryCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -393,7 +395,7 @@ class GETCashbackTransactionHistoryCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -413,14 +415,14 @@ class CartServiceReviewCall {
     String? customerPaymentMethodId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final items = _serializeJson(itemsJson, true);
@@ -437,7 +439,7 @@ class CartServiceReviewCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -458,14 +460,14 @@ class ResetPasswordValidateCodeCall {
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -480,7 +482,7 @@ class ResetPasswordValidateCodeCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -501,14 +503,14 @@ class QueryCompanySearchCall {
     String? categoryId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -518,7 +520,7 @@ class QueryCompanySearchCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'search': search,
@@ -539,14 +541,14 @@ class GetOrderDetailServiceCall {
     String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -556,7 +558,7 @@ class GetOrderDetailServiceCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'order_id': orderId,
@@ -576,14 +578,14 @@ class GetOrderCall {
     String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -593,7 +595,7 @@ class GetOrderCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'order_id': orderId,
@@ -619,14 +621,14 @@ class CartProductReviewCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final items = _serializeJson(itemsJson, true);
@@ -647,7 +649,7 @@ class CartProductReviewCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -670,14 +672,14 @@ class LoginSignupSocialCall {
     String? provider = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -694,7 +696,7 @@ class LoginSignupSocialCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -731,14 +733,14 @@ class QueryCategoryCall {
     String? categoryId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -748,7 +750,7 @@ class QueryCategoryCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'category_id': categoryId,
@@ -769,14 +771,14 @@ class SignupValidateWhatsappCall {
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -791,7 +793,7 @@ class SignupValidateWhatsappCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -815,14 +817,14 @@ class QueryAppointmentCheckHourCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -832,7 +834,7 @@ class QueryAppointmentCheckHourCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'date': date,
@@ -857,14 +859,14 @@ class QueryProductOfServiceCall {
     String? search = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -874,7 +876,7 @@ class QueryProductOfServiceCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -894,14 +896,14 @@ class QueryAddressCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -911,7 +913,7 @@ class QueryAddressCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -929,14 +931,14 @@ class QueryAppointmentProviderCall {
     String? baseProductId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -946,7 +948,7 @@ class QueryAppointmentProviderCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'base_product_id': baseProductId,
@@ -973,14 +975,14 @@ class OrderServiceCall {
     dynamic? itemsJson,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final items = _serializeJson(itemsJson, true);
@@ -1002,7 +1004,7 @@ class OrderServiceCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1022,14 +1024,14 @@ class OrderDeliveryConfirmCall {
     String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1043,7 +1045,7 @@ class OrderDeliveryConfirmCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1067,14 +1069,14 @@ class CompleteProfileCall {
     String? fcmId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1092,7 +1094,7 @@ class CompleteProfileCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1114,14 +1116,14 @@ class FaqEmailCall {
     String? name = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1137,7 +1139,7 @@ class FaqEmailCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1157,14 +1159,14 @@ class QueryAdsCompanyCall {
     String? type = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1174,7 +1176,7 @@ class QueryAdsCompanyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'type': type,
@@ -1194,14 +1196,14 @@ class UpdateDocumentProfileCall {
     String? document = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1215,7 +1217,7 @@ class UpdateDocumentProfileCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1235,15 +1237,15 @@ class QueryCompanyPartnerCall {
     String? categoryId,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     categoryId ??= '';
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1253,7 +1255,7 @@ class QueryCompanyPartnerCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'category_id': categoryId,
@@ -1273,14 +1275,14 @@ class ResetPasswordCall {
     String? email = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1294,7 +1296,7 @@ class ResetPasswordCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1314,14 +1316,14 @@ class RemoveFavoriteCompanyCall {
     String? companyId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1331,7 +1333,7 @@ class RemoveFavoriteCompanyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -1351,14 +1353,14 @@ class SignupRequestCodeSmsCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1372,7 +1374,7 @@ class SignupRequestCodeSmsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1393,14 +1395,14 @@ class POSTChatMessageCall {
     String? message = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1415,7 +1417,7 @@ class POSTChatMessageCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1435,14 +1437,14 @@ class UpdateTokenFcmCall {
     String? fcm = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1456,7 +1458,7 @@ class UpdateTokenFcmCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1485,14 +1487,14 @@ class InsertAddressCall {
     String? number = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1515,7 +1517,7 @@ class InsertAddressCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1585,14 +1587,14 @@ class EditProfileValidateCodeSmsCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1607,7 +1609,7 @@ class EditProfileValidateCodeSmsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1627,14 +1629,14 @@ class QueryFaqAnswerCall {
     String? faqId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1644,7 +1646,7 @@ class QueryFaqAnswerCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'faq_id': faqId,
@@ -1672,14 +1674,14 @@ class QueryCompanyFilterWithCategoryCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1689,7 +1691,7 @@ class QueryCompanyFilterWithCategoryCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'category_id': categoryId,
@@ -1718,14 +1720,14 @@ class PostStripeSubscriptionsCall {
     String? couponId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1740,7 +1742,7 @@ class PostStripeSubscriptionsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1761,14 +1763,14 @@ class FaqFeedbackCall {
     bool? isLike,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1783,7 +1785,7 @@ class FaqFeedbackCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1804,14 +1806,14 @@ class UpdateCustomerCall {
     String? lastName = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1826,7 +1828,7 @@ class UpdateCustomerCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1849,14 +1851,14 @@ class InsertAnalyticsCall {
     String? type = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -1873,7 +1875,7 @@ class InsertAnalyticsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1893,14 +1895,14 @@ class InsertAppointmentCall {
     dynamic? serviceJson,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final service = _serializeJson(serviceJson, true);
@@ -1915,7 +1917,7 @@ class InsertAppointmentCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -1942,14 +1944,14 @@ class QueryCompanyHomeNoAuthCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -1959,7 +1961,7 @@ class QueryCompanyHomeNoAuthCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'primary_category_id': primaryCategoryId,
@@ -1986,14 +1988,14 @@ class QueryFavoriteCompanyCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2003,7 +2005,7 @@ class QueryFavoriteCompanyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'timezone': timezone,
@@ -2018,18 +2020,103 @@ class QueryFavoriteCompanyCall {
   }
 }
 
+class QueryOrderHistoryCall {
+  Future<ApiCallResponse> call({
+    String? orderType = '',
+    String? token = '',
+    String? dataSource,
+    String? branchSource,
+  }) async {
+    dataSource ??= FFDevEnvironmentValues().dataResource;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
+    final baseUrl = MainGroup.getBaseUrl(
+      token: token,
+      dataSource: dataSource,
+      branchSource: branchSource,
+    );
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'Query order history',
+      apiUrl: '${baseUrl}/order/history',
+      callType: ApiCallType.GET,
+      headers: {
+        'Authorization': 'Bearer ${token}',
+        'X-data-source': '${dataSource}',
+        'X-branch': '${branchSource}',
+      },
+      params: {
+        'order_type': orderType,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class InsertComplaintCall {
+  Future<ApiCallResponse> call({
+    String? orderId = '',
+    String? reason = '',
+    String? comment = '',
+    FFUploadedFile? complaintImage1,
+    FFUploadedFile? complaintImage2,
+    FFUploadedFile? complaintImage3,
+    String? token = '',
+    String? dataSource,
+    String? branchSource,
+  }) async {
+    dataSource ??= FFDevEnvironmentValues().dataResource;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
+    final baseUrl = MainGroup.getBaseUrl(
+      token: token,
+      dataSource: dataSource,
+      branchSource: branchSource,
+    );
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'Insert complaint',
+      apiUrl: '${baseUrl}/complaint',
+      callType: ApiCallType.POST,
+      headers: {
+        'Authorization': 'Bearer ${token}',
+        'X-data-source': '${dataSource}',
+        'X-branch': '${branchSource}',
+      },
+      params: {
+        'order_id': orderId,
+        'reason': reason,
+        'comment': comment,
+        'complaint_image_1': complaintImage1,
+        'complaint_image_2': complaintImage2,
+        'complaint_image_3': complaintImage3,
+      },
+      bodyType: BodyType.MULTIPART,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 class GetHomeCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2039,7 +2126,7 @@ class GetHomeCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -2056,14 +2143,14 @@ class QueryNotificationsCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2073,7 +2160,7 @@ class QueryNotificationsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -2092,14 +2179,14 @@ class SignupValidateSmsCall {
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2114,7 +2201,7 @@ class SignupValidateSmsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2134,14 +2221,14 @@ class EditProfileRequestCodeWhatsappCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2155,7 +2242,7 @@ class EditProfileRequestCodeWhatsappCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2182,14 +2269,14 @@ class QueryCompanyHomeCall {
     String? timezone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2199,7 +2286,7 @@ class QueryCompanyHomeCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'primary_category_id': primaryCategoryId,
@@ -2228,14 +2315,14 @@ class MembershipCartReviewCall {
     String? membershipId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2245,7 +2332,7 @@ class MembershipCartReviewCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'customer_payment_method_id': customerPaymentMethodId,
@@ -2268,14 +2355,14 @@ class GetHomeNoAuthCall {
     String? longitude = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2285,7 +2372,7 @@ class GetHomeNoAuthCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'latitude': latitude,
@@ -2306,14 +2393,14 @@ class ValidateCodeDeleteAccountCall {
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2327,7 +2414,7 @@ class ValidateCodeDeleteAccountCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2347,14 +2434,14 @@ class UpdateAddressCopyCall {
     String? addressId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2364,7 +2451,7 @@ class UpdateAddressCopyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -2383,14 +2470,14 @@ class UpdateAddressCall {
     bool? isMain,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2405,7 +2492,7 @@ class UpdateAddressCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2426,14 +2513,14 @@ class QueryServiceCall {
     String? sessionId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2443,7 +2530,7 @@ class QueryServiceCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -2466,14 +2553,14 @@ class AppointmentReviewCall {
     int? selectedDate,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2489,7 +2576,7 @@ class AppointmentReviewCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2510,14 +2597,14 @@ class EditProfileValidateCodeWhatsappCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2532,7 +2619,7 @@ class EditProfileValidateCodeWhatsappCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2565,14 +2652,14 @@ class OrderProductCall {
     String? preferredTime = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final items = _serializeJson(itemsJson, true);
@@ -2600,11 +2687,52 @@ class OrderProductCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class QueryRatingCall {
+  Future<ApiCallResponse> call({
+    String? companyId = '',
+    int? limit,
+    int? offset,
+    String? token = '',
+    String? dataSource,
+    String? branchSource,
+  }) async {
+    dataSource ??= FFDevEnvironmentValues().dataResource;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
+    final baseUrl = MainGroup.getBaseUrl(
+      token: token,
+      dataSource: dataSource,
+      branchSource: branchSource,
+    );
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'Query rating',
+      apiUrl: '${baseUrl}/rating',
+      callType: ApiCallType.GET,
+      headers: {
+        'Authorization': 'Bearer ${token}',
+        'X-data-source': '${dataSource}',
+        'X-branch': '${branchSource}',
+      },
+      params: {
+        'company_id': companyId,
+        'limit': limit,
+        'offset': offset,
+      },
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -2630,14 +2758,14 @@ class EditAddressCall {
     String? addressId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2660,7 +2788,7 @@ class EditAddressCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2681,14 +2809,14 @@ class AppointmentReescheduleCall {
     int? selectedDate,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2703,7 +2831,7 @@ class AppointmentReescheduleCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2723,14 +2851,14 @@ class InsertFavoritePartnerPageCall {
     String? companyPartnerPageId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2744,7 +2872,7 @@ class InsertFavoritePartnerPageCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2764,14 +2892,14 @@ class RemoveFavoritePartnerPageCall {
     String? companyPartnerPageId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2781,7 +2909,7 @@ class RemoveFavoritePartnerPageCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -2800,14 +2928,14 @@ class QuerySessionPropertyCall {
     String? sessionId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2817,7 +2945,7 @@ class QuerySessionPropertyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -2837,14 +2965,14 @@ class GETCashBackAvaliableCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2854,7 +2982,7 @@ class GETCashBackAvaliableCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -2877,14 +3005,14 @@ class UpdatePasswordCall {
     String? password = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2898,7 +3026,7 @@ class UpdatePasswordCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2918,14 +3046,14 @@ class PaymentMethodAttachCall {
     String? paymentMethodId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -2939,7 +3067,7 @@ class PaymentMethodAttachCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -2960,14 +3088,14 @@ class QuerySessionAutomotiveCall {
     String? sessionId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -2977,7 +3105,7 @@ class QuerySessionAutomotiveCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -2998,14 +3126,14 @@ class SignupRequestCodeEmailCall {
     String? email = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3019,7 +3147,7 @@ class SignupRequestCodeEmailCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3040,14 +3168,14 @@ class POSTRedeemAzulPointsCall {
     String? cpf = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3062,7 +3190,7 @@ class POSTRedeemAzulPointsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3087,14 +3215,14 @@ class EditProfileRequestCodeSmsCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3108,7 +3236,7 @@ class EditProfileRequestCodeSmsCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3128,14 +3256,14 @@ class QueryMessagesCall {
     int? page,
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3145,7 +3273,7 @@ class QueryMessagesCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'page': page,
@@ -3164,14 +3292,14 @@ class GetCodeDeleteAccountCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3181,7 +3309,7 @@ class GetCodeDeleteAccountCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       bodyType: BodyType.JSON,
@@ -3199,14 +3327,14 @@ class QueryFaqCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3216,7 +3344,7 @@ class QueryFaqCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -3238,14 +3366,14 @@ class MembershipCheckoutCall {
     String? couponCode = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3263,7 +3391,7 @@ class MembershipCheckoutCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3283,14 +3411,14 @@ class DeletePaymentMethodCall {
     String? paymentMethodId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3300,7 +3428,7 @@ class DeletePaymentMethodCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -3324,14 +3452,14 @@ class SignupCall {
     String? fcmId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3351,7 +3479,7 @@ class SignupCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3401,14 +3529,14 @@ class QuerySessionProductsDeliveryCall {
     String? sessionId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3418,7 +3546,7 @@ class QuerySessionProductsDeliveryCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_id': companyId,
@@ -3439,14 +3567,14 @@ class GetFavoritePagePartnerCall {
     String? companyPartnerPageId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3456,7 +3584,7 @@ class GetFavoritePagePartnerCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'company_partner_page_id': companyPartnerPageId,
@@ -3477,14 +3605,14 @@ class SignupValidateEmailCall {
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3499,7 +3627,7 @@ class SignupValidateEmailCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3518,14 +3646,14 @@ class GETAppVersionAvaliableCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3535,7 +3663,7 @@ class GETAppVersionAvaliableCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -3558,14 +3686,14 @@ class QueryAppointmentReviewCall {
     String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3575,7 +3703,7 @@ class QueryAppointmentReviewCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'order_id': orderId,
@@ -3595,14 +3723,14 @@ class GetOrderDetailCall {
     String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3612,7 +3740,7 @@ class GetOrderDetailCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'order_id': orderId,
@@ -3632,14 +3760,14 @@ class SignupRequestCodeWhatsappCall {
     String? phone = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3653,7 +3781,7 @@ class SignupRequestCodeWhatsappCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3673,14 +3801,14 @@ class EditCustomerEmailCall {
     String? email = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3694,7 +3822,7 @@ class EditCustomerEmailCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3715,14 +3843,14 @@ class PostImagemChatCall {
     String? chatId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3732,7 +3860,7 @@ class PostImagemChatCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'image': image,
@@ -3753,14 +3881,14 @@ class GETChatExistCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3770,7 +3898,7 @@ class GETChatExistCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -3788,19 +3916,64 @@ class GETChatExistCall {
       ));
 }
 
+class InsertRatingCall {
+  Future<ApiCallResponse> call({
+    String? orderId = '',
+    double? rating,
+    String? ratingDescription = '',
+    String? token = '',
+    String? dataSource,
+    String? branchSource,
+  }) async {
+    dataSource ??= FFDevEnvironmentValues().dataResource;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
+    final baseUrl = MainGroup.getBaseUrl(
+      token: token,
+      dataSource: dataSource,
+      branchSource: branchSource,
+    );
+
+    final ffApiRequestBody = '''
+{
+  "order_id": "${escapeStringForJson(orderId)}",
+  "rating": ${rating},
+  "rating_description": "${escapeStringForJson(ratingDescription)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Insert rating',
+      apiUrl: '${baseUrl}/rating',
+      callType: ApiCallType.POST,
+      headers: {
+        'Authorization': 'Bearer ${token}',
+        'X-data-source': '${dataSource}',
+        'X-branch': '${branchSource}',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 class GetCouponCall {
   Future<ApiCallResponse> call({
     String? code = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3810,7 +3983,7 @@ class GetCouponCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'code': code,
@@ -3829,14 +4002,14 @@ class MembershipCancelCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -3846,7 +4019,7 @@ class MembershipCancelCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -3868,14 +4041,14 @@ class MembershipCheckoutChangePlanCall {
     String? couponCode = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3893,7 +4066,7 @@ class MembershipCheckoutChangePlanCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3913,14 +4086,14 @@ class InsertFavoriteCompanyCall {
     String? companyId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3934,7 +4107,7 @@ class InsertFavoriteCompanyCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -3956,14 +4129,14 @@ class LoginCall {
     String? authId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     final ffApiRequestBody = '''
@@ -3979,7 +4152,7 @@ class LoginCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -4016,14 +4189,14 @@ class GetChatMessageCall {
     String? chatId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -4033,7 +4206,7 @@ class GetChatMessageCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'chat_id': chatId,
@@ -4052,14 +4225,14 @@ class QueryCashbackHistoryCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -4069,7 +4242,7 @@ class QueryCashbackHistoryCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -4087,14 +4260,14 @@ class GETMessagesCall {
     String? chatId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -4104,7 +4277,7 @@ class GETMessagesCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'chat_id': chatId,
@@ -4128,14 +4301,14 @@ class PostChatCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -4145,7 +4318,7 @@ class PostChatCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       bodyType: BodyType.JSON,
@@ -4163,14 +4336,14 @@ class GetMembershipCurrentCall {
   Future<ApiCallResponse> call({
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
@@ -4180,7 +4353,7 @@ class GetMembershipCurrentCall {
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {},
       returnBody: true,
@@ -4193,167 +4366,33 @@ class GetMembershipCurrentCall {
   }
 }
 
-class QueryOrderHistoryCall {
+class GetComplaintHistoryCall {
   Future<ApiCallResponse> call({
-    String? orderType = '',
+    String? orderId = '',
     String? token = '',
     String? dataSource,
-    String? bramchSource,
+    String? branchSource,
   }) async {
     dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
+    branchSource ??= FFDevEnvironmentValues().branchVar;
     final baseUrl = MainGroup.getBaseUrl(
       token: token,
       dataSource: dataSource,
-      bramchSource: bramchSource,
+      branchSource: branchSource,
     );
 
     return ApiManager.instance.makeApiCall(
-      callName: 'Query order history',
-      apiUrl: '${baseUrl}/order/history',
+      callName: 'Get complaint history',
+      apiUrl: '${baseUrl}/complaint/history',
       callType: ApiCallType.GET,
       headers: {
         'Authorization': 'Bearer ${token}',
         'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
-      },
-      params: {
-        'order_type': orderType,
-      },
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      isStreamingApi: false,
-      alwaysAllowBody: false,
-    );
-  }
-}
-
-class InsertComplaintCall {
-  Future<ApiCallResponse> call({
-    String? orderId = '',
-    String? reason = '',
-    String? comment = '',
-    FFUploadedFile? complaintImage1,
-    FFUploadedFile? complaintImage2,
-    FFUploadedFile? complaintImage3,
-    String? token = '',
-    String? dataSource,
-    String? bramchSource,
-  }) async {
-    dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
-    final baseUrl = MainGroup.getBaseUrl(
-      token: token,
-      dataSource: dataSource,
-      bramchSource: bramchSource,
-    );
-
-    return ApiManager.instance.makeApiCall(
-      callName: 'Insert complaint',
-      apiUrl: '${baseUrl}/complaint',
-      callType: ApiCallType.POST,
-      headers: {
-        'Authorization': 'Bearer ${token}',
-        'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
+        'X-branch': '${branchSource}',
       },
       params: {
         'order_id': orderId,
-        'reason': reason,
-        'comment': comment,
-        'complaint_image_1': complaintImage1,
-        'complaint_image_2': complaintImage2,
-        'complaint_image_3': complaintImage3,
       },
-      bodyType: BodyType.MULTIPART,
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      isStreamingApi: false,
-      alwaysAllowBody: false,
-    );
-  }
-}
-
-class QueryRatingCall {
-  Future<ApiCallResponse> call({
-    String? companyId = '',
-    int? limit,
-    int? offset,
-    String? token = '',
-    String? dataSource,
-    String? bramchSource,
-  }) async {
-    dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
-    final baseUrl = MainGroup.getBaseUrl(
-      token: token,
-      dataSource: dataSource,
-      bramchSource: bramchSource,
-    );
-
-    return ApiManager.instance.makeApiCall(
-      callName: 'Query rating',
-      apiUrl: '${baseUrl}/rating',
-      callType: ApiCallType.GET,
-      headers: {
-        'Authorization': 'Bearer ${token}',
-        'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
-      },
-      params: {
-        'company_id': companyId,
-        'limit': limit,
-        'offset': offset,
-      },
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      isStreamingApi: false,
-      alwaysAllowBody: false,
-    );
-  }
-}
-
-class InsertRatingCall {
-  Future<ApiCallResponse> call({
-    String? orderId = '',
-    double? rating,
-    String? ratingDescription = '',
-    String? token = '',
-    String? dataSource,
-    String? bramchSource,
-  }) async {
-    dataSource ??= FFDevEnvironmentValues().dataResource;
-    bramchSource ??= FFDevEnvironmentValues().branchVar;
-    final baseUrl = MainGroup.getBaseUrl(
-      token: token,
-      dataSource: dataSource,
-      bramchSource: bramchSource,
-    );
-
-    final ffApiRequestBody = '''
-{
-  "order_id": "${escapeStringForJson(orderId)}",
-  "rating": ${rating},
-  "rating_description": "${escapeStringForJson(ratingDescription)}"
-}''';
-    return ApiManager.instance.makeApiCall(
-      callName: 'Insert rating',
-      apiUrl: '${baseUrl}/rating',
-      callType: ApiCallType.POST,
-      headers: {
-        'Authorization': 'Bearer ${token}',
-        'X-data-source': '${dataSource}',
-        'X-branch': '${bramchSource}',
-      },
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

@@ -123,6 +123,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             builder: (context, params) => TradeCashProductsPageWidget(),
           ),
           FFRoute(
+            name: OrderDetailsWidget.routeName,
+            path: OrderDetailsWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => OrderDetailsWidget(
+              orderId: params.getParam(
+                'orderId',
+                ParamType.String,
+              ),
+            ),
+          ),
+          FFRoute(
             name: ConfirmPhoneWidget.routeName,
             path: ConfirmPhoneWidget.routePath,
             requireAuth: true,
@@ -162,6 +173,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
                 ParamType.DataStruct,
                 isList: false,
                 structBuilder: MembershipStruct.fromSerializableMap,
+              ),
+            ),
+          ),
+          FFRoute(
+            name: OrdersHelpWidget.routeName,
+            path: OrdersHelpWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => OrdersHelpWidget(
+              order: params.getParam(
+                'order',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .OrderStruct.fromSerializableMap,
+              ),
+              reason: params.getParam<ComplaintReason>(
+                'reason',
+                ParamType.Enum,
               ),
             ),
           ),
@@ -273,17 +302,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
                       page: ProfileWidget(),
                     )),
           FFRoute(
-            name: DeliveryFoodWidget.routeName,
-            path: DeliveryFoodWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => DeliveryFoodWidget(
-              companyId: params.getParam(
-                'companyId',
-                ParamType.String,
-              ),
-            ),
-          ),
-          FFRoute(
             name: MembershipChangePlanWidget.routeName,
             path: MembershipChangePlanWidget.routePath,
             requireAuth: true,
@@ -300,20 +318,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             name: AddressDeliveryNoAuthWidget.routeName,
             path: AddressDeliveryNoAuthWidget.routePath,
             builder: (context, params) => AddressDeliveryNoAuthWidget(),
-          ),
-          FFRoute(
-            name: ServiceWidget.routeName,
-            path: ServiceWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => ServiceWidget(
-              company: params.getParam(
-                'company',
-                ParamType.DataStruct,
-                isList: false,
-                structBuilder: aquibrazil_library_oi8i5r_data_schema
-                    .CompanyStruct.fromSerializableMap,
-              ),
-            ),
           ),
           FFRoute(
             name: MembershipCancelWidget.routeName,
@@ -773,6 +777,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             builder: (context, params) => SignupStep1Widget(),
           ),
           FFRoute(
+            name: OrderHistoryWidget.routeName,
+            path: OrderHistoryWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'orderHistory')
+                : OrderHistoryWidget(),
+          ),
+          FFRoute(
             name: CompleteProfileNumberWidget.routeName,
             path: CompleteProfileNumberWidget.routePath,
             builder: (context, params) => CompleteProfileNumberWidget(),
@@ -862,21 +874,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             builder: (context, params) => SecurityWidget(),
           ),
           FFRoute(
-            name: OrderDetailsWidget.routeName,
-            path: OrderDetailsWidget.routePath,
+            name: OrdersHelpHistoryWidget.routeName,
+            path: OrdersHelpHistoryWidget.routePath,
             requireAuth: true,
-            builder: (context, params) => OrderDetailsWidget(
-              orderId: params.getParam(
-                'orderId',
-                ParamType.String,
-              ),
-            ),
-          ),
-          FFRoute(
-            name: OrdersHelpWidget.routeName,
-            path: OrdersHelpWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => OrdersHelpWidget(
+            builder: (context, params) => OrdersHelpHistoryWidget(
               order: params.getParam(
                 'order',
                 ParamType.DataStruct,
@@ -884,19 +885,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
                 structBuilder: aquibrazil_library_oi8i5r_data_schema
                     .OrderStruct.fromSerializableMap,
               ),
-              reason: params.getParam<ComplaintReason>(
-                'reason',
-                ParamType.Enum,
+            ),
+          ),
+          FFRoute(
+            name: DeliveryFoodWidget.routeName,
+            path: DeliveryFoodWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => DeliveryFoodWidget(
+              companyId: params.getParam(
+                'companyId',
+                ParamType.String,
               ),
             ),
           ),
           FFRoute(
-            name: OrderHistoryWidget.routeName,
-            path: OrderHistoryWidget.routePath,
+            name: ServiceWidget.routeName,
+            path: ServiceWidget.routePath,
             requireAuth: true,
-            builder: (context, params) => params.isEmpty
-                ? NavBarPage(initialPage: 'orderHistory')
-                : OrderHistoryWidget(),
+            builder: (context, params) => ServiceWidget(
+              company: params.getParam(
+                'company',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: aquibrazil_library_oi8i5r_data_schema
+                    .CompanyStruct.fromSerializableMap,
+              ),
+            ),
           ),
           FFRoute(
             name: $aquibrazil_library_oi8i5r.HomePageWidget.routeName,

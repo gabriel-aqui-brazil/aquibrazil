@@ -101,7 +101,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      '8zyulgpb' /* Avaliar pedido */,
+                      '8zyulgpb' /* AVALIAR PEDIDO */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.poppins(
@@ -119,12 +119,12 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'cb6szzfh' /* Escolha de 1 a 5 estrelas para... */,
+                      'cb6szzfh' /* ESCOLHA DE 1  A 5 ESTRELAS PAR... */,
                     ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.poppins(
-                            fontWeight: FontWeight.normal,
+                            fontWeight: FontWeight.w500,
                             fontStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
@@ -132,7 +132,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                           color: Color(0xFF4D4D4D),
                           fontSize: 14.0,
                           letterSpacing: 0.0,
-                          fontWeight: FontWeight.normal,
+                          fontWeight: FontWeight.w500,
                           fontStyle:
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
@@ -383,7 +383,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'njh0wnpn' /* Deixe um comentário */,
+                        'njh0wnpn' /* DEIXE UM COMENTÁRIO */,
                       ),
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -430,7 +430,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                                         .fontStyle,
                                   ),
                           hintText: FFLocalizations.of(context).getText(
-                            '3pliobim' /* Nos conte o que achou do seu p... */,
+                            '3pliobim' /* NOS CONTE O QUE ACHOU DO SEU P... */,
                           ),
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
