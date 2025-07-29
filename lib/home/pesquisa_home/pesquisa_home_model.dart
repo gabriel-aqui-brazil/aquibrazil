@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/home/search_company/search_company_widget.dart';
 import 'dart:ui';
 import 'pesquisa_home_widget.dart' show PesquisaHomeWidget;

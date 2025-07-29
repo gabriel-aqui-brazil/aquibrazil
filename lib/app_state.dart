@@ -88,6 +88,18 @@ class FFAppState extends ChangeNotifier {
       _actualVersion =
           await secureStorage.getString('ff_actualVersion') ?? _actualVersion;
     });
+    await _safeInitAsync(() async {
+      if (await secureStorage.read(key: 'ff_lastOrder') != null) {
+        try {
+          final serializedData =
+              await secureStorage.getString('ff_lastOrder') ?? '{}';
+          _lastOrder = aquibrazil_library_oi8i5r_data_schema.OrderStruct
+              .fromSerializableMap(jsonDecode(serializedData));
+        } catch (e) {
+          print("Can't decode persisted data type. Error: $e.");
+        }
+      }
+    });
   }
 
   void update(VoidCallback callback) {
@@ -381,6 +393,24 @@ class FFAppState extends ChangeNotifier {
 
   void deleteActualVersion() {
     secureStorage.delete(key: 'ff_actualVersion');
+  }
+
+  aquibrazil_library_oi8i5r_data_schema.OrderStruct _lastOrder =
+      aquibrazil_library_oi8i5r_data_schema.OrderStruct();
+  aquibrazil_library_oi8i5r_data_schema.OrderStruct get lastOrder => _lastOrder;
+  set lastOrder(aquibrazil_library_oi8i5r_data_schema.OrderStruct value) {
+    _lastOrder = value;
+    secureStorage.setString('ff_lastOrder', value.serialize());
+  }
+
+  void deleteLastOrder() {
+    secureStorage.delete(key: 'ff_lastOrder');
+  }
+
+  void updateLastOrderStruct(
+      Function(aquibrazil_library_oi8i5r_data_schema.OrderStruct) updateFn) {
+    updateFn(_lastOrder);
+    secureStorage.setString('ff_lastOrder', _lastOrder.serialize());
   }
 
   final _cacheHomePageManager = FutureRequestManager<ApiCallResponse>();

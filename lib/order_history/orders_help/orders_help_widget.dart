@@ -109,10 +109,13 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          functions.toUpperCase(valueOrDefault<String>(
-                            widget!.order?.company?.name,
+                          valueOrDefault<String>(
+                            functions.toUpperCase(valueOrDefault<String>(
+                              widget!.order?.company?.name,
+                              '-',
+                            )),
                             '-',
-                          )),
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -2155,7 +2158,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 fontStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -2163,7 +2166,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                               ),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -2211,12 +2214,16 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    functions.toUpperCase(
-                                                        valueOrDefault<String>(
-                                                      widget!
-                                                          .order?.company?.name,
+                                                    valueOrDefault<String>(
+                                                      functions.toUpperCase(
+                                                          valueOrDefault<
+                                                              String>(
+                                                        widget!.order?.company
+                                                            ?.name,
+                                                        '-',
+                                                      )),
                                                       '-',
-                                                    )),
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -2242,18 +2249,22 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    functions.toUpperCase(
-                                                        valueOrDefault<String>(
-                                                      dateTimeFormat(
-                                                        "MMMMEEEEd",
-                                                        getCurrentTimestamp,
-                                                        locale:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .languageCode,
-                                                      ),
-                                                      '--/--/--',
-                                                    )),
+                                                    valueOrDefault<String>(
+                                                      functions.toUpperCase(
+                                                          valueOrDefault<
+                                                              String>(
+                                                        dateTimeFormat(
+                                                          "MMMMEEEEd",
+                                                          getCurrentTimestamp,
+                                                          locale:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .languageCode,
+                                                        ),
+                                                        '--/--/--',
+                                                      )),
+                                                      '-:-',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -2436,8 +2447,12 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
-                                                            orderItem.quantity
-                                                                .toString(),
+                                                            valueOrDefault<
+                                                                String>(
+                                                              orderItem.quantity
+                                                                  .toString(),
+                                                              '0',
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -2470,14 +2485,18 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                       ),
                                                       Expanded(
                                                         child: Text(
-                                                          functions.toUpperCase(
-                                                              valueOrDefault<
-                                                                  String>(
-                                                            orderItem
-                                                                .baseProduct
-                                                                .name,
+                                                          valueOrDefault<
+                                                              String>(
+                                                            functions.toUpperCase(
+                                                                valueOrDefault<
+                                                                    String>(
+                                                              orderItem
+                                                                  .baseProduct
+                                                                  .name,
+                                                              '-',
+                                                            )),
                                                             '-',
-                                                          )),
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -2526,9 +2545,8 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                                     context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  font:
-                                                                      GoogleFonts
-                                                                          .inter(
+                                                                  font: GoogleFonts
+                                                                      .nunito(
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2635,9 +2653,13 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                                 ),
                                                                 Expanded(
                                                                   child: Text(
-                                                                    functions.toUpperCase(
-                                                                        addonItem
-                                                                            .name),
+                                                                    valueOrDefault<
+                                                                        String>(
+                                                                      functions.toUpperCase(
+                                                                          addonItem
+                                                                              .name),
+                                                                      '-',
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -2671,20 +2693,20 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                                                           FormatType
                                                                               .custom,
                                                                       currency:
-                                                                          '\$',
+                                                                          '\$ ',
                                                                       format:
                                                                           '####0.00',
                                                                       locale:
                                                                           'en_US',
                                                                     ),
-                                                                    '\$0.0',
+                                                                    '\$ 0.0',
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
                                                                         font: GoogleFonts
-                                                                            .inter(
+                                                                            .nunito(
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                           fontStyle: FlutterFlowTheme.of(context)
@@ -2915,7 +2937,7 @@ class _OrdersHelpWidgetState extends State<OrdersHelpWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          font: GoogleFonts.rubik(
+                                          font: GoogleFonts.poppins(
                                             fontWeight:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall

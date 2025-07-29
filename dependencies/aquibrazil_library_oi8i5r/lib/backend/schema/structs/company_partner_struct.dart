@@ -22,6 +22,7 @@ class CompanyPartnerStruct extends BaseStruct {
     String? longitude,
     double? distance,
     String? termsAndConditionsUrl,
+    CategoryPartnerStruct? partnerCategory,
   })  : _id = id,
         _name = name,
         _instagram = instagram,
@@ -35,7 +36,8 @@ class CompanyPartnerStruct extends BaseStruct {
         _latitude = latitude,
         _longitude = longitude,
         _distance = distance,
-        _termsAndConditionsUrl = termsAndConditionsUrl;
+        _termsAndConditionsUrl = termsAndConditionsUrl,
+        _partnerCategory = partnerCategory;
 
   // "id" field.
   String? _id;
@@ -141,6 +143,18 @@ class CompanyPartnerStruct extends BaseStruct {
 
   bool hasTermsAndConditionsUrl() => _termsAndConditionsUrl != null;
 
+  // "partner_category" field.
+  CategoryPartnerStruct? _partnerCategory;
+  CategoryPartnerStruct get partnerCategory =>
+      _partnerCategory ?? CategoryPartnerStruct();
+  set partnerCategory(CategoryPartnerStruct? val) => _partnerCategory = val;
+
+  void updatePartnerCategory(Function(CategoryPartnerStruct) updateFn) {
+    updateFn(_partnerCategory ??= CategoryPartnerStruct());
+  }
+
+  bool hasPartnerCategory() => _partnerCategory != null;
+
   static CompanyPartnerStruct fromMap(Map<String, dynamic> data) =>
       CompanyPartnerStruct(
         id: data['id'] as String?,
@@ -160,6 +174,9 @@ class CompanyPartnerStruct extends BaseStruct {
         longitude: data['longitude'] as String?,
         distance: castToType<double>(data['distance']),
         termsAndConditionsUrl: data['terms_and_conditions_url'] as String?,
+        partnerCategory: data['partner_category'] is CategoryPartnerStruct
+            ? data['partner_category']
+            : CategoryPartnerStruct.maybeFromMap(data['partner_category']),
       );
 
   static CompanyPartnerStruct? maybeFromMap(dynamic data) => data is Map
@@ -181,6 +198,7 @@ class CompanyPartnerStruct extends BaseStruct {
         'longitude': _longitude,
         'distance': _distance,
         'terms_and_conditions_url': _termsAndConditionsUrl,
+        'partner_category': _partnerCategory?.toMap(),
       }.withoutNulls;
 
   @override
@@ -241,6 +259,10 @@ class CompanyPartnerStruct extends BaseStruct {
         'terms_and_conditions_url': serializeParam(
           _termsAndConditionsUrl,
           ParamType.String,
+        ),
+        'partner_category': serializeParam(
+          _partnerCategory,
+          ParamType.DataStruct,
         ),
       }.withoutNulls;
 
@@ -317,6 +339,12 @@ class CompanyPartnerStruct extends BaseStruct {
           ParamType.String,
           false,
         ),
+        partnerCategory: deserializeStructParam(
+          data['partner_category'],
+          ParamType.DataStruct,
+          false,
+          structBuilder: CategoryPartnerStruct.fromSerializableMap,
+        ),
       );
 
   @override
@@ -339,7 +367,8 @@ class CompanyPartnerStruct extends BaseStruct {
         latitude == other.latitude &&
         longitude == other.longitude &&
         distance == other.distance &&
-        termsAndConditionsUrl == other.termsAndConditionsUrl;
+        termsAndConditionsUrl == other.termsAndConditionsUrl &&
+        partnerCategory == other.partnerCategory;
   }
 
   @override
@@ -357,7 +386,8 @@ class CompanyPartnerStruct extends BaseStruct {
         latitude,
         longitude,
         distance,
-        termsAndConditionsUrl
+        termsAndConditionsUrl,
+        partnerCategory
       ]);
 }
 
@@ -375,6 +405,7 @@ CompanyPartnerStruct createCompanyPartnerStruct({
   String? longitude,
   double? distance,
   String? termsAndConditionsUrl,
+  CategoryPartnerStruct? partnerCategory,
 }) =>
     CompanyPartnerStruct(
       id: id,
@@ -390,4 +421,5 @@ CompanyPartnerStruct createCompanyPartnerStruct({
       longitude: longitude,
       distance: distance,
       termsAndConditionsUrl: termsAndConditionsUrl,
+      partnerCategory: partnerCategory ?? CategoryPartnerStruct(),
     );

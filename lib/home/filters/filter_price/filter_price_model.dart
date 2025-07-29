@@ -1,5 +1,6 @@
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'filter_price_widget.dart' show FilterPriceWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';

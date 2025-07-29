@@ -1,9 +1,10 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/components/empty_list_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
 import 'dart:async';
 import 'dart:convert';
@@ -16,6 +17,7 @@ import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'partners_widget.dart' show PartnersWidget;
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
@@ -40,18 +42,18 @@ class PartnersModel extends FlutterFlowModel<PartnersWidget> {
 
   ///  State fields for stateful widgets in this page.
 
-  // Model for orderInProgress component.
-  late OrderInProgressModel orderInProgressModel;
+  // Model for CustomAppbar component.
+  late CustomAppbarModel customAppbarModel;
   Completer<ApiCallResponse>? apiRequestCompleter;
 
   @override
   void initState(BuildContext context) {
-    orderInProgressModel = createModel(context, () => OrderInProgressModel());
+    customAppbarModel = createModel(context, () => CustomAppbarModel());
   }
 
   @override
   void dispose() {
-    orderInProgressModel.dispose();
+    customAppbarModel.dispose();
   }
 
   /// Additional helper methods.

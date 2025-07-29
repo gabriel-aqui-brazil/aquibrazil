@@ -1,7 +1,7 @@
-import '/auth/custom_auth/auth_util.dart';
 import '/companies/service/appointment_reeschedule/appointment_reeschedule_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
 import '/custom_code/actions/index.dart' as actions;
@@ -44,9 +44,9 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await actions.order(
+      await actions.orderInProgress(
         context,
-        'order/${currentUserData?.lastOrderId}',
+        'order/${FFAppState().lastOrder.id}',
         () async {
           await showModalBottomSheet(
             isScrollControlled: true,
@@ -58,7 +58,9 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
               return WebViewAware(
                 child: Padding(
                   padding: MediaQuery.viewInsetsOf(context),
-                  child: AppointmentReescheduleWidget(),
+                  child: AppointmentReescheduleWidget(
+                    orderId: FFAppState().lastOrder.type,
+                  ),
                 ),
               );
             },
@@ -97,19 +99,19 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
     context.watch<FFAppState>();
 
     return Visibility(
-      visible: FFAppState().orderSelected.hasId() &&
-          (FFAppState().orderSelected.status != 'Concluido') &&
-          (FFAppState().orderSelected.status != 'Agendado') &&
-          (FFAppState().orderSelected.status != 'Cancelado') &&
-          (FFAppState().orderSelected.status != 'Recusado'),
+      visible: FFAppState().lastOrder.hasId() &&
+          (FFAppState().lastOrder.status != 'Concluido') &&
+          (FFAppState().lastOrder.status != 'Agendado') &&
+          (FFAppState().lastOrder.status != 'Cancelado') &&
+          (FFAppState().lastOrder.status != 'Recusado'),
       child: InkWell(
         splashColor: Colors.transparent,
         focusColor: Colors.transparent,
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,
         onTap: () async {
-          if (FFAppState().orderSelected.type == 'service') {
-            if (FFAppState().orderSelected.status == 'Aceitar novo horário') {
+          if (FFAppState().lastOrder.type == 'service') {
+            if (FFAppState().lastOrder.status == 'Aceitar novo horário') {
               await showModalBottomSheet(
                 isScrollControlled: true,
                 backgroundColor: Colors.transparent,
@@ -120,7 +122,9 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
                   return WebViewAware(
                     child: Padding(
                       padding: MediaQuery.viewInsetsOf(context),
-                      child: AppointmentReescheduleWidget(),
+                      child: AppointmentReescheduleWidget(
+                        orderId: FFAppState().lastOrder.id,
+                      ),
                     ),
                   );
                 },
@@ -130,7 +134,7 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
                 Temp8ConfirmWidget.routeName,
                 queryParameters: {
                   'orderID': serializeParam(
-                    FFAppState().orderSelected.id,
+                    FFAppState().lastOrder.id,
                     ParamType.String,
                   ),
                 }.withoutNulls,
@@ -141,7 +145,7 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
               OrderDetailsWidget.routeName,
               queryParameters: {
                 'orderId': serializeParam(
-                  FFAppState().orderSelected.id,
+                  FFAppState().lastOrder.id,
                   ParamType.String,
                 ),
               }.withoutNulls,
@@ -154,12 +158,12 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
             color: Color(0xFF0C9488),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 56.0, 16.0, 16.0),
+            padding: EdgeInsets.all(8.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Flexible(
+                Expanded(
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -189,11 +193,11 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
                       Flexible(
                         child: Builder(
                           builder: (context) {
-                            if (FFAppState().orderSelected.type == 'service') {
+                            if (FFAppState().lastOrder.type == 'service') {
                               return Text(
                                 valueOrDefault<String>(
                                   functions.toUpperCase(
-                                      'Agendamento  - ${FFAppState().orderSelected.status} - ${FFAppState().orderSelected.company.name}'),
+                                      'Agendamento  - ${FFAppState().lastOrder.status} - ${FFAppState().lastOrder.company.name}'),
                                   '--',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -222,7 +226,7 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
                               return Text(
                                 valueOrDefault<String>(
                                   functions.toUpperCase(
-                                      'Pedido  - ${FFAppState().orderSelected.status} - ${FFAppState().orderSelected.company.name}'),
+                                      'Pedido  - ${FFAppState().lastOrder.status} - ${FFAppState().lastOrder.company.name}'),
                                   '--',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -250,7 +254,7 @@ class _OrderInProgressWidgetState extends State<OrderInProgressWidget>
                           },
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(SizedBox(width: 8.0)),
                   ),
                 ),
                 Icon(

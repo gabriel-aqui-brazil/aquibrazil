@@ -335,197 +335,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // orderDetails
-  {
-    'p5u46jqv': {
-      'pt': 'ACOMPANHAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DE PEDIDO',
-    },
-    'myx5t027': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE DE RECLAMAÇÃO EM ANDAMENTO',
-      'en': 'REQUEST FOR ANALYSIS OF ONGOING COMPLAINT',
-      'es': 'SOLICITUD DE ANÁLISIS DE QUEJA EN CURSO',
-    },
-    '0awadmzs': {
-      'pt':
-          'ENTRAREMOS EM CONTAO VIA E-MAIL OU PELO SEU TELEFONE CADASTRADO EM NOSSA PLATAFORMA COM A SOLUÇÃO',
-      'en':
-          'WE WILL CONTACT YOU VIA EMAIL OR BY YOUR PHONE NUMBER REGISTERED ON OUR PLATFORM WITH THE SOLUTION',
-      'es':
-          'NOS PONDREMOS EN CONTACTO CON USTED VÍA CORREO ELECTRÓNICO O A SU NÚMERO DE TELÉFONO REGISTRADO EN NUESTRA PLATAFORMA CON LA SOLUCIÓN',
-    },
-    'i6uvruo3': {
-      'pt': 'REALIZADO AS: ',
-      'en': 'DONE AS:',
-      'es': 'HECHO COMO:',
-    },
-    'lszgo89n': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    '3bprmx8f': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    '1huoy2rd': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE RECUSADA',
-      'en': 'REQUEST FOR ANALYSIS REFUSED',
-      'es': 'SOLICITUD DE ANÁLISIS RECHAZADA',
-    },
-    '6l9h836f': {
-      'pt': 'FINALIZADO AS: ',
-      'en': 'FINALIZED AS:',
-      'es': 'FINALIZADO COMO:',
-    },
-    'krlgoxyc': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    'vvt4pzdn': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    'qe1vnkde': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE CONCLUÍDA',
-      'en': 'REQUEST FOR ANALYSIS COMPLETED',
-      'es': 'SOLICITUD DE ANÁLISIS COMPLETADA',
-    },
-    'h7lhh9ix': {
-      'pt': 'FINALIZADO AS: ',
-      'en': 'FINALIZED AS:',
-      'es': 'FINALIZADO COMO:',
-    },
-    'ryvxqbm1': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    '5y2rv8oe': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    'm8icup59': {
-      'pt': 'SEU PEDIDO FOI ENTREGUE',
-      'en': 'YOUR ORDER HAS BEEN DELIVERED',
-      'es': 'SU PEDIDO HA SIDO ENTREGADO',
-    },
-    '54tevu47': {
-      'pt': 'PEDIDO ENTREGUE AS ',
-      'en': 'ORDER DELIVERED AS',
-      'es': 'PEDIDO ENTREGADO COMO',
-    },
-    'blsn0q26': {
-      'pt': '14:48',
-      'en': '14:48',
-      'es': '14:48',
-    },
-    '5pvmanfs': {
-      'pt': 'INFORMAÇÕES',
-      'en': 'INFORMATION',
-      'es': 'INFORMACIÓN',
-    },
-    'sf3duwcp': {
-      'pt': 'CÓDIGO DE ENTREGA',
-      'en': 'DELIVERY CODE',
-      'es': 'CÓDIGO DE ENTREGA',
-    },
-    '5bmokfvc': {
-      'pt': 'AJUDA',
-      'en': 'HELP',
-      'es': 'AYUDA',
-    },
-    'wnnyg6es': {
-      'pt': 'RASTREAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DEL PEDIDO',
-    },
-    'n6l3hi1g': {
-      'pt': 'CANCELAR PEDIDO',
-      'en': 'CANCEL ORDER',
-      'es': 'CANCELAR PEDIDO',
-    },
-    'bp7kxwwy': {
-      'pt': 'CONFIRMAR ENTREGA',
-      'en': 'CONFIRM DELIVERY',
-      'es': 'CONFIRMAR ENTREGA',
-    },
-    '3s0w58fd': {
-      'pt': 'AVALIAR PEDIDO',
-      'en': 'EVALUATE ORDER',
-      'es': 'EVALUAR ORDEN',
-    },
-    'e8b7oqan': {
-      'pt': 'ENDEREÇO DE ENTREGA',
-      'en': 'DELIVERY ADDRESS',
-      'es': 'DIRECCIÓN DE ENTREGA',
-    },
-    '6lbfzvew': {
-      'pt': 'OBSERVAÇÃO',
-      'en': 'OBSERVATION',
-      'es': 'OBSERVACIÓN',
-    },
-    'js79e8tl': {
-      'pt': 'DETALHES DO PEDIDO',
-      'en': 'ORDER DETAILS',
-      'es': 'DETALLES DEL PEDIDO',
-    },
-    'nuwjtpiu': {
-      'pt': 'RESUMO DO PAGAMENTO',
-      'en': 'PAYMENT SUMMARY',
-      'es': 'RESUMEN DE PAGO',
-    },
-    'lpfm2er0': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '8rvzu7us': {
-      'pt': 'GORJETA',
-      'en': 'TIP',
-      'es': 'CONSEJO',
-    },
-    'th8gw6m6': {
-      'pt': 'TAXA DE ENTREGA',
-      'en': 'DELIVERY FEE',
-      'es': 'TARIFA DE ENVÍO',
-    },
-    'i3mz7r0z': {
-      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
-      'en': 'TAX AND SERVICE FEE',
-      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
-    },
-    'x33o0exx': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    'wlbqvz4x': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
-      'en': 'WITH AQUIPASS YOU SAVED',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'e1em4e6a': {
-      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
-      'en': 'YOU HAVE EARNED 3% CASHBACK',
-      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'nkkwygwh': {
-      'pt': 'FORMA DE PAGAMENTO',
-      'en': 'PAYMENT METHOD',
-      'es': 'FORMA DE PAGO',
-    },
-    'ottan1jr': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
   // confirmPhone
   {
     'ilqydroa': {
@@ -875,138 +684,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // ordersHelp
-  {
-    'c7k1izy6': {
-      'pt': 'PEDIDO FINALIZADO',
-      'en': 'ORDER COMPLETED',
-      'es': 'PEDIDO COMPLETADO',
-    },
-    'i761s2om': {
-      'pt': 'SENTIMOS MUITO QUE HOUVE UM PROBLEMA COM O SEU PEDIDO',
-      'en': 'WE\'RE SO SORRY THERE WAS A PROBLEM WITH YOUR ORDER',
-      'es': 'LAMENTAMOS MUCHO QUE HAYA HABIDO UN PROBLEMA CON SU PEDIDO.',
-    },
-    'mqnc4cqc': {
-      'pt':
-          'QUEREMOS ENTENDER O QUAL FOI O PROBLEMA PARA NEGOCIAMOS O REEMBOLSO OU OUTRA SOLUÇÃO COM A LOJA',
-      'en':
-          'WE WANT TO UNDERSTAND WHAT THE PROBLEM WAS SO WE CAN NEGOTIATE A REFUND OR OTHER SOLUTION WITH THE STORE',
-      'es':
-          'QUEREMOS ENTENDER CUÁL FUE EL PROBLEMA PARA PODER NEGOCIAR UN REEMBOLSO U OTRA SOLUCIÓN CON LA TIENDA',
-    },
-    'mkwt404c': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    '3rgj48ef': {
-      'pt': 'O QUE ACONTECEU COM O SEU PEDIDO?',
-      'en': 'WHAT HAPPENED TO YOUR ORDER?',
-      'es': '¿QUÉ PASÓ CON TU PEDIDO?',
-    },
-    'ne2tpn1o': {
-      'pt': 'SELECIONE O MOTIVO QUE MELHOR REPRESENTA O SEU PROBLEMA.',
-      'en': 'SELECT THE REASON THAT BEST REPRESENTS YOUR PROBLEM.',
-      'es': 'SELECCIONA EL MOTIVO QUE MEJOR REPRESENTA TU PROBLEMA.',
-    },
-    '2980it8j': {
-      'pt': 'PRODUTO CHEGOU FRIO',
-      'en': 'PRODUCT ARRIVED COLD',
-      'es': 'EL PRODUCTO LLEGÓ FRÍO',
-    },
-    'z0dyrnhm': {
-      'pt': 'PRODUTO ERRADO',
-      'en': 'WRONG PRODUCT',
-      'es': 'PRODUCTO INCORRECTO',
-    },
-    's14vh1ts': {
-      'pt': 'PRODUTO INCOMPLETO',
-      'en': 'INCOMPLETE PRODUCT',
-      'es': 'PRODUCTO INCOMPLETO',
-    },
-    '0ppxiq5c': {
-      'pt': 'PRODUTO DANIFICADO',
-      'en': 'DAMAGED PRODUCT',
-      'es': 'PRODUCTO DAÑADO',
-    },
-    'w0augal9': {
-      'pt': 'ATRASO NA ENTREGA',
-      'en': 'DELAY IN DELIVERY',
-      'es': 'RETRASO EN ENTREGA',
-    },
-    '8ia1f08g': {
-      'pt': 'OUTRO',
-      'en': 'OTHER',
-      'es': 'OTRO',
-    },
-    'x21w7nwo': {
-      'pt':
-          'ANTES DE FINALIZAR, VOCÊ PODERÁ REVISAR SUA SOLICITAÇÃO E FAZER MUDANÇAS, SE NECESSÁRIO.',
-      'en':
-          'BEFORE FINALIZING, YOU MAY REVIEW YOUR APPLICATION AND MAKE CHANGES IF NECESSARY.',
-      'es':
-          'ANTES DE FINALIZAR, PUEDE REVISAR SU SOLICITUD Y HACER CAMBIOS SI ES NECESARIO.',
-    },
-    'nd673286': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'f4y05h29': {
-      'pt': 'CONTE MAIS DETALHES SOBRE O PROBLEMA',
-      'en': 'TELL US MORE DETAILS ABOUT THE PROBLEM',
-      'es': 'CUÉNTANOS MÁS DETALLES SOBRE EL PROBLEMA',
-    },
-    '9c0r94ob': {
-      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OBRIGATÓRIO)',
-      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (MANDATORY)',
-      'es': 'DÍGANOS QUÉ LE PARECIÓ SU PEDIDO (OBLIGATORIO)',
-    },
-    '2b5zokwd': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'm35gae5a': {
-      'pt': 'ADICIONE EVIDÊNCIAS DO PROBLEMA',
-      'en': 'ADD EVIDENCE OF THE PROBLEM',
-      'es': 'AÑADIR EVIDENCIA DEL PROBLEMA',
-    },
-    'y6ie6k8n': {
-      'pt':
-          'O ENVIO DE UMA FOTO DO ITEM, DA EMBALAGEM OU DA NOTA FISCAL PODEM AJUDAR A LOJA A ENTENDER O QUE ACONTECEU COM SEU PEDIDO.',
-      'en':
-          'SENDING A PHOTO OF THE ITEM, PACKAGING OR INVOICE CAN HELP THE STORE UNDERSTAND WHAT HAPPENED TO YOUR ORDER.',
-      'es':
-          'ENVIAR UNA FOTO DEL ARTÍCULO, EMBALAJE O FACTURA PUEDE AYUDAR A LA TIENDA A ENTENDER QUÉ SUCEDIÓ CON SU PEDIDO.',
-    },
-    'owkqt01u': {
-      'pt': 'REVISAR SOLICITAÇÃO',
-      'en': 'REVIEW REQUEST',
-      'es': 'SOLICITUD DE REVISIÓN',
-    },
-    '9yegjyd3': {
-      'pt': 'REVISE SUA SOLICITAÇÃO',
-      'en': 'REVIEW YOUR REQUEST',
-      'es': 'REVISA TU SOLICITUD',
-    },
-    '4r87pzxs': {
-      'pt': 'EVIDÊNCIAS DO PROBLEMA',
-      'en': 'EVIDENCE OF THE PROBLEM',
-      'es': 'EVIDENCIA DEL PROBLEMA',
-    },
-    '5i8sxdcu': {
-      'pt': 'ENVIAR',
-      'en': 'TO SEND',
-      'es': 'PARA ENVIAR',
-    },
-    'j3elzjdn': {
-      'pt': 'Home',
-      'en': '',
-      'es': '',
     },
   },
   // resetPassword-step1
@@ -1886,109 +1563,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
   },
-  // profile
-  {
-    'kmni54bk': {
-      'pt': 'SUA CONTA',
-      'en': 'YOUR ACCOUNT',
-      'es': 'SU CUENTA',
-    },
-    'hpotk948': {
-      'pt': 'DADOS DA CONTA',
-      'en': 'ACCOUNT DATA',
-      'es': 'DATOS DE LA CUENTA',
-    },
-    '1o8xney2': {
-      'pt': 'MENSAGENS',
-      'en': 'MESSAGES',
-      'es': 'MENSAJES',
-    },
-    'h8vuehrk': {
-      'pt': 'NOTIFICAÇÕES',
-      'en': 'NOTIFICATIONS',
-      'es': 'NOTIFICACIONES',
-    },
-    'me624ak8': {
-      'pt': 'MEUS MÉTODOS DE PAGAMENTO',
-      'en': 'MY PAYMENT METHODS',
-      'es': 'MIS MÉTODOS DE PAGO',
-    },
-    'z6eyp5ic': {
-      'pt': 'CLUBE DE PARCEIROS',
-      'en': 'PARTNERS CLUB',
-      'es': 'CLUB DE SOCIOS',
-    },
-    'p1sveqlx': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    'sxnylobj': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'f7qczhc3': {
-      'pt': 'MEUS ENDEREÇOS',
-      'en': 'MY ADDRESSES',
-      'es': 'MIS DIRECCIONES',
-    },
-    'qkoobr9d': {
-      'pt': 'SUPORTE',
-      'en': 'SUPPORT',
-      'es': 'APOYO',
-    },
-    'v49jxr92': {
-      'pt': 'AJUDA',
-      'en': 'HELP',
-      'es': 'AYUDA',
-    },
-    'xi2tgy7y': {
-      'pt': 'AVALIE O APLICATIVO',
-      'en': 'RATE THE APP',
-      'es': 'CALIFICA LA APLICACIÓN',
-    },
-    'svq7l1b2': {
-      'pt': 'PREFERÊNCIAS',
-      'en': 'PREFERENCES',
-      'es': 'PREFERENCIAS',
-    },
-    'hxag7o76': {
-      'pt': 'IDIOMA',
-      'en': 'LANGUAGE',
-      'es': 'IDIOMA',
-    },
-    '4xgvm94t': {
-      'pt': 'SEGURANÇA',
-      'en': 'SECURITY',
-      'es': 'SEGURIDAD',
-    },
-    'non0ybld': {
-      'pt': 'CONFIGURAÇÕES',
-      'en': 'SETTINGS',
-      'es': 'AJUSTES',
-    },
-    'coyksfo4': {
-      'pt': 'APAGAR CONTA',
-      'en': 'DELETE ACCOUNT',
-      'es': 'ELIMINAR CUENTA',
-    },
-    '8htaqjsg': {
-      'pt': 'NOSSAS REDES',
-      'en': 'OUR NETWORKS',
-      'es': 'NUESTRAS REDES',
-    },
-    'p5pnpy68': {
-      'pt': 'INSTAGRAM',
-      'en': 'INSTAGRAM',
-      'es': 'INSTAGRAM',
-    },
-    'qga2yg9z': {
-      'pt': 'DESCONECTAR',
-      'en': 'DISCONNECT',
-      'es': 'DESCONECTAR',
-    },
-  },
   // membershipChangePlan
   {
     '5y13f796': {
@@ -2408,89 +1982,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // home
-  {
-    'a631xi16': {
-      'pt': 'PROMOS DO MÊS DELIVERY',
-      'en': 'DELIVERY MONTH PROMOS',
-      'es': 'PROMOS DE ENTREGA POR MES',
-    },
-    '9qg5u7ed': {
-      'pt': 'NOSSO CLUB DE PARCEIROS',
-      'en': 'OUR PARTNER CLUB',
-      'es': 'NUESTRO CLUB SOCIO',
-    },
-    'iongg50t': {
-      'pt': '+15% DE DESCONTO COM AQUIPASS',
-      'en': '+15% DISCOUNT WITH AQUIPASS',
-      'es': '+15% DESCUENTO CON AQUIPASS',
-    },
-    '92jsf2c9': {
-      'pt': 'EM BREVE',
-      'en': 'SHORTLY',
-      'es': 'DENTRO DE POCO',
-    },
-    'vib538gu': {
-      'pt': 'VEJA AS LOJAS QUE ESTÃO CHEGANDO NO APP',
-      'en': 'SEE THE STORES THAT ARE COMING TO THE APP',
-      'es': 'MIRA LAS TIENDAS QUE LLEGAN A LA APP',
-    },
-    'gq5j4efm': {
-      'pt': 'MEUS PEDIDOS\nRECENTES',
-      'en': 'MY RECENT\nORDERS',
-      'es': 'MIS PEDIDOS\nRECIENTE',
-    },
-    '4ymww51f': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'g61vpjax': {
-      'pt': 'TODAS AS LOJAS',
-      'en': 'ALL STORES',
-      'es': 'TODAS LAS TIENDAS',
-    },
-    'f8z7x8a0': {
-      'pt': 'CATEGORIA',
-      'en': 'CATEGORY',
-      'es': 'CATEGORÍA',
-    },
-    'omm5ygr5': {
-      'pt': 'RETIRADA',
-      'en': 'WITHDRAWAL',
-      'es': 'RETIRO',
-    },
-    'lzqh8h0w': {
-      'pt': 'ENTREGA GRÁTIS',
-      'en': 'FREE DELIVERY',
-      'es': 'ENTREGA GRATUITA',
-    },
-    'cqho8gfr': {
-      'pt': 'DESCONTO DO CLUBE',
-      'en': 'CLUB DISCOUNT',
-      'es': 'DESCUENTO DEL CLUB',
-    },
-    'elczxofs': {
-      'pt': 'PREÇO',
-      'en': 'PRICE',
-      'es': 'PRECIO',
-    },
-    'mln9k1v6': {
-      'pt': 'AVALIAÇÕES',
-      'en': 'REVIEWS',
-      'es': 'RESEÑAS',
-    },
-    'tlhtl7qs': {
-      'pt': 'DISTÂNCIA',
-      'en': 'DISTANCE',
-      'es': 'DISTANCIA',
-    },
-    '6igburi0': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // orderDetailsService
@@ -4200,29 +3691,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // partners
-  {
-    'pk6f9005': {
-      'pt': 'TODOS',
-      'en': 'ALL',
-      'es': 'TODO',
-    },
-    'aaa00w6k': {
-      'pt': 'CATEGORIA VAZIA',
-      'en': 'EMPTY CATEGORY',
-      'es': 'CATEGORÍA VACÍA',
-    },
-    'yxeej7cy': {
-      'pt': 'EM BREVE',
-      'en': 'SHORTLY',
-      'es': 'DENTRO DE POCO',
-    },
-    '4n0t3dpi': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
   // accessInfo
   {
     'b5j4e235': {
@@ -4257,29 +3725,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // favoriteCompany
-  {
-    'n5x6a2vj': {
-      'pt': 'MEUS FAVORITOS',
-      'en': 'MY FAVORITES',
-      'es': 'MIS FAVORITOS',
-    },
-    'le7jbbri': {
-      'pt': 'LISTA DE FAVORITOS VAZIA',
-      'en': 'EMPTY FAVORITE LIST',
-      'es': 'LISTA DE FAVORITOS VACÍA',
-    },
-    'nyzgq20y': {
-      'pt': 'SUAS EMPRESAS FAVORITAS APARECERÃO AQUI',
-      'en': 'YOUR FAVORITE COMPANIES WILL APPEAR HERE',
-      'es': 'TUS EMPRESAS FAVORITAS APARECERÁN AQUÍ',
-    },
-    'xn4asw9r': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // pagOffAnuncio
@@ -4421,102 +3866,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // orderHistory
-  {
-    '18994agu': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'b4fw56ij': {
-      'pt': 'DELIVERY',
-      'en': 'DELIVERY',
-      'es': 'ENTREGA',
-    },
-    'o3c2lo4i': {
-      'pt': 'AGENDAMENTOS',
-      'en': 'APPOINTMENTS',
-      'es': 'EQUIPO',
-    },
-    'u92zr70k': {
-      'pt': 'CONCLUÍDO',
-      'en': 'COMPLETED',
-      'es': 'TERMINADO',
-    },
-    'z6sx1bco': {
-      'pt': 'RECUSADO',
-      'en': 'REFUSED',
-      'es': 'RECHAZADO',
-    },
-    '4acz5fix': {
-      'pt': 'CANCELADO',
-      'en': 'CANCELED',
-      'es': 'CANCELADO',
-    },
-    'owfbas64': {
-      'pt': 'PENDENTE',
-      'en': 'PENDING',
-      'es': 'PENDIENTE',
-    },
-    'ob3fejyl': {
-      'pt': 'EM PREPARO',
-      'en': 'IN PREPARATION',
-      'es': 'EN PREPARACIÓN',
-    },
-    'fboo98in': {
-      'pt': 'PRONTO PARA \nRETIRADA',
-      'en': 'READY FOR\nPICKUP',
-      'es': 'LISTO PARA RECOGER',
-    },
-    'rg0m1s44': {
-      'pt': 'SAIU PARA\nENTREGA',
-      'en': 'OUT FOR\nDELIVERY',
-      'es': 'LIBRE PARA ENTREGA',
-    },
-    '30qiob8f': {
-      'pt': 'AGENDADO',
-      'en': 'SCHEDULED',
-      'es': 'PROGRAMADO',
-    },
-    'as39lw78': {
-      'pt': 'SOLIICITAÇÃO DE \nNOVO HORÁRIO',
-      'en': 'REQUEST FOR\nNEW SCHEDULE',
-      'es': 'SOLICITUD DE \nNUEVO HORARIO',
-    },
-    '4jd9k1xy': {
-      'pt': '-',
-      'en': '',
-      'es': '',
-    },
-    'vklfevcq': {
-      'pt': 'DATA DO AGENDAMENTO',
-      'en': 'APPOINTMENT DATE',
-      'es': 'FECHA DE LA CITA',
-    },
-    'qglylwgn': {
-      'pt': 'ITENS',
-      'en': 'ITEMS',
-      'es': 'ELEMENTOS',
-    },
-    'u5x337lz': {
-      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
-      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
-      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
-    },
-    'l1jcqiec': {
-      'pt':
-          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
-      'en':
-          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
-      'es':
-          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
-    },
-    'nxyn3ooa': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // completeProfileNumber
@@ -5240,6 +4589,677 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
+  // orderDetails
+  {
+    'p5u46jqv': {
+      'pt': 'DETALHES',
+      'en': 'DETAILS',
+      'es': 'DETALLES',
+    },
+    'myx5t027': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE DE RECLAMAÇÃO EM ANDAMENTO',
+      'en': 'REQUEST FOR ANALYSIS OF ONGOING COMPLAINT',
+      'es': 'SOLICITUD DE ANÁLISIS DE QUEJA EN CURSO',
+    },
+    '0awadmzs': {
+      'pt':
+          'ENTRAREMOS EM CONTAO VIA E-MAIL OU PELO SEU TELEFONE CADASTRADO EM NOSSA PLATAFORMA COM A SOLUÇÃO',
+      'en':
+          'WE WILL CONTACT YOU VIA EMAIL OR BY YOUR PHONE NUMBER REGISTERED ON OUR PLATFORM WITH THE SOLUTION',
+      'es':
+          'NOS PONDREMOS EN CONTACTO CON USTED VÍA CORREO ELECTRÓNICO O A SU NÚMERO DE TELÉFONO REGISTRADO EN NUESTRA PLATAFORMA CON LA SOLUCIÓN',
+    },
+    'i6uvruo3': {
+      'pt': 'REALIZADO AS: ',
+      'en': 'DONE AS:',
+      'es': 'HECHO COMO:',
+    },
+    'lszgo89n': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '3bprmx8f': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    '1huoy2rd': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE RECUSADA',
+      'en': 'REQUEST FOR ANALYSIS REFUSED',
+      'es': 'SOLICITUD DE ANÁLISIS RECHAZADA',
+    },
+    '6l9h836f': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'krlgoxyc': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    'vvt4pzdn': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'qe1vnkde': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE CONCLUÍDA',
+      'en': 'REQUEST FOR ANALYSIS COMPLETED',
+      'es': 'SOLICITUD DE ANÁLISIS COMPLETADA',
+    },
+    'h7lhh9ix': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'ryvxqbm1': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '5y2rv8oe': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'm8icup59': {
+      'pt': 'SEU PEDIDO FOI ENTREGUE',
+      'en': 'YOUR ORDER HAS BEEN DELIVERED',
+      'es': 'SU PEDIDO HA SIDO ENTREGADO',
+    },
+    '54tevu47': {
+      'pt': 'PEDIDO ENTREGUE AS ',
+      'en': 'ORDER DELIVERED AS',
+      'es': 'PEDIDO ENTREGADO COMO',
+    },
+    'blsn0q26': {
+      'pt': '14:48',
+      'en': '14:48',
+      'es': '14:48',
+    },
+    '5pvmanfs': {
+      'pt': 'INFORMAÇÕES',
+      'en': 'INFORMATION',
+      'es': 'INFORMACIÓN',
+    },
+    'sf3duwcp': {
+      'pt': 'CÓDIGO DE ENTREGA',
+      'en': 'DELIVERY CODE',
+      'es': 'CÓDIGO DE ENTREGA',
+    },
+    '5bmokfvc': {
+      'pt': 'AJUDA',
+      'en': 'HELP',
+      'es': 'AYUDA',
+    },
+    'wnnyg6es': {
+      'pt': 'RASTREAR PEDIDO',
+      'en': 'TRACK ORDER',
+      'es': 'SEGUIMIENTO DEL PEDIDO',
+    },
+    'n6l3hi1g': {
+      'pt': 'CANCELAR PEDIDO',
+      'en': 'CANCEL ORDER',
+      'es': 'CANCELAR PEDIDO',
+    },
+    'bp7kxwwy': {
+      'pt': 'CONFIRMAR ENTREGA',
+      'en': 'CONFIRM DELIVERY',
+      'es': 'CONFIRMAR ENTREGA',
+    },
+    '3s0w58fd': {
+      'pt': 'AVALIAR PEDIDO',
+      'en': 'EVALUATE ORDER',
+      'es': 'EVALUAR ORDEN',
+    },
+    'e8b7oqan': {
+      'pt': 'ENDEREÇO DE ENTREGA',
+      'en': 'DELIVERY ADDRESS',
+      'es': 'DIRECCIÓN DE ENTREGA',
+    },
+    'txbm6w8c': {
+      'pt': 'RETIRADA NO LOCAL',
+      'en': 'LOCAL PICKUP',
+      'es': 'RECOGIDA LOCAL',
+    },
+    '6lbfzvew': {
+      'pt': 'OBSERVAÇÃO',
+      'en': 'OBSERVATION',
+      'es': 'OBSERVACIÓN',
+    },
+    'js79e8tl': {
+      'pt': 'DETALHES DO PEDIDO',
+      'en': 'ORDER DETAILS',
+      'es': 'DETALLES DEL PEDIDO',
+    },
+    'nuwjtpiu': {
+      'pt': 'RESUMO DO PAGAMENTO',
+      'en': 'PAYMENT SUMMARY',
+      'es': 'RESUMEN DE PAGO',
+    },
+    'lpfm2er0': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '8rvzu7us': {
+      'pt': 'GORJETA',
+      'en': 'TIP',
+      'es': 'CONSEJO',
+    },
+    'th8gw6m6': {
+      'pt': 'TAXA DE ENTREGA',
+      'en': 'DELIVERY FEE',
+      'es': 'TARIFA DE ENVÍO',
+    },
+    'i3mz7r0z': {
+      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
+      'en': 'TAX AND SERVICE FEE',
+      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
+    },
+    'x33o0exx': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    'wlbqvz4x': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
+      'en': 'WITH AQUIPASS YOU SAVED',
+      'es': 'CON AQUIPASS AHORRAS',
+    },
+    'e1em4e6a': {
+      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
+      'en': 'YOU HAVE EARNED 3% CASHBACK',
+      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'nkkwygwh': {
+      'pt': 'FORMA DE PAGAMENTO',
+      'en': 'PAYMENT METHOD',
+      'es': 'FORMA DE PAGO',
+    },
+    'ottan1jr': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // ordersHelp
+  {
+    'c7k1izy6': {
+      'pt': 'PEDIDO FINALIZADO',
+      'en': 'ORDER COMPLETED',
+      'es': 'PEDIDO COMPLETADO',
+    },
+    'i761s2om': {
+      'pt': 'SENTIMOS MUITO QUE HOUVE UM PROBLEMA COM O SEU PEDIDO',
+      'en': 'WE\'RE SO SORRY THERE WAS A PROBLEM WITH YOUR ORDER',
+      'es': 'LAMENTAMOS MUCHO QUE HAYA HABIDO UN PROBLEMA CON SU PEDIDO.',
+    },
+    'mqnc4cqc': {
+      'pt':
+          'QUEREMOS ENTENDER O QUAL FOI O PROBLEMA PARA NEGOCIAMOS O REEMBOLSO OU OUTRA SOLUÇÃO COM A LOJA',
+      'en':
+          'WE WANT TO UNDERSTAND WHAT THE PROBLEM WAS SO WE CAN NEGOTIATE A REFUND OR OTHER SOLUTION WITH THE STORE',
+      'es':
+          'QUEREMOS ENTENDER CUÁL FUE EL PROBLEMA PARA PODER NEGOCIAR UN REEMBOLSO U OTRA SOLUCIÓN CON LA TIENDA',
+    },
+    'mkwt404c': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    '3rgj48ef': {
+      'pt': 'O QUE ACONTECEU COM O SEU PEDIDO?',
+      'en': 'WHAT HAPPENED TO YOUR ORDER?',
+      'es': '¿QUÉ PASÓ CON TU PEDIDO?',
+    },
+    'ne2tpn1o': {
+      'pt': 'SELECIONE O MOTIVO QUE MELHOR REPRESENTA O SEU PROBLEMA.',
+      'en': 'SELECT THE REASON THAT BEST REPRESENTS YOUR PROBLEM.',
+      'es': 'SELECCIONA EL MOTIVO QUE MEJOR REPRESENTA TU PROBLEMA.',
+    },
+    '2980it8j': {
+      'pt': 'PRODUTO CHEGOU FRIO',
+      'en': 'PRODUCT ARRIVED COLD',
+      'es': 'EL PRODUCTO LLEGÓ FRÍO',
+    },
+    'z0dyrnhm': {
+      'pt': 'PRODUTO ERRADO',
+      'en': 'WRONG PRODUCT',
+      'es': 'PRODUCTO INCORRECTO',
+    },
+    's14vh1ts': {
+      'pt': 'PRODUTO INCOMPLETO',
+      'en': 'INCOMPLETE PRODUCT',
+      'es': 'PRODUCTO INCOMPLETO',
+    },
+    '0ppxiq5c': {
+      'pt': 'PRODUTO DANIFICADO',
+      'en': 'DAMAGED PRODUCT',
+      'es': 'PRODUCTO DAÑADO',
+    },
+    'w0augal9': {
+      'pt': 'ATRASO NA ENTREGA',
+      'en': 'DELAY IN DELIVERY',
+      'es': 'RETRASO EN ENTREGA',
+    },
+    '8ia1f08g': {
+      'pt': 'OUTRO',
+      'en': 'OTHER',
+      'es': 'OTRO',
+    },
+    'x21w7nwo': {
+      'pt':
+          'ANTES DE FINALIZAR, VOCÊ PODERÁ REVISAR SUA SOLICITAÇÃO E FAZER MUDANÇAS, SE NECESSÁRIO.',
+      'en':
+          'BEFORE FINALIZING, YOU MAY REVIEW YOUR APPLICATION AND MAKE CHANGES IF NECESSARY.',
+      'es':
+          'ANTES DE FINALIZAR, PUEDE REVISAR SU SOLICITUD Y HACER CAMBIOS SI ES NECESARIO.',
+    },
+    'nd673286': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'f4y05h29': {
+      'pt': 'CONTE MAIS DETALHES SOBRE O PROBLEMA',
+      'en': 'TELL US MORE DETAILS ABOUT THE PROBLEM',
+      'es': 'CUÉNTANOS MÁS DETALLES SOBRE EL PROBLEMA',
+    },
+    '9c0r94ob': {
+      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OBRIGATÓRIO)',
+      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (MANDATORY)',
+      'es': 'DÍGANOS QUÉ LE PARECIÓ SU PEDIDO (OBLIGATORIO)',
+    },
+    '2b5zokwd': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'm35gae5a': {
+      'pt': 'ADICIONE EVIDÊNCIAS DO PROBLEMA',
+      'en': 'ADD EVIDENCE OF THE PROBLEM',
+      'es': 'AÑADIR EVIDENCIA DEL PROBLEMA',
+    },
+    'y6ie6k8n': {
+      'pt':
+          'O ENVIO DE UMA FOTO DO ITEM, DA EMBALAGEM OU DA NOTA FISCAL PODEM AJUDAR A LOJA A ENTENDER O QUE ACONTECEU COM SEU PEDIDO.',
+      'en':
+          'SENDING A PHOTO OF THE ITEM, PACKAGING OR INVOICE CAN HELP THE STORE UNDERSTAND WHAT HAPPENED TO YOUR ORDER.',
+      'es':
+          'ENVIAR UNA FOTO DEL ARTÍCULO, EMBALAJE O FACTURA PUEDE AYUDAR A LA TIENDA A ENTENDER QUÉ SUCEDIÓ CON SU PEDIDO.',
+    },
+    'owkqt01u': {
+      'pt': 'REVISAR SOLICITAÇÃO',
+      'en': 'REVIEW REQUEST',
+      'es': 'SOLICITUD DE REVISIÓN',
+    },
+    '9yegjyd3': {
+      'pt': 'REVISE SUA SOLICITAÇÃO',
+      'en': 'REVIEW YOUR REQUEST',
+      'es': 'REVISA TU SOLICITUD',
+    },
+    '4r87pzxs': {
+      'pt': 'EVIDÊNCIAS DO PROBLEMA',
+      'en': 'EVIDENCE OF THE PROBLEM',
+      'es': 'EVIDENCIA DEL PROBLEMA',
+    },
+    '5i8sxdcu': {
+      'pt': 'ENVIAR',
+      'en': 'TO SEND',
+      'es': 'PARA ENVIAR',
+    },
+    'j3elzjdn': {
+      'pt': 'Home',
+      'en': '',
+      'es': '',
+    },
+  },
+  // profile
+  {
+    'qu14tv26': {
+      'pt': 'OPÇÕES',
+      'en': 'OPTIONS',
+      'es': 'OPCIONES',
+    },
+    'kmni54bk': {
+      'pt': 'SUA CONTA',
+      'en': 'YOUR ACCOUNT',
+      'es': 'SU CUENTA',
+    },
+    'hpotk948': {
+      'pt': 'DADOS DA CONTA',
+      'en': 'ACCOUNT DATA',
+      'es': 'DATOS DE LA CUENTA',
+    },
+    '1o8xney2': {
+      'pt': 'MENSAGENS',
+      'en': 'MESSAGES',
+      'es': 'MENSAJES',
+    },
+    'h8vuehrk': {
+      'pt': 'NOTIFICAÇÕES',
+      'en': 'NOTIFICATIONS',
+      'es': 'NOTIFICACIONES',
+    },
+    'me624ak8': {
+      'pt': 'MEUS MÉTODOS DE PAGAMENTO',
+      'en': 'MY PAYMENT METHODS',
+      'es': 'MIS MÉTODOS DE PAGO',
+    },
+    'z6eyp5ic': {
+      'pt': 'CLUBE DE PARCEIROS',
+      'en': 'PARTNERS CLUB',
+      'es': 'CLUB DE SOCIOS',
+    },
+    'p1sveqlx': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    'sxnylobj': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'f7qczhc3': {
+      'pt': 'MEUS ENDEREÇOS',
+      'en': 'MY ADDRESSES',
+      'es': 'MIS DIRECCIONES',
+    },
+    'qkoobr9d': {
+      'pt': 'SUPORTE',
+      'en': 'SUPPORT',
+      'es': 'APOYO',
+    },
+    'v49jxr92': {
+      'pt': 'AJUDA',
+      'en': 'HELP',
+      'es': 'AYUDA',
+    },
+    'xi2tgy7y': {
+      'pt': 'AVALIE O APLICATIVO',
+      'en': 'RATE THE APP',
+      'es': 'CALIFICA LA APLICACIÓN',
+    },
+    'svq7l1b2': {
+      'pt': 'PREFERÊNCIAS',
+      'en': 'PREFERENCES',
+      'es': 'PREFERENCIAS',
+    },
+    'hxag7o76': {
+      'pt': 'IDIOMA',
+      'en': 'LANGUAGE',
+      'es': 'IDIOMA',
+    },
+    '4xgvm94t': {
+      'pt': 'SEGURANÇA',
+      'en': 'SECURITY',
+      'es': 'SEGURIDAD',
+    },
+    'non0ybld': {
+      'pt': 'CONFIGURAÇÕES',
+      'en': 'SETTINGS',
+      'es': 'AJUSTES',
+    },
+    'coyksfo4': {
+      'pt': 'APAGAR CONTA',
+      'en': 'DELETE ACCOUNT',
+      'es': 'ELIMINAR CUENTA',
+    },
+    '8htaqjsg': {
+      'pt': 'NOSSAS REDES',
+      'en': 'OUR NETWORKS',
+      'es': 'NUESTRAS REDES',
+    },
+    'p5pnpy68': {
+      'pt': 'INSTAGRAM',
+      'en': 'INSTAGRAM',
+      'es': 'INSTAGRAM',
+    },
+    'qga2yg9z': {
+      'pt': 'DESCONECTAR',
+      'en': 'DISCONNECT',
+      'es': 'DESCONECTAR',
+    },
+  },
+  // home
+  {
+    '7yakzcde': {
+      'pt': 'HOME',
+      'en': 'HOME',
+      'es': 'HOME',
+    },
+    'a631xi16': {
+      'pt': 'PROMOS DO MÊS DELIVERY',
+      'en': 'DELIVERY MONTH PROMOS',
+      'es': 'PROMOS DE ENTREGA POR MES',
+    },
+    '9qg5u7ed': {
+      'pt': 'NOSSO CLUB DE PARCEIROS',
+      'en': 'OUR PARTNER CLUB',
+      'es': 'NUESTRO CLUB SOCIO',
+    },
+    'iongg50t': {
+      'pt': '+15% DE DESCONTO COM AQUIPASS',
+      'en': '+15% DISCOUNT WITH AQUIPASS',
+      'es': '+15% DESCUENTO CON AQUIPASS',
+    },
+    '92jsf2c9': {
+      'pt': 'EM BREVE',
+      'en': 'SHORTLY',
+      'es': 'DENTRO DE POCO',
+    },
+    'vib538gu': {
+      'pt': 'VEJA AS LOJAS QUE ESTÃO CHEGANDO NO APP',
+      'en': 'SEE THE STORES THAT ARE COMING TO THE APP',
+      'es': 'MIRA LAS TIENDAS QUE LLEGAN A LA APP',
+    },
+    'gq5j4efm': {
+      'pt': 'MEUS PEDIDOS\nRECENTES',
+      'en': 'MY RECENT\nORDERS',
+      'es': 'MIS PEDIDOS\nRECIENTE',
+    },
+    '4ymww51f': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'g61vpjax': {
+      'pt': 'TODAS AS LOJAS',
+      'en': 'ALL STORES',
+      'es': 'TODAS LAS TIENDAS',
+    },
+    'f8z7x8a0': {
+      'pt': 'CATEGORIA',
+      'en': 'CATEGORY',
+      'es': 'CATEGORÍA',
+    },
+    'omm5ygr5': {
+      'pt': 'RETIRADA',
+      'en': 'WITHDRAWAL',
+      'es': 'RETIRO',
+    },
+    'lzqh8h0w': {
+      'pt': 'ENTREGA GRÁTIS',
+      'en': 'FREE DELIVERY',
+      'es': 'ENTREGA GRATUITA',
+    },
+    'cqho8gfr': {
+      'pt': 'DESCONTO DO CLUBE',
+      'en': 'CLUB DISCOUNT',
+      'es': 'DESCUENTO DEL CLUB',
+    },
+    'elczxofs': {
+      'pt': 'PREÇO',
+      'en': 'PRICE',
+      'es': 'PRECIO',
+    },
+    'mln9k1v6': {
+      'pt': 'AVALIAÇÕES',
+      'en': 'REVIEWS',
+      'es': 'RESEÑAS',
+    },
+    'tlhtl7qs': {
+      'pt': 'DISTÂNCIA',
+      'en': 'DISTANCE',
+      'es': 'DISTANCIA',
+    },
+    '6igburi0': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // partners
+  {
+    'vkxzkpat': {
+      'pt': 'PARCEIROS',
+      'en': 'PARTNERS',
+      'es': 'FOGONADURA',
+    },
+    'pk6f9005': {
+      'pt': 'TODOS',
+      'en': 'ALL',
+      'es': 'TODO',
+    },
+    'aaa00w6k': {
+      'pt': 'CATEGORIA VAZIA',
+      'en': 'EMPTY CATEGORY',
+      'es': 'CATEGORÍA VACÍA',
+    },
+    'yxeej7cy': {
+      'pt': 'EM BREVE',
+      'en': 'SHORTLY',
+      'es': 'DENTRO DE POCO',
+    },
+    '4n0t3dpi': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // favoriteCompany
+  {
+    '9i9fbdw5': {
+      'pt': 'MEUS FAVORITOS',
+      'en': 'MY FAVORITES',
+      'es': 'MIS FAVORITOS',
+    },
+    'le7jbbri': {
+      'pt': 'LISTA DE FAVORITOS VAZIA',
+      'en': 'EMPTY FAVORITE LIST',
+      'es': 'LISTA DE FAVORITOS VACÍA',
+    },
+    'nyzgq20y': {
+      'pt': 'SUAS EMPRESAS FAVORITAS APARECERÃO AQUI',
+      'en': 'YOUR FAVORITE COMPANIES WILL APPEAR HERE',
+      'es': 'TUS EMPRESAS FAVORITAS APARECERÁN AQUÍ',
+    },
+    'xn4asw9r': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // orderHistory
+  {
+    'myb08gba': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'b4fw56ij': {
+      'pt': 'DELIVERY',
+      'en': 'DELIVERY',
+      'es': 'ENTREGA',
+    },
+    'o3c2lo4i': {
+      'pt': 'AGENDAMENTOS',
+      'en': 'APPOINTMENTS',
+      'es': 'EQUIPO',
+    },
+    'u92zr70k': {
+      'pt': 'CONCLUÍDO',
+      'en': 'COMPLETED',
+      'es': 'TERMINADO',
+    },
+    'z6sx1bco': {
+      'pt': 'RECUSADO',
+      'en': 'REFUSED',
+      'es': 'RECHAZADO',
+    },
+    '4acz5fix': {
+      'pt': 'CANCELADO',
+      'en': 'CANCELED',
+      'es': 'CANCELADO',
+    },
+    'owfbas64': {
+      'pt': 'PENDENTE',
+      'en': 'PENDING',
+      'es': 'PENDIENTE',
+    },
+    'ob3fejyl': {
+      'pt': 'EM PREPARO',
+      'en': 'IN PREPARATION',
+      'es': 'EN PREPARACIÓN',
+    },
+    'fboo98in': {
+      'pt': 'PRONTO PARA \nRETIRADA',
+      'en': 'READY FOR\nPICKUP',
+      'es': 'LISTO PARA RECOGER',
+    },
+    'rg0m1s44': {
+      'pt': 'SAIU PARA\nENTREGA',
+      'en': 'OUT FOR\nDELIVERY',
+      'es': 'LIBRE PARA ENTREGA',
+    },
+    '30qiob8f': {
+      'pt': 'AGENDADO',
+      'en': 'SCHEDULED',
+      'es': 'PROGRAMADO',
+    },
+    'as39lw78': {
+      'pt': 'SOLIICITAÇÃO DE \nNOVO HORÁRIO',
+      'en': 'REQUEST FOR\nNEW SCHEDULE',
+      'es': 'SOLICITUD DE \nNUEVO HORARIO',
+    },
+    '4jd9k1xy': {
+      'pt': '-',
+      'en': '',
+      'es': '',
+    },
+    'vklfevcq': {
+      'pt': 'DATA DO AGENDAMENTO',
+      'en': 'APPOINTMENT DATE',
+      'es': 'FECHA DE LA CITA',
+    },
+    'qglylwgn': {
+      'pt': 'ITENS',
+      'en': 'ITEMS',
+      'es': 'ELEMENTOS',
+    },
+    'u5x337lz': {
+      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
+      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
+      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
+    },
+    'l1jcqiec': {
+      'pt':
+          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
+      'en':
+          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
+      'es':
+          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
+    },
+    'nxyn3ooa': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
   // bannerAquiPass
   {
     'yveidc6c': {
@@ -5737,24 +5757,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CANCELAR PEDIDO',
     },
     'mat0ucrb': {
-      'pt': 'Pedido feito por engano',
-      'en': 'Order made by mistake',
-      'es': 'Pedido realizado por error',
+      'pt': 'PEDIDO FEITO POR ENGANO',
+      'en': 'ORDER MADE BY MISTAKE',
+      'es': 'PEDIDO HECHO POR ERROR',
     },
     '1g884wmu': {
-      'pt': 'Selecionei uma forma de pagamento errada',
-      'en': 'I selected the wrong payment method',
-      'es': 'Seleccioné el método de pago incorrecto',
+      'pt': 'SELECIONEI UMA FORMA DE PAGAMENTO ERRADA',
+      'en': 'I SELECTED THE WRONG PAYMENT METHOD',
+      'es': 'SELECCIONÉ EL MÉTODO DE PAGO INCORRECTO',
     },
     'vu3zhcsn': {
-      'pt': 'Meu endereço está errado',
-      'en': 'My address is wrong',
-      'es': 'Mi dirección es incorrecta',
+      'pt': 'MEU ENDEREÇO ESTÁ ERRADO',
+      'en': 'MY ADDRESS IS WRONG',
+      'es': 'MI DIRECCIÓN ESTÁ EQUIVOCADA',
     },
     '45q0acel': {
-      'pt': 'Outro motivo',
-      'en': 'Another reason',
-      'es': 'Otra razón',
+      'pt': 'OUTRO MOTIVO',
+      'en': 'ANOTHER REASON',
+      'es': 'OTRA RAZÓN',
     },
   },
   // AnexarArquivo

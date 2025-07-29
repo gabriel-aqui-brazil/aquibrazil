@@ -1,10 +1,10 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/companies/service/appointment_reeschedule/appointment_reeschedule_widget.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/components/empty_list_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import '/order_history/order_rating/order_rating_widget.dart';
 import 'dart:convert';
 import 'dart:ui';
@@ -36,16 +36,16 @@ class OrderHistoryModel extends FlutterFlowModel<OrderHistoryWidget> {
 
   // Stores action output result for [Backend Call - API (Query order history)] action in orderHistory widget.
   ApiCallResponse? apiResult4xv;
-  // Model for orderInProgress component.
-  late OrderInProgressModel orderInProgressModel;
+  // Model for CustomAppbar component.
+  late CustomAppbarModel customAppbarModel;
 
   @override
   void initState(BuildContext context) {
-    orderInProgressModel = createModel(context, () => OrderInProgressModel());
+    customAppbarModel = createModel(context, () => CustomAppbarModel());
   }
 
   @override
   void dispose() {
-    orderInProgressModel.dispose();
+    customAppbarModel.dispose();
   }
 }

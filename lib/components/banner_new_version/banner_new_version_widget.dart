@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
@@ -57,7 +58,11 @@ class _BannerNewVersionWidgetState extends State<BannerNewVersionWidget> {
                 'https://play.google.com/store/apps/details?id=com.oficial.aquibrazil');
           }
 
-          await Future.delayed(const Duration(milliseconds: 1000));
+          await Future.delayed(
+            Duration(
+              milliseconds: 1000,
+            ),
+          );
           await action_blocks.verifyAppVersion(context);
           safeSetState(() {});
 

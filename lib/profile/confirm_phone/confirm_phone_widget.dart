@@ -304,8 +304,6 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                                                     ?.defaultCard,
                                                 document:
                                                     currentUserData?.document,
-                                                lastOrderId: currentUserData
-                                                    ?.lastOrderId,
                                               ),
                                             );
 
@@ -409,8 +407,6 @@ class _ConfirmPhoneWidgetState extends State<ConfirmPhoneWidget> {
                                                     ?.defaultCard,
                                                 document:
                                                     currentUserData?.document,
-                                                lastOrderId: currentUserData
-                                                    ?.lastOrderId,
                                               ),
                                             );
 

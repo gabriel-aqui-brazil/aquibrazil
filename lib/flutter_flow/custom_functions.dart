@@ -31,6 +31,13 @@ int? getIndexProduct(
   return index != -1 ? index : null;
 }
 
+LatLng convertLatLngString(
+  String lat,
+  String lng,
+) {
+  return LatLng(double.parse(lat), double.parse(lng));
+}
+
 double cartSubtotal(List<dynamic> items) {
   double total = 0;
 

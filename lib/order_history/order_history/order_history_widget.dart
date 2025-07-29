@@ -1,10 +1,10 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/companies/service/appointment_reeschedule/appointment_reeschedule_widget.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/components/empty_list_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import '/order_history/order_rating/order_rating_widget.dart';
 import 'dart:convert';
 import 'dart:ui';
@@ -95,6 +95,46 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          appBar: AppBar(
+            backgroundColor: valueOrDefault<Color>(
+              FFAppState().lastOrder.hasId() &&
+                      (FFAppState().lastOrder.status != 'Concluido') &&
+                      (FFAppState().lastOrder.status != 'Agendado') &&
+                      (FFAppState().lastOrder.status != 'Cancelado') &&
+                      (FFAppState().lastOrder.status != 'Recusado')
+                  ? Color(0xFF0C9488)
+                  : FlutterFlowTheme.of(context).primaryBackground,
+              Color(0xFF0C9488),
+            ),
+            automaticallyImplyLeading: false,
+            title: wrapWithModel(
+              model: _model.customAppbarModel,
+              updateCallback: () => safeSetState(() {}),
+              child: CustomAppbarWidget(
+                title: FFLocalizations.of(context).getText(
+                  'myb08gba' /* HISTÓRICO DE PEDIDOS */,
+                ),
+                actionBtn: () async {
+                  if (Navigator.of(context).canPop()) {
+                    context.pop();
+                  }
+                  context.pushNamed(
+                    HomeWidget.routeName,
+                    extra: <String, dynamic>{
+                      kTransitionInfoKey: TransitionInfo(
+                        hasTransition: true,
+                        transitionType: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 300),
+                      ),
+                    },
+                  );
+                },
+              ),
+            ),
+            actions: [],
+            centerTitle: true,
+            elevation: 0.0,
+          ),
           body: Container(
             width: double.infinity,
             height: double.infinity,
@@ -102,54 +142,12 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                wrapWithModel(
-                  model: _model.orderInProgressModel,
-                  updateCallback: () => safeSetState(() {}),
-                  child: OrderInProgressWidget(),
-                ),
                 Container(
                   width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                  ),
+                  decoration: BoxDecoration(),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        0.0,
-                        valueOrDefault<double>(
-                          FFAppState().orderSelected.hasId() &&
-                                  (FFAppState().orderSelected.status !=
-                                      'Concluido') &&
-                                  (FFAppState().orderSelected.status !=
-                                      'Agendado') &&
-                                  (FFAppState().orderSelected.status !=
-                                      'Cancelado') &&
-                                  (FFAppState().orderSelected.status !=
-                                      'Recusado')
-                              ? 16.0
-                              : 54.0,
-                          0.0,
-                        ),
-                        0.0,
-                        16.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        '18994agu' /* HISTÓRICO DE PEDIDOS */,
-                      ),
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Anton',
-                            fontSize: 18.0,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.normal,
-                          ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -178,7 +176,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                               );
                             },
                             child: Container(
-                              height: 32.0,
+                              height: 40.0,
                               decoration: BoxDecoration(
                                 color: _model.filter == 'product'
                                     ? Color(0xFFF27182)
@@ -201,7 +199,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
-                                            fontWeight: FontWeight.w600,
+                                            fontWeight: FontWeight.w500,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -212,7 +210,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                               : Color(0xFF4D4D4D),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
+                                          fontWeight: FontWeight.w500,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -246,7 +244,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                               );
                             },
                             child: Container(
-                              height: 32.0,
+                              height: 40.0,
                               decoration: BoxDecoration(
                                 color: _model.filter == 'service'
                                     ? Color(0xFFF27182)
@@ -269,7 +267,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
-                                            fontWeight: FontWeight.w600,
+                                            fontWeight: FontWeight.w500,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -280,7 +278,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                               : Color(0xFF4D4D4D),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
+                                          fontWeight: FontWeight.w500,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -319,9 +317,9 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                       return ListView.separated(
                         padding: EdgeInsets.fromLTRB(
                           0,
-                          16.0,
                           0,
                           0,
+                          24.0,
                         ),
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
@@ -359,7 +357,9 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
                                               child:
-                                                  AppointmentReescheduleWidget(),
+                                                  AppointmentReescheduleWidget(
+                                                orderId: orderItem.id,
+                                              ),
                                             ),
                                           ),
                                         );
@@ -401,7 +401,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
+                                  borderRadius: BorderRadius.circular(16.0),
                                   border: Border.all(
                                     color: Color(0xFFE6E6E6),
                                   ),
@@ -446,7 +446,8 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -458,7 +459,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                        fontSize: 16.0,
+                                                        fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -488,7 +489,8 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontStyle:
@@ -510,7 +512,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                                 .fontStyle,
                                                       ),
                                                 ),
-                                              ],
+                                              ].divide(SizedBox(height: 4.0)),
                                             ),
                                           ),
                                           Builder(
@@ -549,6 +551,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFF319B6F),
+                                                            fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -596,6 +599,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFFEB001B),
+                                                            fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -643,6 +647,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFFEB001B),
+                                                            fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -690,6 +695,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                             ),
                                                             color: Color(
                                                                 0xFFF9AB10),
+                                                            fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -742,6 +748,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryText,
+                                                                fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
@@ -796,6 +803,7 @@ RETIRADA */
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .verde,
+                                                                fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
@@ -851,6 +859,7 @@ ENTREGA */
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .verde,
+                                                                fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
@@ -903,6 +912,7 @@ ENTREGA */
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .verde,
+                                                                fontSize: 12.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
@@ -953,6 +963,7 @@ NOVO HORÁRIO */
                                                             ),
                                                             color: Color(
                                                                 0xFFF9AB10),
+                                                            fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -976,7 +987,8 @@ NOVO HORÁRIO */
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -988,6 +1000,7 @@ NOVO HORÁRIO */
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
+                                                        fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -1005,15 +1018,16 @@ NOVO HORÁRIO */
                                             },
                                           ),
                                           Icon(
-                                            Icons.keyboard_arrow_right_rounded,
-                                            color: Color(0xFF808080),
-                                            size: 24.0,
+                                            FFIcons.karrowSquareRight,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 20.0,
                                           ),
                                         ].divide(SizedBox(width: 12.0)),
                                       ),
                                       Divider(
                                         height: 1.0,
-                                        thickness: 2.0,
+                                        thickness: 1.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
                                       ),
@@ -1092,9 +1106,9 @@ NOVO HORÁRIO */
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      font: GoogleFonts.rubik(
+                                                      font: GoogleFonts.poppins(
                                                         fontWeight:
-                                                            FontWeight.w600,
+                                                            FontWeight.w500,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1105,7 +1119,7 @@ NOVO HORÁRIO */
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w500,
                                                       fontStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1116,14 +1130,14 @@ NOVO HORÁRIO */
                                               RatingBarIndicator(
                                                 itemBuilder: (context, index) =>
                                                     Icon(
-                                                  Icons.star_rounded,
+                                                  FFIcons.kcaminho2395,
                                                   color: Color(0xFFF9AB10),
                                                 ),
                                                 direction: Axis.horizontal,
                                                 rating: orderItem.rating.rating,
                                                 unratedColor: Color(0xFFD6D6D6),
                                                 itemCount: 5,
-                                                itemSize: 20.0,
+                                                itemSize: 16.0,
                                               ),
                                             ].divide(SizedBox(width: 12.0)),
                                           ),
@@ -1201,7 +1215,7 @@ NOVO HORÁRIO */
                                                         font:
                                                             GoogleFonts.poppins(
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                              FontWeight.normal,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1213,7 +1227,7 @@ NOVO HORÁRIO */
                                                         fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FontWeight.w600,
+                                                            FontWeight.normal,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1240,13 +1254,15 @@ NOVO HORÁRIO */
                                                             context)
                                                         .languageCode,
                                                   ),
+                                                  textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                              FontWeight.normal,
                                                           fontStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1258,7 +1274,7 @@ NOVO HORÁRIO */
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
-                                                            FontWeight.w600,
+                                                            FontWeight.normal,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1288,7 +1304,7 @@ NOVO HORÁRIO */
                                                   'Agendado')))
                                         Divider(
                                           height: 1.0,
-                                          thickness: 2.0,
+                                          thickness: 1.0,
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
                                         ),
@@ -1307,7 +1323,7 @@ NOVO HORÁRIO */
                                                   color: Color(0xFFF2F2F2),
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          4.0),
+                                                          8.0),
                                                 ),
                                                 child: Align(
                                                   alignment:
@@ -1323,8 +1339,8 @@ NOVO HORÁRIO */
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          font:
-                                                              GoogleFonts.rubik(
+                                                          font: GoogleFonts
+                                                              .poppins(
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             fontStyle:
@@ -1355,9 +1371,9 @@ NOVO HORÁRIO */
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      font: GoogleFonts.rubik(
+                                                      font: GoogleFonts.poppins(
                                                         fontWeight:
-                                                            FontWeight.w500,
+                                                            FontWeight.normal,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1367,7 +1383,7 @@ NOVO HORÁRIO */
                                                       color: Color(0xFF808080),
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FontWeight.w500,
+                                                          FontWeight.normal,
                                                       fontStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1388,7 +1404,7 @@ NOVO HORÁRIO */
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  font: GoogleFonts.rubik(
+                                                  font: GoogleFonts.nunito(
                                                     fontWeight: FontWeight.w500,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(

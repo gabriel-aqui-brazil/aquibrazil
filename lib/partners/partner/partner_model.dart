@@ -9,6 +9,7 @@ import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
+import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'partner_widget.dart' show PartnerWidget;
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';

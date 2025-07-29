@@ -1859,8 +1859,6 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                             defaultCard:
                                                 currentUserData?.defaultCard,
                                             document: currentUserData?.document,
-                                            lastOrderId:
-                                                currentUserData?.lastOrderId,
                                           ),
                                         );
                                       } else {
@@ -1879,10 +1877,16 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                       }
 
                                       await Future.delayed(
-                                          const Duration(milliseconds: 500));
+                                        Duration(
+                                          milliseconds: 500,
+                                        ),
+                                      );
                                     } else {
                                       await Future.delayed(
-                                          const Duration(milliseconds: 500));
+                                        Duration(
+                                          milliseconds: 500,
+                                        ),
+                                      );
                                     }
 
                                     showModalBottomSheet(

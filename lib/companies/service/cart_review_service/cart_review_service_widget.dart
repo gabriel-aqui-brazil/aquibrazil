@@ -1,6 +1,5 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
@@ -9,6 +8,7 @@ import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/actions/actions.dart' as action_blocks;
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
@@ -74,7 +74,7 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -154,8 +154,11 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                                   ),
                             ),
                             Text(
-                              functions.toUpperCase(
-                                  FFAppState().cart.company.address.address),
+                              valueOrDefault<String>(
+                                functions.toUpperCase(
+                                    FFAppState().cart.company.address.address),
+                                '-',
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -256,21 +259,25 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                                         ),
                                   ),
                                   Text(
-                                    dateTimeFormat(
-                                      "MM/dd/y h:mm a",
-                                      DateTime.fromMillisecondsSinceEpoch(
-                                          valueOrDefault<int>(
-                                        widget!.cart?.items
-                                            ?.where((e) =>
-                                                e.service.preferredTime != null)
-                                            .toList()
-                                            ?.firstOrNull
-                                            ?.service
-                                            ?.preferredTime,
-                                        0,
-                                      )),
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
+                                    valueOrDefault<String>(
+                                      dateTimeFormat(
+                                        "MM/dd/y h:mm a",
+                                        DateTime.fromMillisecondsSinceEpoch(
+                                            valueOrDefault<int>(
+                                          widget!.cart?.items
+                                              ?.where((e) =>
+                                                  e.service.preferredTime !=
+                                                  null)
+                                              .toList()
+                                              ?.firstOrNull
+                                              ?.service
+                                              ?.preferredTime,
+                                          0,
+                                        )),
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      '--/--/--',
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -502,12 +509,15 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: formatNumber(
-                              widget!.cart!.aquipassSaved,
-                              formatType: FormatType.custom,
-                              currency: '\$',
-                              format: '#,##0.00',
-                              locale: 'en_us',
+                            text: valueOrDefault<String>(
+                              formatNumber(
+                                widget!.cart?.aquipassSaved,
+                                formatType: FormatType.custom,
+                                currency: '\$',
+                                format: '#,##0.00',
+                                locale: 'en_us',
+                              ),
+                              '\$ 0.0',
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -597,12 +607,15 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: formatNumber(
-                              widget!.cart!.cashback,
-                              formatType: FormatType.custom,
-                              currency: '\$',
-                              format: '#,##0.00',
-                              locale: 'en_us',
+                            text: valueOrDefault<String>(
+                              formatNumber(
+                                widget!.cart?.cashback,
+                                formatType: FormatType.custom,
+                                currency: '\$',
+                                format: '#,##0.00',
+                                locale: 'en_us',
+                              ),
+                              '\$ 0.0',
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -694,8 +707,11 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              functions.toUpperCase(
-                                  FFAppState().paymentMethodSelected.funding),
+                              valueOrDefault<String>(
+                                functions.toUpperCase(
+                                    FFAppState().paymentMethodSelected.funding),
+                                '-',
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -718,9 +734,12 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                               text: TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: functions.toUpperCase(FFAppState()
-                                        .paymentMethodSelected
-                                        .brand),
+                                    text: valueOrDefault<String>(
+                                      functions.toUpperCase(FFAppState()
+                                          .paymentMethodSelected
+                                          .brand),
+                                      '-',
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -748,9 +767,10 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                                     style: TextStyle(),
                                   ),
                                   TextSpan(
-                                    text: FFAppState()
-                                        .paymentMethodSelected
-                                        .last4,
+                                    text: valueOrDefault<String>(
+                                      FFAppState().paymentMethodSelected.last4,
+                                      'XXXX',
+                                    ),
                                     style: TextStyle(),
                                   )
                                 ],
@@ -782,12 +802,15 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: formatNumber(
-                              widget!.cart!.total,
-                              formatType: FormatType.custom,
-                              currency: '\$',
-                              format: '#,##0.00',
-                              locale: 'en_us',
+                            text: valueOrDefault<String>(
+                              formatNumber(
+                                widget!.cart?.total,
+                                formatType: FormatType.custom,
+                                currency: '\$',
+                                format: '#,##0.00',
+                                locale: 'en_us',
+                              ),
+                              '\$ 0.0',
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -835,7 +858,7 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   var _shouldSetState = false;
@@ -887,32 +910,11 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                         aquibrazil_library_oi8i5r_data_schema.OrderStruct
                             .maybeFromMap(
                                 (_model.orderService?.jsonBody ?? ''))!;
+                    FFAppState().lastOrder =
+                        aquibrazil_library_oi8i5r_data_schema.OrderStruct
+                            .maybeFromMap(
+                                (_model.orderService?.jsonBody ?? ''))!;
                     FFAppState().update(() {});
-                    authManager.updateAuthUserData(
-                      authenticationToken: currentAuthenticationToken,
-                      tokenExpiration: currentAuthTokenExpiration,
-                      authUid: currentUserUid,
-                      userData: UserStruct(
-                        id: currentUserData?.id,
-                        firstName: currentUserData?.firstName,
-                        lastName: currentUserData?.lastName,
-                        email: currentUserData?.email,
-                        biometric: currentUserData?.biometric,
-                        profilePicture: currentUserData?.profilePicture,
-                        location: currentUserData?.location,
-                        address: currentUserData?.address,
-                        cashbackEarned: currentUserData?.cashbackEarned,
-                        phone: currentUserData?.phone,
-                        timezone: currentUserData?.timezone,
-                        defaultCard: currentUserData?.defaultCard,
-                        document: currentUserData?.document,
-                        lastOrderId:
-                            aquibrazil_library_oi8i5r_data_schema.OrderStruct
-                                    .maybeFromMap(
-                                        (_model.orderService?.jsonBody ?? ''))
-                                ?.id,
-                      ),
-                    );
 
                     context.goNamed(
                       Temp8ConfirmWidget.routeName,
@@ -926,6 +928,9 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                         ),
                       }.withoutNulls,
                     );
+
+                    if (_shouldSetState) safeSetState(() {});
+                    return;
                   } else {
                     await action_blocks.errorAlertSnacbar(
                       context,
@@ -975,10 +980,7 @@ class _CartReviewServiceWidgetState extends State<CartReviewServiceWidget> {
                 ),
               ),
             ),
-          ]
-              .divide(SizedBox(height: 12.0))
-              .addToStart(SizedBox(height: 12.0))
-              .addToEnd(SizedBox(height: 12.0)),
+          ].divide(SizedBox(height: 12.0)).around(SizedBox(height: 12.0)),
         ),
       ),
     );

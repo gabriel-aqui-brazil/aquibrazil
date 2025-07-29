@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'language_updated_widget.dart' show LanguageUpdatedWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';

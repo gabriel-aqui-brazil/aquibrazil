@@ -76,7 +76,11 @@ class _Temp4AppointmentWidgetState extends State<Temp4AppointmentWidget> {
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,
         onTap: () async {
-          await Future.delayed(const Duration(milliseconds: 4000));
+          await Future.delayed(
+            Duration(
+              milliseconds: 4000,
+            ),
+          );
           Navigator.pop(context);
         },
         child: Container(

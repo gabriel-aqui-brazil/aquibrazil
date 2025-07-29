@@ -14,4 +14,5 @@ export 'debug_print.dart' show debugPrint;
 export 'google_login_action.dart' show googleLoginAction;
 export 'initialize_intercom.dart' show initializeIntercom;
 export 'order.dart' show order;
+export 'order_in_progress.dart' show orderInProgress;
 export 'lock_orientation.dart' show lockOrientation;

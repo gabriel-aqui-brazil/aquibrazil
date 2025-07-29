@@ -93,7 +93,9 @@ class _Temp8ConfirmWidgetState extends State<Temp8ConfirmWidget>
                     },
                     child: Padding(
                       padding: MediaQuery.viewInsetsOf(context),
-                      child: AppointmentReescheduleWidget(),
+                      child: AppointmentReescheduleWidget(
+                        orderId: widget!.orderID!,
+                      ),
                     ),
                   ),
                 );

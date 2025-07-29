@@ -1,8 +1,8 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
@@ -26,8 +26,8 @@ import 'package:provider/provider.dart';
 class ProfileModel extends FlutterFlowModel<ProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // Model for orderInProgress component.
-  late OrderInProgressModel orderInProgressModel;
+  // Model for CustomAppbar component.
+  late CustomAppbarModel customAppbarModel;
   // Stores action output result for [Backend Call - API (GET Chat exist)] action in replaceWidget widget.
   ApiCallResponse? apiResultl1c;
   // Stores action output result for [Backend Call - API (Get membership current)] action in replaceWidget widget.
@@ -35,11 +35,11 @@ class ProfileModel extends FlutterFlowModel<ProfileWidget> {
 
   @override
   void initState(BuildContext context) {
-    orderInProgressModel = createModel(context, () => OrderInProgressModel());
+    customAppbarModel = createModel(context, () => CustomAppbarModel());
   }
 
   @override
   void dispose() {
-    orderInProgressModel.dispose();
+    customAppbarModel.dispose();
   }
 }

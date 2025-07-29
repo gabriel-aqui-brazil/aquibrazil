@@ -4,6 +4,7 @@ import '/backend/schema/structs/index.dart';
 import '/cashback/filter_distance/filter_distance_widget.dart';
 import '/components/banner_aqui_pass/banner_aqui_pass_widget.dart';
 import '/components/banner_new_version/banner_new_version_widget.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -15,7 +16,6 @@ import '/home/filters/filter_category/filter_category_widget.dart';
 import '/home/filters/filter_discount/filter_discount_widget.dart';
 import '/home/filters/filter_price/filter_price_widget.dart';
 import '/home/filters/filter_rating/filter_rating_widget.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import '/home/pesquisa_home/pesquisa_home_widget.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
 import 'dart:async';
@@ -59,8 +59,8 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   bool? cacheOverride;
   // Stores action output result for [Custom Action - isAppUpdated] action in home widget.
   bool? isAppUpdated;
-  // Model for orderInProgress component.
-  late OrderInProgressModel orderInProgressModel;
+  // Model for CustomAppbar component.
+  late CustomAppbarModel customAppbarModel;
   // Model for pesquisaHome component.
   late PesquisaHomeModel pesquisaHomeModel;
   // Model for bannerNewVersion component.
@@ -81,7 +81,7 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   @override
   void initState(BuildContext context) {
-    orderInProgressModel = createModel(context, () => OrderInProgressModel());
+    customAppbarModel = createModel(context, () => CustomAppbarModel());
     pesquisaHomeModel = createModel(context, () => PesquisaHomeModel());
     bannerNewVersionModel = createModel(context, () => BannerNewVersionModel());
     adsModels = FlutterFlowDynamicModels(() => AdsModel());
@@ -91,7 +91,7 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   @override
   void dispose() {
-    orderInProgressModel.dispose();
+    customAppbarModel.dispose();
     pesquisaHomeModel.dispose();
     bannerNewVersionModel.dispose();
     adsModels.dispose();

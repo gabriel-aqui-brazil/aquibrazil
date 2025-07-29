@@ -4,8 +4,6 @@ export '/profile/settings/delete_account/step2/step2_widget.dart'
 export '/profile/language/language/language_widget.dart' show LanguageWidget;
 export '/cashback/trade_cash_products_page/trade_cash_products_page_widget.dart'
     show TradeCashProductsPageWidget;
-export '/order_history/order_details/order_details_widget.dart'
-    show OrderDetailsWidget;
 export '/profile/confirm_phone/confirm_phone_widget.dart'
     show ConfirmPhoneWidget;
 export '/profile/settings/notification_manage/notification_manage_widget.dart'
@@ -13,8 +11,6 @@ export '/profile/settings/notification_manage/notification_manage_widget.dart'
 export '/auth/login/login_widget.dart' show LoginWidget;
 export '/membership/without_membership/membership_checkout_change_plan/membership_checkout_change_plan_widget.dart'
     show MembershipCheckoutChangePlanWidget;
-export '/order_history/orders_help/orders_help_widget.dart'
-    show OrdersHelpWidget;
 export '/auth/reset_p_w/reset_password_step1/reset_password_step1_widget.dart'
     show ResetPasswordStep1Widget;
 export '/profile/mensagens/mensagem_home_no_mensage/mensagem_home_no_mensage_widget.dart'
@@ -37,7 +33,6 @@ export '/profile/settings/terms/terms_widget.dart' show TermsWidget;
 export '/profile/payment_history/pagamentos/pagamentos_widget.dart'
     show PagamentosWidget;
 export '/profile/account_data/account_data_widget.dart' show AccountDataWidget;
-export '/profile/profile/profile_widget.dart' show ProfileWidget;
 export '/membership/without_membership/membership_change_plan/membership_change_plan_widget.dart'
     show MembershipChangePlanWidget;
 export '/address_page/address_no_auth/address_delivery_no_auth/address_delivery_no_auth_widget.dart'
@@ -52,7 +47,6 @@ export '/profile/settings/settings/settings_widget.dart' show SettingsWidget;
 export '/companies/schedule/rental_house_schedule/rental_house_schedule_widget.dart'
     show RentalHouseScheduleWidget;
 export '/profile/info_edit/info_edit_widget.dart' show InfoEditWidget;
-export '/home/home/home_widget.dart' show HomeWidget;
 export '/order_history/order_details_service/order_details_service_widget.dart'
     show OrderDetailsServiceWidget;
 export '/companies/schedule/rental_house/rental_house_widget.dart'
@@ -107,10 +101,7 @@ export '/address_page/address_no_auth/address_delivery_map_no_auth/address_deliv
 export '/profile/help/faq_answer/faq_answer_widget.dart' show FaqAnswerWidget;
 export '/companies/service/temp8_confirm/temp8_confirm_widget.dart'
     show Temp8ConfirmWidget;
-export '/partners/partners/partners_widget.dart' show PartnersWidget;
 export '/profile/access_info/access_info_widget.dart' show AccessInfoWidget;
-export '/company_favorite/favorite_company/favorite_company_widget.dart'
-    show FavoriteCompanyWidget;
 export '/profile/pag_off_anuncio/pag_off_anuncio_widget.dart'
     show PagOffAnuncioWidget;
 export '/auth/signup/complete_profile/complete_profile_validate_number/complete_profile_validate_number_widget.dart'
@@ -119,8 +110,6 @@ export '/cashback/voe_azul_signup/voe_azul_signup_widget.dart'
     show VoeAzulSignupWidget;
 export '/auth/signup/signup_step1/signup_step1_widget.dart'
     show SignupStep1Widget;
-export '/order_history/order_history/order_history_widget.dart'
-    show OrderHistoryWidget;
 export '/auth/signup/complete_profile/complete_profile_number/complete_profile_number_widget.dart'
     show CompleteProfileNumberWidget;
 export '/home/all_categories/all_categories_widget.dart'
@@ -145,3 +134,14 @@ export '/order_history/orders_help_history/orders_help_history_widget.dart'
 export '/companies/product/delivery_food/delivery_food_widget.dart'
     show DeliveryFoodWidget;
 export '/companies/service/service/service_widget.dart' show ServiceWidget;
+export '/order_history/order_details/order_details_widget.dart'
+    show OrderDetailsWidget;
+export '/order_history/orders_help/orders_help_widget.dart'
+    show OrdersHelpWidget;
+export '/profile/profile/profile_widget.dart' show ProfileWidget;
+export '/home/home/home_widget.dart' show HomeWidget;
+export '/partners/partners/partners_widget.dart' show PartnersWidget;
+export '/company_favorite/favorite_company/favorite_company_widget.dart'
+    show FavoriteCompanyWidget;
+export '/order_history/order_history/order_history_widget.dart'
+    show OrderHistoryWidget;

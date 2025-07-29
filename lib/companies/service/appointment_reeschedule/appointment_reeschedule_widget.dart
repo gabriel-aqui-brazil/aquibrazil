@@ -20,7 +20,12 @@ import 'appointment_reeschedule_model.dart';
 export 'appointment_reeschedule_model.dart';
 
 class AppointmentReescheduleWidget extends StatefulWidget {
-  const AppointmentReescheduleWidget({super.key});
+  const AppointmentReescheduleWidget({
+    super.key,
+    required this.orderId,
+  });
+
+  final String? orderId;
 
   @override
   State<AppointmentReescheduleWidget> createState() =>
@@ -524,7 +529,7 @@ class _AppointmentReescheduleWidgetState
                                 var _shouldSetState = false;
                                 _model.apiCancelAppointmenet =
                                     await MainGroup.appointmentReviewCall.call(
-                                  orderId: FFAppState().orderSelected.id,
+                                  orderId: widget!.orderId,
                                   status: 'Cancelado',
                                   token: currentAuthenticationToken,
                                 );
@@ -652,7 +657,7 @@ class _AppointmentReescheduleWidgetState
                                 var _shouldSetState = false;
                                 _model.apiAppointementResponse =
                                     await MainGroup.appointmentReviewCall.call(
-                                  orderId: FFAppState().orderSelected.id,
+                                  orderId: widget!.orderId,
                                   status: 'Aprovado',
                                   token: currentAuthenticationToken,
                                   selectedDate: _model.hourSelected,

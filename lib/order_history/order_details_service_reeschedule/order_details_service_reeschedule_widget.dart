@@ -241,11 +241,14 @@ class _OrderDetailsServiceReescheduleWidgetState
                                   size: 18.0,
                                 ),
                                 Text(
-                                  dateTimeFormat(
-                                    "MMMEd",
-                                    _model.datePicked,
-                                    locale: FFLocalizations.of(context)
-                                        .languageCode,
+                                  valueOrDefault<String>(
+                                    dateTimeFormat(
+                                      "MMMEd",
+                                      _model.datePicked,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
+                                    '--/--/--',
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -282,11 +285,14 @@ class _OrderDetailsServiceReescheduleWidgetState
                                   size: 18.0,
                                 ),
                                 Text(
-                                  dateTimeFormat(
-                                    "h:mm a",
-                                    _model.datePicked,
-                                    locale: FFLocalizations.of(context)
-                                        .languageCode,
+                                  valueOrDefault<String>(
+                                    dateTimeFormat(
+                                      "h:mm a",
+                                      _model.datePicked,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
+                                    '-:-',
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium

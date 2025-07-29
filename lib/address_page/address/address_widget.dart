@@ -685,8 +685,6 @@ class _AddressWidgetState extends State<AddressWidget> {
                                                   currentUserData?.defaultCard,
                                               document:
                                                   currentUserData?.document,
-                                              lastOrderId:
-                                                  currentUserData?.lastOrderId,
                                             ),
                                           );
                                           FFAppState()
