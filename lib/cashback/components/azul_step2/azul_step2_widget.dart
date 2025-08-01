@@ -340,7 +340,6 @@ class _AzulStep2WidgetState extends State<AzulStep2Widget> {
                                   timezone: currentUserData?.timezone,
                                   defaultCard: currentUserData?.defaultCard,
                                   document: _model.cPFfieldTextController.text,
-                                  lastOrderId: currentUserData?.lastOrderId,
                                 ),
                               );
                               Navigator.pop(context);

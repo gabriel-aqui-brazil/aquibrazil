@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/gestures.dart';
@@ -124,7 +125,7 @@ class _BenefitsWidgetState extends State<BenefitsWidget> {
                           children: [
                             TextSpan(
                               text: FFLocalizations.of(context).getText(
-                                '3wp224gg' /* DESCONTOS DE ATÉ 50%  */,
+                                '3wp224gg' /* DESCONTOS DE ATÉ 20%  */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

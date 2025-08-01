@@ -172,7 +172,6 @@ class _PaymentMethodDeleteWidgetState extends State<PaymentMethodDeleteWidget> {
                               .maybeFromMap(
                                   (_model.deletePaymentMethod?.jsonBody ?? '')),
                           document: currentUserData?.document,
-                          lastOrderId: currentUserData?.lastOrderId,
                         ),
                       );
                       ScaffoldMessenger.of(context).showSnackBar(

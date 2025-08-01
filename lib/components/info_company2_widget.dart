@@ -3,6 +3,7 @@ import '/backend/api_requests/api_calls.dart';
 import '/components/empty_list_rating_widget.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
@@ -82,27 +83,30 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(
-                    Icons.keyboard_arrow_left_rounded,
-                    color: FlutterFlowTheme.of(context).primary,
-                    size: 24.0,
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 24.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.close_outlined,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      size: 20.0,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Column(
             mainAxisSize: MainAxisSize.max,
@@ -132,7 +136,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 20.0,
+                                  fontSize: 18.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                   fontStyle: FlutterFlowTheme.of(context)
@@ -149,7 +153,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  font: GoogleFonts.rubik(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -169,8 +173,8 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                       ),
                     ),
                     Container(
-                      width: 60.0,
-                      height: 60.0,
+                      width: 50.0,
+                      height: 50.0,
                       clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -192,27 +196,23 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Text(
-                          valueOrDefault<String>(
-                            formatNumber(
-                              widget!.company?.rating,
-                              formatType: FormatType.custom,
-                              format: '0.0',
-                              locale: '',
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 4.0, 0.0, 0.0),
+                          child: Text(
+                            valueOrDefault<String>(
+                              formatNumber(
+                                widget!.company?.rating,
+                                formatType: FormatType.custom,
+                                format: '0.0',
+                                locale: '',
+                              ),
+                              '5.0',
                             ),
-                            '5.0',
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
@@ -220,10 +220,20 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                         .bodyMedium
                                         .fontStyle,
                                   ),
+                                  fontSize: 14.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                          ),
                         ),
                         RatingBarIndicator(
                           itemBuilder: (context, index) => Icon(
-                            Icons.star_rounded,
+                            FFIcons.kcaminho2395,
                             color: FlutterFlowTheme.of(context).warning,
                           ),
                           direction: Axis.horizontal,
@@ -233,7 +243,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                           ),
                           unratedColor: Color(0xFFD6D6D6),
                           itemCount: 5,
-                          itemSize: 20.0,
+                          itemSize: 16.0,
                         ),
                       ].divide(SizedBox(width: 8.0)),
                     ),
@@ -279,7 +289,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                           FlutterFlowTheme.of(context).secondaryText,
                       labelStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.poppins(
+                                font: GoogleFonts.inter(
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
@@ -298,7 +308,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                               ),
                       unselectedLabelStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.poppins(
+                                font: GoogleFonts.inter(
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
@@ -347,83 +357,75 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      height: 250.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(0.0),
-                                          topRight: Radius.circular(0.0),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 16.0, 12.0, 16.0),
+                                      child: Container(
+                                        height: 250.0,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(16.0),
                                         ),
-                                      ),
-                                      child: Stack(
-                                        children: [
-                                          FlutterFlowGoogleMap(
-                                            controller:
-                                                _model.googleMapsController,
-                                            onCameraIdle: (latLng) => _model
-                                                .googleMapsCenter = latLng,
-                                            initialLocation:
-                                                _model.googleMapsCenter ??=
-                                                    functions.convertLatLng(
-                                                        double.parse(widget!
-                                                            .company!
-                                                            .address
-                                                            .latitude),
-                                                        double.parse(widget!
-                                                            .company!
-                                                            .address
-                                                            .longitude)),
-                                            markerColor:
-                                                GoogleMarkerColor.violet,
-                                            mapType: MapType.normal,
-                                            style: GoogleMapStyle.standard,
-                                            initialZoom: 14.0,
-                                            allowInteraction: false,
-                                            allowZoom: false,
-                                            showZoomControls: false,
-                                            showLocation: false,
-                                            showCompass: false,
-                                            showMapToolbar: false,
-                                            showTraffic: false,
-                                            centerMapOnMarkerTap: false,
-                                          ),
-                                          PointerInterceptor(
-                                            intercepting: isWeb,
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(0.0),
-                                                  bottomRight:
-                                                      Radius.circular(0.0),
-                                                  topLeft: Radius.circular(0.0),
-                                                  topRight:
-                                                      Radius.circular(0.0),
+                                        child: Stack(
+                                          children: [
+                                            FlutterFlowGoogleMap(
+                                              controller:
+                                                  _model.googleMapsController,
+                                              onCameraIdle: (latLng) => _model
+                                                  .googleMapsCenter = latLng,
+                                              initialLocation:
+                                                  _model.googleMapsCenter ??=
+                                                      functions.convertLatLng(
+                                                          double.parse(widget!
+                                                              .company!
+                                                              .address
+                                                              .latitude),
+                                                          double.parse(widget!
+                                                              .company!
+                                                              .address
+                                                              .longitude)),
+                                              markerColor:
+                                                  GoogleMarkerColor.violet,
+                                              mapType: MapType.normal,
+                                              style: GoogleMapStyle.standard,
+                                              initialZoom: 14.0,
+                                              allowInteraction: false,
+                                              allowZoom: false,
+                                              showZoomControls: false,
+                                              showLocation: false,
+                                              showCompass: false,
+                                              showMapToolbar: false,
+                                              showTraffic: false,
+                                              centerMapOnMarkerTap: false,
+                                            ),
+                                            PointerInterceptor(
+                                              intercepting: isWeb,
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          16.0),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 0.0),
-                                            child: PointerInterceptor(
-                                              intercepting: isWeb,
-                                              child: Icon(
-                                                FFIcons.kpin21,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                size: 36.0,
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: PointerInterceptor(
+                                                intercepting: isWeb,
+                                                child: Icon(
+                                                  FFIcons.kpin21,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  size: 36.0,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
                                     Padding(
@@ -486,7 +488,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                           .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 4.0)),
+                                        ].divide(SizedBox(height: 12.0)),
                                       ),
                                     ),
                                     Divider(
@@ -981,7 +983,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 24.0)),
+                                            ].divide(SizedBox(height: 40.0)),
                                           ),
                                         ),
                                       ],
@@ -1020,7 +1022,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                 reverse: false,
                                 scrollDirection: Axis.vertical,
                                 separatorBuilder: (_, __) =>
-                                    SizedBox(height: 24.0),
+                                    SizedBox(height: 40.0),
                                 builderDelegate:
                                     PagedChildBuilderDelegate<dynamic>(
                                   // Customize what your widget looks like when it's loading the first page.
@@ -1082,7 +1084,8 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           fontStyle:
@@ -1091,6 +1094,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
+                                                        fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -1116,7 +1120,8 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FontWeight.normal,
                                                           fontStyle:
@@ -1141,7 +1146,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                             RatingBarIndicator(
                                               itemBuilder: (context, index) =>
                                                   Icon(
-                                                Icons.star_rounded,
+                                                FFIcons.kcaminho2395,
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .warning,
@@ -1150,7 +1155,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                               rating: ratingItem.rating,
                                               unratedColor: Color(0xFFD6D6D6),
                                               itemCount: 5,
-                                              itemSize: 18.0,
+                                              itemSize: 14.0,
                                             ),
                                             Text(
                                               functions.toUpperCase(
@@ -1159,7 +1164,8 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.rubik(
+                                                        font:
+                                                            GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1171,6 +1177,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
+                                                        fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FlutterFlowTheme.of(
@@ -1184,7 +1191,7 @@ class _InfoCompany2WidgetState extends State<InfoCompany2Widget>
                                                                 .fontStyle,
                                                       ),
                                             ),
-                                          ].divide(SizedBox(height: 4.0)),
+                                          ].divide(SizedBox(height: 6.0)),
                                         ),
                                       ),
                                     );

@@ -1,10 +1,10 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/custom_appbar/custom_appbar_widget.dart';
 import '/components/empty_list_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home/order_in_progress/order_in_progress_widget.dart';
 import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
@@ -71,6 +71,46 @@ class _FavoriteCompanyWidgetState extends State<FavoriteCompanyWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        appBar: AppBar(
+          backgroundColor: valueOrDefault<Color>(
+            FFAppState().lastOrder.hasId() &&
+                    (FFAppState().lastOrder.status != 'Concluido') &&
+                    (FFAppState().lastOrder.status != 'Agendado') &&
+                    (FFAppState().lastOrder.status != 'Cancelado') &&
+                    (FFAppState().lastOrder.status != 'Recusado')
+                ? Color(0xFF0C9488)
+                : FlutterFlowTheme.of(context).primaryBackground,
+            Color(0xFF0C9488),
+          ),
+          automaticallyImplyLeading: false,
+          title: wrapWithModel(
+            model: _model.customAppbarModel,
+            updateCallback: () => safeSetState(() {}),
+            child: CustomAppbarWidget(
+              title: FFLocalizations.of(context).getText(
+                '9i9fbdw5' /* MEUS FAVORITOS */,
+              ),
+              actionBtn: () async {
+                if (Navigator.of(context).canPop()) {
+                  context.pop();
+                }
+                context.pushNamed(
+                  HomeWidget.routeName,
+                  extra: <String, dynamic>{
+                    kTransitionInfoKey: TransitionInfo(
+                      hasTransition: true,
+                      transitionType: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 300),
+                    ),
+                  },
+                );
+              },
+            ),
+          ),
+          actions: [],
+          centerTitle: false,
+          elevation: 0.0,
+        ),
         body: FutureBuilder<ApiCallResponse>(
           future: (_model.apiRequestCompleter ??= Completer<ApiCallResponse>()
                 ..complete(MainGroup.queryFavoriteCompanyCall.call(
@@ -98,57 +138,13 @@ class _FavoriteCompanyWidgetState extends State<FavoriteCompanyWidget> {
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    wrapWithModel(
-                      model: _model.orderInProgressModel,
-                      updateCallback: () => safeSetState(() {}),
-                      child: OrderInProgressWidget(),
-                    ),
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0,
-                            valueOrDefault<double>(
-                              FFAppState().orderSelected.hasId() &&
-                                      (FFAppState().orderSelected.status !=
-                                          'Concluido') &&
-                                      (FFAppState().orderSelected.status !=
-                                          'Agendado') &&
-                                      (FFAppState().orderSelected.status !=
-                                          'Cancelado') &&
-                                      (FFAppState().orderSelected.status !=
-                                          'Recusado')
-                                  ? 16.0
-                                  : 54.0,
-                              0.0,
-                            ),
-                            0.0,
-                            16.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'n5x6a2vj' /* MEUS FAVORITOS */,
-                          ),
-                          textAlign: TextAlign.center,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Anton',
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                        ),
-                      ),
-                    ),
-                    Padding(
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 24.0, 12.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       child: Builder(
                         builder: (context) {
                           final companyItems = (containerQueryFavoriteCompanyResponse
@@ -182,11 +178,10 @@ class _FavoriteCompanyWidgetState extends State<FavoriteCompanyWidget> {
                           return ListView.separated(
                             padding: EdgeInsets.fromLTRB(
                               0,
+                              24.0,
                               0,
-                              0,
-                              12.0,
+                              24.0,
                             ),
-                            primary: false,
                             shrinkWrap: true,
                             scrollDirection: Axis.vertical,
                             itemCount: companyItems.length,
@@ -597,8 +592,8 @@ class _FavoriteCompanyWidgetState extends State<FavoriteCompanyWidget> {
                         },
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             );
           },

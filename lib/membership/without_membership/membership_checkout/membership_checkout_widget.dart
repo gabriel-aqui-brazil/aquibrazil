@@ -12,6 +12,7 @@ import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/actions/actions.dart' as action_blocks;
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
@@ -169,478 +170,57 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                   ),
                         ),
                       ),
-                      Builder(
-                        builder: (context) {
-                          if (FFAppState().membershipPlanSelected.type ==
-                              'membership_single') {
-                            return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 12.0, 0.0),
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).info,
-                                  borderRadius: BorderRadius.circular(16.0),
-                                  border: Border.all(
+                      Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16.0),
+                          border: Border.all(
+                            color: FlutterFlowTheme.of(context).primary,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (FFAppState()
+                                    .membershipPlanSelected
+                                    .discountPercentage !=
+                                0.0)
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, -1.0),
+                                child: Container(
+                                  width: 140.0,
+                                  height: 33.0,
+                                  decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context).primary,
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '7n2rtq0a' /* COMPRA ÚNICA */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF7C7C7C),
-                                                          fontSize: 11.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                  RichText(
-                                                    textScaler:
-                                                        MediaQuery.of(context)
-                                                            .textScaler,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        TextSpan(
-                                                          text: valueOrDefault<
-                                                              String>(
-                                                            formatNumber(
-                                                              FFAppState()
-                                                                  .membershipPlanSelected
-                                                                  .value,
-                                                              formatType:
-                                                                  FormatType
-                                                                      .custom,
-                                                              currency: '\$',
-                                                              format:
-                                                                  '##,##0.00',
-                                                              locale: 'en_us',
-                                                            ),
-                                                            '\$100.00',
-                                                          ),
-                                                          style: GoogleFonts
-                                                              .roboto(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryText,
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontSize: 18.0,
-                                                          ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'h0498bd0' /*  por 30 dias */,
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: Color(
-                                                                0xFF868686),
-                                                            fontSize: 12.0,
-                                                          ),
-                                                        )
-                                                      ],
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
-                                                    ),
-                                                  ),
-                                                ].divide(SizedBox(height: 2.0)),
-                                              ),
-                                            ].divide(SizedBox(height: 4.0)),
-                                          ),
-                                        ],
-                                      ),
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(8.0),
+                                      topLeft: Radius.circular(14.0),
+                                      topRight: Radius.circular(0.0),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                            );
-                          } else if (FFAppState().membershipPlanSelected.type ==
-                              'membership_monthly') {
-                            return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 12.0, 0.0),
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).info,
-                                  borderRadius: BorderRadius.circular(16.0),
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.of(context).primary,
                                   ),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '9zdruxbb' /* MENSAL */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF7C7C7C),
-                                                          fontSize: 11.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                  RichText(
-                                                    textScaler:
-                                                        MediaQuery.of(context)
-                                                            .textScaler,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        TextSpan(
-                                                          text: formatNumber(
-                                                            FFAppState()
-                                                                .membershipPlanSelected
-                                                                .value,
-                                                            formatType:
-                                                                FormatType
-                                                                    .custom,
-                                                            currency: '\$',
-                                                            format: '##,##0.00',
-                                                            locale: 'en_us',
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryText,
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontSize: 18.0,
-                                                          ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            '7suw24ed' /*  por mês */,
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: Color(
-                                                                0xFF868686),
-                                                            fontSize: 12.0,
-                                                          ),
-                                                        )
-                                                      ],
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 4.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '2dexrodc' /* Cancele quando quiser */,
-                                                      ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryText,
-                                                                fontSize: 11.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
-                                                    ),
-                                                  ),
-                                                ].divide(SizedBox(height: 2.0)),
-                                              ),
-                                            ].divide(SizedBox(height: 4.0)),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ].divide(SizedBox(height: 8.0)),
-                                ),
-                              ),
-                            );
-                          } else {
-                            return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 12.0, 0.0),
-                              child: Container(
-                                width: double.infinity,
-                                height: 108.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).info,
-                                  borderRadius: BorderRadius.circular(16.0),
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 140.0,
-                                      height: 33.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(8.0),
-                                          topLeft: Radius.circular(14.0),
-                                          topRight: Radius.circular(0.0),
-                                        ),
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          RichText(
-                                            textScaler: MediaQuery.of(context)
-                                                .textScaler,
-                                            text: TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: formatNumber(
-                                                                FFAppState()
-                                                                    .membershipPlanSelected
-                                                                    .discountPercentage,
-                                                                formatType:
-                                                                    FormatType
-                                                                        .percent,
-                                                              ) !=
-                                                              null &&
-                                                          formatNumber(
-                                                                FFAppState()
-                                                                    .membershipPlanSelected
-                                                                    .discountPercentage,
-                                                                formatType:
-                                                                    FormatType
-                                                                        .percent,
-                                                              ) !=
-                                                              ''
-                                                      ? formatNumber(
-                                                          FFAppState()
-                                                              .membershipPlanSelected
-                                                              .discountPercentage,
-                                                          formatType: FormatType
-                                                              .percent,
-                                                        )
-                                                      : '10%',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      RichText(
+                                        textScaler:
+                                            MediaQuery.of(context).textScaler,
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: valueOrDefault<String>(
+                                                formatNumber(
+                                                  FFAppState()
+                                                      .membershipPlanSelected
+                                                      .discountPercentage,
+                                                  formatType:
+                                                      FormatType.percent,
                                                 ),
-                                                TextSpan(
-                                                  text: FFLocalizations.of(
-                                                          context)
-                                                      .getText(
-                                                    'ffie2f6y' /*  DE DESCONTO */,
-                                                  ),
-                                                  style: TextStyle(),
-                                                )
-                                              ],
+                                                '0',
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -657,50 +237,6 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryBackground,
-                                                    fontSize: 12.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 0.0, 0.0, 0.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'x09i9ph8' /* ANUAL */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.inter(
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                    ),
-                                                    color: Color(0xFF7C7C7C),
                                                     fontSize: 11.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -711,170 +247,203 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                                             .fontStyle,
                                                   ),
                                             ),
-                                            Flexible(
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'phsz5ky8' /* $119.90  */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
+                                            TextSpan(
+                                              text: FFLocalizations.of(context)
+                                                  .getText(
+                                                'l4ahmsaz' /*  DE DESCONTO */,
+                                              ),
+                                              style: TextStyle(),
+                                            )
+                                          ],
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.inter(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                fontSize: 11.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
                                                         .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          fontSize: 18.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w800,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough,
-                                                        ),
-                                                  ),
-                                                  RichText(
-                                                    textScaler:
-                                                        MediaQuery.of(context)
-                                                            .textScaler,
-                                                    text: TextSpan(
-                                                      children: [
-                                                        TextSpan(
-                                                          text: formatNumber(
-                                                            FFAppState()
-                                                                .membershipPlanSelected
-                                                                .value,
-                                                            formatType:
-                                                                FormatType
-                                                                    .custom,
-                                                            currency: '\$',
-                                                            format: '##,##0.00',
-                                                            locale: 'en_us',
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryText,
-                                                            fontWeight:
-                                                                FontWeight.w800,
-                                                            fontSize: 18.0,
-                                                          ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'i0jqfr8m' /*  por ano ( */,
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: Color(
-                                                                0xFF868686),
-                                                            fontSize: 12.0,
-                                                          ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: formatNumber(
-                                                            FFAppState()
-                                                                    .membershipPlanSelected
-                                                                    .value /
-                                                                12,
-                                                            formatType:
-                                                                FormatType
-                                                                    .decimal,
-                                                            decimalType:
-                                                                DecimalType
-                                                                    .periodDecimal,
-                                                            currency: '\$',
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: Color(
-                                                                0xFF868686),
-                                                            fontSize: 12.0,
-                                                          ),
-                                                        ),
-                                                        TextSpan(
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            '2bne2r89' /*  por mês) */,
-                                                          ),
-                                                          style:
-                                                              GoogleFonts.inter(
-                                                            color: Color(
-                                                                0xFF868686),
-                                                            fontSize: 12.0,
-                                                          ),
-                                                        )
-                                                      ],
-                                                      style:
+                                                        .fontStyle,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            Padding(
+                              padding: EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    functions
+                                        .toUpperCase(valueOrDefault<String>(
+                                      FFAppState().membershipPlanSelected.name,
+                                      '-',
+                                    )),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: Color(0xFF7C7C7C),
+                                          fontSize: 11.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w600,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      if (FFAppState()
+                                              .membershipPlanSelected
+                                              .discountPercentage !=
+                                          0.0)
+                                        Text(
+                                          formatNumber(
+                                            FFAppState()
+                                                .membershipPlanSelected
+                                                .originalPrice,
+                                            formatType: FormatType.custom,
+                                            currency: '\$',
+                                            format: '##,##0.00',
+                                            locale: 'en_US',
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.roboto(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                fontSize: 14.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                                decoration:
+                                                    TextDecoration.lineThrough,
+                                              ),
+                                        ),
+                                      Builder(
+                                        builder: (context) {
+                                          if (valueOrDefault<String>(
+                                                FFAppState()
+                                                    .membershipPlanSelected
+                                                    .type,
+                                                '-',
+                                              ) ==
+                                              'membership_annual') {
+                                            return RichText(
+                                              textScaler: MediaQuery.of(context)
+                                                  .textScaler,
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: formatNumber(
+                                                      FFAppState()
+                                                          .membershipPlanSelected
+                                                          .value,
+                                                      formatType:
+                                                          FormatType.custom,
+                                                      currency: '\$',
+                                                      format: '##,##0.00',
+                                                      locale: 'en_US',
+                                                    ),
+                                                    style: GoogleFonts.roboto(
+                                                      color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font:
-                                                                    GoogleFonts
-                                                                        .rubik(
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
+                                                              .primaryText,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 18.0,
                                                     ),
                                                   ),
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      'wmx134qx' /*  por ano ( */,
+                                                    ),
+                                                    style: GoogleFonts.inter(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        valueOrDefault<String>(
+                                                      formatNumber(
+                                                        FFAppState()
+                                                                .membershipPlanSelected
+                                                                .value /
+                                                            12,
+                                                        formatType:
+                                                            FormatType.custom,
+                                                        currency: '\$',
+                                                        format: '##,##0.00',
+                                                        locale: 'en_US',
+                                                      ),
+                                                      '\$0.00',
+                                                    ),
+                                                    style: GoogleFonts.roboto(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      'tle5xqib' /*  por mês) */,
+                                                    ),
+                                                    style: GoogleFonts.inter(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  )
                                                 ],
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 4.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '8gv1ophf' /* Cancele quando quiser */,
-                                                ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      font: GoogleFonts.poppins(
+                                                      font: GoogleFonts.rubik(
                                                         fontWeight:
-                                                            FontWeight.normal,
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -884,11 +453,13 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primaryText,
-                                                      fontSize: 11.0,
+                                                              .primary,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FontWeight.normal,
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
                                                       fontStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -896,62 +467,300 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                                               .fontStyle,
                                                     ),
                                               ),
-                                            ),
-                                          ].divide(SizedBox(height: 2.0)),
+                                            );
+                                          } else if (valueOrDefault<String>(
+                                                FFAppState()
+                                                    .membershipPlanSelected
+                                                    .type,
+                                                '-',
+                                              ) ==
+                                              'membership_monthly') {
+                                            return RichText(
+                                              textScaler: MediaQuery.of(context)
+                                                  .textScaler,
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: formatNumber(
+                                                      FFAppState()
+                                                          .membershipPlanSelected
+                                                          .value,
+                                                      formatType:
+                                                          FormatType.custom,
+                                                      currency: '\$',
+                                                      format: '##,##0.00',
+                                                      locale: 'en_US',
+                                                    ),
+                                                    style: GoogleFonts.roboto(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 18.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      '3woboo8u' /*  por mês */,
+                                                    ),
+                                                    style: GoogleFonts.inter(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  )
+                                                ],
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.rubik(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                              ),
+                                            );
+                                          } else {
+                                            return RichText(
+                                              textScaler: MediaQuery.of(context)
+                                                  .textScaler,
+                                              text: TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: formatNumber(
+                                                      FFAppState()
+                                                          .membershipPlanSelected
+                                                          .value,
+                                                      formatType:
+                                                          FormatType.custom,
+                                                      currency: '\$',
+                                                      format: '##,##0.00',
+                                                      locale: 'en_US',
+                                                    ),
+                                                    style: GoogleFonts.roboto(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 18.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      'en5pw3w4' /*  por  */,
+                                                    ),
+                                                    style: GoogleFonts.inter(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: FFAppState()
+                                                        .membershipPlanSelected
+                                                        .days
+                                                        .toString(),
+                                                    style: TextStyle(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      '0u5l9xna' /*  dias */,
+                                                    ),
+                                                    style: TextStyle(
+                                                      color: Color(0xFF868686),
+                                                      fontSize: 12.0,
+                                                    ),
+                                                  )
+                                                ],
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.rubik(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                      ),
+                                    ].divide(SizedBox(width: 8.0)),
+                                  ),
+                                  if ((valueOrDefault<String>(
+                                            widget!.couponCode,
+                                            '-',
+                                          ) ==
+                                          'FREE3') ||
+                                      (widget!.couponCode == 'free3'))
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 4.0, 0.0, 4.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'i9slmkhq' /* Aproveite os 3 primeiros meses... */,
                                         ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.roboto(
+                                                fontWeight: FontWeight.w600,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              fontSize: 14.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w600,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
-                                ),
+                                  if (valueOrDefault<String>(
+                                        FFAppState()
+                                            .membershipPlanSelected
+                                            .typePlan,
+                                        '-',
+                                      ) ==
+                                      'subscription')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 4.0, 0.0, 0.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'uuct5zj4' /* Cancele quando quiser */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.inter(
+                                                fontWeight: FontWeight.normal,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontSize: 11.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                      ),
+                                    ),
+                                ].divide(SizedBox(height: 2.0)),
                               ),
-                            );
-                          }
-                        },
+                            ),
+                          ],
+                        ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            12.0, 0.0, 12.0, 0.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pop();
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'a5iqhcjg' /* ALTERAR PLANO */,
-                          ),
-                          options: FFButtonOptions(
-                            width: double.infinity,
-                            height: 45.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  font: GoogleFonts.inter(
+                      FFButtonWidget(
+                        onPressed: () async {
+                          context.pop();
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'a5iqhcjg' /* ALTERAR PLANO */,
+                        ),
+                        options: FFButtonOptions(
+                          width: double.infinity,
+                          height: 45.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    font: GoogleFonts.inter(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    fontSize: 14.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontStyle,
-                                ),
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                            borderRadius: BorderRadius.circular(100.0),
+                          elevation: 0.0,
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
                           ),
-                          showLoadingIndicator: false,
+                          borderRadius: BorderRadius.circular(100.0),
                         ),
+                        showLoadingIndicator: false,
                       ),
                       wrapWithModel(
                         model: _model.paymentMethodSelectModel,
@@ -1037,7 +846,7 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                               formatNumber(
                                                 FFAppState()
                                                     .membershipPlanSelected
-                                                    .value,
+                                                    .originalPrice,
                                                 formatType: FormatType.custom,
                                                 currency: '\$',
                                                 format: '##,##0.00',
@@ -1084,8 +893,10 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                     ),
                                   ],
                                 ),
-                                if (FFAppState().membershipPlanSelected.type ==
-                                    'membership_annual')
+                                if (FFAppState()
+                                        .membershipPlanSelected
+                                        .discountPercentage !=
+                                    0.0)
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -1093,7 +904,7 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '0gjcl8pg' /* DESCONTO PLANO ANUAL */,
+                                          '0gjcl8pg' /* DESCONTO */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -1121,103 +932,19 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                         text: TextSpan(
                                           children: [
                                             TextSpan(
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                '07egpyd3' /* $12.01 */,
+                                              text: formatNumber(
+                                                FFAppState()
+                                                        .membershipPlanSelected
+                                                        .originalPrice *
+                                                    FFAppState()
+                                                        .membershipPlanSelected
+                                                        .discountPercentage,
+                                                formatType: FormatType.custom,
+                                                currency: '\$',
+                                                format: '##,##0.00',
+                                                locale: 'en_us',
                                               ),
                                               style: TextStyle(),
-                                            )
-                                          ],
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.roboto(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                if ((widget!.couponCode != null &&
-                                        widget!.couponCode != '') &&
-                                    (FFAppState().membershipPlanSelected.type ==
-                                        'membership_annual'))
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          'o0ocrjx9' /* DESCONTO INFLUENCIADOR */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight: FontWeight.w500,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Color(0xFF808080),
-                                              fontSize: 12.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                      RichText(
-                                        textScaler:
-                                            MediaQuery.of(context).textScaler,
-                                        text: TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: valueOrDefault<String>(
-                                                formatNumber(
-                                                  MembershipCheckoutStruct
-                                                          .maybeFromMap(
-                                                              membershipCheckoutMembershipCartReviewResponse
-                                                                  .jsonBody)
-                                                      ?.discount,
-                                                  formatType: FormatType.custom,
-                                                  currency: '\$',
-                                                  format: '#,##0.00',
-                                                  locale: 'en_us',
-                                                ),
-                                                '\$0.00',
-                                              ),
-                                              style: GoogleFonts.roboto(
-                                                color: Color(0xFF319B6F),
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 14.0,
-                                              ),
                                             )
                                           ],
                                           style: FlutterFlowTheme.of(context)
@@ -1461,6 +1188,41 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                     ),
                                   ],
                                 ),
+                                if ((valueOrDefault<String>(
+                                          widget!.couponCode,
+                                          '-',
+                                        ) ==
+                                        'FREE3') ||
+                                    (widget!.couponCode == 'free3'))
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 4.0, 0.0, 4.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'tlqx8b2l' /* Aproveite os 3 primeiros meses... */,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.roboto(
+                                              fontWeight: FontWeight.normal,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF808080),
+                                            fontSize: 12.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.normal,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                    ),
+                                  ),
                                 Builder(
                                   builder: (context) {
                                     if (FFAppState()
@@ -1859,8 +1621,6 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                             defaultCard:
                                                 currentUserData?.defaultCard,
                                             document: currentUserData?.document,
-                                            lastOrderId:
-                                                currentUserData?.lastOrderId,
                                           ),
                                         );
                                       } else {
@@ -1879,10 +1639,16 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                       }
 
                                       await Future.delayed(
-                                          const Duration(milliseconds: 500));
+                                        Duration(
+                                          milliseconds: 500,
+                                        ),
+                                      );
                                     } else {
                                       await Future.delayed(
-                                          const Duration(milliseconds: 500));
+                                        Duration(
+                                          milliseconds: 500,
+                                        ),
+                                      );
                                     }
 
                                     showModalBottomSheet(

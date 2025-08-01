@@ -50,7 +50,7 @@ Future<bool?> insertUserDocument(
         getJsonField(
           (apiInsertDocumentResponse?.jsonBody ?? ''),
           r'''$.message''',
-        ).toString().toString(),
+        ).toString(),
         style: TextStyle(
           color: FlutterFlowTheme.of(context).primaryText,
         ),
@@ -124,7 +124,11 @@ Future<bool> verifyHomeCache(BuildContext context) async {
       currentUserData?.id,
       '-',
     ));
-    await Future.delayed(const Duration(milliseconds: 1000));
+    await Future.delayed(
+      Duration(
+        milliseconds: 1000,
+      ),
+    );
     FFAppState().isCacheOverride = false;
     return true;
   } else {

@@ -1,6 +1,5 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
@@ -9,6 +8,7 @@ import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/actions/actions.dart' as action_blocks;
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'cart_review_service_widget.dart' show CartReviewServiceWidget;

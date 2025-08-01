@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'cart_company_closed_widget.dart' show CartCompanyClosedWidget;
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';

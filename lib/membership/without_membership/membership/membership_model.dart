@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/membership/benefits/benefits_widget.dart';
-import '/membership/without_membership/membership_plans/membership_plans_widget.dart';
 import 'dart:convert';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
@@ -40,28 +39,27 @@ class MembershipModel extends FlutterFlowModel<MembershipWidget> {
 
   bool mandatoryCPF = false;
 
+  String? coupon;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for couponField widget.
   FocusNode? couponFieldFocusNode;
   TextEditingController? couponFieldTextController;
   String? Function(BuildContext, String?)? couponFieldTextControllerValidator;
-  Completer<ApiCallResponse>? apiRequestCompleter;
   // Stores action output result for [Backend Call - API (Get Coupon)] action in IconButton widget.
   ApiCallResponse? apiGetCoupon;
+  Completer<ApiCallResponse>? apiRequestCompleter;
   // State field(s) for document widget.
   FocusNode? documentFocusNode;
   TextEditingController? documentTextController;
   late MaskTextInputFormatter documentMask;
   String? Function(BuildContext, String?)? documentTextControllerValidator;
-  // Model for membershipPlans component.
-  late MembershipPlansModel membershipPlansModel;
   // Model for benefits component.
   late BenefitsModel benefitsModel;
 
   @override
   void initState(BuildContext context) {
-    membershipPlansModel = createModel(context, () => MembershipPlansModel());
     benefitsModel = createModel(context, () => BenefitsModel());
   }
 
@@ -73,7 +71,6 @@ class MembershipModel extends FlutterFlowModel<MembershipWidget> {
     documentFocusNode?.dispose();
     documentTextController?.dispose();
 
-    membershipPlansModel.dispose();
     benefitsModel.dispose();
   }
 

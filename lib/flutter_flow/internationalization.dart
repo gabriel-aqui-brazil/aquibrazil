@@ -335,197 +335,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // orderDetails
-  {
-    'p5u46jqv': {
-      'pt': 'ACOMPANHAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DE PEDIDO',
-    },
-    'myx5t027': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE DE RECLAMAÇÃO EM ANDAMENTO',
-      'en': 'REQUEST FOR ANALYSIS OF ONGOING COMPLAINT',
-      'es': 'SOLICITUD DE ANÁLISIS DE QUEJA EN CURSO',
-    },
-    '0awadmzs': {
-      'pt':
-          'ENTRAREMOS EM CONTAO VIA E-MAIL OU PELO SEU TELEFONE CADASTRADO EM NOSSA PLATAFORMA COM A SOLUÇÃO',
-      'en':
-          'WE WILL CONTACT YOU VIA EMAIL OR BY YOUR PHONE NUMBER REGISTERED ON OUR PLATFORM WITH THE SOLUTION',
-      'es':
-          'NOS PONDREMOS EN CONTACTO CON USTED VÍA CORREO ELECTRÓNICO O A SU NÚMERO DE TELÉFONO REGISTRADO EN NUESTRA PLATAFORMA CON LA SOLUCIÓN',
-    },
-    'i6uvruo3': {
-      'pt': 'REALIZADO AS: ',
-      'en': 'DONE AS:',
-      'es': 'HECHO COMO:',
-    },
-    'lszgo89n': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    '3bprmx8f': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    '1huoy2rd': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE RECUSADA',
-      'en': 'REQUEST FOR ANALYSIS REFUSED',
-      'es': 'SOLICITUD DE ANÁLISIS RECHAZADA',
-    },
-    '6l9h836f': {
-      'pt': 'FINALIZADO AS: ',
-      'en': 'FINALIZED AS:',
-      'es': 'FINALIZADO COMO:',
-    },
-    'krlgoxyc': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    'vvt4pzdn': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    'qe1vnkde': {
-      'pt': 'SOLICITAÇÃO DE ANÁLISE CONCLUÍDA',
-      'en': 'REQUEST FOR ANALYSIS COMPLETED',
-      'es': 'SOLICITUD DE ANÁLISIS COMPLETADA',
-    },
-    'h7lhh9ix': {
-      'pt': 'FINALIZADO AS: ',
-      'en': 'FINALIZED AS:',
-      'es': 'FINALIZADO COMO:',
-    },
-    'ryvxqbm1': {
-      'pt': 'OBSERVAÇÃO: ',
-      'en': 'OBSERVATION:',
-      'es': 'OBSERVACIÓN:',
-    },
-    '5y2rv8oe': {
-      'pt': 'DETALHES DA SOLICITAÇÃO',
-      'en': 'APPLICATION DETAILS',
-      'es': 'DETALLES DE LA SOLICITUD',
-    },
-    'm8icup59': {
-      'pt': 'SEU PEDIDO FOI ENTREGUE',
-      'en': 'YOUR ORDER HAS BEEN DELIVERED',
-      'es': 'SU PEDIDO HA SIDO ENTREGADO',
-    },
-    '54tevu47': {
-      'pt': 'PEDIDO ENTREGUE AS ',
-      'en': 'ORDER DELIVERED AS',
-      'es': 'PEDIDO ENTREGADO COMO',
-    },
-    'blsn0q26': {
-      'pt': '14:48',
-      'en': '14:48',
-      'es': '14:48',
-    },
-    '5pvmanfs': {
-      'pt': 'INFORMAÇÕES',
-      'en': 'INFORMATION',
-      'es': 'INFORMACIÓN',
-    },
-    'sf3duwcp': {
-      'pt': 'CÓDIGO DE ENTREGA',
-      'en': 'DELIVERY CODE',
-      'es': 'CÓDIGO DE ENTREGA',
-    },
-    '5bmokfvc': {
-      'pt': 'AJUDA',
-      'en': 'HELP',
-      'es': 'AYUDA',
-    },
-    'wnnyg6es': {
-      'pt': 'RASTREAR PEDIDO',
-      'en': 'TRACK ORDER',
-      'es': 'SEGUIMIENTO DEL PEDIDO',
-    },
-    'n6l3hi1g': {
-      'pt': 'CANCELAR PEDIDO',
-      'en': 'CANCEL ORDER',
-      'es': 'CANCELAR PEDIDO',
-    },
-    'bp7kxwwy': {
-      'pt': 'CONFIRMAR ENTREGA',
-      'en': 'CONFIRM DELIVERY',
-      'es': 'CONFIRMAR ENTREGA',
-    },
-    '3s0w58fd': {
-      'pt': 'AVALIAR PEDIDO',
-      'en': 'EVALUATE ORDER',
-      'es': 'EVALUAR ORDEN',
-    },
-    'e8b7oqan': {
-      'pt': 'ENDEREÇO DE ENTREGA',
-      'en': 'DELIVERY ADDRESS',
-      'es': 'DIRECCIÓN DE ENTREGA',
-    },
-    '6lbfzvew': {
-      'pt': 'OBSERVAÇÃO',
-      'en': 'OBSERVATION',
-      'es': 'OBSERVACIÓN',
-    },
-    'js79e8tl': {
-      'pt': 'DETALHES DO PEDIDO',
-      'en': 'ORDER DETAILS',
-      'es': 'DETALLES DEL PEDIDO',
-    },
-    'nuwjtpiu': {
-      'pt': 'RESUMO DO PAGAMENTO',
-      'en': 'PAYMENT SUMMARY',
-      'es': 'RESUMEN DE PAGO',
-    },
-    'lpfm2er0': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '8rvzu7us': {
-      'pt': 'GORJETA',
-      'en': 'TIP',
-      'es': 'CONSEJO',
-    },
-    'th8gw6m6': {
-      'pt': 'TAXA DE ENTREGA',
-      'en': 'DELIVERY FEE',
-      'es': 'TARIFA DE ENVÍO',
-    },
-    'i3mz7r0z': {
-      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
-      'en': 'TAX AND SERVICE FEE',
-      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
-    },
-    'x33o0exx': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    'wlbqvz4x': {
-      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
-      'en': 'WITH AQUIPASS YOU SAVED',
-      'es': 'CON AQUIPASS AHORRAS',
-    },
-    'e1em4e6a': {
-      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
-      'en': 'YOU HAVE EARNED 3% CASHBACK',
-      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'nkkwygwh': {
-      'pt': 'FORMA DE PAGAMENTO',
-      'en': 'PAYMENT METHOD',
-      'es': 'FORMA DE PAGO',
-    },
-    'ottan1jr': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
   // confirmPhone
   {
     'ilqydroa': {
@@ -877,138 +686,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // ordersHelp
-  {
-    'c7k1izy6': {
-      'pt': 'PEDIDO FINALIZADO',
-      'en': 'ORDER COMPLETED',
-      'es': 'PEDIDO COMPLETADO',
-    },
-    'i761s2om': {
-      'pt': 'SENTIMOS MUITO QUE HOUVE UM PROBLEMA COM O SEU PEDIDO',
-      'en': 'WE\'RE SO SORRY THERE WAS A PROBLEM WITH YOUR ORDER',
-      'es': 'LAMENTAMOS MUCHO QUE HAYA HABIDO UN PROBLEMA CON SU PEDIDO.',
-    },
-    'mqnc4cqc': {
-      'pt':
-          'QUEREMOS ENTENDER O QUAL FOI O PROBLEMA PARA NEGOCIAMOS O REEMBOLSO OU OUTRA SOLUÇÃO COM A LOJA',
-      'en':
-          'WE WANT TO UNDERSTAND WHAT THE PROBLEM WAS SO WE CAN NEGOTIATE A REFUND OR OTHER SOLUTION WITH THE STORE',
-      'es':
-          'QUEREMOS ENTENDER CUÁL FUE EL PROBLEMA PARA PODER NEGOCIAR UN REEMBOLSO U OTRA SOLUCIÓN CON LA TIENDA',
-    },
-    'mkwt404c': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    '3rgj48ef': {
-      'pt': 'O QUE ACONTECEU COM O SEU PEDIDO?',
-      'en': 'WHAT HAPPENED TO YOUR ORDER?',
-      'es': '¿QUÉ PASÓ CON TU PEDIDO?',
-    },
-    'ne2tpn1o': {
-      'pt': 'SELECIONE O MOTIVO QUE MELHOR REPRESENTA O SEU PROBLEMA.',
-      'en': 'SELECT THE REASON THAT BEST REPRESENTS YOUR PROBLEM.',
-      'es': 'SELECCIONA EL MOTIVO QUE MEJOR REPRESENTA TU PROBLEMA.',
-    },
-    '2980it8j': {
-      'pt': 'PRODUTO CHEGOU FRIO',
-      'en': 'PRODUCT ARRIVED COLD',
-      'es': 'EL PRODUCTO LLEGÓ FRÍO',
-    },
-    'z0dyrnhm': {
-      'pt': 'PRODUTO ERRADO',
-      'en': 'WRONG PRODUCT',
-      'es': 'PRODUCTO INCORRECTO',
-    },
-    's14vh1ts': {
-      'pt': 'PRODUTO INCOMPLETO',
-      'en': 'INCOMPLETE PRODUCT',
-      'es': 'PRODUCTO INCOMPLETO',
-    },
-    '0ppxiq5c': {
-      'pt': 'PRODUTO DANIFICADO',
-      'en': 'DAMAGED PRODUCT',
-      'es': 'PRODUCTO DAÑADO',
-    },
-    'w0augal9': {
-      'pt': 'ATRASO NA ENTREGA',
-      'en': 'DELAY IN DELIVERY',
-      'es': 'RETRASO EN ENTREGA',
-    },
-    '8ia1f08g': {
-      'pt': 'OUTRO',
-      'en': 'OTHER',
-      'es': 'OTRO',
-    },
-    'x21w7nwo': {
-      'pt':
-          'ANTES DE FINALIZAR, VOCÊ PODERÁ REVISAR SUA SOLICITAÇÃO E FAZER MUDANÇAS, SE NECESSÁRIO.',
-      'en':
-          'BEFORE FINALIZING, YOU MAY REVIEW YOUR APPLICATION AND MAKE CHANGES IF NECESSARY.',
-      'es':
-          'ANTES DE FINALIZAR, PUEDE REVISAR SU SOLICITUD Y HACER CAMBIOS SI ES NECESARIO.',
-    },
-    'nd673286': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'f4y05h29': {
-      'pt': 'CONTE MAIS DETALHES SOBRE O PROBLEMA',
-      'en': 'TELL US MORE DETAILS ABOUT THE PROBLEM',
-      'es': 'CUÉNTANOS MÁS DETALLES SOBRE EL PROBLEMA',
-    },
-    '9c0r94ob': {
-      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OBRIGATÓRIO)',
-      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (MANDATORY)',
-      'es': 'DÍGANOS QUÉ LE PARECIÓ SU PEDIDO (OBLIGATORIO)',
-    },
-    '2b5zokwd': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'm35gae5a': {
-      'pt': 'ADICIONE EVIDÊNCIAS DO PROBLEMA',
-      'en': 'ADD EVIDENCE OF THE PROBLEM',
-      'es': 'AÑADIR EVIDENCIA DEL PROBLEMA',
-    },
-    'y6ie6k8n': {
-      'pt':
-          'O ENVIO DE UMA FOTO DO ITEM, DA EMBALAGEM OU DA NOTA FISCAL PODEM AJUDAR A LOJA A ENTENDER O QUE ACONTECEU COM SEU PEDIDO.',
-      'en':
-          'SENDING A PHOTO OF THE ITEM, PACKAGING OR INVOICE CAN HELP THE STORE UNDERSTAND WHAT HAPPENED TO YOUR ORDER.',
-      'es':
-          'ENVIAR UNA FOTO DEL ARTÍCULO, EMBALAJE O FACTURA PUEDE AYUDAR A LA TIENDA A ENTENDER QUÉ SUCEDIÓ CON SU PEDIDO.',
-    },
-    'owkqt01u': {
-      'pt': 'REVISAR SOLICITAÇÃO',
-      'en': 'REVIEW REQUEST',
-      'es': 'SOLICITUD DE REVISIÓN',
-    },
-    '9yegjyd3': {
-      'pt': 'REVISE SUA SOLICITAÇÃO',
-      'en': 'REVIEW YOUR REQUEST',
-      'es': 'REVISA TU SOLICITUD',
-    },
-    '4r87pzxs': {
-      'pt': 'EVIDÊNCIAS DO PROBLEMA',
-      'en': 'EVIDENCE OF THE PROBLEM',
-      'es': 'EVIDENCIA DEL PROBLEMA',
-    },
-    '5i8sxdcu': {
-      'pt': 'ENVIAR',
-      'en': 'TO SEND',
-      'es': 'PARA ENVIAR',
-    },
-    'j3elzjdn': {
-      'pt': 'Home',
-      'en': '',
-      'es': '',
-    },
-  },
   // resetPassword-step1
   {
     'glgswwht': {
@@ -1324,205 +1001,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           '¿NO ENCONTRASTE LO QUE BUSCABAS? ¡ENVÍANOS UN CORREO ELECTRÓNICO CON TU PREGUNTA!',
     },
     'vzqfjj3w': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
-  // membershipCheckout
-  {
-    'augbingd': {
-      'pt': 'CONFIRMAR E PAGAR',
-      'en': 'CONFIRM AND PAY',
-      'es': 'CONFIRMAR Y PAGAR',
-    },
-    '4ha81ykg': {
-      'pt': 'PLANO SELECIONADO',
-      'en': 'SELECTED PLAN',
-      'es': 'PLAN SELECCIONADO',
-    },
-    '7n2rtq0a': {
-      'pt': 'COMPRA ÚNICA',
-      'en': 'ONE TIME PURCHASE',
-      'es': 'COMPRA ÚNICA',
-    },
-    'h0498bd0': {
-      'pt': ' por 30 dias',
-      'en': 'for 30 days',
-      'es': 'por 30 días',
-    },
-    '9zdruxbb': {
-      'pt': 'MENSAL',
-      'en': 'MONTHLY',
-      'es': 'MENSUAL',
-    },
-    '7suw24ed': {
-      'pt': ' por mês',
-      'en': 'per month',
-      'es': 'por mes',
-    },
-    '2dexrodc': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'ffie2f6y': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'sq64hnuf': {
-      'pt': '20% DE DESCONTO',
-      'en': '20% DISCOUNT',
-      'es': '20% DE DESCUENTO',
-    },
-    'x09i9ph8': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'phsz5ky8': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    'i0jqfr8m': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    '2bne2r89': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    '8gv1ophf': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'a5iqhcjg': {
-      'pt': 'ALTERAR PLANO',
-      'en': 'CHANGE PLAN',
-      'es': 'PLAN DE CAMBIO',
-    },
-    'b71a25oj': {
-      'pt': 'RESUMO DO PAGAMENTO',
-      'en': 'PAYMENT SUMMARY',
-      'es': 'RESUMEN DE PAGO',
-    },
-    '9ov76fde': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '0gjcl8pg': {
-      'pt': 'DESCONTO PLANO ANUAL',
-      'en': 'ANNUAL PLAN DISCOUNT',
-      'es': 'DESCUENTO EN PLAN ANUAL',
-    },
-    '07egpyd3': {
-      'pt': '\$12.01',
-      'en': '',
-      'es': '',
-    },
-    'o0ocrjx9': {
-      'pt': 'DESCONTO INFLUENCIADOR',
-      'en': 'INFLUENCER DISCOUNT',
-      'es': 'DESCUENTO PARA INFLUENCERS',
-    },
-    'z7oc8fhv': {
-      'pt': 'TAXA DE SERVIÇO',
-      'en': 'SERVICE FEE',
-      'es': 'TARIFA DE SERVICIO',
-    },
-    'govqlxt8': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    'hiuixk8y': {
-      'pt': 'A assinatura do AquiPASS ',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción AquiPASS',
-    },
-    'vfbl5zzr': {
-      'pt': 'não é reembolsável. ',
-      'en': 'is non-refundable.',
-      'es': 'no es reembolsable.',
-    },
-    'rb4i0y5e': {
-      'pt':
-          'Ela será renovada a cada ano no cartão cadastrado, até que você solicite o cancelamento.',
-      'en':
-          'It will be renewed every year on the registered card, until you request cancellation.',
-      'es':
-          'Se renovará cada año en la tarjeta registrada, hasta que solicites la baja.',
-    },
-    'n6gkll4y': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    '2klnkcuc': {
-      'pt': 'A assinatura do AquiPASS ',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción a AquiPASS',
-    },
-    'x5tjgt6c': {
-      'pt': 'não é reembolsável. ',
-      'en': 'is non-refundable.',
-      'es': 'no es reembolsable.',
-    },
-    'nsdo98h8': {
-      'pt':
-          ' Ela será renovada a cada mês no cartão cadastrado, até que você solicite o cancelamento.',
-      'en':
-          'It will be renewed every month on the registered card, until you request cancellation.',
-      'es':
-          'Se renovará cada mes en la tarjeta registrada, hasta que solicites la baja.',
-    },
-    'v0501ov5': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    'ezcpifb9': {
-      'pt':
-          'Este plano possui pagamento único, ou seja, você será cobrado apenas uma vez no momento da contratação, sem cobranças recorrentes.',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción AquiPASS',
-    },
-    'jolmx57o': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    'duoyblun': {
-      'pt': 'Para saber mais, confira os ',
-      'en': 'To learn more, check out the',
-      'es': 'Para obtener más información, consulte la',
-    },
-    'p87tfg9t': {
-      'pt': 'Termos de Serviço.',
-      'en': 'Terms of Service.',
-      'es': 'Condiciones de servicio.',
-    },
-    'rncgr4bb': {
-      'pt': 'ASSINAR O AQUIPASS',
-      'en': 'SIGN UP FOR AQUIPASS',
-      'es': 'REGÍSTRATE EN AQUIPASS',
-    },
-    'btamck6d': {
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
@@ -1886,227 +1364,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
   },
-  // profile
-  {
-    'kmni54bk': {
-      'pt': 'SUA CONTA',
-      'en': 'YOUR ACCOUNT',
-      'es': 'SU CUENTA',
-    },
-    'hpotk948': {
-      'pt': 'DADOS DA CONTA',
-      'en': 'ACCOUNT DATA',
-      'es': 'DATOS DE LA CUENTA',
-    },
-    '1o8xney2': {
-      'pt': 'MENSAGENS',
-      'en': 'MESSAGES',
-      'es': 'MENSAJES',
-    },
-    'h8vuehrk': {
-      'pt': 'NOTIFICAÇÕES',
-      'en': 'NOTIFICATIONS',
-      'es': 'NOTIFICACIONES',
-    },
-    'me624ak8': {
-      'pt': 'MEUS MÉTODOS DE PAGAMENTO',
-      'en': 'MY PAYMENT METHODS',
-      'es': 'MIS MÉTODOS DE PAGO',
-    },
-    'z6eyp5ic': {
-      'pt': 'CLUBE DE PARCEIROS',
-      'en': 'PARTNERS CLUB',
-      'es': 'CLUB DE SOCIOS',
-    },
-    'p1sveqlx': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    'sxnylobj': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'f7qczhc3': {
-      'pt': 'MEUS ENDEREÇOS',
-      'en': 'MY ADDRESSES',
-      'es': 'MIS DIRECCIONES',
-    },
-    'qkoobr9d': {
-      'pt': 'SUPORTE',
-      'en': 'SUPPORT',
-      'es': 'APOYO',
-    },
-    'v49jxr92': {
-      'pt': 'AJUDA',
-      'en': 'HELP',
-      'es': 'AYUDA',
-    },
-    'xi2tgy7y': {
-      'pt': 'AVALIE O APLICATIVO',
-      'en': 'RATE THE APP',
-      'es': 'CALIFICA LA APLICACIÓN',
-    },
-    'svq7l1b2': {
-      'pt': 'PREFERÊNCIAS',
-      'en': 'PREFERENCES',
-      'es': 'PREFERENCIAS',
-    },
-    'hxag7o76': {
-      'pt': 'IDIOMA',
-      'en': 'LANGUAGE',
-      'es': 'IDIOMA',
-    },
-    '4xgvm94t': {
-      'pt': 'SEGURANÇA',
-      'en': 'SECURITY',
-      'es': 'SEGURIDAD',
-    },
-    'non0ybld': {
-      'pt': 'CONFIGURAÇÕES',
-      'en': 'SETTINGS',
-      'es': 'AJUSTES',
-    },
-    'coyksfo4': {
-      'pt': 'APAGAR CONTA',
-      'en': 'DELETE ACCOUNT',
-      'es': 'ELIMINAR CUENTA',
-    },
-    '8htaqjsg': {
-      'pt': 'NOSSAS REDES',
-      'en': 'OUR NETWORKS',
-      'es': 'NUESTRAS REDES',
-    },
-    'p5pnpy68': {
-      'pt': 'INSTAGRAM',
-      'en': 'INSTAGRAM',
-      'es': 'INSTAGRAM',
-    },
-    'qga2yg9z': {
-      'pt': 'DESCONECTAR',
-      'en': 'DISCONNECT',
-      'es': 'DESCONECTAR',
-    },
-  },
-  // membershipChangePlan
-  {
-    '5y13f796': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    'gkmx6nsp': {
-      'pt': 'ATÉ ',
-      'en': 'UNTIL',
-      'es': 'HASTA',
-    },
-    'iihj8b56': {
-      'pt': '4X MAIS BENEFÍCIOS ',
-      'en': '4X MORE BENEFITS',
-      'es': '4 VECES MÁS BENEFICIOS',
-    },
-    'hjhd898d': {
-      'pt': 'COM O AQUIPASS',
-      'en': 'WITH AQUIPASS',
-      'es': 'CON AQUIPASS',
-    },
-    's3qpqaty': {
-      'pt': 'PLANO ATUAL',
-      'en': 'CURRENT PLAN',
-      'es': 'PLAN ACTUAL',
-    },
-    'md27seg7': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    '02paan57': {
-      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
-      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
-      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
-    },
-    '6mk9zapq': {
-      'pt': 'Digite aqui seu cupom de desconto',
-      'en': 'Enter your discount coupon here',
-      'es': 'Introduce aquí tu cupón de descuento',
-    },
-    'xf680i3k': {
-      'pt': 'CONVIDADO(A) POR ',
-      'en': 'INVITED BY',
-      'es': 'INVITADO POR',
-    },
-    'obix7cgr': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    '3ichy6sk': {
-      'pt': 'CUPOM DE DESCONTO APLICADO',
-      'en': 'DISCOUNT COUPON APPLIED',
-      'es': 'CUPÓN DE DESCUENTO APLICADO',
-    },
-    '898oon4u': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    'dckhvpv3': {
-      'pt': 'CUPOM NÃO ENCONTRADO',
-      'en': 'COUPON NOT FOUND',
-      'es': 'CUPÓN NO ENCONTRADO',
-    },
-    '93rk9pym': {
-      'pt': 'ESCOLHA SEU PLANO:',
-      'en': 'CHOOSE YOUR PLAN:',
-      'es': 'ELIGE TU PLAN:',
-    },
-    'y7ruus82': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'dblvv2sq': {
-      'pt': '10% DE DESCONTO',
-      'en': '10% DISCOUNT',
-      'es': '10% DE DESCUENTO',
-    },
-    '5630x3mi': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'g743j0gs': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    's53wp3oc': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    'pd93i3f6': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    'onw4t1t6': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    '9vxovh1d': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'ns2sq6op': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // addressDeliveryNoAuth
   {
     'cwc4ir03': {
@@ -2408,89 +1665,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // home
-  {
-    'a631xi16': {
-      'pt': 'PROMOS DO MÊS DELIVERY',
-      'en': 'DELIVERY MONTH PROMOS',
-      'es': 'PROMOS DE ENTREGA POR MES',
-    },
-    '9qg5u7ed': {
-      'pt': 'NOSSO CLUB DE PARCEIROS',
-      'en': 'OUR PARTNER CLUB',
-      'es': 'NUESTRO CLUB SOCIO',
-    },
-    'iongg50t': {
-      'pt': '+15% DE DESCONTO COM AQUIPASS',
-      'en': '+15% DISCOUNT WITH AQUIPASS',
-      'es': '+15% DESCUENTO CON AQUIPASS',
-    },
-    '92jsf2c9': {
-      'pt': 'EM BREVE',
-      'en': 'SHORTLY',
-      'es': 'DENTRO DE POCO',
-    },
-    'vib538gu': {
-      'pt': 'VEJA AS LOJAS QUE ESTÃO CHEGANDO NO APP',
-      'en': 'SEE THE STORES THAT ARE COMING TO THE APP',
-      'es': 'MIRA LAS TIENDAS QUE LLEGAN A LA APP',
-    },
-    'gq5j4efm': {
-      'pt': 'MEUS PEDIDOS\nRECENTES',
-      'en': 'MY RECENT\nORDERS',
-      'es': 'MIS PEDIDOS\nRECIENTE',
-    },
-    '4ymww51f': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'g61vpjax': {
-      'pt': 'TODAS AS LOJAS',
-      'en': 'ALL STORES',
-      'es': 'TODAS LAS TIENDAS',
-    },
-    'f8z7x8a0': {
-      'pt': 'CATEGORIA',
-      'en': 'CATEGORY',
-      'es': 'CATEGORÍA',
-    },
-    'omm5ygr5': {
-      'pt': 'RETIRADA',
-      'en': 'WITHDRAWAL',
-      'es': 'RETIRO',
-    },
-    'lzqh8h0w': {
-      'pt': 'ENTREGA GRÁTIS',
-      'en': 'FREE DELIVERY',
-      'es': 'ENTREGA GRATUITA',
-    },
-    'cqho8gfr': {
-      'pt': 'DESCONTO DO CLUBE',
-      'en': 'CLUB DISCOUNT',
-      'es': 'DESCUENTO DEL CLUB',
-    },
-    'elczxofs': {
-      'pt': 'PREÇO',
-      'en': 'PRICE',
-      'es': 'PRECIO',
-    },
-    'mln9k1v6': {
-      'pt': 'AVALIAÇÕES',
-      'en': 'REVIEWS',
-      'es': 'RESEÑAS',
-    },
-    'tlhtl7qs': {
-      'pt': 'DISTÂNCIA',
-      'en': 'DISTANCE',
-      'es': 'DISTANCIA',
-    },
-    '6igburi0': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // orderDetailsService
@@ -4200,29 +3374,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // partners
-  {
-    'pk6f9005': {
-      'pt': 'TODOS',
-      'en': 'ALL',
-      'es': 'TODO',
-    },
-    'aaa00w6k': {
-      'pt': 'CATEGORIA VAZIA',
-      'en': 'EMPTY CATEGORY',
-      'es': 'CATEGORÍA VACÍA',
-    },
-    'yxeej7cy': {
-      'pt': 'EM BREVE',
-      'en': 'SHORTLY',
-      'es': 'DENTRO DE POCO',
-    },
-    '4n0t3dpi': {
-      'pt': '',
-      'en': '',
-      'es': '',
-    },
-  },
   // accessInfo
   {
     'b5j4e235': {
@@ -4257,29 +3408,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // favoriteCompany
-  {
-    'n5x6a2vj': {
-      'pt': 'MEUS FAVORITOS',
-      'en': 'MY FAVORITES',
-      'es': 'MIS FAVORITOS',
-    },
-    'le7jbbri': {
-      'pt': 'LISTA DE FAVORITOS VAZIA',
-      'en': 'EMPTY FAVORITE LIST',
-      'es': 'LISTA DE FAVORITOS VACÍA',
-    },
-    'nyzgq20y': {
-      'pt': 'SUAS EMPRESAS FAVORITAS APARECERÃO AQUI',
-      'en': 'YOUR FAVORITE COMPANIES WILL APPEAR HERE',
-      'es': 'TUS EMPRESAS FAVORITAS APARECERÁN AQUÍ',
-    },
-    'xn4asw9r': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // pagOffAnuncio
@@ -4421,102 +3549,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
-    },
-  },
-  // orderHistory
-  {
-    '18994agu': {
-      'pt': 'HISTÓRICO DE PEDIDOS',
-      'en': 'ORDER HISTORY',
-      'es': 'HISTORIAL DE PEDIDOS',
-    },
-    'b4fw56ij': {
-      'pt': 'DELIVERY',
-      'en': 'DELIVERY',
-      'es': 'ENTREGA',
-    },
-    'o3c2lo4i': {
-      'pt': 'AGENDAMENTOS',
-      'en': 'APPOINTMENTS',
-      'es': 'EQUIPO',
-    },
-    'u92zr70k': {
-      'pt': 'CONCLUÍDO',
-      'en': 'COMPLETED',
-      'es': 'TERMINADO',
-    },
-    'z6sx1bco': {
-      'pt': 'RECUSADO',
-      'en': 'REFUSED',
-      'es': 'RECHAZADO',
-    },
-    '4acz5fix': {
-      'pt': 'CANCELADO',
-      'en': 'CANCELED',
-      'es': 'CANCELADO',
-    },
-    'owfbas64': {
-      'pt': 'PENDENTE',
-      'en': 'PENDING',
-      'es': 'PENDIENTE',
-    },
-    'ob3fejyl': {
-      'pt': 'EM PREPARO',
-      'en': 'IN PREPARATION',
-      'es': 'EN PREPARACIÓN',
-    },
-    'fboo98in': {
-      'pt': 'PRONTO PARA \nRETIRADA',
-      'en': 'READY FOR\nPICKUP',
-      'es': 'LISTO PARA RECOGER',
-    },
-    'rg0m1s44': {
-      'pt': 'SAIU PARA\nENTREGA',
-      'en': 'OUT FOR\nDELIVERY',
-      'es': 'LIBRE PARA ENTREGA',
-    },
-    '30qiob8f': {
-      'pt': 'AGENDADO',
-      'en': 'SCHEDULED',
-      'es': 'PROGRAMADO',
-    },
-    'as39lw78': {
-      'pt': 'SOLIICITAÇÃO DE \nNOVO HORÁRIO',
-      'en': 'REQUEST FOR\nNEW SCHEDULE',
-      'es': 'SOLICITUD DE \nNUEVO HORARIO',
-    },
-    '4jd9k1xy': {
-      'pt': '-',
-      'en': '',
-      'es': '',
-    },
-    'vklfevcq': {
-      'pt': 'DATA DO AGENDAMENTO',
-      'en': 'APPOINTMENT DATE',
-      'es': 'FECHA DE LA CITA',
-    },
-    'qglylwgn': {
-      'pt': 'ITENS',
-      'en': 'ITEMS',
-      'es': 'ELEMENTOS',
-    },
-    'u5x337lz': {
-      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
-      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
-      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
-    },
-    'l1jcqiec': {
-      'pt':
-          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
-      'en':
-          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
-      'es':
-          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
-    },
-    'nxyn3ooa': {
-      'pt': '',
-      'en': '',
-      'es': '',
     },
   },
   // completeProfileNumber
@@ -4663,102 +3695,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '4,99',
     },
     'n9fkaycw': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
-  // membership
-  {
-    'ql57ilx7': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    '0onqs37u': {
-      'pt': 'ATÉ ',
-      'en': 'UNTIL',
-      'es': 'HASTA',
-    },
-    'kjklhhsq': {
-      'pt': '4X MAIS BENEFÍCIOS ',
-      'en': '4X MORE BENEFITS',
-      'es': '4 VECES MÁS BENEFICIOS',
-    },
-    's949hccv': {
-      'pt': 'COM O AQUIPASS',
-      'en': 'WITH AQUIPASS',
-      'es': 'CON AQUIPASS',
-    },
-    '1ge22r04': {
-      'pt':
-          'COM O AQUIPASS VOCÊ GARANTE OS MAIORES DESCONTOS NOS MELHORES LUGARES!',
-      'en':
-          'WITH AQUIPASS YOU GUARANTEE THE BIGGEST DISCOUNTS IN THE BEST PLACES!',
-      'es':
-          '¡CON AQUIPASS GARANTIZAS LOS MAYORES DESCUENTOS EN LOS MEJORES LUGARES!',
-    },
-    'tlvez06s': {
-      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
-      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
-      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
-    },
-    '5y42u0s4': {
-      'pt': 'Digite aqui seu cupom de desconto',
-      'en': 'Enter your discount coupon here',
-      'es': 'Introduce aquí tu cupón de descuento',
-    },
-    '16p5fuar': {
-      'pt': 'CONVIDADO(A) POR ',
-      'en': 'INVITED BY',
-      'es': 'INVITADO POR',
-    },
-    'x4av0sq2': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    'b247c3z0': {
-      'pt': 'CUPOM DE DESCONTO APLICADO',
-      'en': 'DISCOUNT COUPON APPLIED',
-      'es': 'CUPÓN DE DESCUENTO APLICADO',
-    },
-    '7a159nqw': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    '8h7z2xrs': {
-      'pt': 'CUPOM NÃO ENCONTRADO',
-      'en': 'COUPON NOT FOUND',
-      'es': 'CUPÓN NO ENCONTRADO',
-    },
-    'e64lypay': {
-      'pt': 'DIGITE SEU CPF',
-      'en': 'ENTER YOUR CPF',
-      'es': 'INGRESE SU CPF',
-    },
-    'k8hiyr6u': {
-      'pt': 'OS PONTOS GANHOS SERÃO DISPONIBILIZADOS ',
-      'en': 'EARNED POINTS WILL BE MADE AVAILABLE',
-      'es': 'LOS PUNTOS GANADOS ESTARÁN DISPONIBLES',
-    },
-    '1ic2cor8': {
-      'pt': 'Digite aqui seu CPF',
-      'en': 'Enter your CPF here',
-      'es': 'Ingrese su CPF aquí',
-    },
-    'dl441phu': {
-      'pt': 'CPF INVÁLIDO',
-      'en': 'INVALID CPF',
-      'es': 'CPF NO VÁLIDO',
-    },
-    'tfmzk4l6': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'z7nr0b2h': {
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
@@ -5235,6 +4171,1134 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'LIBRO',
     },
     '96yxp592': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
+    },
+  },
+  // orderDetails
+  {
+    'p5u46jqv': {
+      'pt': 'DETALHES',
+      'en': 'DETAILS',
+      'es': 'DETALLES',
+    },
+    'myx5t027': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE DE RECLAMAÇÃO EM ANDAMENTO',
+      'en': 'REQUEST FOR ANALYSIS OF ONGOING COMPLAINT',
+      'es': 'SOLICITUD DE ANÁLISIS DE QUEJA EN CURSO',
+    },
+    '0awadmzs': {
+      'pt':
+          'ENTRAREMOS EM CONTAO VIA E-MAIL OU PELO SEU TELEFONE CADASTRADO EM NOSSA PLATAFORMA COM A SOLUÇÃO',
+      'en':
+          'WE WILL CONTACT YOU VIA EMAIL OR BY YOUR PHONE NUMBER REGISTERED ON OUR PLATFORM WITH THE SOLUTION',
+      'es':
+          'NOS PONDREMOS EN CONTACTO CON USTED VÍA CORREO ELECTRÓNICO O A SU NÚMERO DE TELÉFONO REGISTRADO EN NUESTRA PLATAFORMA CON LA SOLUCIÓN',
+    },
+    'i6uvruo3': {
+      'pt': 'REALIZADO AS: ',
+      'en': 'DONE AS:',
+      'es': 'HECHO COMO:',
+    },
+    'lszgo89n': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '3bprmx8f': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    '1huoy2rd': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE RECUSADA',
+      'en': 'REQUEST FOR ANALYSIS REFUSED',
+      'es': 'SOLICITUD DE ANÁLISIS RECHAZADA',
+    },
+    '6l9h836f': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'krlgoxyc': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    'vvt4pzdn': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'qe1vnkde': {
+      'pt': 'SOLICITAÇÃO DE ANÁLISE CONCLUÍDA',
+      'en': 'REQUEST FOR ANALYSIS COMPLETED',
+      'es': 'SOLICITUD DE ANÁLISIS COMPLETADA',
+    },
+    'h7lhh9ix': {
+      'pt': 'FINALIZADO AS: ',
+      'en': 'FINALIZED AS:',
+      'es': 'FINALIZADO COMO:',
+    },
+    'ryvxqbm1': {
+      'pt': 'OBSERVAÇÃO: ',
+      'en': 'OBSERVATION:',
+      'es': 'OBSERVACIÓN:',
+    },
+    '5y2rv8oe': {
+      'pt': 'DETALHES DA SOLICITAÇÃO',
+      'en': 'APPLICATION DETAILS',
+      'es': 'DETALLES DE LA SOLICITUD',
+    },
+    'm8icup59': {
+      'pt': 'SEU PEDIDO FOI ENTREGUE',
+      'en': 'YOUR ORDER HAS BEEN DELIVERED',
+      'es': 'SU PEDIDO HA SIDO ENTREGADO',
+    },
+    '54tevu47': {
+      'pt': 'PEDIDO ENTREGUE AS ',
+      'en': 'ORDER DELIVERED AS',
+      'es': 'PEDIDO ENTREGADO COMO',
+    },
+    'blsn0q26': {
+      'pt': '14:48',
+      'en': '14:48',
+      'es': '14:48',
+    },
+    '5pvmanfs': {
+      'pt': 'INFORMAÇÕES',
+      'en': 'INFORMATION',
+      'es': 'INFORMACIÓN',
+    },
+    'sf3duwcp': {
+      'pt': 'CÓDIGO DE ENTREGA',
+      'en': 'DELIVERY CODE',
+      'es': 'CÓDIGO DE ENTREGA',
+    },
+    '5bmokfvc': {
+      'pt': 'AJUDA',
+      'en': 'HELP',
+      'es': 'AYUDA',
+    },
+    'wnnyg6es': {
+      'pt': 'RASTREAR PEDIDO',
+      'en': 'TRACK ORDER',
+      'es': 'SEGUIMIENTO DEL PEDIDO',
+    },
+    'n6l3hi1g': {
+      'pt': 'CANCELAR PEDIDO',
+      'en': 'CANCEL ORDER',
+      'es': 'CANCELAR PEDIDO',
+    },
+    'bp7kxwwy': {
+      'pt': 'CONFIRMAR ENTREGA',
+      'en': 'CONFIRM DELIVERY',
+      'es': 'CONFIRMAR ENTREGA',
+    },
+    '3s0w58fd': {
+      'pt': 'AVALIAR PEDIDO',
+      'en': 'EVALUATE ORDER',
+      'es': 'EVALUAR ORDEN',
+    },
+    'e8b7oqan': {
+      'pt': 'ENDEREÇO DE ENTREGA',
+      'en': 'DELIVERY ADDRESS',
+      'es': 'DIRECCIÓN DE ENTREGA',
+    },
+    'txbm6w8c': {
+      'pt': 'RETIRADA NO LOCAL',
+      'en': 'LOCAL PICKUP',
+      'es': 'RECOGIDA LOCAL',
+    },
+    '6lbfzvew': {
+      'pt': 'OBSERVAÇÃO',
+      'en': 'OBSERVATION',
+      'es': 'OBSERVACIÓN',
+    },
+    'js79e8tl': {
+      'pt': 'DETALHES DO PEDIDO',
+      'en': 'ORDER DETAILS',
+      'es': 'DETALLES DEL PEDIDO',
+    },
+    'nuwjtpiu': {
+      'pt': 'RESUMO DO PAGAMENTO',
+      'en': 'PAYMENT SUMMARY',
+      'es': 'RESUMEN DE PAGO',
+    },
+    'lpfm2er0': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '8rvzu7us': {
+      'pt': 'GORJETA',
+      'en': 'TIP',
+      'es': 'CONSEJO',
+    },
+    'th8gw6m6': {
+      'pt': 'TAXA DE ENTREGA',
+      'en': 'DELIVERY FEE',
+      'es': 'TARIFA DE ENVÍO',
+    },
+    'i3mz7r0z': {
+      'pt': 'IMPOSTO E TAXA DE SERVIÇO',
+      'en': 'TAX AND SERVICE FEE',
+      'es': 'IMPUESTOS Y TASAS DE SERVICIO',
+    },
+    'x33o0exx': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    'wlbqvz4x': {
+      'pt': 'COM AQUIPASS VOCÊ ECONOMIZOU',
+      'en': 'WITH AQUIPASS YOU SAVED',
+      'es': 'CON AQUIPASS AHORRAS',
+    },
+    'e1em4e6a': {
+      'pt': 'VOCÊ GANHOU 3% DE CASHBACK',
+      'en': 'YOU HAVE EARNED 3% CASHBACK',
+      'es': 'HAS GANADO UN 3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'nkkwygwh': {
+      'pt': 'FORMA DE PAGAMENTO',
+      'en': 'PAYMENT METHOD',
+      'es': 'FORMA DE PAGO',
+    },
+    'ottan1jr': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // ordersHelp
+  {
+    'c7k1izy6': {
+      'pt': 'PEDIDO FINALIZADO',
+      'en': 'ORDER COMPLETED',
+      'es': 'PEDIDO COMPLETADO',
+    },
+    'i761s2om': {
+      'pt': 'SENTIMOS MUITO QUE HOUVE UM PROBLEMA COM O SEU PEDIDO',
+      'en': 'WE\'RE SO SORRY THERE WAS A PROBLEM WITH YOUR ORDER',
+      'es': 'LAMENTAMOS MUCHO QUE HAYA HABIDO UN PROBLEMA CON SU PEDIDO.',
+    },
+    'mqnc4cqc': {
+      'pt':
+          'QUEREMOS ENTENDER O QUAL FOI O PROBLEMA PARA NEGOCIAMOS O REEMBOLSO OU OUTRA SOLUÇÃO COM A LOJA',
+      'en':
+          'WE WANT TO UNDERSTAND WHAT THE PROBLEM WAS SO WE CAN NEGOTIATE A REFUND OR OTHER SOLUTION WITH THE STORE',
+      'es':
+          'QUEREMOS ENTENDER CUÁL FUE EL PROBLEMA PARA PODER NEGOCIAR UN REEMBOLSO U OTRA SOLUCIÓN CON LA TIENDA',
+    },
+    'mkwt404c': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    '3rgj48ef': {
+      'pt': 'O QUE ACONTECEU COM O SEU PEDIDO?',
+      'en': 'WHAT HAPPENED TO YOUR ORDER?',
+      'es': '¿QUÉ PASÓ CON TU PEDIDO?',
+    },
+    'ne2tpn1o': {
+      'pt': 'SELECIONE O MOTIVO QUE MELHOR REPRESENTA O SEU PROBLEMA.',
+      'en': 'SELECT THE REASON THAT BEST REPRESENTS YOUR PROBLEM.',
+      'es': 'SELECCIONA EL MOTIVO QUE MEJOR REPRESENTA TU PROBLEMA.',
+    },
+    '2980it8j': {
+      'pt': 'PRODUTO CHEGOU FRIO',
+      'en': 'PRODUCT ARRIVED COLD',
+      'es': 'EL PRODUCTO LLEGÓ FRÍO',
+    },
+    'z0dyrnhm': {
+      'pt': 'PRODUTO ERRADO',
+      'en': 'WRONG PRODUCT',
+      'es': 'PRODUCTO INCORRECTO',
+    },
+    's14vh1ts': {
+      'pt': 'PRODUTO INCOMPLETO',
+      'en': 'INCOMPLETE PRODUCT',
+      'es': 'PRODUCTO INCOMPLETO',
+    },
+    '0ppxiq5c': {
+      'pt': 'PRODUTO DANIFICADO',
+      'en': 'DAMAGED PRODUCT',
+      'es': 'PRODUCTO DAÑADO',
+    },
+    'w0augal9': {
+      'pt': 'ATRASO NA ENTREGA',
+      'en': 'DELAY IN DELIVERY',
+      'es': 'RETRASO EN ENTREGA',
+    },
+    '8ia1f08g': {
+      'pt': 'OUTRO',
+      'en': 'OTHER',
+      'es': 'OTRO',
+    },
+    'x21w7nwo': {
+      'pt':
+          'ANTES DE FINALIZAR, VOCÊ PODERÁ REVISAR SUA SOLICITAÇÃO E FAZER MUDANÇAS, SE NECESSÁRIO.',
+      'en':
+          'BEFORE FINALIZING, YOU MAY REVIEW YOUR APPLICATION AND MAKE CHANGES IF NECESSARY.',
+      'es':
+          'ANTES DE FINALIZAR, PUEDE REVISAR SU SOLICITUD Y HACER CAMBIOS SI ES NECESARIO.',
+    },
+    'nd673286': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'f4y05h29': {
+      'pt': 'CONTE MAIS DETALHES SOBRE O PROBLEMA',
+      'en': 'TELL US MORE DETAILS ABOUT THE PROBLEM',
+      'es': 'CUÉNTANOS MÁS DETALLES SOBRE EL PROBLEMA',
+    },
+    '9c0r94ob': {
+      'pt': 'NOS CONTE O QUE ACHOU DO SEU PEDIDO (OBRIGATÓRIO)',
+      'en': 'TELL US WHAT YOU THOUGHT OF YOUR ORDER (MANDATORY)',
+      'es': 'DÍGANOS QUÉ LE PARECIÓ SU PEDIDO (OBLIGATORIO)',
+    },
+    '2b5zokwd': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'm35gae5a': {
+      'pt': 'ADICIONE EVIDÊNCIAS DO PROBLEMA',
+      'en': 'ADD EVIDENCE OF THE PROBLEM',
+      'es': 'AÑADIR EVIDENCIA DEL PROBLEMA',
+    },
+    'y6ie6k8n': {
+      'pt':
+          'O ENVIO DE UMA FOTO DO ITEM, DA EMBALAGEM OU DA NOTA FISCAL PODEM AJUDAR A LOJA A ENTENDER O QUE ACONTECEU COM SEU PEDIDO.',
+      'en':
+          'SENDING A PHOTO OF THE ITEM, PACKAGING OR INVOICE CAN HELP THE STORE UNDERSTAND WHAT HAPPENED TO YOUR ORDER.',
+      'es':
+          'ENVIAR UNA FOTO DEL ARTÍCULO, EMBALAJE O FACTURA PUEDE AYUDAR A LA TIENDA A ENTENDER QUÉ SUCEDIÓ CON SU PEDIDO.',
+    },
+    'owkqt01u': {
+      'pt': 'REVISAR SOLICITAÇÃO',
+      'en': 'REVIEW REQUEST',
+      'es': 'SOLICITUD DE REVISIÓN',
+    },
+    '9yegjyd3': {
+      'pt': 'REVISE SUA SOLICITAÇÃO',
+      'en': 'REVIEW YOUR REQUEST',
+      'es': 'REVISA TU SOLICITUD',
+    },
+    '4r87pzxs': {
+      'pt': 'EVIDÊNCIAS DO PROBLEMA',
+      'en': 'EVIDENCE OF THE PROBLEM',
+      'es': 'EVIDENCIA DEL PROBLEMA',
+    },
+    '5i8sxdcu': {
+      'pt': 'ENVIAR',
+      'en': 'TO SEND',
+      'es': 'PARA ENVIAR',
+    },
+    'j3elzjdn': {
+      'pt': 'Home',
+      'en': '',
+      'es': '',
+    },
+  },
+  // profile
+  {
+    'qu14tv26': {
+      'pt': 'OPÇÕES',
+      'en': 'OPTIONS',
+      'es': 'OPCIONES',
+    },
+    'kmni54bk': {
+      'pt': 'SUA CONTA',
+      'en': 'YOUR ACCOUNT',
+      'es': 'SU CUENTA',
+    },
+    'hpotk948': {
+      'pt': 'DADOS DA CONTA',
+      'en': 'ACCOUNT DATA',
+      'es': 'DATOS DE LA CUENTA',
+    },
+    '1o8xney2': {
+      'pt': 'MENSAGENS',
+      'en': 'MESSAGES',
+      'es': 'MENSAJES',
+    },
+    'h8vuehrk': {
+      'pt': 'NOTIFICAÇÕES',
+      'en': 'NOTIFICATIONS',
+      'es': 'NOTIFICACIONES',
+    },
+    'me624ak8': {
+      'pt': 'MEUS MÉTODOS DE PAGAMENTO',
+      'en': 'MY PAYMENT METHODS',
+      'es': 'MIS MÉTODOS DE PAGO',
+    },
+    'z6eyp5ic': {
+      'pt': 'CLUBE DE PARCEIROS',
+      'en': 'PARTNERS CLUB',
+      'es': 'CLUB DE SOCIOS',
+    },
+    'p1sveqlx': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    'sxnylobj': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'f7qczhc3': {
+      'pt': 'MEUS ENDEREÇOS',
+      'en': 'MY ADDRESSES',
+      'es': 'MIS DIRECCIONES',
+    },
+    'qkoobr9d': {
+      'pt': 'SUPORTE',
+      'en': 'SUPPORT',
+      'es': 'APOYO',
+    },
+    'v49jxr92': {
+      'pt': 'AJUDA',
+      'en': 'HELP',
+      'es': 'AYUDA',
+    },
+    'xi2tgy7y': {
+      'pt': 'AVALIE O APLICATIVO',
+      'en': 'RATE THE APP',
+      'es': 'CALIFICA LA APLICACIÓN',
+    },
+    'svq7l1b2': {
+      'pt': 'PREFERÊNCIAS',
+      'en': 'PREFERENCES',
+      'es': 'PREFERENCIAS',
+    },
+    'hxag7o76': {
+      'pt': 'IDIOMA',
+      'en': 'LANGUAGE',
+      'es': 'IDIOMA',
+    },
+    '4xgvm94t': {
+      'pt': 'SEGURANÇA',
+      'en': 'SECURITY',
+      'es': 'SEGURIDAD',
+    },
+    'non0ybld': {
+      'pt': 'CONFIGURAÇÕES',
+      'en': 'SETTINGS',
+      'es': 'AJUSTES',
+    },
+    'coyksfo4': {
+      'pt': 'APAGAR CONTA',
+      'en': 'DELETE ACCOUNT',
+      'es': 'ELIMINAR CUENTA',
+    },
+    '8htaqjsg': {
+      'pt': 'NOSSAS REDES',
+      'en': 'OUR NETWORKS',
+      'es': 'NUESTRAS REDES',
+    },
+    'p5pnpy68': {
+      'pt': 'INSTAGRAM',
+      'en': 'INSTAGRAM',
+      'es': 'INSTAGRAM',
+    },
+    'qga2yg9z': {
+      'pt': 'DESCONECTAR',
+      'en': 'DISCONNECT',
+      'es': 'DESCONECTAR',
+    },
+  },
+  // home
+  {
+    '7yakzcde': {
+      'pt': 'HOME',
+      'en': 'HOME',
+      'es': 'HOME',
+    },
+    'a631xi16': {
+      'pt': 'PROMOS DO MÊS DELIVERY',
+      'en': 'DELIVERY MONTH PROMOS',
+      'es': 'PROMOS DE ENTREGA POR MES',
+    },
+    '9qg5u7ed': {
+      'pt': 'NOSSO CLUB DE PARCEIROS',
+      'en': 'OUR PARTNER CLUB',
+      'es': 'NUESTRO CLUB SOCIO',
+    },
+    'iongg50t': {
+      'pt': '+15% DE DESCONTO COM AQUIPASS',
+      'en': '+15% DISCOUNT WITH AQUIPASS',
+      'es': '+15% DESCUENTO CON AQUIPASS',
+    },
+    '92jsf2c9': {
+      'pt': 'EM BREVE',
+      'en': 'SHORTLY',
+      'es': 'DENTRO DE POCO',
+    },
+    'vib538gu': {
+      'pt': 'VEJA AS LOJAS QUE ESTÃO CHEGANDO NO APP',
+      'en': 'SEE THE STORES THAT ARE COMING TO THE APP',
+      'es': 'MIRA LAS TIENDAS QUE LLEGAN A LA APP',
+    },
+    'gq5j4efm': {
+      'pt': 'MEUS PEDIDOS\nRECENTES',
+      'en': 'MY RECENT\nORDERS',
+      'es': 'MIS PEDIDOS\nRECIENTE',
+    },
+    '4ymww51f': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'g61vpjax': {
+      'pt': 'TODAS AS LOJAS',
+      'en': 'ALL STORES',
+      'es': 'TODAS LAS TIENDAS',
+    },
+    'f8z7x8a0': {
+      'pt': 'CATEGORIA',
+      'en': 'CATEGORY',
+      'es': 'CATEGORÍA',
+    },
+    'omm5ygr5': {
+      'pt': 'RETIRADA',
+      'en': 'WITHDRAWAL',
+      'es': 'RETIRO',
+    },
+    'lzqh8h0w': {
+      'pt': 'ENTREGA GRÁTIS',
+      'en': 'FREE DELIVERY',
+      'es': 'ENTREGA GRATUITA',
+    },
+    'cqho8gfr': {
+      'pt': 'DESCONTO DO CLUBE',
+      'en': 'CLUB DISCOUNT',
+      'es': 'DESCUENTO DEL CLUB',
+    },
+    'elczxofs': {
+      'pt': 'PREÇO',
+      'en': 'PRICE',
+      'es': 'PRECIO',
+    },
+    'mln9k1v6': {
+      'pt': 'AVALIAÇÕES',
+      'en': 'REVIEWS',
+      'es': 'RESEÑAS',
+    },
+    'tlhtl7qs': {
+      'pt': 'DISTÂNCIA',
+      'en': 'DISTANCE',
+      'es': 'DISTANCIA',
+    },
+    '6igburi0': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // partners
+  {
+    'vkxzkpat': {
+      'pt': 'PARCEIROS',
+      'en': 'PARTNERS',
+      'es': 'FOGONADURA',
+    },
+    'pk6f9005': {
+      'pt': 'TODOS',
+      'en': 'ALL',
+      'es': 'TODO',
+    },
+    'aaa00w6k': {
+      'pt': 'CATEGORIA VAZIA',
+      'en': 'EMPTY CATEGORY',
+      'es': 'CATEGORÍA VACÍA',
+    },
+    'yxeej7cy': {
+      'pt': 'EM BREVE',
+      'en': 'SHORTLY',
+      'es': 'DENTRO DE POCO',
+    },
+    '4n0t3dpi': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // favoriteCompany
+  {
+    '9i9fbdw5': {
+      'pt': 'MEUS FAVORITOS',
+      'en': 'MY FAVORITES',
+      'es': 'MIS FAVORITOS',
+    },
+    'le7jbbri': {
+      'pt': 'LISTA DE FAVORITOS VAZIA',
+      'en': 'EMPTY FAVORITE LIST',
+      'es': 'LISTA DE FAVORITOS VACÍA',
+    },
+    'nyzgq20y': {
+      'pt': 'SUAS EMPRESAS FAVORITAS APARECERÃO AQUI',
+      'en': 'YOUR FAVORITE COMPANIES WILL APPEAR HERE',
+      'es': 'TUS EMPRESAS FAVORITAS APARECERÁN AQUÍ',
+    },
+    'xn4asw9r': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // orderHistory
+  {
+    'myb08gba': {
+      'pt': 'HISTÓRICO DE PEDIDOS',
+      'en': 'ORDER HISTORY',
+      'es': 'HISTORIAL DE PEDIDOS',
+    },
+    'b4fw56ij': {
+      'pt': 'DELIVERY',
+      'en': 'DELIVERY',
+      'es': 'ENTREGA',
+    },
+    'o3c2lo4i': {
+      'pt': 'AGENDAMENTOS',
+      'en': 'APPOINTMENTS',
+      'es': 'EQUIPO',
+    },
+    'u92zr70k': {
+      'pt': 'CONCLUÍDO',
+      'en': 'COMPLETED',
+      'es': 'TERMINADO',
+    },
+    'z6sx1bco': {
+      'pt': 'RECUSADO',
+      'en': 'REFUSED',
+      'es': 'RECHAZADO',
+    },
+    '4acz5fix': {
+      'pt': 'CANCELADO',
+      'en': 'CANCELED',
+      'es': 'CANCELADO',
+    },
+    'owfbas64': {
+      'pt': 'PENDENTE',
+      'en': 'PENDING',
+      'es': 'PENDIENTE',
+    },
+    'ob3fejyl': {
+      'pt': 'EM PREPARO',
+      'en': 'IN PREPARATION',
+      'es': 'EN PREPARACIÓN',
+    },
+    'fboo98in': {
+      'pt': 'PRONTO PARA \nRETIRADA',
+      'en': 'READY FOR\nPICKUP',
+      'es': 'LISTO PARA RECOGER',
+    },
+    'rg0m1s44': {
+      'pt': 'SAIU PARA\nENTREGA',
+      'en': 'OUT FOR\nDELIVERY',
+      'es': 'LIBRE PARA ENTREGA',
+    },
+    '30qiob8f': {
+      'pt': 'AGENDADO',
+      'en': 'SCHEDULED',
+      'es': 'PROGRAMADO',
+    },
+    'as39lw78': {
+      'pt': 'SOLIICITAÇÃO DE \nNOVO HORÁRIO',
+      'en': 'REQUEST FOR\nNEW SCHEDULE',
+      'es': 'SOLICITUD DE \nNUEVO HORARIO',
+    },
+    '4jd9k1xy': {
+      'pt': '-',
+      'en': '',
+      'es': '',
+    },
+    'vklfevcq': {
+      'pt': 'DATA DO AGENDAMENTO',
+      'en': 'APPOINTMENT DATE',
+      'es': 'FECHA DE LA CITA',
+    },
+    'qglylwgn': {
+      'pt': 'ITENS',
+      'en': 'ITEMS',
+      'es': 'ELEMENTOS',
+    },
+    'u5x337lz': {
+      'pt': 'VOCÊ AINDA NÃO POSSUI NENHUM PEDIDO',
+      'en': 'YOU DON\'T HAVE ANY ORDERS YET',
+      'es': 'AÚN NO TIENES NINGÚN PEDIDO',
+    },
+    'l1jcqiec': {
+      'pt':
+          'SEUS PEDIDOS REALIZADOS APARECERÃO AQUI. QUE TAL FAZER UM PEDIDO AGORA?',
+      'en':
+          'YOUR PLACED ORDERS WILL APPEAR HERE. HOW ABOUT PLACING AN ORDER NOW?',
+      'es':
+          'SUS PEDIDOS REALIZADOS APARECERÁN AQUÍ. ¿Qué tal hacer un pedido ahora?',
+    },
+    'nxyn3ooa': {
+      'pt': '',
+      'en': '',
+      'es': '',
+    },
+  },
+  // membershipCheckout
+  {
+    'augbingd': {
+      'pt': 'CONFIRMAR E PAGAR',
+      'en': 'CONFIRM AND PAY',
+      'es': 'CONFIRMAR Y PAGAR',
+    },
+    '4ha81ykg': {
+      'pt': 'PLANO SELECIONADO',
+      'en': 'SELECTED PLAN',
+      'es': 'PLAN SELECCIONADO',
+    },
+    'l4ahmsaz': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    '67dccctc': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    'wmx134qx': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'tle5xqib': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    '3woboo8u': {
+      'pt': ' por mês',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    'en5pw3w4': {
+      'pt': ' por ',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    '0u5l9xna': {
+      'pt': ' dias',
+      'en': '',
+      'es': '',
+    },
+    'i9slmkhq': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'uuct5zj4': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    'a5iqhcjg': {
+      'pt': 'ALTERAR PLANO',
+      'en': 'CHANGE PLAN',
+      'es': 'PLAN DE CAMBIO',
+    },
+    'b71a25oj': {
+      'pt': 'RESUMO DO PAGAMENTO',
+      'en': 'PAYMENT SUMMARY',
+      'es': 'RESUMEN DE PAGO',
+    },
+    '9ov76fde': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '0gjcl8pg': {
+      'pt': 'DESCONTO',
+      'en': 'ANNUAL PLAN DISCOUNT',
+      'es': 'DESCUENTO EN PLAN ANUAL',
+    },
+    'z7oc8fhv': {
+      'pt': 'TAXA DE SERVIÇO',
+      'en': 'SERVICE FEE',
+      'es': 'TARIFA DE SERVICIO',
+    },
+    'govqlxt8': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    'tlqx8b2l': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'hiuixk8y': {
+      'pt': 'A assinatura do AquiPASS ',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción AquiPASS',
+    },
+    'vfbl5zzr': {
+      'pt': 'não é reembolsável. ',
+      'en': 'is non-refundable.',
+      'es': 'no es reembolsable.',
+    },
+    'rb4i0y5e': {
+      'pt':
+          'Ela será renovada a cada ano no cartão cadastrado, até que você solicite o cancelamento.',
+      'en':
+          'It will be renewed every year on the registered card, until you request cancellation.',
+      'es':
+          'Se renovará cada año en la tarjeta registrada, hasta que solicites la baja.',
+    },
+    'n6gkll4y': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    '2klnkcuc': {
+      'pt': 'A assinatura do AquiPASS ',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción a AquiPASS',
+    },
+    'x5tjgt6c': {
+      'pt': 'não é reembolsável. ',
+      'en': 'is non-refundable.',
+      'es': 'no es reembolsable.',
+    },
+    'nsdo98h8': {
+      'pt':
+          ' Ela será renovada a cada mês no cartão cadastrado, até que você solicite o cancelamento.',
+      'en':
+          'It will be renewed every month on the registered card, until you request cancellation.',
+      'es':
+          'Se renovará cada mes en la tarjeta registrada, hasta que solicites la baja.',
+    },
+    'v0501ov5': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    'ezcpifb9': {
+      'pt':
+          'Este plano possui pagamento único, ou seja, você será cobrado apenas uma vez no momento da contratação, sem cobranças recorrentes.',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción AquiPASS',
+    },
+    'jolmx57o': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    'duoyblun': {
+      'pt': 'Para saber mais, confira os ',
+      'en': 'To learn more, check out the',
+      'es': 'Para obtener más información, consulte la',
+    },
+    'p87tfg9t': {
+      'pt': 'Termos de Serviço.',
+      'en': 'Terms of Service.',
+      'es': 'Condiciones de servicio.',
+    },
+    'rncgr4bb': {
+      'pt': 'ASSINAR O AQUIPASS',
+      'en': 'SIGN UP FOR AQUIPASS',
+      'es': 'REGÍSTRATE EN AQUIPASS',
+    },
+    'btamck6d': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
+    },
+  },
+  // membershipChangePlan
+  {
+    '5y13f796': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    'gkmx6nsp': {
+      'pt': 'ATÉ ',
+      'en': 'UNTIL',
+      'es': 'HASTA',
+    },
+    'iihj8b56': {
+      'pt': '4X MAIS BENEFÍCIOS ',
+      'en': '4X MORE BENEFITS',
+      'es': '4 VECES MÁS BENEFICIOS',
+    },
+    'hjhd898d': {
+      'pt': 'COM O AQUIPASS',
+      'en': 'WITH AQUIPASS',
+      'es': 'CON AQUIPASS',
+    },
+    's3qpqaty': {
+      'pt': 'PLANO ATUAL',
+      'en': 'CURRENT PLAN',
+      'es': 'PLAN ACTUAL',
+    },
+    'md27seg7': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    '02paan57': {
+      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
+      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
+      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
+    },
+    '6mk9zapq': {
+      'pt': 'Digite aqui seu cupom de desconto',
+      'en': 'Enter your discount coupon here',
+      'es': 'Introduce aquí tu cupón de descuento',
+    },
+    'xf680i3k': {
+      'pt': 'CONVIDADO(A) POR ',
+      'en': 'INVITED BY',
+      'es': 'INVITADO POR',
+    },
+    'obix7cgr': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    '3ichy6sk': {
+      'pt': 'CUPOM DE DESCONTO APLICADO',
+      'en': 'DISCOUNT COUPON APPLIED',
+      'es': 'CUPÓN DE DESCUENTO APLICADO',
+    },
+    '898oon4u': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    'dckhvpv3': {
+      'pt': 'CUPOM NÃO ENCONTRADO',
+      'en': 'COUPON NOT FOUND',
+      'es': 'CUPÓN NO ENCONTRADO',
+    },
+    '93rk9pym': {
+      'pt': 'ESCOLHA SEU PLANO:',
+      'en': 'CHOOSE YOUR PLAN:',
+      'es': 'ELIGE TU PLAN:',
+    },
+    'y7ruus82': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    'dblvv2sq': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    '5630x3mi': {
+      'pt': 'ANUAL',
+      'en': 'ANNUAL',
+      'es': 'ANUAL',
+    },
+    'g743j0gs': {
+      'pt': '\$119.90 ',
+      'en': '\$119.90',
+      'es': '\$119,90',
+    },
+    's53wp3oc': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'pd93i3f6': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    'onw4t1t6': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    '9vxovh1d': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'ns2sq6op': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
+    },
+  },
+  // membership
+  {
+    'ql57ilx7': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    '0onqs37u': {
+      'pt': 'ATÉ ',
+      'en': 'UNTIL',
+      'es': 'HASTA',
+    },
+    'kjklhhsq': {
+      'pt': '4X MAIS BENEFÍCIOS ',
+      'en': '4X MORE BENEFITS',
+      'es': '4 VECES MÁS BENEFICIOS',
+    },
+    's949hccv': {
+      'pt': 'COM O AQUIPASS',
+      'en': 'WITH AQUIPASS',
+      'es': 'CON AQUIPASS',
+    },
+    '1ge22r04': {
+      'pt':
+          'COM O AQUIPASS VOCÊ GARANTE OS MAIORES DESCONTOS NOS MELHORES LUGARES!',
+      'en':
+          'WITH AQUIPASS YOU GUARANTEE THE BIGGEST DISCOUNTS IN THE BEST PLACES!',
+      'es':
+          '¡CON AQUIPASS GARANTIZAS LOS MAYORES DESCUENTOS EN LOS MEJORES LUGARES!',
+    },
+    'tlvez06s': {
+      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
+      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
+      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
+    },
+    '5y42u0s4': {
+      'pt': 'Digite aqui seu cupom de desconto',
+      'en': 'Enter your discount coupon here',
+      'es': 'Introduce aquí tu cupón de descuento',
+    },
+    '16p5fuar': {
+      'pt': 'CONVIDADO(A) POR ',
+      'en': 'INVITED BY',
+      'es': 'INVITADO POR',
+    },
+    'x4av0sq2': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    'b247c3z0': {
+      'pt': 'CUPOM DE DESCONTO APLICADO',
+      'en': 'DISCOUNT COUPON APPLIED',
+      'es': 'CUPÓN DE DESCUENTO APLICADO',
+    },
+    '7a159nqw': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    '8h7z2xrs': {
+      'pt': 'CUPOM NÃO ENCONTRADO',
+      'en': 'COUPON NOT FOUND',
+      'es': 'CUPÓN NO ENCONTRADO',
+    },
+    'e64lypay': {
+      'pt': 'DIGITE SEU CPF',
+      'en': 'ENTER YOUR CPF',
+      'es': 'INGRESE SU CPF',
+    },
+    'k8hiyr6u': {
+      'pt': 'OS PONTOS GANHOS SERÃO DISPONIBILIZADOS ',
+      'en': 'EARNED POINTS WILL BE MADE AVAILABLE',
+      'es': 'LOS PUNTOS GANADOS ESTARÁN DISPONIBLES',
+    },
+    '1ic2cor8': {
+      'pt': 'Digite aqui seu CPF',
+      'en': 'Enter your CPF here',
+      'es': 'Ingrese su CPF aquí',
+    },
+    'dl441phu': {
+      'pt': 'CPF INVÁLIDO',
+      'en': 'INVALID CPF',
+      'es': 'CPF NO VÁLIDO',
+    },
+    'wzsuu1wy': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    'r7en5tpv': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    '3p5r9zir': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'f2bo178f': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    '9zaqxvw1': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    '117i3rxc': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    'mp0m5e35': {
+      'pt': ' por mês',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    'q44ms73w': {
+      'pt': ' por ',
+      'en': 'put',
+      'es': 'poner',
+    },
+    'dkj3oiyk': {
+      'pt': ' dias',
+      'en': 'days',
+      'es': 'días',
+    },
+    'v84btf7u': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'w4swprtf': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    'tfmzk4l6': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'z7nr0b2h': {
       'pt': 'Home',
       'en': 'Home',
       'es': 'Hogar',
@@ -5737,24 +5801,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CANCELAR PEDIDO',
     },
     'mat0ucrb': {
-      'pt': 'Pedido feito por engano',
-      'en': 'Order made by mistake',
-      'es': 'Pedido realizado por error',
+      'pt': 'PEDIDO FEITO POR ENGANO',
+      'en': 'ORDER MADE BY MISTAKE',
+      'es': 'PEDIDO HECHO POR ERROR',
     },
     '1g884wmu': {
-      'pt': 'Selecionei uma forma de pagamento errada',
-      'en': 'I selected the wrong payment method',
-      'es': 'Seleccioné el método de pago incorrecto',
+      'pt': 'SELECIONEI UMA FORMA DE PAGAMENTO ERRADA',
+      'en': 'I SELECTED THE WRONG PAYMENT METHOD',
+      'es': 'SELECCIONÉ EL MÉTODO DE PAGO INCORRECTO',
     },
     'vu3zhcsn': {
-      'pt': 'Meu endereço está errado',
-      'en': 'My address is wrong',
-      'es': 'Mi dirección es incorrecta',
+      'pt': 'MEU ENDEREÇO ESTÁ ERRADO',
+      'en': 'MY ADDRESS IS WRONG',
+      'es': 'MI DIRECCIÓN ESTÁ EQUIVOCADA',
     },
     '45q0acel': {
-      'pt': 'Outro motivo',
-      'en': 'Another reason',
-      'es': 'Otra razón',
+      'pt': 'OUTRO MOTIVO',
+      'en': 'ANOTHER REASON',
+      'es': 'OTRA RAZÓN',
     },
   },
   // AnexarArquivo
@@ -6967,54 +7031,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'ENVIAR RESEÑA',
     },
   },
-  // benefits
-  {
-    'kuxiqiua': {
-      'pt': 'BENEFÍCIOS AQUIPASS:',
-      'en': 'AQUIPASS BENEFITS:',
-      'es': 'BENEFICIOS DE AQUIPASS:',
-    },
-    '3wp224gg': {
-      'pt': 'DESCONTOS DE ATÉ 50% ',
-      'en': 'DISCOUNTS UP TO 50%',
-      'es': 'DESCUENTOS HASTA EL 50%',
-    },
-    'yspc56if': {
-      'pt': 'EM PRODUTOS E SERVIÇOS.',
-      'en': 'IN PRODUCTS AND SERVICES.',
-      'es': 'EN PRODUCTOS Y SERVICIOS.',
-    },
-    '7un0lbbw': {
-      'pt': '3% DE CASHBACK ',
-      'en': '3% CASHBACK',
-      'es': '3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'g4zn4aq3': {
-      'pt': 'EM QUALQUER COMPRA NO APP.',
-      'en': 'WITH ANY IN-APP PURCHASE.',
-      'es': 'CON CUALQUIER COMPRA DENTRO DE LA APLICACIÓN.',
-    },
-    'k0vuevak': {
-      'pt': 'DESCONTOS EXCLUSIVOS ',
-      'en': 'EXCLUSIVE DISCOUNTS',
-      'es': 'DESCUENTOS EXCLUSIVOS',
-    },
-    '43f7r6wp': {
-      'pt': 'EM NOSSA REDE DE PARCEIROS.',
-      'en': 'IN OUR PARTNER NETWORK.',
-      'es': 'EN NUESTRA RED DE SOCIOS.',
-    },
-    '4m3zq9go': {
-      'pt': 'EXPERIÊNCIA',
-      'en': 'EXPERIENCE',
-      'es': 'EXPERIENCIA',
-    },
-    'wav7e1pg': {
-      'pt': ' SEM ANÚNCIOS.',
-      'en': 'NO ADS.',
-      'es': 'SIN PUBLICIDAD.',
-    },
-  },
   // deliveryNotAddress
   {
     'nlxy73nw': {
@@ -7312,74 +7328,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'PARA AGREGAR',
     },
   },
-  // membershipPlans
-  {
-    'jyvt4oe1': {
-      'pt': 'ESCOLHA SEU PLANO:',
-      'en': 'CHOOSE YOUR PLAN:',
-      'es': 'ELIGE TU PLAN:',
-    },
-    '682dz1is': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'q7lhh1jo': {
-      'pt': '10% DE DESCONTO',
-      'en': '10% DISCOUNT',
-      'es': '10% DE DESCUENTO',
-    },
-    '2vccd6dh': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'oiiww22d': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    '9h0j23yc': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    'tkv6qwxb': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    '8xpp0nna': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    '11kmf7ty': {
-      'pt': 'MENSAL',
-      'en': 'MONTHLY',
-      'es': 'MENSUAL',
-    },
-    '19xjii9s': {
-      'pt': ' por mês',
-      'en': 'per month',
-      'es': 'por mes',
-    },
-    '4qeu9o9i': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'eurz6m50': {
-      'pt': 'COMPRA ÚNICA',
-      'en': 'ONE TIME PURCHASE',
-      'es': 'COMPRA ÚNICA',
-    },
-    'fj9swijj': {
-      'pt': ' por 30 dias',
-      'en': 'for 30 days',
-      'es': 'por 30 días',
-    },
-  },
   // filterCategory
   {
     'rsyg8z2m': {
@@ -7620,6 +7568,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'SELECIONAR OUTRO MOTIVO',
       'en': 'SELECT ANOTHER REASON',
       'es': 'SELECCIONE OTRO MOTIVO',
+    },
+  },
+  // benefits
+  {
+    'kuxiqiua': {
+      'pt': 'BENEFÍCIOS AQUIPASS:',
+      'en': 'AQUIPASS BENEFITS:',
+      'es': 'BENEFICIOS DE AQUIPASS:',
+    },
+    '3wp224gg': {
+      'pt': 'DESCONTOS DE ATÉ 20% ',
+      'en': 'DISCOUNTS UP TO 50%',
+      'es': 'DESCUENTOS HASTA EL 50%',
+    },
+    'yspc56if': {
+      'pt': 'EM PRODUTOS E SERVIÇOS.',
+      'en': 'IN PRODUCTS AND SERVICES.',
+      'es': 'EN PRODUCTOS Y SERVICIOS.',
+    },
+    '7un0lbbw': {
+      'pt': '3% DE CASHBACK ',
+      'en': '3% CASHBACK',
+      'es': '3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'g4zn4aq3': {
+      'pt': 'EM QUALQUER COMPRA NO APP.',
+      'en': 'WITH ANY IN-APP PURCHASE.',
+      'es': 'CON CUALQUIER COMPRA DENTRO DE LA APLICACIÓN.',
+    },
+    'k0vuevak': {
+      'pt': 'DESCONTOS EXCLUSIVOS ',
+      'en': 'EXCLUSIVE DISCOUNTS',
+      'es': 'DESCUENTOS EXCLUSIVOS',
+    },
+    '43f7r6wp': {
+      'pt': 'EM NOSSA REDE DE PARCEIROS.',
+      'en': 'IN OUR PARTNER NETWORK.',
+      'es': 'EN NUESTRA RED DE SOCIOS.',
+    },
+    '4m3zq9go': {
+      'pt': 'EXPERIÊNCIA',
+      'en': 'EXPERIENCE',
+      'es': 'EXPERIENCIA',
+    },
+    'wav7e1pg': {
+      'pt': ' SEM ANÚNCIOS.',
+      'en': 'NO ADS.',
+      'es': 'SIN PUBLICIDAD.',
     },
   },
   // Miscellaneous

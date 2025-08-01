@@ -1,6 +1,5 @@
 import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
-import '/backend/schema/structs/index.dart';
 import '/companies/product/cart_product/select_prefered_time/select_prefered_time_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -10,6 +9,7 @@ import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
     as aquibrazil_library_oi8i5r_data_schema;
 import '/actions/actions.dart' as action_blocks;
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:ff_commons/api_requests/api_streaming.dart';
@@ -805,32 +805,11 @@ class _Cart5WidgetState extends State<Cart5Widget> {
                         aquibrazil_library_oi8i5r_data_schema.OrderStruct
                             .maybeFromMap(
                                 (_model.apiResultd3r?.jsonBody ?? ''))!;
+                    FFAppState().lastOrder =
+                        aquibrazil_library_oi8i5r_data_schema.OrderStruct
+                            .maybeFromMap(
+                                (_model.apiResultd3r?.jsonBody ?? ''))!;
                     FFAppState().update(() {});
-                    authManager.updateAuthUserData(
-                      authenticationToken: currentAuthenticationToken,
-                      tokenExpiration: currentAuthTokenExpiration,
-                      authUid: currentUserUid,
-                      userData: UserStruct(
-                        id: currentUserData?.id,
-                        firstName: currentUserData?.firstName,
-                        lastName: currentUserData?.lastName,
-                        email: currentUserData?.email,
-                        biometric: currentUserData?.biometric,
-                        profilePicture: currentUserData?.profilePicture,
-                        location: currentUserData?.location,
-                        address: currentUserData?.address,
-                        cashbackEarned: currentUserData?.cashbackEarned,
-                        phone: currentUserData?.phone,
-                        timezone: currentUserData?.timezone,
-                        defaultCard: currentUserData?.defaultCard,
-                        document: currentUserData?.document,
-                        lastOrderId:
-                            aquibrazil_library_oi8i5r_data_schema.OrderStruct
-                                    .maybeFromMap(
-                                        (_model.apiResultd3r?.jsonBody ?? ''))
-                                ?.id,
-                      ),
-                    );
                     Navigator.pop(context);
 
                     context.pushNamed(

@@ -547,9 +547,6 @@ class _LoginWidgetState extends State<LoginWidget>
                                     document: UserStruct.maybeFromMap(
                                             (_model.authLogin?.jsonBody ?? ''))
                                         ?.document,
-                                    lastOrderId: UserStruct.maybeFromMap(
-                                            (_model.authLogin?.jsonBody ?? ''))
-                                        ?.lastOrderId,
                                   ),
                                 );
                                 await MainGroup.editFcmIdCall.call(

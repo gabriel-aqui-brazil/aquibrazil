@@ -749,8 +749,6 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
                                                       ?.defaultCard,
                                                   document:
                                                       currentUserData?.document,
-                                                  lastOrderId: currentUserData
-                                                      ?.lastOrderId,
                                                 ),
                                               );
 

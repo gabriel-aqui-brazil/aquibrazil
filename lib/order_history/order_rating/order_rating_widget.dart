@@ -63,7 +63,11 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,
         onTap: () async {
-          await Future.delayed(const Duration(milliseconds: 4000));
+          await Future.delayed(
+            Duration(
+              milliseconds: 4000,
+            ),
+          );
           Navigator.pop(context);
         },
         child: Container(
@@ -87,8 +91,8 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: Container(
-                    width: 32.0,
-                    height: 4.0,
+                    width: 30.0,
+                    height: 10.0,
                     decoration: BoxDecoration(
                       color: Color(0xFFD9D9D9),
                       borderRadius: BorderRadius.circular(100.0),
@@ -104,17 +108,10 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                       '8zyulgpb' /* AVALIAR PEDIDO */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
+                          fontFamily: 'Anton',
                           fontSize: 20.0,
                           letterSpacing: 0.0,
-                          fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                          fontWeight: FontWeight.w300,
                         ),
                   ),
                   Text(
@@ -144,14 +141,14 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                       onRatingUpdate: (newValue) =>
                           safeSetState(() => _model.ratingBarValue = newValue),
                       itemBuilder: (context, index) => Icon(
-                        Icons.star_rounded,
+                        FFIcons.kcaminho2395,
                         color: Color(0xFFF9AB10),
                       ),
                       direction: Axis.horizontal,
                       initialRating: _model.ratingBarValue ??= 3.0,
                       unratedColor: Color(0xFFD6D6D6),
                       itemCount: 5,
-                      itemSize: 24.0,
+                      itemSize: 20.0,
                       glowColor: Color(0xFFF9AB10),
                     ),
                   ),
@@ -388,7 +385,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.normal,
                               fontStyle: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
@@ -396,7 +393,7 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                             color: Color(0xFF4D4D4D),
                             fontSize: 14.0,
                             letterSpacing: 0.0,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.normal,
                             fontStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
@@ -544,19 +541,16 @@ class _OrderRatingWidgetState extends State<OrderRatingWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.rubik(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
+                          font: GoogleFonts.poppins(
+                            fontWeight: FontWeight.normal,
                             fontStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           color: Colors.white,
+                          fontSize: 15.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
+                          fontWeight: FontWeight.normal,
                           fontStyle:
                               FlutterFlowTheme.of(context).titleSmall.fontStyle,
                         ),

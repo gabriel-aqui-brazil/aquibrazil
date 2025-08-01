@@ -2039,8 +2039,6 @@ class _AddressDeliveryAddEditWidgetState
                                             defaultCard:
                                                 currentUserData?.defaultCard,
                                             document: currentUserData?.document,
-                                            lastOrderId:
-                                                currentUserData?.lastOrderId,
                                           ),
                                         );
                                       }

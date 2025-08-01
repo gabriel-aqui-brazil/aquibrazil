@@ -499,7 +499,7 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                     ),
                                     RatingBarIndicator(
                                       itemBuilder: (context, index) => Icon(
-                                        Icons.star_rounded,
+                                        FFIcons.kcaminho2395,
                                         color: Color(0xFFF9AB10),
                                       ),
                                       direction: Axis.horizontal,
@@ -512,7 +512,7 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                           .rating,
                                       unratedColor: Color(0xFF9CA3AF),
                                       itemCount: 5,
-                                      itemSize: 20.0,
+                                      itemSize: 16.0,
                                     ),
                                   ].divide(SizedBox(width: 12.0)),
                                 ),
@@ -1596,17 +1596,20 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                             CrossAxisAlignment.end,
                                         children: [
                                           Text(
-                                            formatNumber(
-                                              aquibrazil_library_oi8i5r_data_schema
-                                                          .OrderStruct
-                                                      .maybeFromMap(
-                                                          orderDetailsServiceGetOrderDetailServiceResponse
-                                                              .jsonBody)!
-                                                  .subtotal,
-                                              formatType: FormatType.custom,
-                                              currency: '\$',
-                                              format: '#,##0.00',
-                                              locale: 'en_us',
+                                            valueOrDefault<String>(
+                                              formatNumber(
+                                                aquibrazil_library_oi8i5r_data_schema
+                                                            .OrderStruct
+                                                        .maybeFromMap(
+                                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                                .jsonBody)
+                                                    ?.subtotal,
+                                                formatType: FormatType.custom,
+                                                currency: '\$',
+                                                format: '#,##0.00',
+                                                locale: 'en_us',
+                                              ),
+                                              '\$ 0.0',
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1631,17 +1634,20 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                                 ),
                                           ),
                                           Text(
-                                            formatNumber(
-                                              aquibrazil_library_oi8i5r_data_schema
-                                                          .OrderStruct
-                                                      .maybeFromMap(
-                                                          orderDetailsServiceGetOrderDetailServiceResponse
-                                                              .jsonBody)!
-                                                  .taxAndServiceFee,
-                                              formatType: FormatType.custom,
-                                              currency: '\$',
-                                              format: '#,##0.00',
-                                              locale: 'en_us',
+                                            valueOrDefault<String>(
+                                              formatNumber(
+                                                aquibrazil_library_oi8i5r_data_schema
+                                                            .OrderStruct
+                                                        .maybeFromMap(
+                                                            orderDetailsServiceGetOrderDetailServiceResponse
+                                                                .jsonBody)
+                                                    ?.taxAndServiceFee,
+                                                formatType: FormatType.custom,
+                                                currency: '\$',
+                                                format: '#,##0.00',
+                                                locale: 'en_us',
+                                              ),
+                                              '\$ 0.0',
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1707,17 +1713,20 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                             ),
                                       ),
                                       Text(
-                                        formatNumber(
-                                          aquibrazil_library_oi8i5r_data_schema
-                                                      .OrderStruct
-                                                  .maybeFromMap(
-                                                      orderDetailsServiceGetOrderDetailServiceResponse
-                                                          .jsonBody)!
-                                              .totalAmount,
-                                          formatType: FormatType.custom,
-                                          currency: '\$',
-                                          format: '#,##0.00',
-                                          locale: 'en_us',
+                                        valueOrDefault<String>(
+                                          formatNumber(
+                                            aquibrazil_library_oi8i5r_data_schema
+                                                        .OrderStruct
+                                                    .maybeFromMap(
+                                                        orderDetailsServiceGetOrderDetailServiceResponse
+                                                            .jsonBody)
+                                                ?.totalAmount,
+                                            formatType: FormatType.custom,
+                                            currency: '\$',
+                                            format: '#,##0.00',
+                                            locale: 'en_us',
+                                          ),
+                                          '\$ 0.0',
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -1801,17 +1810,20 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                           ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
-                                          formatNumber(
-                                            aquibrazil_library_oi8i5r_data_schema
-                                                        .OrderStruct
-                                                    .maybeFromMap(
-                                                        orderDetailsServiceGetOrderDetailServiceResponse
-                                                            .jsonBody)!
-                                                .aquipassSaved,
-                                            formatType: FormatType.custom,
-                                            currency: '\$',
-                                            format: '#,##0.00',
-                                            locale: 'en_us',
+                                          valueOrDefault<String>(
+                                            formatNumber(
+                                              aquibrazil_library_oi8i5r_data_schema
+                                                          .OrderStruct
+                                                      .maybeFromMap(
+                                                          orderDetailsServiceGetOrderDetailServiceResponse
+                                                              .jsonBody)
+                                                  ?.aquipassSaved,
+                                              formatType: FormatType.custom,
+                                              currency: '\$',
+                                              format: '#,##0.00',
+                                              locale: 'en_us',
+                                            ),
+                                            '\$ 0.0',
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -1898,17 +1910,20 @@ class _OrderDetailsServiceWidgetState extends State<OrderDetailsServiceWidget> {
                                           ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
-                                          formatNumber(
-                                            aquibrazil_library_oi8i5r_data_schema
-                                                        .OrderStruct
-                                                    .maybeFromMap(
-                                                        orderDetailsServiceGetOrderDetailServiceResponse
-                                                            .jsonBody)!
-                                                .membershipCashback,
-                                            formatType: FormatType.custom,
-                                            currency: '\$',
-                                            format: '#,##0.00',
-                                            locale: 'en_us',
+                                          valueOrDefault<String>(
+                                            formatNumber(
+                                              aquibrazil_library_oi8i5r_data_schema
+                                                          .OrderStruct
+                                                      .maybeFromMap(
+                                                          orderDetailsServiceGetOrderDetailServiceResponse
+                                                              .jsonBody)
+                                                  ?.membershipCashback,
+                                              formatType: FormatType.custom,
+                                              currency: '\$',
+                                              format: '#,##0.00',
+                                              locale: 'en_us',
+                                            ),
+                                            '\$ 0.0',
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium

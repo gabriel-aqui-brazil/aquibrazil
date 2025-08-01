@@ -233,8 +233,6 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                                         defaultCard:
                                             currentUserData?.defaultCard,
                                         document: currentUserData?.document,
-                                        lastOrderId:
-                                            currentUserData?.lastOrderId,
                                       ),
                                     );
                                   } else {
@@ -261,8 +259,6 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                                         defaultCard:
                                             currentUserData?.defaultCard,
                                         document: currentUserData?.document,
-                                        lastOrderId:
-                                            currentUserData?.lastOrderId,
                                       ),
                                     );
                                   }
@@ -412,8 +408,6 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                                         defaultCard:
                                             currentUserData?.defaultCard,
                                         document: currentUserData?.document,
-                                        lastOrderId:
-                                            currentUserData?.lastOrderId,
                                       ),
                                     );
                                   } else {
@@ -440,8 +434,6 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                                         defaultCard:
                                             currentUserData?.defaultCard,
                                         document: currentUserData?.document,
-                                        lastOrderId:
-                                            currentUserData?.lastOrderId,
                                       ),
                                     );
                                   }

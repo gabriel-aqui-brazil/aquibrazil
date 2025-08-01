@@ -175,10 +175,10 @@ class _DeliveryFoodWidgetState extends State<DeliveryFoodWidget>
                                       fillColor: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       icon: Icon(
-                                        Icons.arrow_back,
+                                        Icons.arrow_back_sharp,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
-                                        size: 16.0,
+                                        size: 20.0,
                                       ),
                                       onPressed: () async {
                                         context.safePop();
@@ -1139,7 +1139,7 @@ class _DeliveryFoodWidgetState extends State<DeliveryFoodWidget>
                                     ),
                                     Container(
                                       width: double.infinity,
-                                      height: 260.0,
+                                      height: 280.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -2204,7 +2204,7 @@ class _DeliveryFoodWidgetState extends State<DeliveryFoodWidget>
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
-                                                                                BorderRadius.circular(8.0),
+                                                                                BorderRadius.circular(12.0),
                                                                             child:
                                                                                 Image.network(
                                                                               productsListItem.image.firstOrNull!.url,

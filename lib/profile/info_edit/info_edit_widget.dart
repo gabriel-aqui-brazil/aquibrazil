@@ -460,7 +460,6 @@ class _InfoEditWidgetState extends State<InfoEditWidget> {
                                 timezone: currentUserData?.timezone,
                                 defaultCard: currentUserData?.defaultCard,
                                 document: currentUserData?.document,
-                                lastOrderId: currentUserData?.lastOrderId,
                               ),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(

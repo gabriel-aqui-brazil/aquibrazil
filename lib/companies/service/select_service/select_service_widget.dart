@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"
@@ -103,7 +104,10 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                               topRight: Radius.circular(25.0),
                             ),
                             child: Image.network(
-                              imageItem.url,
+                              valueOrDefault<String>(
+                                imageItem.url,
+                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mE0o3DUMem2PBSBV2xgB/assets/hj58uh1it70k/logosite_1.png',
+                              ),
                               width: double.infinity,
                               height: 200.0,
                               fit: BoxFit.cover,
@@ -254,8 +258,11 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                                     size: 20.0,
                                   ),
                                   Text(
-                                    functions
-                                        .toUpperCase(widget!.company?.name),
+                                    valueOrDefault<String>(
+                                      functions
+                                          .toUpperCase(widget!.company?.name),
+                                      '-',
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -299,8 +306,11 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                               Align(
                                 alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Text(
-                                  functions
-                                      .toUpperCase(widget!.baseProduct?.name),
+                                  valueOrDefault<String>(
+                                    functions
+                                        .toUpperCase(widget!.baseProduct?.name),
+                                    '-',
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -323,10 +333,14 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                               Align(
                                 alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Text(
-                                  functions.toUpperCase(valueOrDefault<String>(
-                                    widget!.baseProduct?.description,
-                                    'description',
-                                  )),
+                                  valueOrDefault<String>(
+                                    functions
+                                        .toUpperCase(valueOrDefault<String>(
+                                      widget!.baseProduct?.description,
+                                      'description',
+                                    )),
+                                    '-',
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -350,12 +364,15 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    formatNumber(
-                                      widget!.baseProduct!.price,
-                                      formatType: FormatType.custom,
-                                      currency: '\$',
-                                      format: '#,##0.00',
-                                      locale: 'en_us',
+                                    valueOrDefault<String>(
+                                      formatNumber(
+                                        widget!.baseProduct?.price,
+                                        formatType: FormatType.custom,
+                                        currency: '\$',
+                                        format: '#,##0.00',
+                                        locale: 'en_us',
+                                      ),
+                                      '\$ 0.0',
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -383,12 +400,16 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          formatNumber(
-                                            widget!.baseProduct!.originalPrice,
-                                            formatType: FormatType.custom,
-                                            currency: '\$',
-                                            format: '#,##0.00',
-                                            locale: 'en_us',
+                                          valueOrDefault<String>(
+                                            formatNumber(
+                                              widget!
+                                                  .baseProduct?.originalPrice,
+                                              formatType: FormatType.custom,
+                                              currency: '\$',
+                                              format: '#,##0.00',
+                                              locale: 'en_us',
+                                            ),
+                                            '\$ 0.0',
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -439,21 +460,27 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                                                       AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Text(
-                                                    '${formatNumber(
-                                                      ((widget!.baseProduct!
-                                                                      .originalPrice -
+                                                    valueOrDefault<String>(
+                                                      '${valueOrDefault<String>(
+                                                        formatNumber(
+                                                          ((widget!.baseProduct!
+                                                                          .originalPrice -
+                                                                      widget!
+                                                                          .baseProduct!
+                                                                          .price) /
                                                                   widget!
                                                                       .baseProduct!
-                                                                      .price) /
-                                                              widget!
-                                                                  .baseProduct!
-                                                                  .originalPrice) *
-                                                          100,
-                                                      formatType:
-                                                          FormatType.custom,
-                                                      format: '##.#',
-                                                      locale: '',
-                                                    )}%',
+                                                                      .originalPrice) *
+                                                              100,
+                                                          formatType:
+                                                              FormatType.custom,
+                                                          format: '##.#',
+                                                          locale: '',
+                                                        ),
+                                                        '%0',
+                                                      )}%',
+                                                      '%0',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -674,15 +701,18 @@ class _SelectServiceWidgetState extends State<SelectServiceWidget> {
                                 ].divide(SizedBox(width: 8.0)),
                               ),
                               Text(
-                                formatNumber(
-                                  (widget!.baseProduct!.price +
-                                          functions.sumAddons(
-                                              FFAppState().addons.toList())) *
-                                      _model.count,
-                                  formatType: FormatType.custom,
-                                  currency: '\$',
-                                  format: '#,##0.00',
-                                  locale: 'en_us',
+                                valueOrDefault<String>(
+                                  formatNumber(
+                                    (widget!.baseProduct!.price +
+                                            functions.sumAddons(
+                                                FFAppState().addons.toList())) *
+                                        _model.count,
+                                    formatType: FormatType.custom,
+                                    currency: '\$',
+                                    format: '#,##0.00',
+                                    locale: 'en_us',
+                                  ),
+                                  '\$ 0.0',
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

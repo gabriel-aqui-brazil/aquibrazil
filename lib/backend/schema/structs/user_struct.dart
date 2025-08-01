@@ -28,7 +28,6 @@ class UserStruct extends BaseStruct {
     String? timezone,
     aquibrazil_library_oi8i5r_data_schema.CardStruct? defaultCard,
     String? document,
-    String? lastOrderId,
     bool? isSignup,
   })  : _id = id,
         _authToken = authToken,
@@ -46,7 +45,6 @@ class UserStruct extends BaseStruct {
         _timezone = timezone,
         _defaultCard = defaultCard,
         _document = document,
-        _lastOrderId = lastOrderId,
         _isSignup = isSignup;
 
   // "id" field.
@@ -183,13 +181,6 @@ class UserStruct extends BaseStruct {
 
   bool hasDocument() => _document != null;
 
-  // "last_order_id" field.
-  String? _lastOrderId;
-  String get lastOrderId => _lastOrderId ?? '';
-  set lastOrderId(String? val) => _lastOrderId = val;
-
-  bool hasLastOrderId() => _lastOrderId != null;
-
   // "is_signup" field.
   bool? _isSignup;
   bool get isSignup => _isSignup ?? false;
@@ -220,7 +211,6 @@ class UserStruct extends BaseStruct {
             : aquibrazil_library_oi8i5r_data_schema.CardStruct.maybeFromMap(
                 data['default_card']),
         document: data['document'] as String?,
-        lastOrderId: data['last_order_id'] as String?,
         isSignup: data['is_signup'] as bool?,
       );
 
@@ -244,7 +234,6 @@ class UserStruct extends BaseStruct {
         'timezone': _timezone,
         'default_card': _defaultCard?.toMap(),
         'document': _document,
-        'last_order_id': _lastOrderId,
         'is_signup': _isSignup,
       }.withoutNulls;
 
@@ -314,10 +303,6 @@ class UserStruct extends BaseStruct {
         ),
         'document': serializeParam(
           _document,
-          ParamType.String,
-        ),
-        'last_order_id': serializeParam(
-          _lastOrderId,
           ParamType.String,
         ),
         'is_signup': serializeParam(
@@ -411,11 +396,6 @@ class UserStruct extends BaseStruct {
           ParamType.String,
           false,
         ),
-        lastOrderId: deserializeParam(
-          data['last_order_id'],
-          ParamType.String,
-          false,
-        ),
         isSignup: deserializeParam(
           data['is_signup'],
           ParamType.bool,
@@ -446,7 +426,6 @@ class UserStruct extends BaseStruct {
         timezone == other.timezone &&
         defaultCard == other.defaultCard &&
         document == other.document &&
-        lastOrderId == other.lastOrderId &&
         isSignup == other.isSignup;
   }
 
@@ -468,7 +447,6 @@ class UserStruct extends BaseStruct {
         timezone,
         defaultCard,
         document,
-        lastOrderId,
         isSignup
       ]);
 }
@@ -489,7 +467,6 @@ UserStruct createUserStruct({
   String? timezone,
   aquibrazil_library_oi8i5r_data_schema.CardStruct? defaultCard,
   String? document,
-  String? lastOrderId,
   bool? isSignup,
 }) =>
     UserStruct(
@@ -509,6 +486,5 @@ UserStruct createUserStruct({
       defaultCard:
           defaultCard ?? aquibrazil_library_oi8i5r_data_schema.CardStruct(),
       document: document,
-      lastOrderId: lastOrderId,
       isSignup: isSignup,
     );

@@ -5,6 +5,7 @@ import '/companies/product/contain_item_other_company/contain_item_other_company
 import '/companies/product/container_adicionais/container_adicionais_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/membership/without_membership/membership_without/membership_without_widget.dart';
 import 'dart:ui';
 import "package:aquibrazil_library_oi8i5r/backend/schema/structs/index.dart"

@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/order_history/order_cancel/order_cancel_widget.dart';
 import 'dart:ui';
 import 'package:ff_theme/flutter_flow/flutter_flow_theme.dart';
@@ -131,7 +132,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'mat0ucrb' /* Pedido feito por engano */,
+                          'mat0ucrb' /* PEDIDO FEITO POR ENGANO */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -140,7 +141,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              fontSize: 14.0,
+                              fontSize: 12.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.normal,
                               fontStyle: FlutterFlowTheme.of(context)
@@ -168,7 +169,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      '1g884wmu' /* Selecionei uma forma de pagame... */,
+                      '1g884wmu' /* SELECIONEI UMA FORMA DE PAGAME... */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -177,7 +178,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                          fontSize: 14.0,
+                          fontSize: 12.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.normal,
                           fontStyle:
@@ -202,7 +203,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      'vu3zhcsn' /* Meu endereço está errado */,
+                      'vu3zhcsn' /* MEU ENDEREÇO ESTÁ ERRADO */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -211,7 +212,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                          fontSize: 14.0,
+                          fontSize: 12.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.normal,
                           fontStyle:
@@ -236,7 +237,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      '45q0acel' /* Outro motivo */,
+                      '45q0acel' /* OUTRO MOTIVO */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -245,7 +246,7 @@ class _OrderCancelReasonWidgetState extends State<OrderCancelReasonWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                          fontSize: 14.0,
+                          fontSize: 12.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.normal,
                           fontStyle:

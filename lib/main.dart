@@ -197,10 +197,16 @@ class _MyAppState extends State<MyApp> {
       routerConfig: _router,
       builder: (_, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(
-          textScaler: TextScaler.linear(_textScaleFactor).clamp(
-            minScaleFactor: FlutterFlowTheme.minTextScaleFactor,
-            maxScaleFactor: FlutterFlowTheme.maxTextScaleFactor,
-          ),
+          textScaler:
+              _textScaleFactor == FlutterFlowTheme.defaultTextScaleFactor
+                  ? MediaQuery.of(context).textScaler.clamp(
+                        minScaleFactor: FlutterFlowTheme.minTextScaleFactor,
+                        maxScaleFactor: FlutterFlowTheme.maxTextScaleFactor,
+                      )
+                  : TextScaler.linear(_textScaleFactor).clamp(
+                      minScaleFactor: FlutterFlowTheme.minTextScaleFactor,
+                      maxScaleFactor: FlutterFlowTheme.maxTextScaleFactor,
+                    ),
         ),
         child: child!,
       ),
@@ -265,13 +271,13 @@ class _NavBarPageState extends State<NavBarPage> {
           color: Color(0xFF1A1A1A),
           activeColor: FlutterFlowTheme.of(context).primary,
           tabBackgroundColor: Color(0x00000000),
-          tabBorderRadius: 100.0,
+          tabBorderRadius: 8.0,
           tabMargin: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 34.0),
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
           gap: 0.0,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           duration: Duration(milliseconds: 500),
-          haptic: false,
+          haptic: true,
           tabs: [
             GButton(
               icon: FFIcons.khome3,
