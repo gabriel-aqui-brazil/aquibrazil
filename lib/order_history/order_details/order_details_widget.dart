@@ -2325,13 +2325,15 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                               ),
-                            if ((FFAppState().orderSelected.status ==
-                                    'Saiu para entrega') &&
-                                (FFAppState()
-                                        .orderSelected
-                                        .company
-                                        .deliveryLogistics ==
-                                    'Propria'))
+                            if (((FFAppState().orderSelected.status ==
+                                        'Saiu para entrega') &&
+                                    (FFAppState()
+                                            .orderSelected
+                                            .company
+                                            .deliveryLogistics ==
+                                        'Propria')) ||
+                                (FFAppState().orderSelected.status ==
+                                    'Pronto para retirada'))
                               FFButtonWidget(
                                 onPressed: () async {
                                   var _shouldSetState = false;

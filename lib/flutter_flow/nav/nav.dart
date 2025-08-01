@@ -213,21 +213,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             builder: (context, params) => HelpWidget(),
           ),
           FFRoute(
-            name: MembershipCheckoutWidget.routeName,
-            path: MembershipCheckoutWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => MembershipCheckoutWidget(
-              couponCode: params.getParam(
-                'couponCode',
-                ParamType.String,
-              ),
-              document: params.getParam(
-                'document',
-                ParamType.String,
-              ),
-            ),
-          ),
-          FFRoute(
             name: Step1Widget.routeName,
             path: Step1Widget.routePath,
             requireAuth: true,
@@ -261,19 +246,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             path: AccountDataWidget.routePath,
             requireAuth: true,
             builder: (context, params) => AccountDataWidget(),
-          ),
-          FFRoute(
-            name: MembershipChangePlanWidget.routeName,
-            path: MembershipChangePlanWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => MembershipChangePlanWidget(
-              planActual: params.getParam(
-                'planActual',
-                ParamType.DataStruct,
-                isList: false,
-                structBuilder: MembershipStruct.fromSerializableMap,
-              ),
-            ),
           ),
           FFRoute(
             name: AddressDeliveryNoAuthWidget.routeName,
@@ -739,12 +711,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             ),
           ),
           FFRoute(
-            name: MembershipWidget.routeName,
-            path: MembershipWidget.routePath,
-            requireAuth: true,
-            builder: (context, params) => MembershipWidget(),
-          ),
-          FFRoute(
             name: CompleteProfileWidget.routeName,
             path: CompleteProfileWidget.routePath,
             builder: (context, params) => CompleteProfileWidget(),
@@ -911,6 +877,40 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) {
             builder: (context, params) => params.isEmpty
                 ? NavBarPage(initialPage: 'orderHistory')
                 : OrderHistoryWidget(),
+          ),
+          FFRoute(
+            name: MembershipCheckoutWidget.routeName,
+            path: MembershipCheckoutWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipCheckoutWidget(
+              couponCode: params.getParam(
+                'couponCode',
+                ParamType.String,
+              ),
+              document: params.getParam(
+                'document',
+                ParamType.String,
+              ),
+            ),
+          ),
+          FFRoute(
+            name: MembershipChangePlanWidget.routeName,
+            path: MembershipChangePlanWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipChangePlanWidget(
+              planActual: params.getParam(
+                'planActual',
+                ParamType.DataStruct,
+                isList: false,
+                structBuilder: MembershipStruct.fromSerializableMap,
+              ),
+            ),
+          ),
+          FFRoute(
+            name: MembershipWidget.routeName,
+            path: MembershipWidget.routePath,
+            requireAuth: true,
+            builder: (context, params) => MembershipWidget(),
           ),
           FFRoute(
             name: $aquibrazil_library_oi8i5r.HomePageWidget.routeName,

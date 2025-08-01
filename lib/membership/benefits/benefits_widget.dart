@@ -125,7 +125,7 @@ class _BenefitsWidgetState extends State<BenefitsWidget> {
                           children: [
                             TextSpan(
                               text: FFLocalizations.of(context).getText(
-                                '3wp224gg' /* DESCONTOS DE ATÉ 50%  */,
+                                '3wp224gg' /* DESCONTOS DE ATÉ 20%  */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

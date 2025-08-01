@@ -1006,205 +1006,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // membershipCheckout
-  {
-    'augbingd': {
-      'pt': 'CONFIRMAR E PAGAR',
-      'en': 'CONFIRM AND PAY',
-      'es': 'CONFIRMAR Y PAGAR',
-    },
-    '4ha81ykg': {
-      'pt': 'PLANO SELECIONADO',
-      'en': 'SELECTED PLAN',
-      'es': 'PLAN SELECCIONADO',
-    },
-    '7n2rtq0a': {
-      'pt': 'COMPRA ÚNICA',
-      'en': 'ONE TIME PURCHASE',
-      'es': 'COMPRA ÚNICA',
-    },
-    'h0498bd0': {
-      'pt': ' por 30 dias',
-      'en': 'for 30 days',
-      'es': 'por 30 días',
-    },
-    '9zdruxbb': {
-      'pt': 'MENSAL',
-      'en': 'MONTHLY',
-      'es': 'MENSUAL',
-    },
-    '7suw24ed': {
-      'pt': ' por mês',
-      'en': 'per month',
-      'es': 'por mes',
-    },
-    '2dexrodc': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'ffie2f6y': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'sq64hnuf': {
-      'pt': '20% DE DESCONTO',
-      'en': '20% DISCOUNT',
-      'es': '20% DE DESCUENTO',
-    },
-    'x09i9ph8': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'phsz5ky8': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    'i0jqfr8m': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    '2bne2r89': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    '8gv1ophf': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'a5iqhcjg': {
-      'pt': 'ALTERAR PLANO',
-      'en': 'CHANGE PLAN',
-      'es': 'PLAN DE CAMBIO',
-    },
-    'b71a25oj': {
-      'pt': 'RESUMO DO PAGAMENTO',
-      'en': 'PAYMENT SUMMARY',
-      'es': 'RESUMEN DE PAGO',
-    },
-    '9ov76fde': {
-      'pt': 'SUBTOTAL',
-      'en': 'SUBTOTAL',
-      'es': 'TOTAL PARCIAL',
-    },
-    '0gjcl8pg': {
-      'pt': 'DESCONTO PLANO ANUAL',
-      'en': 'ANNUAL PLAN DISCOUNT',
-      'es': 'DESCUENTO EN PLAN ANUAL',
-    },
-    '07egpyd3': {
-      'pt': '\$12.01',
-      'en': '',
-      'es': '',
-    },
-    'o0ocrjx9': {
-      'pt': 'DESCONTO INFLUENCIADOR',
-      'en': 'INFLUENCER DISCOUNT',
-      'es': 'DESCUENTO PARA INFLUENCERS',
-    },
-    'z7oc8fhv': {
-      'pt': 'TAXA DE SERVIÇO',
-      'en': 'SERVICE FEE',
-      'es': 'TARIFA DE SERVICIO',
-    },
-    'govqlxt8': {
-      'pt': 'TOTAL A PAGAR',
-      'en': 'TOTAL PAYABLE',
-      'es': 'TOTAL A PAGAR',
-    },
-    'hiuixk8y': {
-      'pt': 'A assinatura do AquiPASS ',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción AquiPASS',
-    },
-    'vfbl5zzr': {
-      'pt': 'não é reembolsável. ',
-      'en': 'is non-refundable.',
-      'es': 'no es reembolsable.',
-    },
-    'rb4i0y5e': {
-      'pt':
-          'Ela será renovada a cada ano no cartão cadastrado, até que você solicite o cancelamento.',
-      'en':
-          'It will be renewed every year on the registered card, until you request cancellation.',
-      'es':
-          'Se renovará cada año en la tarjeta registrada, hasta que solicites la baja.',
-    },
-    'n6gkll4y': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    '2klnkcuc': {
-      'pt': 'A assinatura do AquiPASS ',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción a AquiPASS',
-    },
-    'x5tjgt6c': {
-      'pt': 'não é reembolsável. ',
-      'en': 'is non-refundable.',
-      'es': 'no es reembolsable.',
-    },
-    'nsdo98h8': {
-      'pt':
-          ' Ela será renovada a cada mês no cartão cadastrado, até que você solicite o cancelamento.',
-      'en':
-          'It will be renewed every month on the registered card, until you request cancellation.',
-      'es':
-          'Se renovará cada mes en la tarjeta registrada, hasta que solicites la baja.',
-    },
-    'v0501ov5': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    'ezcpifb9': {
-      'pt':
-          'Este plano possui pagamento único, ou seja, você será cobrado apenas uma vez no momento da contratação, sem cobranças recorrentes.',
-      'en': 'The AquiPASS subscription',
-      'es': 'La suscripción AquiPASS',
-    },
-    'jolmx57o': {
-      'pt':
-          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
-      'en':
-          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
-      'es':
-          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
-    },
-    'duoyblun': {
-      'pt': 'Para saber mais, confira os ',
-      'en': 'To learn more, check out the',
-      'es': 'Para obtener más información, consulte la',
-    },
-    'p87tfg9t': {
-      'pt': 'Termos de Serviço.',
-      'en': 'Terms of Service.',
-      'es': 'Condiciones de servicio.',
-    },
-    'rncgr4bb': {
-      'pt': 'ASSINAR O AQUIPASS',
-      'en': 'SIGN UP FOR AQUIPASS',
-      'es': 'REGÍSTRATE EN AQUIPASS',
-    },
-    'btamck6d': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // step1
   {
     'gyjlv5iy': {
@@ -1561,124 +1362,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
       'en': '',
       'es': '',
-    },
-  },
-  // membershipChangePlan
-  {
-    '5y13f796': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    'gkmx6nsp': {
-      'pt': 'ATÉ ',
-      'en': 'UNTIL',
-      'es': 'HASTA',
-    },
-    'iihj8b56': {
-      'pt': '4X MAIS BENEFÍCIOS ',
-      'en': '4X MORE BENEFITS',
-      'es': '4 VECES MÁS BENEFICIOS',
-    },
-    'hjhd898d': {
-      'pt': 'COM O AQUIPASS',
-      'en': 'WITH AQUIPASS',
-      'es': 'CON AQUIPASS',
-    },
-    's3qpqaty': {
-      'pt': 'PLANO ATUAL',
-      'en': 'CURRENT PLAN',
-      'es': 'PLAN ACTUAL',
-    },
-    'md27seg7': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    '02paan57': {
-      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
-      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
-      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
-    },
-    '6mk9zapq': {
-      'pt': 'Digite aqui seu cupom de desconto',
-      'en': 'Enter your discount coupon here',
-      'es': 'Introduce aquí tu cupón de descuento',
-    },
-    'xf680i3k': {
-      'pt': 'CONVIDADO(A) POR ',
-      'en': 'INVITED BY',
-      'es': 'INVITADO POR',
-    },
-    'obix7cgr': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    '3ichy6sk': {
-      'pt': 'CUPOM DE DESCONTO APLICADO',
-      'en': 'DISCOUNT COUPON APPLIED',
-      'es': 'CUPÓN DE DESCUENTO APLICADO',
-    },
-    '898oon4u': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    'dckhvpv3': {
-      'pt': 'CUPOM NÃO ENCONTRADO',
-      'en': 'COUPON NOT FOUND',
-      'es': 'CUPÓN NO ENCONTRADO',
-    },
-    '93rk9pym': {
-      'pt': 'ESCOLHA SEU PLANO:',
-      'en': 'CHOOSE YOUR PLAN:',
-      'es': 'ELIGE TU PLAN:',
-    },
-    'y7ruus82': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'dblvv2sq': {
-      'pt': '10% DE DESCONTO',
-      'en': '10% DISCOUNT',
-      'es': '10% DE DESCUENTO',
-    },
-    '5630x3mi': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'g743j0gs': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    's53wp3oc': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    'pd93i3f6': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    'onw4t1t6': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    '9vxovh1d': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'ns2sq6op': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
     },
   },
   // addressDeliveryNoAuth
@@ -4017,102 +3700,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Hogar',
     },
   },
-  // membership
-  {
-    'ql57ilx7': {
-      'pt': 'AQUIPASS',
-      'en': 'AQUIPASS',
-      'es': 'AQUIPASS',
-    },
-    '0onqs37u': {
-      'pt': 'ATÉ ',
-      'en': 'UNTIL',
-      'es': 'HASTA',
-    },
-    'kjklhhsq': {
-      'pt': '4X MAIS BENEFÍCIOS ',
-      'en': '4X MORE BENEFITS',
-      'es': '4 VECES MÁS BENEFICIOS',
-    },
-    's949hccv': {
-      'pt': 'COM O AQUIPASS',
-      'en': 'WITH AQUIPASS',
-      'es': 'CON AQUIPASS',
-    },
-    '1ge22r04': {
-      'pt':
-          'COM O AQUIPASS VOCÊ GARANTE OS MAIORES DESCONTOS NOS MELHORES LUGARES!',
-      'en':
-          'WITH AQUIPASS YOU GUARANTEE THE BIGGEST DISCOUNTS IN THE BEST PLACES!',
-      'es':
-          '¡CON AQUIPASS GARANTIZAS LOS MAYORES DESCUENTOS EN LOS MEJORES LUGARES!',
-    },
-    'tlvez06s': {
-      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
-      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
-      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
-    },
-    '5y42u0s4': {
-      'pt': 'Digite aqui seu cupom de desconto',
-      'en': 'Enter your discount coupon here',
-      'es': 'Introduce aquí tu cupón de descuento',
-    },
-    '16p5fuar': {
-      'pt': 'CONVIDADO(A) POR ',
-      'en': 'INVITED BY',
-      'es': 'INVITADO POR',
-    },
-    'x4av0sq2': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    'b247c3z0': {
-      'pt': 'CUPOM DE DESCONTO APLICADO',
-      'en': 'DISCOUNT COUPON APPLIED',
-      'es': 'CUPÓN DE DESCUENTO APLICADO',
-    },
-    '7a159nqw': {
-      'pt': 'Convidado(a) por ',
-      'en': 'Invited by',
-      'es': 'Invitado por',
-    },
-    '8h7z2xrs': {
-      'pt': 'CUPOM NÃO ENCONTRADO',
-      'en': 'COUPON NOT FOUND',
-      'es': 'CUPÓN NO ENCONTRADO',
-    },
-    'e64lypay': {
-      'pt': 'DIGITE SEU CPF',
-      'en': 'ENTER YOUR CPF',
-      'es': 'INGRESE SU CPF',
-    },
-    'k8hiyr6u': {
-      'pt': 'OS PONTOS GANHOS SERÃO DISPONIBILIZADOS ',
-      'en': 'EARNED POINTS WILL BE MADE AVAILABLE',
-      'es': 'LOS PUNTOS GANADOS ESTARÁN DISPONIBLES',
-    },
-    '1ic2cor8': {
-      'pt': 'Digite aqui seu CPF',
-      'en': 'Enter your CPF here',
-      'es': 'Ingrese su CPF aquí',
-    },
-    'dl441phu': {
-      'pt': 'CPF INVÁLIDO',
-      'en': 'INVALID CPF',
-      'es': 'CPF NO VÁLIDO',
-    },
-    'tfmzk4l6': {
-      'pt': 'CONTINUAR',
-      'en': 'CONTINUE',
-      'es': 'CONTINUAR',
-    },
-    'z7nr0b2h': {
-      'pt': 'Home',
-      'en': 'Home',
-      'es': 'Hogar',
-    },
-  },
   // completeProfile
   {
     'ianor12j': {
@@ -5258,6 +4845,463 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
       'en': '',
       'es': '',
+    },
+  },
+  // membershipCheckout
+  {
+    'augbingd': {
+      'pt': 'CONFIRMAR E PAGAR',
+      'en': 'CONFIRM AND PAY',
+      'es': 'CONFIRMAR Y PAGAR',
+    },
+    '4ha81ykg': {
+      'pt': 'PLANO SELECIONADO',
+      'en': 'SELECTED PLAN',
+      'es': 'PLAN SELECCIONADO',
+    },
+    'l4ahmsaz': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    '67dccctc': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    'wmx134qx': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'tle5xqib': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    '3woboo8u': {
+      'pt': ' por mês',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    'en5pw3w4': {
+      'pt': ' por ',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    '0u5l9xna': {
+      'pt': ' dias',
+      'en': '',
+      'es': '',
+    },
+    'i9slmkhq': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'uuct5zj4': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    'a5iqhcjg': {
+      'pt': 'ALTERAR PLANO',
+      'en': 'CHANGE PLAN',
+      'es': 'PLAN DE CAMBIO',
+    },
+    'b71a25oj': {
+      'pt': 'RESUMO DO PAGAMENTO',
+      'en': 'PAYMENT SUMMARY',
+      'es': 'RESUMEN DE PAGO',
+    },
+    '9ov76fde': {
+      'pt': 'SUBTOTAL',
+      'en': 'SUBTOTAL',
+      'es': 'TOTAL PARCIAL',
+    },
+    '0gjcl8pg': {
+      'pt': 'DESCONTO',
+      'en': 'ANNUAL PLAN DISCOUNT',
+      'es': 'DESCUENTO EN PLAN ANUAL',
+    },
+    'z7oc8fhv': {
+      'pt': 'TAXA DE SERVIÇO',
+      'en': 'SERVICE FEE',
+      'es': 'TARIFA DE SERVICIO',
+    },
+    'govqlxt8': {
+      'pt': 'TOTAL A PAGAR',
+      'en': 'TOTAL PAYABLE',
+      'es': 'TOTAL A PAGAR',
+    },
+    'tlqx8b2l': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'hiuixk8y': {
+      'pt': 'A assinatura do AquiPASS ',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción AquiPASS',
+    },
+    'vfbl5zzr': {
+      'pt': 'não é reembolsável. ',
+      'en': 'is non-refundable.',
+      'es': 'no es reembolsable.',
+    },
+    'rb4i0y5e': {
+      'pt':
+          'Ela será renovada a cada ano no cartão cadastrado, até que você solicite o cancelamento.',
+      'en':
+          'It will be renewed every year on the registered card, until you request cancellation.',
+      'es':
+          'Se renovará cada año en la tarjeta registrada, hasta que solicites la baja.',
+    },
+    'n6gkll4y': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    '2klnkcuc': {
+      'pt': 'A assinatura do AquiPASS ',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción a AquiPASS',
+    },
+    'x5tjgt6c': {
+      'pt': 'não é reembolsável. ',
+      'en': 'is non-refundable.',
+      'es': 'no es reembolsable.',
+    },
+    'nsdo98h8': {
+      'pt':
+          ' Ela será renovada a cada mês no cartão cadastrado, até que você solicite o cancelamento.',
+      'en':
+          'It will be renewed every month on the registered card, until you request cancellation.',
+      'es':
+          'Se renovará cada mes en la tarjeta registrada, hasta que solicites la baja.',
+    },
+    'v0501ov5': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    'ezcpifb9': {
+      'pt':
+          'Este plano possui pagamento único, ou seja, você será cobrado apenas uma vez no momento da contratação, sem cobranças recorrentes.',
+      'en': 'The AquiPASS subscription',
+      'es': 'La suscripción AquiPASS',
+    },
+    'jolmx57o': {
+      'pt':
+          'A assinatura do AquiPASS não é reembolsável. Sua assinatura vai ser automaticamente renovada todos os anos no cartão inserido até que você cancele.',
+      'en':
+          'The AquiPASS subscription is non-refundable. Your subscription will automatically renew every year on the card you entered until you cancel.',
+      'es':
+          'La suscripción a AquiPASS no es reembolsable. Su suscripción se renovará automáticamente cada año en la tarjeta ingresada hasta que la cancele.',
+    },
+    'duoyblun': {
+      'pt': 'Para saber mais, confira os ',
+      'en': 'To learn more, check out the',
+      'es': 'Para obtener más información, consulte la',
+    },
+    'p87tfg9t': {
+      'pt': 'Termos de Serviço.',
+      'en': 'Terms of Service.',
+      'es': 'Condiciones de servicio.',
+    },
+    'rncgr4bb': {
+      'pt': 'ASSINAR O AQUIPASS',
+      'en': 'SIGN UP FOR AQUIPASS',
+      'es': 'REGÍSTRATE EN AQUIPASS',
+    },
+    'btamck6d': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
+    },
+  },
+  // membershipChangePlan
+  {
+    '5y13f796': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    'gkmx6nsp': {
+      'pt': 'ATÉ ',
+      'en': 'UNTIL',
+      'es': 'HASTA',
+    },
+    'iihj8b56': {
+      'pt': '4X MAIS BENEFÍCIOS ',
+      'en': '4X MORE BENEFITS',
+      'es': '4 VECES MÁS BENEFICIOS',
+    },
+    'hjhd898d': {
+      'pt': 'COM O AQUIPASS',
+      'en': 'WITH AQUIPASS',
+      'es': 'CON AQUIPASS',
+    },
+    's3qpqaty': {
+      'pt': 'PLANO ATUAL',
+      'en': 'CURRENT PLAN',
+      'es': 'PLAN ACTUAL',
+    },
+    'md27seg7': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    '02paan57': {
+      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
+      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
+      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
+    },
+    '6mk9zapq': {
+      'pt': 'Digite aqui seu cupom de desconto',
+      'en': 'Enter your discount coupon here',
+      'es': 'Introduce aquí tu cupón de descuento',
+    },
+    'xf680i3k': {
+      'pt': 'CONVIDADO(A) POR ',
+      'en': 'INVITED BY',
+      'es': 'INVITADO POR',
+    },
+    'obix7cgr': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    '3ichy6sk': {
+      'pt': 'CUPOM DE DESCONTO APLICADO',
+      'en': 'DISCOUNT COUPON APPLIED',
+      'es': 'CUPÓN DE DESCUENTO APLICADO',
+    },
+    '898oon4u': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    'dckhvpv3': {
+      'pt': 'CUPOM NÃO ENCONTRADO',
+      'en': 'COUPON NOT FOUND',
+      'es': 'CUPÓN NO ENCONTRADO',
+    },
+    '93rk9pym': {
+      'pt': 'ESCOLHA SEU PLANO:',
+      'en': 'CHOOSE YOUR PLAN:',
+      'es': 'ELIGE TU PLAN:',
+    },
+    'y7ruus82': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    'dblvv2sq': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    '5630x3mi': {
+      'pt': 'ANUAL',
+      'en': 'ANNUAL',
+      'es': 'ANUAL',
+    },
+    'g743j0gs': {
+      'pt': '\$119.90 ',
+      'en': '\$119.90',
+      'es': '\$119,90',
+    },
+    's53wp3oc': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'pd93i3f6': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    'onw4t1t6': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    '9vxovh1d': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'ns2sq6op': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
+    },
+  },
+  // membership
+  {
+    'ql57ilx7': {
+      'pt': 'AQUIPASS',
+      'en': 'AQUIPASS',
+      'es': 'AQUIPASS',
+    },
+    '0onqs37u': {
+      'pt': 'ATÉ ',
+      'en': 'UNTIL',
+      'es': 'HASTA',
+    },
+    'kjklhhsq': {
+      'pt': '4X MAIS BENEFÍCIOS ',
+      'en': '4X MORE BENEFITS',
+      'es': '4 VECES MÁS BENEFICIOS',
+    },
+    's949hccv': {
+      'pt': 'COM O AQUIPASS',
+      'en': 'WITH AQUIPASS',
+      'es': 'CON AQUIPASS',
+    },
+    '1ge22r04': {
+      'pt':
+          'COM O AQUIPASS VOCÊ GARANTE OS MAIORES DESCONTOS NOS MELHORES LUGARES!',
+      'en':
+          'WITH AQUIPASS YOU GUARANTEE THE BIGGEST DISCOUNTS IN THE BEST PLACES!',
+      'es':
+          '¡CON AQUIPASS GARANTIZAS LOS MAYORES DESCUENTOS EN LOS MEJORES LUGARES!',
+    },
+    'tlvez06s': {
+      'pt': 'POSSUI ALGUM CUPOM DE DESCONTO?',
+      'en': 'DO YOU HAVE A DISCOUNT COUPON?',
+      'es': '¿TIENES UN CUPÓN DE DESCUENTO?',
+    },
+    '5y42u0s4': {
+      'pt': 'Digite aqui seu cupom de desconto',
+      'en': 'Enter your discount coupon here',
+      'es': 'Introduce aquí tu cupón de descuento',
+    },
+    '16p5fuar': {
+      'pt': 'CONVIDADO(A) POR ',
+      'en': 'INVITED BY',
+      'es': 'INVITADO POR',
+    },
+    'x4av0sq2': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    'b247c3z0': {
+      'pt': 'CUPOM DE DESCONTO APLICADO',
+      'en': 'DISCOUNT COUPON APPLIED',
+      'es': 'CUPÓN DE DESCUENTO APLICADO',
+    },
+    '7a159nqw': {
+      'pt': 'Convidado(a) por ',
+      'en': 'Invited by',
+      'es': 'Invitado por',
+    },
+    '8h7z2xrs': {
+      'pt': 'CUPOM NÃO ENCONTRADO',
+      'en': 'COUPON NOT FOUND',
+      'es': 'CUPÓN NO ENCONTRADO',
+    },
+    'e64lypay': {
+      'pt': 'DIGITE SEU CPF',
+      'en': 'ENTER YOUR CPF',
+      'es': 'INGRESE SU CPF',
+    },
+    'k8hiyr6u': {
+      'pt': 'OS PONTOS GANHOS SERÃO DISPONIBILIZADOS ',
+      'en': 'EARNED POINTS WILL BE MADE AVAILABLE',
+      'es': 'LOS PUNTOS GANADOS ESTARÁN DISPONIBLES',
+    },
+    '1ic2cor8': {
+      'pt': 'Digite aqui seu CPF',
+      'en': 'Enter your CPF here',
+      'es': 'Ingrese su CPF aquí',
+    },
+    'dl441phu': {
+      'pt': 'CPF INVÁLIDO',
+      'en': 'INVALID CPF',
+      'es': 'CPF NO VÁLIDO',
+    },
+    'wzsuu1wy': {
+      'pt': ' DE DESCONTO',
+      'en': 'DISCOUNT',
+      'es': 'DESCUENTO',
+    },
+    'r7en5tpv': {
+      'pt': '10% DE DESCONTO',
+      'en': '10% DISCOUNT',
+      'es': '10% DE DESCUENTO',
+    },
+    '3p5r9zir': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    'f2bo178f': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    '9zaqxvw1': {
+      'pt': ' por ano (',
+      'en': 'per year (',
+      'es': 'por año (',
+    },
+    '117i3rxc': {
+      'pt': ' por mês)',
+      'en': 'per month)',
+      'es': 'por mes)',
+    },
+    'mp0m5e35': {
+      'pt': ' por mês',
+      'en': 'per month',
+      'es': 'por mes',
+    },
+    'q44ms73w': {
+      'pt': ' por ',
+      'en': 'put',
+      'es': 'poner',
+    },
+    'dkj3oiyk': {
+      'pt': ' dias',
+      'en': 'days',
+      'es': 'días',
+    },
+    'v84btf7u': {
+      'pt':
+          'Aproveite os 3 primeiros meses grátis! Após esse período, será aplicada a cobrança regular.',
+      'en':
+          'Enjoy the first 3 months free! After that, regular billing will apply.',
+      'es':
+          '¡Disfruta de los primeros 3 meses gratis! Después, se aplicará la facturación normal.',
+    },
+    'w4swprtf': {
+      'pt': 'Cancele quando quiser',
+      'en': 'Cancel anytime',
+      'es': 'Cancelar en cualquier momento',
+    },
+    'tfmzk4l6': {
+      'pt': 'CONTINUAR',
+      'en': 'CONTINUE',
+      'es': 'CONTINUAR',
+    },
+    'z7nr0b2h': {
+      'pt': 'Home',
+      'en': 'Home',
+      'es': 'Hogar',
     },
   },
   // bannerAquiPass
@@ -6987,54 +7031,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'ENVIAR RESEÑA',
     },
   },
-  // benefits
-  {
-    'kuxiqiua': {
-      'pt': 'BENEFÍCIOS AQUIPASS:',
-      'en': 'AQUIPASS BENEFITS:',
-      'es': 'BENEFICIOS DE AQUIPASS:',
-    },
-    '3wp224gg': {
-      'pt': 'DESCONTOS DE ATÉ 50% ',
-      'en': 'DISCOUNTS UP TO 50%',
-      'es': 'DESCUENTOS HASTA EL 50%',
-    },
-    'yspc56if': {
-      'pt': 'EM PRODUTOS E SERVIÇOS.',
-      'en': 'IN PRODUCTS AND SERVICES.',
-      'es': 'EN PRODUCTOS Y SERVICIOS.',
-    },
-    '7un0lbbw': {
-      'pt': '3% DE CASHBACK ',
-      'en': '3% CASHBACK',
-      'es': '3% DE REEMBOLSO EN EFECTIVO',
-    },
-    'g4zn4aq3': {
-      'pt': 'EM QUALQUER COMPRA NO APP.',
-      'en': 'WITH ANY IN-APP PURCHASE.',
-      'es': 'CON CUALQUIER COMPRA DENTRO DE LA APLICACIÓN.',
-    },
-    'k0vuevak': {
-      'pt': 'DESCONTOS EXCLUSIVOS ',
-      'en': 'EXCLUSIVE DISCOUNTS',
-      'es': 'DESCUENTOS EXCLUSIVOS',
-    },
-    '43f7r6wp': {
-      'pt': 'EM NOSSA REDE DE PARCEIROS.',
-      'en': 'IN OUR PARTNER NETWORK.',
-      'es': 'EN NUESTRA RED DE SOCIOS.',
-    },
-    '4m3zq9go': {
-      'pt': 'EXPERIÊNCIA',
-      'en': 'EXPERIENCE',
-      'es': 'EXPERIENCIA',
-    },
-    'wav7e1pg': {
-      'pt': ' SEM ANÚNCIOS.',
-      'en': 'NO ADS.',
-      'es': 'SIN PUBLICIDAD.',
-    },
-  },
   // deliveryNotAddress
   {
     'nlxy73nw': {
@@ -7332,74 +7328,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'PARA AGREGAR',
     },
   },
-  // membershipPlans
-  {
-    'jyvt4oe1': {
-      'pt': 'ESCOLHA SEU PLANO:',
-      'en': 'CHOOSE YOUR PLAN:',
-      'es': 'ELIGE TU PLAN:',
-    },
-    '682dz1is': {
-      'pt': ' DE DESCONTO',
-      'en': 'DISCOUNT',
-      'es': 'DESCUENTO',
-    },
-    'q7lhh1jo': {
-      'pt': '10% DE DESCONTO',
-      'en': '10% DISCOUNT',
-      'es': '10% DE DESCUENTO',
-    },
-    '2vccd6dh': {
-      'pt': 'ANUAL',
-      'en': 'ANNUAL',
-      'es': 'ANUAL',
-    },
-    'oiiww22d': {
-      'pt': '\$119.90 ',
-      'en': '\$119.90',
-      'es': '\$119,90',
-    },
-    '9h0j23yc': {
-      'pt': ' por ano (',
-      'en': 'per year (',
-      'es': 'por año (',
-    },
-    'tkv6qwxb': {
-      'pt': ' por mês)',
-      'en': 'per month)',
-      'es': 'por mes)',
-    },
-    '8xpp0nna': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    '11kmf7ty': {
-      'pt': 'MENSAL',
-      'en': 'MONTHLY',
-      'es': 'MENSUAL',
-    },
-    '19xjii9s': {
-      'pt': ' por mês',
-      'en': 'per month',
-      'es': 'por mes',
-    },
-    '4qeu9o9i': {
-      'pt': 'Cancele quando quiser',
-      'en': 'Cancel anytime',
-      'es': 'Cancelar en cualquier momento',
-    },
-    'eurz6m50': {
-      'pt': 'COMPRA ÚNICA',
-      'en': 'ONE TIME PURCHASE',
-      'es': 'COMPRA ÚNICA',
-    },
-    'fj9swijj': {
-      'pt': ' por 30 dias',
-      'en': 'for 30 days',
-      'es': 'por 30 días',
-    },
-  },
   // filterCategory
   {
     'rsyg8z2m': {
@@ -7640,6 +7568,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'SELECIONAR OUTRO MOTIVO',
       'en': 'SELECT ANOTHER REASON',
       'es': 'SELECCIONE OTRO MOTIVO',
+    },
+  },
+  // benefits
+  {
+    'kuxiqiua': {
+      'pt': 'BENEFÍCIOS AQUIPASS:',
+      'en': 'AQUIPASS BENEFITS:',
+      'es': 'BENEFICIOS DE AQUIPASS:',
+    },
+    '3wp224gg': {
+      'pt': 'DESCONTOS DE ATÉ 20% ',
+      'en': 'DISCOUNTS UP TO 50%',
+      'es': 'DESCUENTOS HASTA EL 50%',
+    },
+    'yspc56if': {
+      'pt': 'EM PRODUTOS E SERVIÇOS.',
+      'en': 'IN PRODUCTS AND SERVICES.',
+      'es': 'EN PRODUCTOS Y SERVICIOS.',
+    },
+    '7un0lbbw': {
+      'pt': '3% DE CASHBACK ',
+      'en': '3% CASHBACK',
+      'es': '3% DE REEMBOLSO EN EFECTIVO',
+    },
+    'g4zn4aq3': {
+      'pt': 'EM QUALQUER COMPRA NO APP.',
+      'en': 'WITH ANY IN-APP PURCHASE.',
+      'es': 'CON CUALQUIER COMPRA DENTRO DE LA APLICACIÓN.',
+    },
+    'k0vuevak': {
+      'pt': 'DESCONTOS EXCLUSIVOS ',
+      'en': 'EXCLUSIVE DISCOUNTS',
+      'es': 'DESCUENTOS EXCLUSIVOS',
+    },
+    '43f7r6wp': {
+      'pt': 'EM NOSSA REDE DE PARCEIROS.',
+      'en': 'IN OUR PARTNER NETWORK.',
+      'es': 'EN NUESTRA RED DE SOCIOS.',
+    },
+    '4m3zq9go': {
+      'pt': 'EXPERIÊNCIA',
+      'en': 'EXPERIENCE',
+      'es': 'EXPERIENCIA',
+    },
+    'wav7e1pg': {
+      'pt': ' SEM ANÚNCIOS.',
+      'en': 'NO ADS.',
+      'es': 'SIN PUBLICIDAD.',
     },
   },
   // Miscellaneous

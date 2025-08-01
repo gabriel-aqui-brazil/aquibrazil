@@ -21,8 +21,6 @@ export '/profile/mensagens/chat/chat_widget.dart' show ChatWidget;
 export '/profile/help/faq_answer_view/faq_answer_view_widget.dart'
     show FaqAnswerViewWidget;
 export '/profile/help/help/help_widget.dart' show HelpWidget;
-export '/membership/without_membership/membership_checkout/membership_checkout_widget.dart'
-    show MembershipCheckoutWidget;
 export '/profile/settings/delete_account/step1/step1_widget.dart'
     show Step1Widget;
 export '/auth/signup/signup_step3/signup_step3_widget.dart'
@@ -33,8 +31,6 @@ export '/profile/settings/terms/terms_widget.dart' show TermsWidget;
 export '/profile/payment_history/pagamentos/pagamentos_widget.dart'
     show PagamentosWidget;
 export '/profile/account_data/account_data_widget.dart' show AccountDataWidget;
-export '/membership/without_membership/membership_change_plan/membership_change_plan_widget.dart'
-    show MembershipChangePlanWidget;
 export '/address_page/address_no_auth/address_delivery_no_auth/address_delivery_no_auth_widget.dart'
     show AddressDeliveryNoAuthWidget;
 export '/membership/with_membership/membership_cancel/membership_cancel_widget.dart'
@@ -116,8 +112,6 @@ export '/home/all_categories/all_categories_widget.dart'
     show AllCategoriesWidget;
 export '/companies/schedule/rental_automotive/rental_automotive_widget.dart'
     show RentalAutomotiveWidget;
-export '/membership/without_membership/membership/membership_widget.dart'
-    show MembershipWidget;
 export '/auth/signup/complete_profile/complete_profile/complete_profile_widget.dart'
     show CompleteProfileWidget;
 export '/profile/email_edit/email_edit_widget.dart' show EmailEditWidget;
@@ -145,3 +139,9 @@ export '/company_favorite/favorite_company/favorite_company_widget.dart'
     show FavoriteCompanyWidget;
 export '/order_history/order_history/order_history_widget.dart'
     show OrderHistoryWidget;
+export '/membership/without_membership/membership_checkout/membership_checkout_widget.dart'
+    show MembershipCheckoutWidget;
+export '/membership/membership_change_plan/membership_change_plan_widget.dart'
+    show MembershipChangePlanWidget;
+export '/membership/without_membership/membership/membership_widget.dart'
+    show MembershipWidget;
