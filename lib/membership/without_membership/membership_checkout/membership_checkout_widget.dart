@@ -1651,6 +1651,8 @@ class _MembershipCheckoutWidgetState extends State<MembershipCheckoutWidget> {
                                       );
                                     }
 
+                                    FFAppState().clearCacheHomePageCacheKey(
+                                        currentUserUid);
                                     showModalBottomSheet(
                                       isScrollControlled: true,
                                       backgroundColor: Colors.transparent,
